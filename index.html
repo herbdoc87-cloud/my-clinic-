@@ -152,6 +152,26 @@
 <div id="info" class="section" style="background-color: #f8f5f0; border-radius: 15px; margin-bottom: 50px;">
     <div style="display: flex; gap: 40px; margin-bottom: 20px;">
         <h2 id="location" class="section-title" style="margin-bottom: 0;">위치안내</h2>
+        <div style="margin-bottom: 25px; border-radius: 12px; overflow: hidden; border: 1px solid #e0e0e0; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
+        <iframe src="https://maps.google.com/maps?q=경기도%20고양시%20일산서구%20고양대로%20726&t=&z=17&ie=UTF8&iwloc=&output=embed" width="100%" height="400" style="border:0; display: block;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+    ```
+
+### 💡 붙여넣을 위치 참고 (이렇게 들어가면 됩니다)
+
+```html
+<div id="info" class="section" style="background-color: #f8f5f0; border-radius: 15px; margin-bottom: 50px;">
+    <div style="display: flex; gap: 40px; margin-bottom: 20px;">
+        <h2 id="location" class="section-title" style="margin-bottom: 0;">위치안내</h2>
+        <h2 id="hours" class="section-title" style="margin-bottom: 0;">진료시간</h2>
+    </div>
+
+    <div style="margin-bottom: 25px; border-radius: 12px; overflow: hidden; ... (생략)
+
+    <div class="card-container">
+        <div class="card">
+            <h3>📍 오시는 길</h3>
+            ...
         <h2 id="hours" class="section-title" style="margin-bottom: 0;">진료시간</h2>
     </div>
     <div class="card-container">
