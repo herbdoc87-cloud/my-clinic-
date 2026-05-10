@@ -46,4 +46,121 @@
         .info-list { list-style: none; padding: 0; margin: 0; }
         .info-list li { margin-bottom: 12px; line-height: 1.5; font-size: 1.05em; }
         .badge { background: #f0ebe1; color: var(--primary); padding: 4px 10px; border-radius: 20px; font-size: 0.85em; margin-right: 8px; font-weight: bold; display: inline-block; width: 45px; text-align: center; }
-        .sub-text { font-size: 0.9em;
+        .sub-text { font-size: 0.9em; color: #666; margin-top: 15px; display: block; background: #f9f9f9; padding: 10px; border-radius: 5px; }
+
+        /* 모바일 대응 */
+        @media (max-width: 768px) {
+            .nav-links { display: none; } /* 화면이 좁을 땐 상단 메뉴 숨김 */
+            header { padding: 50px 20px; }
+            h1 { font-size: 2em; }
+            .disease-list li { flex: 1 1 45%; } /* 모바일에서는 2칸씩 */
+        }
+    </style>
+</head>
+<body>
+
+<nav>
+    <a href="#" class="nav-logo">우성한의원</a>
+    <div class="nav-links">
+        <a href="#specialties">주력진료과목</a>
+        <a href="#chubyak">첩약보험</a>
+        <a href="#longtermcare">노인장기요양보험</a>
+        <a href="#location">위치안내</a>
+        <a href="#hours">진료시간</a>
+    </div>
+</nav>
+
+<header>
+    <h1>일산 우성한의원</h1>
+    <p class="slogan"><strong>정통 한의학과 첨단 진단 기기의 만남</strong><br>초음파 진단을 통한 정확한 원인 파악과 정성 어린 진료로 환자분의 건강한 내일을 약속합니다.</p>
+    <div class="btn-group">
+        <a href="https://blog.naver.com/herbdoc87" class="btn btn-blog" target="_blank">📝 고원장의 별별이야기</a>
+        <a href="tel:031-975-3075" class="btn btn-call">☎ 예약 및 전화 상담</a>
+    </div>
+</header>
+
+<div id="specialties" class="section">
+    <h2 class="section-title">주력 진료과목</h2>
+    <div class="card-container">
+        <div class="card">
+            <h3>💪 통증 및 근골격 클리닉</h3>
+            <p>초음파 기기를 활용한 정확한 진단으로 목, 어깨, 허리, 관절 등의 만성 통증과 디스크 질환을 치료합니다.</p>
+        </div>
+        <div class="card">
+            <h3>🌿 내과 클리닉</h3>
+            <p>기능성 소화불량, 역류성 식도염, 과민성 대장 증후군 등 잘 낫지 않는 만성 위장 질환의 근본 원인을 다스립니다.</p>
+        </div>
+        <div class="card">
+            <h3>🌸 여성 클리닉</h3>
+            <p>월경통, 생리불순, 갱년기 증후군, 산후풍 등 여성 고유의 질환을 따뜻하고 세심하게 치료합니다.</p>
+        </div>
+        <div class="card">
+            <h3>📚 수험생 클리닉</h3>
+            <p>학업 스트레스로 인한 만성 피로와 집중력 저하를 개선하여 최상의 컨디션을 유지하도록 돕습니다.</p>
+        </div>
+        <div class="card">
+            <h3>⚖️ 다이어트 클리닉</h3>
+            <p>개인별 체질에 맞춘 건강한 한약과 치료를 통해 요요 현상을 최소화하고 효과적인 체중 감량을 돕습니다.</p>
+        </div>
+    </div>
+</div>
+
+<div id="chubyak" class="section" style="background-color: #fff;">
+    <h2 class="section-title">건강보험 적용 첩약 (한약)</h2>
+    <p style="font-size: 1.1em; margin-bottom: 25px; line-height: 1.6;">
+        건강보험 적용 혜택이 확대되어, 이제 아래 <strong>6가지 주요 질환</strong>에 대해 본인 부담금을 크게 줄여 맞춤 한약을 처방받으실 수 있습니다.<br>
+        (※ 실비보험 가입자의 경우 추가 혜택이 가능할 수 있으니 내원 시 문의해 주세요.)
+    </p>
+    <ul class="disease-list">
+        <li>🤧 알레르기 비염</li>
+        <li>🍲 기능성 소화불량</li>
+        <li>🩸 월경통 (생리통)</li>
+        <li>💥 요추추간판탈출증<br>(허리디스크)</li>
+        <li>🎭 안면신경마비<br>(구안와사)</li>
+        <li>🧠 뇌혈관질환 후유증<br>(65세 이상)</li>
+    </ul>
+</div>
+
+<div id="longtermcare" class="section">
+    <h2 class="section-title">노인장기요양보험 의사소견서</h2>
+    <div class="card" style="flex: 1 1 100%;">
+        <h3 style="color: var(--primary);">어르신들을 위한 장기요양등급 신청 안내</h3>
+        <p style="font-size: 1.1em; line-height: 1.7;">
+            치매, 중풍, 파킨슨병 등 노인성 질환으로 인해 일상생활을 혼자 수행하기 어려우신 어르신들을 위해 <strong>노인장기요양등급 판정에 필요한 '의사소견서(한의사)'</strong>를 정성껏 발급해 드리고 있습니다.
+        </p>
+        <p style="font-size: 1.05em; color: #555; margin-top: 15px;">
+            등급 판정을 받으시면 요양보호사의 방문 요양, 방문 목욕, 주야간 보호 센터 이용 등 다양한 국가 지원 혜택을 받으실 수 있습니다. 소견서 발급 절차나 상담이 필요하시다면 언제든 한의원으로 문의해 주시기 바랍니다.
+        </p>
+    </div>
+</div>
+
+<div id="info" class="section" style="background-color: #f8f5f0; border-radius: 15px; margin-bottom: 50px;">
+    <div style="display: flex; gap: 40px; margin-bottom: 20px;">
+        <h2 id="location" class="section-title" style="margin-bottom: 0;">위치안내</h2>
+        <h2 id="hours" class="section-title" style="margin-bottom: 0;">진료시간</h2>
+    </div>
+    <div class="card-container">
+        <div class="card">
+            <h3>📍 오시는 길</h3>
+            <ul class="info-list">
+                <li><strong>주소</strong><br>경기도 고양시 일산서구 고양대로 726, 4층</li>
+                <li style="margin-top: 20px;"><strong>주차 안내</strong><br>일산제1공영주차장 (신한은행 옆) 이용</li>
+            </ul>
+            <span class="sub-text">※ 무인주차장 1시간 주차비를 한의원에서 정산해 드립니다.</span>
+        </div>
+
+        <div class="card">
+            <h3>⏰ 진료 시간</h3>
+            <ul class="info-list">
+                <li><span class="badge">평일</span> 09:30 ~ 19:00</li>
+                <li><span class="badge">목·토</span> 09:30 ~ 14:00 <span style="font-size: 0.9em; color:#d32f2f;">(점심시간 없음)</span></li>
+                <li><span class="badge">점심</span> 13:00 ~ 14:00</li>
+                <li><span class="badge">휴진</span> 일요일 및 공휴일</li>
+            </ul>
+            <span class="sub-text">※ 대체공휴일은 오후 5시까지 단축진료합니다.<br>※ <strong>대기 시간 단축을 위해 예약 후 방문을 권장합니다.</strong></span>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
