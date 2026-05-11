@@ -16,10 +16,18 @@
         .nav-links a { text-decoration: none; color: #333; font-weight: bold; font-size: 0.95em; transition: color 0.2s; }
         .nav-links a:hover { color: var(--primary); }
 
-        /* 2. 메인 배너 (히어로 섹션) */
-        header { background: var(--bg-light); padding: 80px 20px; text-align: center; border-bottom: 1px solid #e0e0e0; }
-        h1 { color: var(--primary); margin-bottom: 15px; font-size: 2.5em; }
-        .slogan { font-size: 1.2em; color: #555; max-width: 650px; margin: 0 auto 30px auto; line-height: 1.5; }
+       /* 2. 메인 배너 (히어로 섹션) - 배경 이미지 적용 */
+        header { 
+            /* 배경 사진(배경.jpg)을 깔고 그 위에 살짝 어두운 필터를 덮어 글씨가 잘 보이게 합니다 */
+            background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), url('배경.jpg'); 
+            background-size: cover; 
+            background-position: center; 
+            padding: 100px 20px; 
+            text-align: center; 
+        }
+        /* 배경이 어두워졌으므로 제목과 슬로건 글씨를 흰색으로 바꿉니다 */
+        header h1 { color: #ffffff; margin-bottom: 15px; font-size: 2.5em; text-shadow: 1px 1px 4px rgba(0,0,0,0.5); }
+        header .slogan { font-size: 1.2em; color: #f8f8f8; max-width: 650px; margin: 0 auto 30px auto; line-height: 1.5; text-shadow: 1px 1px 4px rgba(0,0,0,0.5); }
         
         /* 버튼 스타일 */
         .btn-group { margin-top: 25px; display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; }
