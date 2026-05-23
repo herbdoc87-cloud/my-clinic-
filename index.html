@@ -79,8 +79,15 @@
     </div>
 
     <script>
-        function checkClinicStatus() {
+       function checkClinicStatus() {
             const now = new Date();
+            
+            // ⬇️ 컴퓨터가 오늘 날짜를 인식하도록 이 부분이 꼭 필요합니다! ⬇️
+            const year = now.getFullYear();
+            const month = String(now.getMonth() + 1).padStart(2, '0');
+            const date = String(now.getDate()).padStart(2, '0');
+            const todayString = `${year}-${month}-${date}`; 
+            // ⬆️ ------------------------------------------------ ⬆️
             const day = now.getDay(); // 0:일요일, 1:월요일, ..., 4:목요일, 5:금요일, 6:토요일
             const hours = now.getHours();
             const minutes = now.getMinutes();
