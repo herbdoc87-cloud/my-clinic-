@@ -44,17 +44,17 @@
         .card:hover { transform: translateY(-5px); }
         .card h3 { color: var(--primary); margin-top: 0; font-size: 1.3em; margin-bottom: 15px; }
         
-        /* 첩약 질환 리스트 디자인 수정 (클릭 유도형 박스) */
+        /* 첩약 질환 리스트 디자인 수정 (박스 전체 클릭 및 마우스 효과 활성화) */
         .disease-list { display: flex; flex-wrap: wrap; gap: 10px; padding: 0; list-style: none; }
         .disease-list li { flex: 1 1 calc(33.333% - 10px); box-sizing: border-box; }
         .disease-list a { 
             display: flex; align-items: center; justify-content: center; 
-            background: #f0ebe1; padding: 15px; border-radius: 8px; 
+            background: #f0ebe1; padding: 18px 15px; border-radius: 8px; 
             text-align: center; font-weight: bold; color: var(--primary); 
             font-size: 1.05em; text-decoration: none; 
-            transition: background-color 0.2s, transform 0.2s; height: 100%; box-sizing: border-box;
+            transition: background-color 0.2s, transform 0.2s, box-shadow 0.2s; height: 100%; box-sizing: border-box;
         }
-        .disease-list a:hover { background: #e6dfd1; transform: translateY(-3px); box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
+        .disease-list a:hover { background: #e6dfd1; transform: translateY(-3px); box-shadow: 0 4px 8px rgba(0,0,0,0.1); }
         
         /* 안내 리스트 스타일 (진료시간 등) */
         .info-list { list-style: none; padding: 0; margin: 0; }
@@ -67,7 +67,7 @@
             .nav-links { display: none; } 
             header { padding: 50px 20px; }
             h1 { font-size: 2em; }
-            .disease-list li { flex: 1 1 45%; } 
+            .disease-list li { flex: 1 1 calc(50% - 10px); } 
         }
     </style>
 </head>
@@ -179,7 +179,7 @@
     <h1>일산 우성한의원</h1>
     <p class="slogan"><strong>정통 한의학과 첨단 진단 기기의 만남</strong><br>초음파 진단을 통한 정확한 원인 파악과 정성 어린 진료로 환자분의 건강한 내일을 약속합니다.</p>
     <div class="btn-group">
-        <a href="[https://blog.naver.com/herbdoc87](https://blog.naver.com/herbdoc87)" class="btn btn-blog" target="_blank">📝 우성한의원 블로그</a>
+        <a href="https://blog.naver.com/herbdoc87" class="btn btn-blog" target="_blank">📝 우성한의원 블로그</a>
         <a href="tel:031-975-3075" class="btn btn-call">☎ 한의원 전화 상담</a>
         <a href="sms:010-9720-3075" class="btn btn-call" style="background-color: #8d6e63;">📱 원장님 전화 문자상담</a> 
     </div>
@@ -226,12 +226,12 @@
         (※ 질환명을 클릭하시면 상세한 블로그 설명으로 이동합니다.)
     </p>
     <ul class="disease-list">
-        <li><a href="[https://blog.naver.com/herbdoc87/223593449663](https://blog.naver.com/herbdoc87/223593449663)" target="_blank">🤧 알레르기 비염</a></li>
-        <li><a href="[https://blog.naver.com/herbdoc87/223684669854](https://blog.naver.com/herbdoc87/223684669854)" target="_blank">🍲 기능성 소화불량</a></li>
-        <li><a href="[https://blog.naver.com/herbdoc87/222151551712](https://blog.naver.com/herbdoc87/222151551712)" target="_blank">🩸 월경통 (생리통)</a></li>
-        <li><a href="[https://blog.naver.com/herbdoc87/223521596681](https://blog.naver.com/herbdoc87/223521596681)" target="_blank">💥 요추추간판탈출증<br>(허리디스크)</a></li>
-        <li><a href="[https://blog.naver.com/herbdoc87/222152954328](https://blog.naver.com/herbdoc87/222152954328)" target="_blank">🎭 안면신경마비<br>(구안와사)</a></li>
-        <li><a href="[https://blog.naver.com/herbdoc87/222155076565](https://blog.naver.com/herbdoc87/222155076565)" target="_blank">🧠 뇌혈관질환 후유증</a></li>
+        <li><a href="https://blog.naver.com/herbdoc87/223593449663" target="_blank">🤧 알레르기 비염</a></li>
+        <li><a href="https://blog.naver.com/herbdoc87/223684669854" target="_blank">🍲 기능성 소화불량</a></li>
+        <li><a href="https://blog.naver.com/herbdoc87/222151551712" target="_blank">🩸 월경통 (생리통)</a></li>
+        <li><a href="https://blog.naver.com/herbdoc87/223521596681" target="_blank">💥 요추추간판탈출증<br>(허리디스크)</a></li>
+        <li><a href="https://blog.naver.com/herbdoc87/222152954328" target="_blank">🎭 안면신경마비<br>(구안와사)</a></li>
+        <li><a href="https://blog.naver.com/herbdoc87/222155076565" target="_blank">🧠 뇌혈관질환 후유증</a></li>
     </ul>
     <p class="sub-text" style="margin-top:20px;">※ 실비보험 가입자의 경우 추가 혜택이 가능할 수 있으니 내원 시 문의해 주세요.</p>
 </div>
@@ -268,7 +268,7 @@
     </div>
 
     <div style="margin-bottom: 25px; border-radius: 12px; overflow: hidden; border: 1px solid #e0e0e0; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
-        <iframe src="[https://maps.google.com/maps?q=경기도%20고양시%20일산서구%20고양대로%20726&t=&z=18&ie=UTF8&iwloc=&output=embed](https://maps.google.com/maps?q=경기도%20고양시%20일산서구%20고양대로%20726&t=&z=18&ie=UTF8&iwloc=&output=embed)" width="100%" height="400" style="border:0; display: block;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <iframe src="https://maps.google.com/maps?q=%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EA%B3%A0%EC%96%91%EC%8B%9C%20%EC%9D%BC%EC%82%B0%EC%84%9C%EA%B5%AC%20%EA%B3%A0%EC%96%91%EB%8C%80%EB%A1%9C%20726&t=&z=17&ie=UTF8&iwloc=&output=embed" width="100%" height="400" style="border:0; display: block;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
 
     <div class="card-container">
@@ -298,7 +298,7 @@
             
             <img src="카톡채널.jpg" alt="카카오톡 채널 QR코드" style="width: 140px; height: 140px; margin-bottom: 20px; border-radius: 12px; box-shadow: 0 2px 6px rgba(0,0,0,0.1);">
             
-            <a href="[http://pf.kakao.com/_xogxeFxd/friend](http://pf.kakao.com/_xogxeFxd/friend)" target="_blank" style="background-color: #FEE500; color: #191919; padding: 12px 15px; border-radius: 8px; text-decoration: none; font-weight: bold; font-size: 1.05em; display: flex; align-items: center; justify-content: center; width: 100%; max-width: 280px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); transition: opacity 0.2s;">
+            <a href="http://pf.kakao.com/_xogxeFxd/friend" target="_blank" style="background-color: #FEE500; color: #191919; padding: 12px 15px; border-radius: 8px; text-decoration: none; font-weight: bold; font-size: 1.05em; display: flex; align-items: center; justify-content: center; width: 100%; max-width: 280px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); transition: opacity 0.2s;">
                 <svg viewBox="0 0 32 32" width="20" height="20" style="margin-right: 8px; fill: #191919;"><path d="M16 4.64c-6.96 0-12.64 4.48-12.64 10.08 0 3.52 2.32 6.64 5.76 8.48l-1.44 5.44c-.16.48.32.8.72.56l6.32-4.24c1.28.24 2.56.4 3.92.4 6.96 0 12.64-4.48 12.64-10.08S22.96 4.64 16 4.64z"/></svg>
                 채널 친구 추가하고 혜택 알림 받기
             </a>
