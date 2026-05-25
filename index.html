@@ -18,14 +18,12 @@
 
        /* 2. 메인 배너 (히어로 섹션) - 배경 이미지 적용 */
         header { 
-            /* 배경 사진(배경.jpg)을 깔고 그 위에 살짝 어두운 필터를 덮어 글씨가 잘 보이게 합니다 */
             background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), url('배경.jpg'); 
             background-size: cover; 
             background-position: center; 
             padding: 100px 20px; 
             text-align: center; 
         }
-        /* 배경이 어두워졌으므로 제목과 슬로건 글씨를 흰색으로 바꿉니다 */
         header h1 { color: #ffffff; margin-bottom: 15px; font-size: 2.5em; text-shadow: 1px 1px 4px rgba(0,0,0,0.5); }
         header .slogan { font-size: 1.2em; color: #f8f8f8; max-width: 650px; margin: 0 auto 30px auto; line-height: 1.5; text-shadow: 1px 1px 4px rgba(0,0,0,0.5); }
         
@@ -46,9 +44,17 @@
         .card:hover { transform: translateY(-5px); }
         .card h3 { color: var(--primary); margin-top: 0; font-size: 1.3em; margin-bottom: 15px; }
         
-        /* 첩약 질환 리스트 */
+        /* 첩약 질환 리스트 디자인 수정 (클릭 유도형 박스) */
         .disease-list { display: flex; flex-wrap: wrap; gap: 10px; padding: 0; list-style: none; }
-        .disease-list li { background: #f0ebe1; padding: 15px; border-radius: 8px; flex: 1 1 calc(33.333% - 10px); text-align: center; font-weight: bold; color: var(--primary); font-size: 1.05em; box-sizing: border-box; }
+        .disease-list li { flex: 1 1 calc(33.333% - 10px); box-sizing: border-box; }
+        .disease-list a { 
+            display: flex; align-items: center; justify-content: center; 
+            background: #f0ebe1; padding: 15px; border-radius: 8px; 
+            text-align: center; font-weight: bold; color: var(--primary); 
+            font-size: 1.05em; text-decoration: none; 
+            transition: background-color 0.2s, transform 0.2s; height: 100%; box-sizing: border-box;
+        }
+        .disease-list a:hover { background: #e6dfd1; transform: translateY(-3px); box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
         
         /* 안내 리스트 스타일 (진료시간 등) */
         .info-list { list-style: none; padding: 0; margin: 0; }
@@ -58,117 +64,106 @@
 
         /* 모바일 대응 */
         @media (max-width: 768px) {
-            .nav-links { display: none; } /* 화면이 좁을 땐 상단 메뉴 숨김 */
+            .nav-links { display: none; } 
             header { padding: 50px 20px; }
             h1 { font-size: 2em; }
-            .disease-list li { flex: 1 1 45%; } /* 모바일에서는 2칸씩 */
+            .disease-list li { flex: 1 1 45%; } 
         }
     </style>
 </head>
 <body>
 
-<div style="background-color: #f8f5f0; border-bottom: 1px solid #e0e0e0; padding: 8px 20px; font-size: 0.88em; color: #555; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 5px;">
-        <div>📍 경기도 고양시 일산서구 고양대로 726, 4층</div>
+<div style="background-color: #f8f5f0; border-bottom: 1px solid #e0e0e0; padding: 8px 20px; font-size: 0.88em; color: #555; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 5px;">
+    <div>📍 경기도 고양시 일산서구 고양대로 726, 4층</div>
 
     <div style="display: flex; align-items: center; gap: 6px; font-weight: bold;">
-            <span>진료 주간 안내:</span>
-            <span id="clinic-status-badge" style="color: white; padding: 3px 8px; border-radius: 4px; font-size: 0.9em; font-weight: bold; transition: background-color 0.3s;">확인 중...</span>
-        </div>
-    
-        <div style="font-weight: bold;">📞 전화문의: <a href="tel:031-975-3075" style="color: #555; text-decoration: none;">031-975-3075</a></div>
+        <span>진료 안내:</span>
+        <span id="clinic-status-badge" style="color: white; padding: 3px 8px; border-radius: 4px; font-size: 0.9em; font-weight: bold; transition: background-color 0.3s;">확인 중...</span>
     </div>
 
-    <script>
-       function checkClinicStatus() {
-            const now = new Date();
-            
-            // ⬇️ 컴퓨터가 오늘 날짜를 인식하도록 이 부분이 꼭 필요합니다! ⬇️
-            const year = now.getFullYear();
-            const month = String(now.getMonth() + 1).padStart(2, '0');
-            const date = String(now.getDate()).padStart(2, '0');
-            const todayString = `${year}-${month}-${date}`; 
-            // ⬆️ ------------------------------------------------ ⬆️
-            const day = now.getDay(); // 0:일요일, 1:월요일, ..., 4:목요일, 5:금요일, 6:토요일
-            const hours = now.getHours();
-            const minutes = now.getMinutes();
-            const time = hours * 100 + minutes; // 예: 오후 1시 30분 -> 1330
-            
-            let statusText = "진료 종료";
-            let badgeColor = "#757575"; // 기본 회색 (진료종료)
+    <div style="font-weight: bold;">📞 전화문의: <a href="tel:031-975-3075" style="color: #555; text-decoration: none;">031-975-3075</a></div>
+</div>
 
-            // 🔴 1. 아예 쉬는 공휴일 날짜
-            const holidays = [
-                "2026-06-06", 
-                "2026-08-15", 
-                "2026-09-24", 
-                "2026-09-25", 
-                "2026-10-03", 
-                "2026-12-25"  
-            ];
+<script>
+    function checkClinicStatus() {
+        const now = new Date();
+        const year = now.getFullYear();
+        const month = String(now.getMonth() + 1).padStart(2, '0');
+        const date = String(now.getDate()).padStart(2, '0');
+        const todayString = `${year}-${month}-${date}`; 
 
-            // 🟠 2. 오후 2시까지 단축 진료하는 날짜 
-            const shortDays = [
-                "2026-06-03", 
-    
-            ];
+        const day = now.getDay(); 
+        const hours = now.getHours();
+        const minutes = now.getMinutes();
+        const time = hours * 100 + minutes; 
+        
+        let statusText = "진료 종료";
+        let badgeColor = "#757575"; 
 
-            // --- 시간 계산 로직 ---
-            if (holidays.includes(todayString)) {
-                // 공휴일인 경우
-                statusText = "공휴일 휴진";
-                badgeColor = "#d32f2f"; 
-                
-            } else if (shortDays.includes(todayString)) {
-                // 단축 진료하는 날인 경우 (오전 9:30 ~ 오후 5:00)
-                if (time >= 930 && time < 1700) {
-                    statusText = "단축 진료 중 (5시 마감)";
-                    badgeColor = "#2e7d32"; 
-                } else {
-                    statusText = "진료 종료";
-                    badgeColor = "#757575";
-                }
-            if (day === 0) { 
-                // 1. 일요일 휴진
-                statusText = "일요일 휴진";
-                badgeColor = "#d32f2f"; // 빨간색
-            } else if (day === 4 || day === 6) { 
-                // 2. 목요일 및 토요일 (오전 9:30 ~ 오후 2:00, 점심시간 없음)
-                if (time >= 930 && time < 1400) {
-                    statusText = "진료 중";
-                    badgeColor = "#2e7d32"; // 초록색
-                } else {
-                    statusText = "진료 종료";
-                    badgeColor = "#757575";
-                }
-            } else { 
-                // 3. 평일 월·화·수·금 (오전 9:30 ~ 오후 7:00, 점심 1~2시)
-                if (time >= 930 && time < 1300) {
-                    statusText = "진료 중";
-                    badgeColor = "#2e7d32";
-                } else if (time >= 1300 && time < 1400) {
-                    statusText = "점심 시간";
-                    badgeColor = "#f57c00"; // 주황색
-                } else if (time >= 1400 && time < 1900) {
-                    statusText = "진료 중";
-                    badgeColor = "#2e7d32";
-                } else {
-                    statusText = "진료 종료";
-                    badgeColor = "#757575";
-                }
+        // 🔴 1. 아예 쉬는 공휴일 날짜
+        const holidays = [
+            "2026-06-06", 
+            "2026-08-15", 
+            "2026-09-24", 
+            "2026-09-25", 
+            "2026-10-03", 
+            "2026-12-25"  
+        ];
+
+        // 🟠 2. 오후 2시까지 단축 진료하는 날짜 
+        const shortDays = [
+            "2026-06-03"
+        ];
+
+        // --- 시간 계산 로직 ---
+        if (holidays.includes(todayString)) {
+            statusText = "공휴일 휴진";
+            badgeColor = "#d32f2f"; 
+        } else if (shortDays.includes(todayString)) {
+            if (time >= 930 && time < 1400) {
+                statusText = "단축 진료 중";
+                badgeColor = "#2e7d32"; 
+            } else {
+                statusText = "진료 종료";
+                badgeColor = "#757575";
             }
-
-            // 화면에 반영
-            const badge = document.getElementById("clinic-status-badge");
-            if (badge) {
-                badge.innerText = statusText;
-                badge.style.backgroundColor = badgeColor;
+        } else if (day === 0) { 
+            statusText = "일요일 휴진";
+            badgeColor = "#d32f2f"; 
+        } else if (day === 4 || day === 6) { 
+            if (time >= 930 && time < 1400) {
+                statusText = "진료 중";
+                badgeColor = "#2e7d32"; 
+            } else {
+                statusText = "진료 종료";
+                badgeColor = "#757575";
+            }
+        } else { 
+            if (time >= 930 && time < 1300) {
+                statusText = "진료 중";
+                badgeColor = "#2e7d32";
+            } else if (time >= 1300 && time < 1400) {
+                statusText = "점심 시간";
+                badgeColor = "#f57c00"; 
+            } else if (time >= 1400 && time < 1900) {
+                statusText = "진료 중";
+                badgeColor = "#2e7d32";
+            } else {
+                statusText = "진료 종료";
+                badgeColor = "#757575";
             }
         }
 
-        // 페이지가 켜질 때 즉시 실행합니다
-        checkClinicStatus();
-    </script>
-    ```
+        // 화면에 반영
+        const badge = document.getElementById("clinic-status-badge");
+        if (badge) {
+            badge.innerText = statusText;
+            badge.style.backgroundColor = badgeColor;
+        }
+    }
+    checkClinicStatus();
+</script>
+
 <nav>
     <a href="#" class="nav-logo">우성한의원</a>
     <div class="nav-links">
@@ -184,8 +179,8 @@
     <h1>일산 우성한의원</h1>
     <p class="slogan"><strong>정통 한의학과 첨단 진단 기기의 만남</strong><br>초음파 진단을 통한 정확한 원인 파악과 정성 어린 진료로 환자분의 건강한 내일을 약속합니다.</p>
     <div class="btn-group">
-        <a href="https://blog.naver.com/herbdoc87" class="btn btn-blog" target="_blank">📝 우성한의원 블로그</a>
-        <a href="tel:031-975-3075" class="btn btn-call">☎  한의원 전화 상담</a>
+        <a href="[https://blog.naver.com/herbdoc87](https://blog.naver.com/herbdoc87)" class="btn btn-blog" target="_blank">📝 우성한의원 블로그</a>
+        <a href="tel:031-975-3075" class="btn btn-call">☎ 한의원 전화 상담</a>
         <a href="sms:010-9720-3075" class="btn btn-call" style="background-color: #8d6e63;">📱 원장님 전화 문자상담</a> 
     </div>
 </header>
@@ -205,7 +200,6 @@
             <h3>🌸 여성 클리닉</h3>
             <p>월경통, 생리불순, 갱년기 증후군, 산후풍 등 여성 고유의 질환을 따뜻하고 세심하게 치료합니다.</p>
         </div>
-
         <div class="card">
             <h3>👶 소아 클리닉 (성장 및 면역력)</h3>
             <p>성장판 초음파 검사를 통해 아이의 예상 키를 과학적으로 예측하고, 잦은 감기나 비염 등 약해진 면역력을 보강하여 바른 성장을 돕습니다.</p>
@@ -218,7 +212,6 @@
             <h3>⚖️ 다이어트 클리닉</h3>
             <p>개인별 체질에 맞춘 건강한 한약과 치료를 통해 요요 현상을 최소화하고 효과적인 체중 감량을 돕습니다.</p>
         </div>
-
         <div class="card">
             <h3>🚗 자동차보험 클리닉 (교통사고)</h3>
             <p>눈에 보이지 않는 미세한 손상과 어혈을 치료하여 후유증을 예방합니다. 본인 부담금 없이 침, 약침, 추나요법, 한약 등 맞춤 한방 치료를 받으실 수 있습니다.</p>
@@ -233,13 +226,13 @@
         (※ 질환명을 클릭하시면 상세한 블로그 설명으로 이동합니다.)
     </p>
     <ul class="disease-list">
-        <li><a href="https://blog.naver.com/herbdoc87/223593449663" target="_blank">🤧 알레르기 비염</a></li>
-        <li><a href="https://blog.naver.com/herbdoc87/223684669854" target="_blank">🍲 기능성 소화불량</a></li>
-        <li><a href="https://blog.naver.com/herbdoc87/222151551712" target="_blank">🩸 월경통 (생리통)</a></li>
-        <li><a href="https://blog.naver.com/herbdoc87/223521596681" target="_blank">💥 요추추간판탈출증<br>(허리디스크)</a></li>
-        <li><a href="https://blog.naver.com/herbdoc87/222152954328" target="_blank">🎭 안면신경마비<br>(구안와사)</a></li>
-        <li><a href="https://blog.naver.com/herbdoc87/222155076565" target="_blank">🧠 뇌혈관질환 후유증</a></li>
-        </ul>
+        <li><a href="[https://blog.naver.com/herbdoc87/223593449663](https://blog.naver.com/herbdoc87/223593449663)" target="_blank">🤧 알레르기 비염</a></li>
+        <li><a href="[https://blog.naver.com/herbdoc87/223684669854](https://blog.naver.com/herbdoc87/223684669854)" target="_blank">🍲 기능성 소화불량</a></li>
+        <li><a href="[https://blog.naver.com/herbdoc87/222151551712](https://blog.naver.com/herbdoc87/222151551712)" target="_blank">🩸 월경통 (생리통)</a></li>
+        <li><a href="[https://blog.naver.com/herbdoc87/223521596681](https://blog.naver.com/herbdoc87/223521596681)" target="_blank">💥 요추추간판탈출증<br>(허리디스크)</a></li>
+        <li><a href="[https://blog.naver.com/herbdoc87/222152954328](https://blog.naver.com/herbdoc87/222152954328)" target="_blank">🎭 안면신경마비<br>(구안와사)</a></li>
+        <li><a href="[https://blog.naver.com/herbdoc87/222155076565](https://blog.naver.com/herbdoc87/222155076565)" target="_blank">🧠 뇌혈관질환 후유증</a></li>
+    </ul>
     <p class="sub-text" style="margin-top:20px;">※ 실비보험 가입자의 경우 추가 혜택이 가능할 수 있으니 내원 시 문의해 주세요.</p>
 </div>
 
@@ -275,14 +268,14 @@
     </div>
 
     <div style="margin-bottom: 25px; border-radius: 12px; overflow: hidden; border: 1px solid #e0e0e0; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
-        <iframe src="https://maps.google.com/maps?q=경기도%20고양시%20일산서구%20고양대로%20726&t=&z=18&ie=UTF8&iwloc=&output=embed" width="100%" height="400" style="border:0; display: block;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <iframe src="[https://maps.google.com/maps?q=경기도%20고양시%20일산서구%20고양대로%20726&t=&z=18&ie=UTF8&iwloc=&output=embed](https://maps.google.com/maps?q=경기도%20고양시%20일산서구%20고양대로%20726&t=&z=18&ie=UTF8&iwloc=&output=embed)" width="100%" height="400" style="border:0; display: block;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
 
     <div class="card-container">
         <div class="card">
             <h3>📍 오시는 길</h3>
             <ul class="info-list">
-                <li><strong>주소</strong><br>경기도 고양시 일산서구 고양대로 726, 4층<br><span style="font-size: 0.9em; color:#666;"></span></li>
+                <li><strong>주소</strong><br>경기도 고양시 일산서구 고양대로 726, 4층</li>
                 <li style="margin-top: 15px;"><strong>주차 안내</strong><br>일산제1공영주차장 (지도상 건물우측 이용)</li>
             </ul>
             <span class="sub-text">※ 무인주차장 1시간 주차비를 한의원에서 정산해 드립니다.</span>
@@ -296,16 +289,16 @@
                 <li><span class="badge">점심</span> 13:00 ~ 14:00</li>
                 <li><span class="badge">휴진</span> 일요일 및 공휴일</li>
             </ul>
-            <span class="sub-text">※ 대체공휴일진료는 전화문의 바랍니다.<br>
+            <span class="sub-text">※ 대체공휴일진료는 전화문의 바랍니다.</span>
         </div>
    
-   <div class="card" style="text-align: center; display: flex; flex-direction: column; justify-content: center; align-items: center;">
+        <div class="card" style="text-align: center; display: flex; flex-direction: column; justify-content: center; align-items: center;">
             <h3>💬 카카오톡 상담 및 예약</h3>
             <p style="margin-bottom: 15px; font-size: 1.05em; color: #555;">스마트폰으로 아래 QR코드를 스캔하거나<br>노란색 버튼을 눌러 채널을 추가해 보세요.</p>
             
             <img src="카톡채널.jpg" alt="카카오톡 채널 QR코드" style="width: 140px; height: 140px; margin-bottom: 20px; border-radius: 12px; box-shadow: 0 2px 6px rgba(0,0,0,0.1);">
             
-            <a href="http://pf.kakao.com/_xogxeFxd/friend" target="_blank" style="background-color: #FEE500; color: #191919; padding: 12px 15px; border-radius: 8px; text-decoration: none; font-weight: bold; font-size: 1.05em; display: flex; align-items: center; justify-content: center; width: 100%; max-width: 280px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); transition: opacity 0.2s;">
+            <a href="[http://pf.kakao.com/_xogxeFxd/friend](http://pf.kakao.com/_xogxeFxd/friend)" target="_blank" style="background-color: #FEE500; color: #191919; padding: 12px 15px; border-radius: 8px; text-decoration: none; font-weight: bold; font-size: 1.05em; display: flex; align-items: center; justify-content: center; width: 100%; max-width: 280px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); transition: opacity 0.2s;">
                 <svg viewBox="0 0 32 32" width="20" height="20" style="margin-right: 8px; fill: #191919;"><path d="M16 4.64c-6.96 0-12.64 4.48-12.64 10.08 0 3.52 2.32 6.64 5.76 8.48l-1.44 5.44c-.16.48.32.8.72.56l6.32-4.24c1.28.24 2.56.4 3.92.4 6.96 0 12.64-4.48 12.64-10.08S22.96 4.64 16 4.64z"/></svg>
                 채널 친구 추가하고 혜택 알림 받기
             </a>
