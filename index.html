@@ -62,6 +62,17 @@
         .badge { background: #f0ebe1; color: var(--primary); padding: 4px 10px; border-radius: 20px; font-size: 0.85em; margin-right: 8px; font-weight: bold; display: inline-block; width: 45px; text-align: center; }
         .sub-text { font-size: 0.9em; color: #666; margin-top: 15px; display: block; background: #f9f9f9; padding: 10px; border-radius: 5px; }
 
+       /* 원장님 소개 섹션 디자인 */
+        .profile-container { display: flex; flex-wrap: wrap; gap: 40px; align-items: center; background: #fff; padding: 40px; border-radius: 12px; border: 1px solid #e0e0e0; box-shadow: 0 4px 6px rgba(0,0,0,0.05); box-sizing: border-box; }
+        .profile-img { flex: 1 1 250px; text-align: center; }
+        .profile-img img { width: 100%; max-width: 300px; border-radius: 12px; object-fit: cover; box-shadow: 0 4px 8px rgba(0,0,0,0.1); }
+        .profile-text { flex: 2 1 400px; }
+        .profile-text h3 { color: var(--primary); font-size: 1.5em; margin-top: 0; margin-bottom: 15px; }
+        .profile-text p { margin-bottom: 20px; font-size: 1.1em; line-height: 1.6; color: #444; }
+        .history-list { list-style: none; padding: 0; margin: 0; }
+        .history-list li { margin-bottom: 10px; font-size: 1.05em; position: relative; padding-left: 18px; }
+        .history-list li::before { content: '✔'; position: absolute; left: 0; color: var(--primary); font-size: 0.9em; }
+        
         /* 모바일 대응 */
         @media (max-width: 768px) {
             .nav-links { display: none; } 
@@ -167,7 +178,8 @@
 <nav>
     <a href="#" class="nav-logo">우성한의원</a>
     <div class="nav-links">
-        <a href="#specialties">주력진료과목</a>
+        <a href="#about">의료진 소개</a>
+        <a href="#specialties">진료과목</a>
         <a href="#chubyak">첩약보험</a>
         <a href="#longtermcare">노인장기요양보험</a>
         <a href="#location">위치안내</a>
@@ -185,8 +197,31 @@
     </div>
 </header>
 
+<!-- 메인 배너 끝 -->
+</header>
+
+<!-- ⬇️ 여기서부터 복사해서 붙여넣으세요 ⬇️ -->
+<div id="about" class="section">
+    <h2 class="section-title">의료진 소개</h2>
+    <div class="profile-container">
+        <div class="profile-img">
+            <!-- 사진 파일 이름은 원장님.jpg 로 맞춰주세요 -->
+            <img src="원장님.jpg" alt="고의현 대표원장">
+        </div>
+        <div class="profile-text">
+            <h3>대표원장 고의현</h3>
+            <p>안녕하세요. 일산 우성한의원 대표원장입니다.<br>환자분의 아픔에 깊이 공감하며, 초음파 등 첨단 기기를 활용한 정확한 진단과 정성 어린 한방 치료로 바른 건강을 되찾아 드리겠습니다.</p>
+            <ul class="history-list">
+                <li>대구한의대학교 한의학과 졸업 (학사)</li>
+                <li>현) 일산 우성한의원 대표원장</li>
+            
+            </ul>
+        </div>
+    </div>
+</div>
+    
 <div id="specialties" class="section">
-    <h2 class="section-title">주력 진료과목</h2>
+    <h2 class="section-title"> 진료과목</h2>
     <div class="card-container">
         <div class="card">
             <h3>💪 통증 및 근골격 클리닉</h3>
