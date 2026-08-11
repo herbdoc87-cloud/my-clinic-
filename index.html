@@ -84,6 +84,7 @@
 </head>
 <body>
 
+<!-- 실시간 진료 상태 바 정보 고정 -->
 <div style="background-color: #f8f5f0; border-bottom: 1px solid #e0e0e0; padding: 8px 20px; font-size: 0.88em; color: #555; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 5px;">
     <div>📍 경기도 고양시 일산서구 고양대로 726, 4층</div>
 
@@ -93,6 +94,11 @@
     </div>
 
     <div style="font-weight: bold;">📞 전화문의: <a href="tel:031-975-3075" style="color: #555; text-decoration: none;">031-975-3075</a></div>
+</div>
+
+<!-- 🏖️ 여름휴가 공지 배너 (휴가가 끝나고 진료에 복귀하시면 이 세 줄의 코드만 지워주시면 됩니다!) -->
+<div style="background-color: #e3f2fd; color: #0277bd; text-align: center; padding: 12px; font-weight: bold; font-size: 1.05em;">
+    🏖️ [여름휴가 안내] 8월 14일(금) ~ 8월 17일(월)은 한의원 휴가로 휴진합니다.
 </div>
 
 <script>
@@ -111,6 +117,14 @@
         let statusText = "진료 종료";
         let badgeColor = "#757575"; 
 
+        // 🏖️ 0. 여름휴가 날짜 (시간 로직에서 가장 먼저 확인하도록 추가했습니다)
+        const vacations = [
+            "2026-08-14",
+            "2026-08-15",
+            "2026-08-16",
+            "2026-08-17"
+        ];
+
         // 🔴 1. 아예 쉬는 공휴일 날짜
         const holidays = [
             "2026-06-06", 
@@ -127,7 +141,11 @@
         ];
 
         // --- 시간 계산 로직 ---
-        if (holidays.includes(todayString)) {
+        if (vacations.includes(todayString)) {
+            // 휴가 기간일 때 뜨는 뱃지 설정
+            statusText = "여름휴가 휴진";
+            badgeColor = "#0288d1"; // 시원한 파란색
+        } else if (holidays.includes(todayString)) {
             statusText = "공휴일 휴진";
             badgeColor = "#d32f2f"; 
         } else if (shortDays.includes(todayString)) {
@@ -173,6 +191,7 @@
         }
     }
     checkClinicStatus();
+</script>
 </script>
 
 <nav>
