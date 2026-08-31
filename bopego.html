@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>우성한의원 호흡기 클리닉 - 보폐고 엔오</title>
+    <style>
+        /* 기본 설정 */
+        :root { --primary: #5d4037; --bg-light: #f0f4f8; --accent: #0277bd; }
+        body { font-family: 'Apple SD Gothic Neo', sans-serif; line-height: 1.6; margin: 0; color: #333; background-color: #fafafa; scroll-behavior: smooth; }
+        
+        /* 1. 상단 네비게이션 바 */
+        nav { background: #fff; padding: 15px 20px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 100; display: flex; justify-content: space-between; align-items: center; }
+        .nav-logo { font-size: 1.3em; font-weight: bold; color: var(--primary); text-decoration: none; display: flex; align-items: center; gap: 8px; white-space: nowrap; }
+        .nav-logo img { height: 32px; width: 32px; border-radius: 50%; object-fit: cover; }
+        .nav-links { display: flex; gap: 20px; flex-wrap: wrap; justify-content: flex-end; }
+        .nav-links a { text-decoration: none; color: #333; font-weight: bold; font-size: 0.95em; transition: color 0.2s; }
+        .nav-links a:hover { color: var(--accent); }
+
+       /* 2. 메인 배너 (호흡기 특화) */
+        header { 
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('배경.jpg'); 
+            background-size: cover; 
+            background-position: center; 
+            padding: 100px 20px; 
+            text-align: center; 
+        }
+        header h1 { color: #ffffff; margin-bottom: 15px; font-size: 2.3em; text-shadow: 1px 1px 4px rgba(0,0,0,0.5); line-height: 1.3; }
+        header .slogan { font-size: 1.2em; color: #f8f8f8; max-width: 700px; margin: 0 auto 30px auto; line-height: 1.6; text-shadow: 1px 1px 4px rgba(0,0,0,0.5); }
+        .highlight-text { color: #4fc3f7; font-weight: bold; }
+        
+        /* 버튼 스타일 */
+        .btn-group { margin-top: 25px; display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; }
+        .btn { display: inline-block; padding: 12px 28px; text-decoration: none; border-radius: 8px; font-weight: bold; transition: all 0.2s; font-size: 1.05em; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+        .btn:hover { opacity: 0.9; transform: translateY(-2px); }
+        .btn-call { background: var(--primary); color: white; }
+        .btn-form { background: var(--accent); color: white; font-size: 1.1em; padding: 15px 35px; border-radius: 30px; animation: pulse 2s infinite; }
+        
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(2, 119, 189, 0.7); }
+            70% { box-shadow: 0 0 0 15px rgba(2, 119, 189, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(2, 119, 189, 0); }
+        }
+
+        /* 3. 컨텐츠 섹션 공통 스타일 */
+        .section { padding: 80px 20px; max-width: 900px; margin: auto; }
+        .section-title { color: #222; margin-bottom: 40px; border-bottom: 3px solid var(--accent); padding-bottom: 10px; display: inline-block; font-size: 1.6em; text-align: center; width: 100%; }
+        
+        /* 카드 레이아웃 */
+        .card-container { display: flex; flex-wrap: wrap; gap: 20px; }
+        .card { flex: 1 1 200px; border: 1px solid #e0e0e0; padding: 30px; border-radius: 12px; background: #fff; box-sizing: border-box; box-shadow: 0 4px 6px rgba(0,0,0,0.05); transition: transform 0.2s; text-align: center; }
+        .card:hover { transform: translateY(-5px); }
+        .card h3 { color: var(--accent); margin-top: 0; font-size: 1.25em; margin-bottom: 15px; }
+        .card p { color: #555; line-height: 1.5; margin-bottom: 0; }
+        
+        /* 성분 및 가격표 박스 */
+        .price-box { background: var(--bg-light); border: 2px solid #b3e5fc; border-radius: 12px; padding: 40px; text-align: center; margin-top: 30px; }
+        .price-box h3 { color: var(--accent); font-size: 1.5em; margin-top: 0; }
+        .price-item { font-size: 1.3em; font-weight: bold; color: #333; margin: 15px 0; }
+        .free-sample { display: inline-block; background: #d32f2f; color: white; padding: 8px 15px; border-radius: 20px; font-weight: bold; margin-top: 15px; font-size: 0.95em; }
+
+        /* 안내 리스트 스타일 */
+        .info-list { list-style: none; padding: 0; margin: 0; text-align: left; }
+        .info-list li { margin-bottom: 12px; line-height: 1.5; font-size: 1.05em; }
+        .badge { background: #e1f5fe; color: var(--accent); padding: 4px 10px; border-radius: 20px; font-size: 0.85em; margin-right: 8px; font-weight: bold; display: inline-block; width: 45px; text-align: center; }
+        .sub-text { font-size: 0.9em; color: #666; margin-top: 15px; display: block; background: #f9f9f9; padding: 10px; border-radius: 5px; text-align: left; }
+
+        @media (max-width: 768px) {
+            .nav-links { display: none; } 
+            header { padding: 60px 20px; }
+            header h1 { font-size: 1.8em; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- 실시간 진료 상태 바 -->
+<div style="background-color: #f8f5f0; border-bottom: 1px solid #e0e0e0; padding: 8px 20px; font-size: 0.88em; color: #555; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 5px;">
+    <div>📍 경기도 고양시 일산서구 고양대로 726, 4층</div>
+    <div style="display: flex; align-items: center; gap: 6px; font-weight: bold;">
+        <span>진료 안내:</span>
+        <span id="clinic-status-badge" style="color: white; padding: 3px 8px; border-radius: 4px; font-size: 0.9em; font-weight: bold; transition: background-color 0.3s;">확인 중...</span>
+    </div>
+    <div style="font-weight: bold;">📞 전화문의: <a href="tel:031-975-3075" style="color: #555; text-decoration: none;">031-975-3075</a></div>
+</div>
+
+<script>
+    function checkClinicStatus() {
+        const now = new Date();
+        const year = now.getFullYear();
+        const month = String(now.getMonth() + 1).padStart(2, '0');
+        const date = String(now.getDate()).padStart(2, '0');
+        const todayString = `${year}-${month}-${date}`; 
+        const day = now.getDay(); 
+        const hours = now.getHours();
+        const minutes = now.getMinutes();
+        const time = hours * 100 + minutes; 
+        
+        let statusText = "진료 종료";
+        let badgeColor = "#757575"; 
+        
+        const holidays = ["2026-06-06", "2026-08-15", "2026-09-24", "2026-09-25", "2026-10-03", "2026-12-25"];
+        const shortDays = ["2026-06-03"];
+
+        if (holidays.includes(todayString)) {
+            statusText = "공휴일 휴진"; badgeColor = "#d32f2f"; 
+        } else if (shortDays.includes(todayString)) {
+            if (time >= 930 && time < 1400) { statusText = "단축 진료 중"; badgeColor = "#2e7d32"; } 
+            else { statusText = "진료 종료"; badgeColor = "#757575"; }
+        } else if (day === 0) { 
+            statusText = "일요일 휴진"; badgeColor = "#d32f2f"; 
+        } else if (day === 4 || day === 6) { 
+            if (time >= 930 && time < 1400) { statusText = "진료 중"; badgeColor = "#2e7d32"; } 
+            else { statusText = "진료 종료"; badgeColor = "#757575"; }
+        } else { 
+            if (time >= 930 && time < 1300) { statusText = "진료 중"; badgeColor = "#2e7d32"; } 
+            else if (time >= 1300 && time < 1400) { statusText = "점심 시간"; badgeColor = "#f57c00"; } 
+            else if (time >= 1400 && time < 1900) { statusText = "진료 중"; badgeColor = "#2e7d32"; } 
+            else { statusText = "진료 종료"; badgeColor = "#757575"; }
+        }
+
+        const badge = document.getElementById("clinic-status-badge");
+        if (badge) { badge.innerText = statusText; badge.style.backgroundColor = badgeColor; }
+    }
+    checkClinicStatus();
+</script>
+
+<nav>
+    <a href="#" class="nav-logo">
+        <img src="우성한의원마크.jpg" alt="우성한의원 마크">
+        <span>우성한의원 호흡기 클리닉</span>
+    </a>
+    <div class="nav-links">
+        <a href="#about">보폐고 엔오란?</a>
+        <a href="#target">이런 분들께 추천</a>
+        <a href="#price">처방 안내</a>
+        <a href="#location">진료시간 및 위치</a>
+    </div>
+</nav>
+
+<!-- 메인 배너 (호흡기 집중) -->
+<header>
+    <h1>가수, 배우 등 연예인들이 사랑하는<br><span class="highlight-text">명품 호흡기 보약, 보폐고 엔오</span></h1>
+    <p class="slogan">인후·성대질환 | 비염·축농증 | 만성 기침·가래<br>지금까지 이런 약은 없었습니다. 호흡기 점막을 촉촉하게 적시고 염증을 완화하여 답답한 호흡기를 편안하게 튼튼하게 지켜드립니다.</p>
+    
+    <div class="btn-group">
+        <!-- ⬇️ 보폐고 엔오 간편접수 구글 폼 주소를 넣어주세요 ⬇️ -->
+        <a href="여기에_보폐고_구글폼_주소_넣기" target="_blank" class="btn btn-form">✨ 보폐고 엔오 비대면 처방 신청하기</a>
+    </div>
+    <div class="btn-group" style="margin-top: 15px;">
+        <a href="tel:031-975-3075" class="btn btn-call" style="background-color: #333;">☎ 전화 상담 031-975-3075</a>
+        <a href="http://pf.kakao.com/_xogxeFxd/chat" target="_blank" class="btn btn-call" style="background-color: #FEE500; color: #191919;">💬 카카오톡 문의 (샘플 신청)</a> 
+    </div>
+</header>
+
+<!-- 보폐고 엔오 설명 -->
+<div id="about" class="section">
+    <h2 class="section-title">보폐고 엔오(NO)의 특별함</h2>
+    <div class="card-container">
+        <div class="card">
+            <h3 style="font-size: 2em; margin-bottom: 5px;">🌬️</h3>
+            <h3>엔오(산화질소)의 힘</h3>
+            <p>혈관 및 기관지 순환을 촉진하고 만성 염증을 완화하여, 답답한 호흡기의 본질적인 환경을 개선합니다.</p>
+        </div>
+        <div class="card">
+            <h3 style="font-size: 2em; margin-bottom: 5px;">💧</h3>
+            <h3>점막 보습 및 강화</h3>
+            <p>마르고 갈라진 인후두와 기관지 점막을 촉촉하게 적셔주어, 외부 바이러스로부터 몸을 방어하는 힘을 기릅니다.</p>
+        </div>
+        <div class="card">
+            <h3 style="font-size: 2em; margin-bottom: 5px;">🌿</h3>
+            <h3>안전한 천연 한약재</h3>
+            <p>길경, 대청엽, 금은화, 연교, 맥문동, 오미자 등 순한 천연 성분으로 조제되어 부담 없이 매일 장기 복용할 수 있습니다.</p>
+        </div>
+    </div>
+</div>
+
+<!-- 추천 대상 -->
+<div id="target" class="section" style="background-color: #fff;">
+    <h2 class="section-title">이런 분들에게 적극 추천합니다</h2>
+    <div class="card-container" style="gap: 15px;">
+        <div class="card" style="border-left: 4px solid var(--accent); text-align: left;">
+            <h3 style="color: #333; font-size: 1.1em;">🗣️ 목을 자주 사용하시는 분</h3>
+            <p style="font-size: 0.95em;">말, 노래, 강의 등 직업적으로 성대와 인후두 혹사가 잦으신 분</p>
+        </div>
+        <div class="card" style="border-left: 4px solid var(--accent); text-align: left;">
+            <h3 style="color: #333; font-size: 1.1em;">😷 만성 기침·가래가 불편하신 분</h3>
+            <p style="font-size: 0.95em;">건조한 목, 떨어지지 않는 잔기침과 가래로 일상생활이 불편하신 분</p>
+        </div>
+        <div class="card" style="border-left: 4px solid var(--accent); text-align: left;">
+            <h3 style="color: #333; font-size: 1.1em;">🤧 비염·축농증이 있으신 분</h3>
+            <p style="font-size: 0.95em;">답답한 코 막힘, 노란 콧물, 후비루(코가 뒤로 넘어가는 증상)가 고민이신 분</p>
+        </div>
+        <div class="card" style="border-left: 4px solid var(--accent); text-align: left;">
+            <h3 style="color: #333; font-size: 1.1em;">🫁 호흡기 면역력이 약하신 분</h3>
+            <p style="font-size: 0.95em;">평소 폐, 기관지, 목이 약하여 감기에 자주 걸리고 오래가시는 분</p>
+        </div>
+    </div>
+</div>
+
+<!-- 가격 및 처방 안내 -->
+<div id="price" class="section">
+    <h2 class="section-title">처방 안내 및 비용</h2>
+    <p style="text-align: center; font-size: 1.1em; color: #555;">보폐고 엔오는 원장님의 꼼꼼한 진단(대면/비대면) 후 처방되는 맞춤 한약입니다.</p>
+    
+    <div class="price-box">
+        <h3>보폐고 엔오 처방 비용</h3>
+        <div class="price-item">15일분 (45포) : 170,000원</div>
+        <div class="price-item" style="color: var(--accent);">30일분 (90포) : 300,000원</div>
+        
+        <div class="free-sample">🎁 샘플 무료 체험 가능!</div>
+        <p style="margin-top: 20px; font-size: 0.95em; color: #666;">효과가 궁금하신 분은 카카오톡이나 전화로 편하게 샘플을 문의해 주세요.</p>
+    </div>
+    
+    <div style="text-align: center; margin-top: 40px;">
+        <a href="여기에_보폐고_구글폼_주소_넣기" target="_blank" class="btn btn-form" style="padding: 12px 30px; box-shadow: none; animation: none;">비대면 설문 작성하고 바로 처방받기 👉</a>
+    </div>
+</div>
+
+<!-- 위치 안내 및 진료시간 -->
+<div id="location" class="section" style="background-color: #f8f5f0; border-radius: 15px; margin-bottom: 50px;">
+    <div style="display: flex; gap: 40px; margin-bottom: 20px;">
+        <h2 class="section-title" style="margin-bottom: 0; text-align: left; width: auto; border-bottom: none; color: var(--primary);">오시는 길 및 진료시간</h2>
+    </div>
+
+    <div style="margin-bottom: 25px; border-radius: 12px; overflow: hidden; border: 1px solid #e0e0e0; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
+        <iframe src="https://maps.google.com/maps?q=%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EA%B3%A0%EC%96%91%EC%8B%9C%20%EC%9D%BC%EC%82%B0%EC%84%9C%EA%B5%AC%20%EA%B3%A0%EC%96%91%EB%8C%80%EB%A1%9C%20726&t=&z=17&ie=UTF8&iwloc=&output=embed" width="100%" height="400" style="border:0; display: block;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+
+    <div class="card-container">
+        <div class="card" style="text-align: left;">
+            <h3 style="color: var(--primary);">📍 오시는 길</h3>
+            <ul class="info-list">
+                <li><strong>주소</strong><br>경기도 고양시 일산서구 고양대로 726, 4층 우성한의원</li>
+                <li style="margin-top: 15px;"><strong>주차 안내</strong><br>일산제1공영주차장 (지도상 건물우측 이용)</li>
+            </ul>
+            <span class="sub-text">※ 무인주차장 1시간 주차비를 한의원에서 정산해 드립니다.</span>
+        </div>
+
+        <div class="card" style="text-align: left;">
+            <h3 style="color: var(--primary);">⏰ 진료 시간</h3>
+            <ul class="info-list">
+                <li><span class="badge" style="background: #f0ebe1; color: var(--primary);">평일</span> 09:30 ~ 19:00</li>
+                <li><span class="badge" style="background: #f0ebe1; color: var(--primary);">목·토</span> 09:30 ~ 14:00 <span style="font-size: 0.9em; color:#d32f2f;">(점심시간 없음)</span></li>
+                <li><span class="badge" style="background: #f0ebe1; color: var(--primary);">점심</span> 13:00 ~ 14:00</li>
+                <li><span class="badge" style="background: #f0ebe1; color: var(--primary);">휴진</span> 일요일 및 공휴일</li>
+            </ul>
+            <span class="sub-text">※ 대체공휴일진료는 전화문의 바랍니다.</span>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
