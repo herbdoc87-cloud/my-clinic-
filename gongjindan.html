@@ -53,6 +53,19 @@
         .card h3 { color: var(--primary); margin-top: 0; font-size: 1.25em; margin-bottom: 15px; }
         .card p { color: #555; line-height: 1.5; margin-bottom: 0; text-align: left; }
 
+        /* ★ 빠져있던 제품 카드 (공진단 3종 사진 포함) 디자인 코드 추가 ★ */
+        .product-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin-bottom: 40px; }
+        .product-card { background: #fff; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 10px rgba(0,0,0,0.05); border: 1px solid #e0e0e0; transition: transform 0.3s, box-shadow 0.3s; display: flex; flex-direction: column; }
+        .product-card:hover { transform: translateY(-8px); box-shadow: 0 10px 20px rgba(197, 155, 39, 0.15); border-color: var(--accent); }
+        .product-img-wrap { width: 100%; height: 220px; overflow: hidden; border-bottom: 3px solid var(--accent); background-color: #f0f0f0; } /* 사진이 없을 때 회색 배경이 보이도록 추가 */
+        .product-img-wrap img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s; }
+        .product-card:hover .product-img-wrap img { transform: scale(1.05); }
+        .product-info { padding: 25px 20px; flex-grow: 1; display: flex; flex-direction: column; }
+        .product-title { color: var(--primary); margin: 0 0 12px 0; font-size: 1.35em; text-align: center; font-weight: bold; }
+        .product-desc { font-size: 0.95em; color: #555; margin: 0; line-height: 1.6; word-break: keep-all; flex-grow: 1; text-align: center; }
+        .tag-wrap { display: flex; gap: 8px; justify-content: center; margin-bottom: 15px; }
+        .product-tag { background: #fcf9f2; color: var(--accent); font-size: 0.8em; padding: 4px 12px; border-radius: 20px; border: 1px solid #e5c158; font-weight: bold; }
+
         /* 안내 리스트 스타일 */
         .info-list { list-style: none; padding: 0; margin: 0; text-align: left; }
         .info-list li { margin-bottom: 12px; line-height: 1.5; font-size: 1.05em; }
@@ -89,10 +102,9 @@
 
 <header>
     <h1>황제에게 진상되던 보약 중의 보약<br><span class="highlight-text">우성한의원 명품 공진단</span></h1>
-    <p class="slogan">기혈을 뚫어주고 생명의 원천을 튼튼하게 하는 기적의 명약.<br>최고급 사향과 러시아산 녹용을 원장님이 직접 엄선하여, 단기간에 극도의 피로를 회복하고 저하된 면역력을 폭발적으로 끌어올립니다.</p>
+    <p class="slogan">기혈을 뚫어주고 생명의 원천을 튼튼하게 하는 기적의 명약.<br>최고급 사향과 러시아산 녹용을 고의현 원장이 직접 엄선하여, 단기간에 극도의 피로를 회복하고 저하된 면역력을 폭발적으로 끌어올립니다.</p>
     
     <div class="btn-group">
-        <!-- ⬇️ 공진단 비대면 접수 구글 폼 주소를 넣어주세요 ⬇️ -->
         <a href="https://forms.gle/XvkZgMmDFtL1YFXy8" target="_blank" class="btn btn-form">✨ 공진단 비대면 처방 신청하기</a>
     </div>
     <div class="btn-group" style="margin-top: 15px;">
@@ -100,14 +112,6 @@
         <a href="http://pf.kakao.com/_xogxeFxd/chat" target="_blank" class="btn btn-call" style="background-color: #FEE500; color: #191919;">💬 카카오톡 상담</a> 
     </div>
 </header>
-
-<!-- ⬇️ 사진 추가를 위한 공간 (필요시 활성화하세요) ⬇️ -->
-<!-- 
-<div style="text-align: center; background-color: #fcf9f2; padding: 50px 20px; border-bottom: 1px solid #e0e0e0;">
-    <h2 style="color: #c59b27; margin-top: 0; margin-bottom: 25px; font-size: 1.5em;">귀한 분을 위한 황실의 처방</h2>
-    <img src="공진단사진.jpg" alt="우성한의원 공진단" style="max-width: 100%; width: 400px; height: auto; border-radius: 12px; filter: drop-shadow(0 10px 15px rgba(0,0,0,0.15));">
-</div> 
--->
 
 <!-- 공진단 핵심 약재 소개 -->
 <div id="about" class="section">
@@ -209,7 +213,7 @@
                 <p class="product-desc">체력이 약한 수험생, 성장기 어린이의 체력 증진과 두뇌 발달, 집중력 향상에 도움을 줄 수 있도록 특별히 조제된 맞춤형 공진단입니다.</p>
             </div>
         </div>
-    </div
+    </div> <!-- ★ 이 부분이 </div 로 잘못 닫혀있던 것을 </div>로 정상 수정했습니다 ★ -->
         
     <div style="background: #fff; padding: 40px; border-radius: 12px; border: 1px solid #e0e0e0; box-shadow: 0 4px 10px rgba(0,0,0,0.05); text-align: center;">
         <h3 style="color: var(--primary); margin-top: 0; font-size: 1.4em;">우성한의원 공진단의 원칙</h3>
