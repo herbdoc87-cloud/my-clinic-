@@ -1,1 +1,212 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>우성한의원 명품 공진단</title>
+    <style>
+        /* 기본 설정 (공진단의 품격을 나타내는 딥레드 & 골드 톤) */
+        :root { --primary: #5c0000; --bg-light: #fcf9f2; --accent: #c59b27; }
+        body { font-family: 'Apple SD Gothic Neo', sans-serif; line-height: 1.6; margin: 0; color: #333; background-color: #fafafa; scroll-behavior: smooth; }
+        
+        /* 1. 상단 네비게이션 바 */
+        nav { background: #fff; padding: 15px 20px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 100; display: flex; justify-content: space-between; align-items: center; }
+        .nav-logo { font-size: 1.3em; font-weight: bold; color: var(--primary); text-decoration: none; display: flex; align-items: center; gap: 8px; white-space: nowrap; }
+        .nav-logo img { height: 32px; width: 32px; border-radius: 50%; object-fit: cover; }
+        .nav-links { display: flex; gap: 20px; flex-wrap: wrap; justify-content: flex-end; }
+        .nav-links a { text-decoration: none; color: #333; font-weight: bold; font-size: 0.95em; transition: color 0.2s; }
+        .nav-links a:hover { color: var(--accent); }
 
+       /* 2. 메인 배너 */
+        header { 
+            background: linear-gradient(rgba(20, 0, 0, 0.75), rgba(20, 0, 0, 0.75)), url('배경.jpg'); 
+            background-size: cover; 
+            background-position: center; 
+            padding: 100px 20px; 
+            text-align: center; 
+        }
+        header h1 { color: #f8e5b4; margin-bottom: 15px; font-size: 2.3em; text-shadow: 1px 1px 4px rgba(0,0,0,0.8); line-height: 1.3; }
+        header .slogan { font-size: 1.2em; color: #fff; max-width: 700px; margin: 0 auto 30px auto; line-height: 1.6; text-shadow: 1px 1px 4px rgba(0,0,0,0.8); }
+        .highlight-text { color: #ffd700; font-weight: bold; }
+        
+        /* 버튼 스타일 */
+        .btn-group { margin-top: 25px; display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; }
+        .btn { display: inline-block; padding: 12px 28px; text-decoration: none; border-radius: 8px; font-weight: bold; transition: all 0.2s; font-size: 1.05em; box-shadow: 0 4px 6px rgba(0,0,0,0.2); }
+        .btn:hover { opacity: 0.9; transform: translateY(-2px); }
+        .btn-call { background: var(--primary); color: white; }
+        .btn-form { background: var(--accent); color: #fff; font-size: 1.1em; padding: 15px 35px; border-radius: 30px; animation: pulse 2s infinite; border: 1px solid #e5c158; }
+        
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(197, 155, 39, 0.7); }
+            70% { box-shadow: 0 0 0 15px rgba(197, 155, 39, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(197, 155, 39, 0); }
+        }
+
+        /* 3. 컨텐츠 섹션 */
+        .section { padding: 80px 20px; max-width: 900px; margin: auto; }
+        .section-title { color: #222; margin-bottom: 40px; border-bottom: 3px solid var(--accent); padding-bottom: 10px; display: inline-block; font-size: 1.6em; text-align: center; width: 100%; }
+        
+        /* 카드 레이아웃 */
+        .card-container { display: flex; flex-wrap: wrap; gap: 20px; }
+        .card { flex: 1 1 200px; border: 1px solid #e0e0e0; padding: 30px; border-radius: 12px; background: #fff; box-sizing: border-box; box-shadow: 0 4px 6px rgba(0,0,0,0.05); transition: transform 0.2s; text-align: center; }
+        .card:hover { transform: translateY(-5px); border-color: var(--accent); }
+        .card h3 { color: var(--primary); margin-top: 0; font-size: 1.25em; margin-bottom: 15px; }
+        .card p { color: #555; line-height: 1.5; margin-bottom: 0; text-align: left; }
+
+        /* 안내 리스트 스타일 */
+        .info-list { list-style: none; padding: 0; margin: 0; text-align: left; }
+        .info-list li { margin-bottom: 12px; line-height: 1.5; font-size: 1.05em; }
+        .badge { background: #fcf9f2; color: var(--primary); padding: 4px 10px; border-radius: 20px; font-size: 0.85em; margin-right: 8px; font-weight: bold; display: inline-block; width: 45px; text-align: center; border: 1px solid #e0e0e0; }
+        .sub-text { font-size: 0.9em; color: #666; margin-top: 15px; display: block; background: #f9f9f9; padding: 10px; border-radius: 5px; text-align: left; }
+
+        @media (max-width: 768px) {
+            .nav-links { display: none; } 
+            header { padding: 60px 20px; }
+            header h1 { font-size: 1.8em; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- 상단 상태 바 -->
+<div style="background-color: #f8f5f0; border-bottom: 1px solid #e0e0e0; padding: 8px 20px; font-size: 0.88em; color: #555; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 5px;">
+    <div>📍 경기도 고양시 일산서구 고양대로 726, 4층</div>
+    <div style="font-weight: bold;">📞 전화문의: <a href="tel:031-975-3075" style="color: #555; text-decoration: none;">031-975-3075</a></div>
+</div>
+
+<nav>
+    <a href="#" class="nav-logo">
+        <img src="우성한의원마크.jpg" alt="우성한의원 마크">
+        <span>우성한의원 공진단 클리닉</span>
+    </a>
+    <div class="nav-links">
+        <a href="#about">공진단이란?</a>
+        <a href="#target">추천 대상</a>
+        <a href="#types">처방 안내</a>
+        <a href="#location">진료시간 및 위치</a>
+    </div>
+</nav>
+
+<header>
+    <h1>황제에게 진상되던 보약 중의 보약<br><span class="highlight-text">우성한의원 명품 공진단</span></h1>
+    <p class="slogan">기혈을 뚫어주고 생명의 원천을 튼튼하게 하는 기적의 명약.<br>최고급 사향과 러시아산 녹용을 원장님이 직접 엄선하여, 단기간에 극도의 피로를 회복하고 저하된 면역력을 폭발적으로 끌어올립니다.</p>
+    
+    <div class="btn-group">
+        <!-- ⬇️ 공진단 비대면 접수 구글 폼 주소를 넣어주세요 ⬇️ -->
+        <a href="여기에_공진단_구글폼_주소_넣기" target="_blank" class="btn btn-form">✨ 공진단 비대면 처방 신청하기</a>
+    </div>
+    <div class="btn-group" style="margin-top: 15px;">
+        <a href="tel:031-975-3075" class="btn btn-call" style="background-color: #333;">☎ 한의원 전화 문의</a>
+        <a href="http://pf.kakao.com/_xogxeFxd/chat" target="_blank" class="btn btn-call" style="background-color: #FEE500; color: #191919;">💬 카카오톡 상담</a> 
+    </div>
+</header>
+
+<!-- ⬇️ 사진 추가를 위한 공간 (필요시 활성화하세요) ⬇️ -->
+<!-- 
+<div style="text-align: center; background-color: #fcf9f2; padding: 50px 20px; border-bottom: 1px solid #e0e0e0;">
+    <h2 style="color: #c59b27; margin-top: 0; margin-bottom: 25px; font-size: 1.5em;">귀한 분을 위한 황실의 처방</h2>
+    <img src="공진단사진.jpg" alt="우성한의원 공진단" style="max-width: 100%; width: 400px; height: auto; border-radius: 12px; filter: drop-shadow(0 10px 15px rgba(0,0,0,0.15));">
+</div> 
+-->
+
+<!-- 공진단 핵심 약재 소개 -->
+<div id="about" class="section">
+    <h2 class="section-title">공진단을 완성하는 4대 고귀한 약재</h2>
+    <div class="card-container">
+        <div class="card" style="border-top: 4px solid var(--primary);">
+            <h3 style="text-align: center; font-size: 1.5em; margin-bottom: 5px;">🦌 사향</h3>
+            <p style="text-align: center; font-weight: bold; color: var(--accent); margin-bottom: 15px;">(막힌 기운을 뚫는 힘)</p>
+            <p>전신으로 약효를 빠르게 전달하며, 중추신경을 각성시키고 막힌 혈을 강력하게 뚫어주어 뇌 건강과 피로 회복에 탁월합니다.</p>
+        </div>
+        <div class="card" style="border-top: 4px solid var(--primary);">
+            <h3 style="text-align: center; font-size: 1.5em; margin-bottom: 5px;">🌿 녹용</h3>
+            <p style="text-align: center; font-weight: bold; color: var(--accent); margin-bottom: 15px;">(양기 보충의 핵심)</p>
+            <p>부족한 양기를 보충하고 뼈와 근육을 튼튼하게 하며, 조혈 작용을 돕고 쇠약해진 체력을 근본적으로 끌어올립니다.</p>
+        </div>
+        <div class="card" style="border-top: 4px solid var(--primary);">
+            <h3 style="text-align: center; font-size: 1.5em; margin-bottom: 5px;">🌺 당귀</h3>
+            <p style="text-align: center; font-weight: bold; color: var(--accent); margin-bottom: 15px;">(보혈과 순환)</p>
+            <p>혈액을 보충하고 순환을 개선하여 빈혈을 예방하며, 여성의 생리 불순 및 각종 부인과 질환 완화에 도움을 줍니다.</p>
+        </div>
+        <div class="card" style="border-top: 4px solid var(--primary);">
+            <h3 style="text-align: center; font-size: 1.5em; margin-bottom: 5px;">🍒 산수유</h3>
+            <p style="text-align: center; font-weight: bold; color: var(--accent); margin-bottom: 15px;">(신장 기능 강화)</p>
+            <p>신장과 간 기능에 활력을 불어넣어 정력을 증강시키고, 땀이 많이 나거나 소변이 잦은 증상을 다스립니다.</p>
+        </div>
+    </div>
+</div>
+
+<!-- 추천 대상 -->
+<div id="target" class="section" style="background-color: #fff;">
+    <h2 class="section-title">이런 분들께 공진단을 적극 권해드립니다</h2>
+    <div class="card-container" style="gap: 15px;">
+        <div class="card" style="border-left: 4px solid var(--accent); text-align: left;">
+            <h3 style="color: #333; font-size: 1.1em;">💼 만성 피로에 시달리는 직장인</h3>
+            <p style="font-size: 0.95em;">과도한 업무와 스트레스로 자고 일어나도 개운하지 않고 늘 무기력하신 분</p>
+        </div>
+        <div class="card" style="border-left: 4px solid var(--accent); text-align: left;">
+            <h3 style="color: #333; font-size: 1.1em;">📚 체력과 집중력이 필요한 수험생</h3>
+            <p style="font-size: 0.95em;">막판 스퍼트를 위한 두뇌 피로 개선 및 폭발적인 체력과 집중력이 필요한 분 (총명 공진단)</p>
+        </div>
+        <div class="card" style="border-left: 4px solid var(--accent); text-align: left;">
+            <h3 style="color: #333; font-size: 1.1em;">👵👴 연로하신 부모님 기력 회복</h3>
+            <p style="font-size: 0.95em;">면역력이 떨어져 잔병치레가 잦고 기력이 쇠하신 부모님을 위한 최고의 효도 선물</p>
+        </div>
+        <div class="card" style="border-left: 4px solid var(--accent); text-align: left;">
+            <h3 style="color: #333; font-size: 1.1em;">🏥 수술 및 큰 병 후 회복기 환자</h3>
+            <p style="font-size: 0.95em;">질환이나 수술 후 급격히 저하된 체력을 단기간에 빠르고 안전하게 보강해야 하는 분</p>
+        </div>
+    </div>
+</div>
+
+<!-- 처방 안내 및 폼 유도 -->
+<div id="types" class="section" style="background-color: #fcf9f2;">
+    <h2 class="section-title">환자분의 상태에 맞춘 맞춤 처방</h2>
+    <div style="background: #fff; padding: 40px; border-radius: 12px; border: 1px solid #e0e0e0; box-shadow: 0 4px 10px rgba(0,0,0,0.05); text-align: center;">
+        <h3 style="color: var(--primary); margin-top: 0; font-size: 1.4em;">우성한의원 공진단의 원칙</h3>
+        <p style="font-size: 1.1em; color: #555; margin-bottom: 20px;">엄격한 식약처 인증을 통과한 <strong>정식 수입 정품 사향</strong>과 최고 등급의 <strong>러시아산 녹용(원용)</strong>만을 고집합니다.</p>
+        
+        <p style="color: #666; font-size: 0.95em; line-height: 1.6; text-align: left; background: #fafafa; padding: 20px; border-radius: 8px;">
+            ※ 뛰어난 효능의 <strong style="color: var(--primary);">원방 사향 공진단</strong> 외에도, 일상적인 피로 회복을 위해 가격 부담을 낮추고 목향이나 침향으로 대체 조제한 <strong style="color: var(--primary);">목향/침향 공진단</strong>, 수험생을 위한 <strong style="color: var(--primary);">총명 공진단</strong> 등 진단 결과에 따라 1:1 맞춤 처방이 가능합니다.
+        </p>
+        
+        <div style="margin-top: 30px;">
+            <a href="여기에_공진단_구글폼_주소_넣기" target="_blank" class="btn btn-form" style="padding: 12px 30px; box-shadow: none; animation: none;">원장님과 비대면 상담 시작하기 👉</a>
+        </div>
+    </div>
+</div>
+
+<!-- 위치 안내 및 진료시간 -->
+<div id="location" class="section" style="background-color: #fff; border-radius: 15px; margin-bottom: 50px;">
+    <div style="display: flex; gap: 40px; margin-bottom: 20px;">
+        <h2 class="section-title" style="margin-bottom: 0; text-align: left; width: auto; border-bottom: none; color: var(--primary);">오시는 길 및 진료시간</h2>
+    </div>
+
+    <div style="margin-bottom: 25px; border-radius: 12px; overflow: hidden; border: 1px solid #e0e0e0;">
+        <iframe src="https://maps.google.com/maps?q=%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EA%B3%A0%EC%96%91%EC%8B%9C%20%EC%9D%BC%EC%82%B0%EC%84%9C%EA%B5%AC%20%EA%B3%A0%EC%96%91%EB%8C%80%EB%A1%9C%20726&t=&z=17&ie=UTF8&iwloc=&output=embed" width="100%" height="400" style="border:0; display: block;" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+
+    <div class="card-container">
+        <div class="card" style="text-align: left; border-color: #f0e6d2;">
+            <h3 style="color: var(--primary); text-align: left;">📍 오시는 길</h3>
+            <ul class="info-list">
+                <li><strong>주소</strong><br>경기도 고양시 일산서구 고양대로 726, 4층 우성한의원</li>
+                <li style="margin-top: 15px;"><strong>주차 안내</strong><br>일산제1공영주차장 (지도상 건물우측 이용)</li>
+            </ul>
+            <span class="sub-text">※ 무인주차장 1시간 주차비를 한의원에서 정산해 드립니다.</span>
+        </div>
+
+        <div class="card" style="text-align: left; border-color: #f0e6d2;">
+            <h3 style="color: var(--primary); text-align: left;">⏰ 진료 시간</h3>
+            <ul class="info-list">
+                <li><span class="badge">평일</span> 09:30 ~ 19:00</li>
+                <li><span class="badge">목·토</span> 09:30 ~ 14:00 <span style="font-size: 0.9em; color:#d32f2f;">(점심시간 없음)</span></li>
+                <li><span class="badge">점심</span> 13:00 ~ 14:00</li>
+                <li><span class="badge">휴진</span> 일요일 및 공휴일</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
