@@ -1,1 +1,214 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>우성한의원 산화질소(NO) 클리닉</title>
+    <style>
+        :root { 
+            --primary: #5d4037; 
+            --no-blue: #0288d1; 
+            --no-dark: #01579b;
+            --bg-light: #f4f9fd; 
+            --accent: #d32f2f;
+        }
+        body { font-family: 'Apple SD Gothic Neo', sans-serif; line-height: 1.6; margin: 0; color: #333; background-color: #fafafa; scroll-behavior: smooth; }
+        
+        /* 1. 네비게이션 바 */
+        nav { background: #fff; padding: 15px 20px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 100; display: flex; justify-content: space-between; align-items: center; }
+        .nav-logo { font-size: 1.3em; font-weight: bold; color: var(--primary); text-decoration: none; display: flex; align-items: center; gap: 8px; white-space: nowrap; }
+        .nav-logo img { height: 32px; width: 32px; border-radius: 50%; object-fit: cover; }
+        .nav-links { display: flex; gap: 20px; flex-wrap: wrap; justify-content: flex-end; }
+        .nav-links a { text-decoration: none; color: #333; font-weight: bold; font-size: 0.95em; transition: color 0.2s; }
+        .nav-links a:hover { color: var(--no-blue); }
 
+        /* 2. 메인 배너 */
+        header { 
+            background: linear-gradient(rgba(1, 40, 75, 0.75), rgba(1, 40, 75, 0.75)), url('배경.jpg'); 
+            background-size: cover; 
+            background-position: center; 
+            padding: 90px 20px; 
+            text-align: center; 
+        }
+        header h1 { color: #ffffff; margin-bottom: 15px; font-size: 2.3em; text-shadow: 1px 1px 4px rgba(0,0,0,0.7); line-height: 1.3; }
+        header .slogan { font-size: 1.2em; color: #e1f5fe; max-width: 750px; margin: 0 auto 30px auto; line-height: 1.6; }
+        .highlight-text { color: #4fc3f7; font-weight: bold; }
+        
+        /* 버튼 스타일 */
+        .btn-group { margin-top: 25px; display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; }
+        .btn { display: inline-block; padding: 12px 28px; text-decoration: none; border-radius: 8px; font-weight: bold; transition: all 0.2s; font-size: 1.05em; box-shadow: 0 4px 6px rgba(0,0,0,0.2); }
+        .btn:hover { opacity: 0.9; transform: translateY(-2px); }
+        .btn-call { background: var(--primary); color: white; }
+        .btn-form { background: var(--no-blue); color: white; font-size: 1.1em; padding: 15px 35px; border-radius: 30px; animation: pulse 2s infinite; }
+        
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(2, 136, 209, 0.7); }
+            70% { box-shadow: 0 0 0 15px rgba(2, 136, 209, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(2, 136, 209, 0); }
+        }
+
+        /* 3. 섹션 레이아웃 */
+        .section { padding: 70px 20px; max-width: 960px; margin: auto; }
+        .section-title { color: #222; margin-bottom: 40px; border-bottom: 3px solid var(--no-blue); padding-bottom: 10px; display: inline-block; font-size: 1.6em; text-align: center; width: 100%; }
+        
+        /* 카드 레이아웃 */
+        .card-container { display: flex; flex-wrap: wrap; gap: 20px; }
+        .card { flex: 1 1 280px; border: 1px solid #e0e0e0; padding: 25px; border-radius: 12px; background: #fff; box-sizing: border-box; box-shadow: 0 4px 6px rgba(0,0,0,0.05); transition: transform 0.2s; }
+        .card:hover { transform: translateY(-5px); border-color: var(--no-blue); }
+        .card h3 { color: var(--no-dark); margin-top: 0; font-size: 1.3em; margin-bottom: 12px; }
+        
+        /* 학술 포인트 박스 */
+        .science-box { background: var(--bg-light); border-left: 5px solid var(--no-blue); padding: 25px; border-radius: 8px; margin-bottom: 30px; }
+        
+        /* 자가진단 리스트 */
+        .check-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 15px; margin-top: 20px; }
+        .check-item { background: #fff; border: 1px solid #cfd8dc; padding: 15px; border-radius: 8px; display: flex; align-items: center; gap: 10px; font-size: 0.98em; }
+
+        @media (max-width: 768px) {
+            .nav-links { display: none; } 
+            header { padding: 60px 20px; }
+            header h1 { font-size: 1.8em; }
+        }
+    </style>
+</head>
+<body>
+
+<div style="background-color: #f8f5f0; border-bottom: 1px solid #e0e0e0; padding: 8px 20px; font-size: 0.88em; color: #555; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 5px;">
+    <div>📍 경기도 고양시 일산서구 고양대로 726, 4층</div>
+    <div style="font-weight: bold;">📞 전화문의: <a href="tel:031-975-3075" style="color: #555; text-decoration: none;">031-975-3075</a></div>
+</div>
+
+<nav>
+    <a href="#" class="nav-logo">
+        <img src="우성한의원마크.jpg" alt="우성한의원 마크">
+        <span>우성한의원 산화질소 클리닉</span>
+    </a>
+    <div class="nav-links">
+        <a href="#about">산화질소의 과학</a>
+        <a href="#self-check">결핍 자가진단</a>
+        <a href="#products">처방 라인업</a>
+        <a href="#location">위치 및 진료안내</a>
+    </div>
+</nav>
+
+<header>
+    <h1>혈관이 뚫리면 온몸이 젊어집니다<br><span class="highlight-text">우성한의원 산화질소(NO) 맞춤 처방</span></h1>
+    <p class="slogan">1998년 노벨 생리의학상이 입증한 생명의 기적 분자, 산화질소.<br>막힌 미세혈류와 림프 순환을 열어 세포 단위의 염증을 치유하고 활력을 되찾아 드립니다.</p>
+    
+    <div class="btn-group">
+        <a href="여기에_산화질소_상담_구글폼_주소_넣기" target="_blank" class="btn btn-form">✨ 산화질소 비대면 처방·상담 신청</a>
+    </div>
+    <div class="btn-group" style="margin-top: 15px;">
+        <a href="tel:031-975-3075" class="btn btn-call" style="background-color: #333;">☎ 전화 상담 031-975-3075</a>
+        <a href="http://pf.kakao.com/_xogxeFxd/chat" target="_blank" class="btn btn-call" style="background-color: #FEE500; color: #191919;">💬 카카오톡 문의</a> 
+    </div>
+</header>
+
+<!-- 산화질소 개요 및 학술 근거 -->
+<div id="about" class="section">
+    <h2 class="section-title">산화질소(Nitric Oxide), 왜 우리 몸에 필수일까요?</h2>
+    
+    <div class="science-box">
+        <h3 style="color: var(--no-dark); margin-top: 0;">🔬 1998년 노벨 생리의학상이 밝혀낸 '혈관 청소부'</h3>
+        <p style="margin-bottom: 0;">혈관 내피세포에서 분비되는 산화질소(NO)는 혈관 평활근을 이완시켜 직경을 확장하고 탄력을 복원시키는 인체 내 가장 핵심적인 신호전달 분자입니다. 혈액과 림프의 순환을 촉진하여 조직 세포 깊숙한 곳까지 산소와 영양분을 전달하고 노폐물을 배출합니다.</p>
+    </div>
+
+    <div class="card-container">
+        <div class="card">
+            <h3 style="text-align: center;">📉 40대 이후 급격한 감소</h3>
+            <p>20대에 100%이던 산화질소 생성력은 40대에 50%, 60대에는 산화 스트레스 등으로 실제 이용률이 25% 수준까지 떨어집니다. 이 부족해진 틈을 외부에서 안전하게 채워주는 것이 혈관 회춘의 핵심입니다.</p>
+        </div>
+        <div class="card">
+            <h3 style="text-align: center;">🛡️ 세포 재생과 항염증 작용</h3>
+            <p>미세 순환을 정상화하여 만성 염증 물질을 배출하고 조직 재생을 유도합니다. 뇌혈류 개선을 통한 인지기능 보호, 말초 신경 및 관절 통증의 근본 원인을 제어합니다.</p>
+        </div>
+        <div class="card">
+            <h3 style="text-align: center;">🌿 발효 대사체를 통한 안전성</h3>
+            <p>화학적 질산염 제제와 달리, 발효된 천연 엔오 대사체 기술과 한약재를 접목하여 약물 내성 없이 장기 복용에도 안전한 흡수율을 자랑합니다.</p>
+        </div>
+    </div>
+</div>
+
+<!-- 자가진단 체크리스트 -->
+<div id="self-check" class="section" style="background-color: #fff; border-radius: 12px; padding: 40px 20px;">
+    <h2 class="section-title">내 몸의 산화질소 부족 신호 [자가진단]</h2>
+    <p style="text-align: center; color: #666; margin-bottom: 25px;">아래 항목 중 <strong>3가지 이상</strong>에 해당하신다면 적극적인 산화질소 보충 관리가 필요합니다.</p>
+
+    <div class="check-grid">
+        <div class="check-item">🩺 혈압이 높거나 고지혈증·당뇨 진단을 받은 적이 있다.</div>
+        <div class="check-item">🧊 손발이 항상 차갑고 저리거나, 밤에 쥐가 자주 난다.</div>
+        <div class="check-item">😴 자고 일어나도 개운하지 않고 만성 피로가 지속된다.</div>
+        <div class="check-item">🧠 머리가 자주 멍하고 집중력과 기억력이 예전 같지 않다.</div>
+        <div class="check-item">👀 눈이 쉽게 침침해지고 뒷목이나 어깨가 뻣뻣하게 굳는다.</div>
+        <div class="check-item">🦵 다리나 얼굴이 자주 붓고 종아리 당김과 무거움이 심하다.</div>
+    </div>
+</div>
+
+<!-- 주요 제품 및 처방 라인업 -->
+<div id="products" class="section">
+    <h2 class="section-title">우성한의원 산화질소 맞춤 처방 라인업</h2>
+    
+    <div class="card-container">
+        <!-- 1. 보폐고 엔오 -->
+        <div class="card" style="border-top: 4px solid var(--no-blue);">
+            <span style="background: #e1f5fe; color: var(--no-dark); padding: 4px 8px; border-radius: 4px; font-size: 0.85em; font-weight: bold;">호흡기 보약</span>
+            <h3 style="margin-top: 10px;">보폐고 엔오(NO)</h3>
+            <p><strong>인후·성대질환 | 만성 기침·가래 | 비염·축농증</strong></p>
+            <p style="color: #666; font-size: 0.95em;">산화질소의 혈류 개선과 천연 점막 보호 한약재(길경, 맥문동, 오미자 등)가 결합하여 건조하고 마른 기관지 점막을 촉촉하게 적시고 염증을 가라앉힙니다.</p>
+            <a href="/bopego.html" target="_blank" class="btn" style="background: var(--no-blue); color: #fff; width: 100%; box-sizing: border-box; text-align: center; margin-top: 10px; font-size: 0.95em;">보폐고 엔오 자세히 보기 👉</a>
+        </div>
+
+        <!-- 2. 부종환 엔오 -->
+        <div class="card" style="border-top: 4px solid #2e7d32;">
+            <span style="background: #e8f5e9; color: #2e7d32; padding: 4px 8px; border-radius: 4px; font-size: 0.85em; font-weight: bold;">하지·전신 부종</span>
+            <h3 style="margin-top: 10px;">부종환 엔오(NO)</h3>
+            <p><strong>하지부종 | 종아리 당김 | 하지 저림 | 산후부종</strong></p>
+            <p style="color: #666; font-size: 0.95em;">전통 명방 당귀작약산을 기반으로 오약, 현호색과 산화질소를 결합했습니다. 하체 정체 수분을 배출하고 어혈을 풀어주어 무거운 종아리와 붓기를 가볍게 해소합니다.</p>
+            <a href="여기에_산화질소_상담_구글폼_주소_넣기" target="_blank" class="btn" style="background: #2e7d32; color: #fff; width: 100%; box-sizing: border-box; text-align: center; margin-top: 10px; font-size: 0.95em;">부종환 처방 상담하기 👉</a>
+        </div>
+
+        <!-- 3. 향후 출시 예정 신제품 안내 -->
+        <div class="card" style="border-top: 4px solid var(--primary);">
+            <span style="background: #efebe9; color: var(--primary); padding: 4px 8px; border-radius: 4px; font-size: 0.85em; font-weight: bold;">맞춤 처방 연구</span>
+            <h3 style="margin-top: 10px;">산화질소 신제품 라인업</h3>
+            <p><strong>세포 재생 | 만성 염증 | 혈관·림프 순환 개선</strong></p>
+            <p style="color: #666; font-size: 0.95em;">우성한의원은 최신 분자생물학적 근거를 바탕으로 산화질소(NO)와 전통 정통 한의학을 융합한 다양한 특화 처방을 연구·개발하고 있습니다[cite: 4, 6].</p>
+            <ul style="list-style: none; padding: 0; margin: 12px 0; font-size: 0.9em; color: #555; background: #fafafa; padding: 10px; border-radius: 6px;">
+                <li>• 환자별 증상과 체질에 맞춘 1:1 맞춤 진단</li>
+                <li>• 새로운 산화질소 특화 처방 순차 출시 예정</li>
+            </ul>
+            <a href="tel:031-975-3075" class="btn" style="background: var(--primary); color: #fff; width: 100%; box-sizing: border-box; text-align: center; margin-top: 5px; font-size: 0.95em;">산화질소 1:1 진료 문의 ☎</a>
+        </div>
+    </div>
+</div>
+
+<!-- 오시는 길 및 진료시간 -->
+<div id="location" class="section" style="background-color: #f8f5f0; border-radius: 15px; margin-bottom: 50px;">
+    <h2 class="section-title" style="margin-bottom: 20px; text-align: left; width: auto; border-bottom: none; color: var(--primary);">오시는 길 및 진료시간</h2>
+
+    <div style="margin-bottom: 25px; border-radius: 12px; overflow: hidden; border: 1px solid #e0e0e0;">
+        <iframe src="https://maps.google.com/maps?q=%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EA%B3%A0%EC%96%91%EC%8B%9C%20%EC%9D%BC%EC%82%B0%EC%84%9C%EA%B5%AC%20%EA%B3%A0%EC%96%91%EB%8C%80%EB%A1%9C%20726&t=&z=17&ie=UTF8&iwloc=&output=embed" width="100%" height="380" style="border:0; display: block;" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+
+    <div class="card-container">
+        <div class="card" style="text-align: left;">
+            <h3 style="color: var(--primary);">📍 오시는 길</h3>
+            <p style="margin: 0; font-size: 0.95em; line-height: 1.6;">
+                <strong>주소</strong>: 경기도 고양시 일산서구 고양대로 726, 4층 우성한의원<br>
+                <strong>주차 안내</strong>: 일산제1공영주차장 (지도상 건물 우측 이용 시 1시간 정산 지원)
+            </p>
+        </div>
+
+        <div class="card" style="text-align: left;">
+            <h3 style="color: var(--primary);">⏰ 진료 시간</h3>
+            <p style="margin: 0; font-size: 0.95em; line-height: 1.6;">
+                • <strong>평일</strong>: 09:30 ~ 19:00 (점심 13:00 ~ 14:00)<br>
+                • <strong>목·토</strong>: 09:30 ~ 14:00 (점심시간 없이 연속진료)<br>
+                • <strong>일요일 및 공휴일</strong>: 휴진
+            </p>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
