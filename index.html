@@ -76,9 +76,24 @@
         .history-list li { margin-bottom: 10px; font-size: 1.05em; position: relative; padding-left: 18px; }
         .history-list li::before { content: '✔'; position: absolute; left: 0; color: var(--primary); font-size: 0.9em; }
         
-        /* 모바일 대응 */
+        /* 햄버거 메뉴 버튼 (PC에서는 숨김) */
+        .menu-toggle { display: none; font-size: 1.8em; cursor: pointer; color: var(--primary); }
+
+        /* 📱 모바일 대응 (이 부분으로 덮어쓰세요) */
         @media (max-width: 768px) {
-            .nav-links { display: none; } 
+            .menu-toggle { display: block; }
+            nav { flex-wrap: wrap; }
+            .nav-links { 
+                display: none; /* 평소에는 숨김 */
+                flex-direction: column; 
+                width: 100%; 
+                background: #fff; 
+                padding: 10px 0;
+            }
+            .nav-links.active { display: flex; } /* 버튼 누르면 나타남 */
+            .nav-links a { padding: 15px 10px; border-bottom: 1px solid #f0f0f0; width: 100%; box-sizing: border-box; text-align: left; }
+            .nav-links a:last-child { border-bottom: none; }
+            
             header { padding: 50px 20px; }
             h1 { font-size: 2em; }
             .disease-list li { flex: 1 1 calc(50% - 10px); } 
@@ -176,21 +191,33 @@
     
     // 2. 1분(60000ms)마다 백그라운드에서 실시간 자동 갱신
     setInterval(checkClinicStatus, 60000);
+
+    // ⬇️ 모바일 햄버거 메뉴 동작 스크립트 (새로 추가) ⬇️
+    function toggleMenu() {
+        const navLinks = document.getElementById("navLinks");
+        if (window.innerWidth <= 768) {
+            navLinks.classList.toggle("active");
+        }
+    }
 </script>
 
 <nav>
-    <a href="#" class="nav-logo">
-    <img src="우성한의원마크.jpg" alt="우성한의원 마크">
-    <span>우성한의원</span>
-</a>
-    <div class="nav-links">
-        <a href="#about">의료진 소개</a>
-        <a href="#premium-clinics" style="color: #d32f2f;">특화처방·명품보약</a>
-        <a href="#specialties">진료과목</a>
-        <a href="#chubyak">첩약보험</a>
-        <a href="#longtermcare">노인장기요양보험</a>
-        <a href="#location">위치안내</a>
-        <a href="#hours">진료시간</a>
+   <a href="#" class="nav-logo">
+        <img src="우성한의원마크.jpg" alt="우성한의원 마크">
+        <span>우성한의원</span>
+    </a>
+    
+    <!-- ⬇️ 모바일용 햄버거 버튼 추가 ⬇️ -->
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+    
+    <div class="nav-links" id="navLinks">
+        <a href="#about" onclick="toggleMenu()">의료진 소개</a>
+        <a href="#premium-clinics" style="color: #d32f2f;" onclick="toggleMenu()">특화처방·맞춤보약</a> 
+        <a href="#specialties" onclick="toggleMenu()">진료과목</a>
+        <a href="#chubyak" onclick="toggleMenu()">첩약보험</a>
+        <a href="#longtermcare" onclick="toggleMenu()">노인장기요양보험</a>
+        <a href="#location" onclick="toggleMenu()">위치안내</a>
+        <a href="#hours" onclick="toggleMenu()">진료시간</a>
     </div>
 </nav>
 
