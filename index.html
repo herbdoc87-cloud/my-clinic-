@@ -115,80 +115,67 @@
         let statusText = "진료 종료";
         let badgeColor = "#757575"; 
 
-        // 🏖️ 0. 여름휴가 날짜 (시간 로직에서 가장 먼저 확인하도록 추가했습니다)
-        const vacations = [
-            "2026-08-14",
-            "2026-08-15",
-            "2026-08-16",
-            "2026-08-17"
-        ];
+        // 🗓️ 특별 진료 일정 관리 (객체 형태)
+        // 매년 이곳의 날짜와 텍스트만 업데이트하면 됩니다!
+        const specialDays = {
+            // 🏖️ 여름휴가 (파란색 배지)
+            "2026-08-14": { type: "closed", text: "여름휴가 휴진", color: "#0288d1" },
+            "2026-08-15": { type: "closed", text: "여름휴가 휴진", color: "#0288d1" },
+            "2026-08-16": { type: "closed", text: "여름휴가 휴진", color: "#0288d1" },
+            "2026-08-17": { type: "closed", text: "여름휴가 휴진", color: "#0288d1" },
+            
+            // 🔴 법정 공휴일 (빨간색 배지)
+            "2026-06-06": { type: "closed", text: "현충일 휴진", color: "#d32f2f" },
+            "2026-09-24": { type: "closed", text: "추석 연휴 휴진", color: "#d32f2f" },
+            "2026-09-25": { type: "closed", text: "추석 연휴 휴진", color: "#d32f2f" },
+            "2026-10-03": { type: "closed", text: "개천절 휴진", color: "#d32f2f" },
+            "2026-12-25": { type: "closed", text: "성탄절 휴진", color: "#d32f2f" },
 
-        // 🔴 1. 아예 쉬는 공휴일 날짜
-        const holidays = [
-            "2026-06-06", 
-            "2026-08-15", 
-            "2026-09-24", 
-            "2026-09-25", 
-            "2026-10-03", 
-            "2026-12-25"  
-        ];
-
-        // 🟠 2. 오후 2시까지 단축 진료하는 날짜 
-        const shortDays = [
-            "2026-06-03"
-        ];
+            // 🟠 단축 진료일 (초록/회색 배지)
+            "2026-06-03": { type: "short", text: "단축 진료 중" }
+        };
 
         // --- 시간 계산 로직 ---
-        if (vacations.includes(todayString)) {
-            // 휴가 기간일 때 뜨는 뱃지 설정
-            statusText = "여름휴가 휴진";
-            badgeColor = "#0288d1"; // 시원한 파란색
-        } else if (holidays.includes(todayString)) {
-            statusText = "공휴일 휴진";
-            badgeColor = "#d32f2f"; 
-        } else if (shortDays.includes(todayString)) {
-            if (time >= 930 && time < 1400) {
-                statusText = "단축 진료 중";
-                badgeColor = "#2e7d32"; 
-            } else {
-                statusText = "진료 종료";
-                badgeColor = "#757575";
+        if (specialDays[todayString]) {
+            const special = specialDays[todayString];
+            
+            if (special.type === "closed") {
+                statusText = special.text;
+                badgeColor = special.color;
+            } else if (special.type === "short") {
+                if (time >= 930 && time < 1400) {
+                    statusText = special.text;
+                    badgeColor = "#2e7d32"; 
+                } else {
+                    statusText = "진료 종료";
+                    badgeColor = "#757575";
+                }
             }
         } else if (day === 0) { 
-            statusText = "일요일 휴진";
-            badgeColor = "#d32f2f"; 
-        } else if (day === 4 || day === 6) { 
-            if (time >= 930 && time < 1400) {
-                statusText = "진료 중";
-                badgeColor = "#2e7d32"; 
-            } else {
-                statusText = "진료 종료";
-                badgeColor = "#757575";
-            }
-        } else { 
-            if (time >= 930 && time < 1300) {
-                statusText = "진료 중";
-                badgeColor = "#2e7d32";
-            } else if (time >= 1300 && time < 1400) {
-                statusText = "점심 시간";
-                badgeColor = "#f57c00"; 
-            } else if (time >= 1400 && time < 1900) {
-                statusText = "진료 중";
-                badgeColor = "#2e7d32";
-            } else {
-                statusText = "진료 종료";
-                badgeColor = "#757575";
-            }
+            statusText = "일요일 휴진"; badgeColor = "#d32f2f"; 
+        } else if (day === 4 || day === 6) { // 목, 토
+            if (time >= 930 && time < 1400) { statusText = "진료 중"; badgeColor = "#2e7d32"; } 
+            else { statusText = "진료 종료"; badgeColor = "#757575"; }
+        } else { // 평일
+            if (time >= 930 && time < 1300) { statusText = "진료 중"; badgeColor = "#2e7d32"; } 
+            else if (time >= 1300 && time < 1400) { statusText = "점심 시간"; badgeColor = "#f57c00"; } 
+            else if (time >= 1400 && time < 1900) { statusText = "진료 중"; badgeColor = "#2e7d32"; } 
+            else { statusText = "진료 종료"; badgeColor = "#757575"; }
         }
 
         // 화면에 반영
         const badge = document.getElementById("clinic-status-badge");
-        if (badge) {
-            badge.innerText = statusText;
-            badge.style.backgroundColor = badgeColor;
+        if (badge) { 
+            badge.innerText = statusText; 
+            badge.style.backgroundColor = badgeColor; 
         }
     }
+    
+    // 1. 페이지 접속 시 즉시 실행
     checkClinicStatus();
+    
+    // 2. 1분(60000ms)마다 백그라운드에서 실시간 자동 갱신
+    setInterval(checkClinicStatus, 60000);
 </script>
 
 <nav>
