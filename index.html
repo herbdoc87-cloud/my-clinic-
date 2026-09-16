@@ -11,7 +11,10 @@
         
         /* 1. 상단 네비게이션 바 */
         nav { background: #fff; padding: 15px 20px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 100; display: flex; justify-content: space-between; align-items: center; }
-        .nav-logo { font-size: 1.3em; font-weight: bold; color: var(--primary); text-decoration: none; min-width: 120px; }
+        /* ⬇️ 이 부분으로 덮어쓰기 하세요 ⬇️ */
+        .nav-logo { font-size: 1.3em; font-weight: bold; color: var(--primary); text-decoration: none; display: flex; align-items: center; gap: 8px; }
+        .nav-logo img { height: 32px; width: 32px; border-radius: 50%; object-fit: cover; }
+        /* ⬆️ 여기까지 ⬆️ */
         .nav-links { display: flex; gap: 20px; flex-wrap: wrap; justify-content: flex-end; }
         .nav-links a { text-decoration: none; color: #333; font-weight: bold; font-size: 0.95em; transition: color 0.2s; }
         .nav-links a:hover { color: var(--primary); }
@@ -190,7 +193,10 @@
 </script>
 
 <nav>
-    <a href="#" class="nav-logo">우성한의원</a>
+    <a href="#" class="nav-logo">
+    <img src="우성한의원마크.jpg" alt="우성한의원 마크">
+    <span>우성한의원</span>
+</a>
     <div class="nav-links">
         <a href="#about">의료진 소개</a>
         <a href="#premium-clinics" style="color: #d32f2f;">특화처방·명품보약</a>
