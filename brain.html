@@ -22,18 +22,18 @@
         .nav-links a { text-decoration: none; color: #333; font-weight: bold; font-size: 0.95em; transition: color 0.2s; }
         .nav-links a:hover { color: var(--secondary); }
 
-        /* 2. 메인 배너 */
+        /* 2. 메인 배너 (배경.jpg 적용) */
         header { 
-            background: linear-gradient(rgba(44, 62, 80, 0.8), rgba(44, 62, 80, 0.8)), url('건뇌클리닉배경.jpg'); 
+            background: linear-gradient(rgba(44, 62, 80, 0.5), rgba(44, 62, 80, 0.5)), url('배경.jpg'); 
             background-size: cover; 
             background-position: center; 
             padding: 100px 20px; 
             text-align: center; 
             color: #fff;
         }
-        header h1 { margin-bottom: 15px; font-size: 2.4em; text-shadow: 1px 1px 4px rgba(0,0,0,0.5); line-height: 1.3; }
-        header .slogan { font-size: 1.2em; color: #e8f8f5; max-width: 750px; margin: 0 auto 30px auto; line-height: 1.6; }
-        .highlight-text { color: #1abc9c; font-weight: bold; }
+        header h1 { margin-bottom: 15px; font-size: 2.4em; text-shadow: 2px 2px 5px rgba(0,0,0,0.7); line-height: 1.3; }
+        header .slogan { font-size: 1.2em; color: #e8f8f5; max-width: 750px; margin: 0 auto 30px auto; line-height: 1.6; text-shadow: 1px 1px 3px rgba(0,0,0,0.6); }
+        .highlight-text { color: #1abc9c; font-weight: bold; text-shadow: 1px 1px 4px rgba(0,0,0,0.8); }
         
         /* 버튼 스타일 */
         .btn-group { margin-top: 25px; display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; }
@@ -60,6 +60,7 @@
         .product-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin-bottom: 40px; }
         .product-card { background: #fff; border: 1px solid #e0e0e0; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.05); transition: transform 0.2s; display: flex; flex-direction: column; padding: 25px;}
         .product-card:hover { transform: translateY(-5px); border-color: var(--secondary); box-shadow: 0 8px 15px rgba(0,0,0,0.1); }
+        .product-img { width: 100%; max-height: 250px; object-fit: cover; border-radius: 8px; margin: 15px 0; border: 1px solid #eee; }
         .product-info h3 { color: var(--primary); margin-top: 0; margin-bottom: 10px; font-size: 1.3em; }
         .tag { display: inline-block; background: #e8f8f5; color: var(--secondary); padding: 4px 8px; border-radius: 4px; font-size: 0.85em; font-weight: bold; margin-bottom: 12px; }
         .tag-purple { display: inline-block; background: #f4ecf7; color: var(--tertiary); padding: 4px 8px; border-radius: 4px; font-size: 0.85em; font-weight: bold; margin-bottom: 12px; }
@@ -160,6 +161,8 @@
             <div class="product-info">
                 <span class="tag">내부 순환·영양 공급</span>
                 <h3>명품 건뇌환 (健腦丸)</h3>
+                <!-- 건뇌환 사진 추가 -->
+                <img src="건뇌환.jpg" alt="건뇌환" class="product-img">
                 <p style="color: #444; font-size: 0.95em; margin-bottom: 15px;">동의보감 및 전통 한의학의 지혜를 바탕으로, 뇌신경 활성화와 인지 기능 개선에 도움을 줄 수 있는 엄선된 한약재로 조제된 환약입니다.</p>
                 <ul>
                     <li><strong>뇌혈류 개선:</strong> 뇌로 가는 혈액 순환을 도와 머리를 맑게 유지하는 데 도움을 줍니다.</li>
@@ -175,6 +178,8 @@
             <div class="product-info">
                 <span class="tag-purple">외부 이완·구조적 회복</span>
                 <h3 style="color: var(--tertiary);">두개천골태반약침</h3>
+                <!-- 두개천골태반약침 사진 추가 -->
+                <img src="두개천골태반약침.jpg" alt="두개천골태반약침 시술" class="product-img">
                 <p style="color: #444; font-size: 0.95em; margin-bottom: 15px;">치매 환자나 난치성 질환자의 얇아진 두피에 거름을 주고, 딱딱하게 굳은 두개골 봉합선의 움직임을 회복시키는 특수 약침입니다.</p>
                 <ul>
                     <li><strong>고농축 태반 성분:</strong> 자하거(태반) 성분 95% 이상에 사물탕과 이진탕(어성초, 하수오, 당귀 등) 약재가 추가로 배합되었습니다.</li>
