@@ -133,22 +133,17 @@
         // 🗓️ 특별 진료 일정 관리 (객체 형태)
         // 매년 이곳의 날짜와 텍스트만 업데이트하면 됩니다!
         const specialDays = {
-            // 🏖️ 여름휴가 (파란색 배지)
-            "2026-08-14": { type: "closed", text: "여름휴가 휴진", color: "#0288d1" },
-            "2026-08-15": { type: "closed", text: "여름휴가 휴진", color: "#0288d1" },
-            "2026-08-16": { type: "closed", text: "여름휴가 휴진", color: "#0288d1" },
-            "2026-08-17": { type: "closed", text: "여름휴가 휴진", color: "#0288d1" },
-            
-            // 🔴 법정 공휴일 (빨간색 배지)
-            "2026-06-06": { type: "closed", text: "현충일 휴진", color: "#d32f2f" },
+        // 🔴 법정 공휴일 및 연휴 (빨간색 배지)
             "2026-09-24": { type: "closed", text: "추석 연휴 휴진", color: "#d32f2f" },
             "2026-09-25": { type: "closed", text: "추석 연휴 휴진", color: "#d32f2f" },
+            "2026-09-26": { type: "closed", text: "추석 연휴 휴진", color: "#d32f2f" },
             "2026-10-03": { type: "closed", text: "개천절 휴진", color: "#d32f2f" },
+            "2026-10-09": { type: "closed", text: "한글날 휴진", color: "#d32f2f" },
             "2026-12-25": { type: "closed", text: "성탄절 휴진", color: "#d32f2f" },
 
-            // 🟠 단축 진료일 (초록/회색 배지)
-            "2026-06-03": { type: "short", text: "단축 진료 중" }
-        };
+            // 🟢 공휴일/대체휴일 정상 진료 강조 (초록색 배지)
+            "2026-10-05": { type: "normal", text: "대체휴일 정상진료" }
+        };   
 
         // --- 시간 계산 로직 ---
         if (specialDays[todayString]) {
