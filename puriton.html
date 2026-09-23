@@ -76,12 +76,13 @@
 </head>
 <body>
 
-<!-- 상단 안내 바 -->
-<div style="background-color: #f8f5f0; border-bottom: 1px solid #e0e0e0; padding: 8px 20px; font-size: 0.88em; color: #555; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 5px;">
+<!-- 상단 안내 바 (수정됨: div 태그 닫기 오류 해결) -->
+<div style="background-color: #f8f5f0; border-bottom: 1px solid #e0e0e0; padding: 8px 20px; font-size: 0.88em; color: #555; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px;">
     <div style="display: flex; align-items: center; gap: 10px;">
         <!-- 메인홈피 이동 버튼 -->
         <a href="https://ilsan-wsclinic.vercel.app/" style="background-color: #1a4f76; color: white; padding: 4px 10px; border-radius: 4px; text-decoration: none; font-weight: bold; font-size: 0.9em; box-shadow: 0 1px 3px rgba(0,0,0,0.1);">🏠 메인홈피 가기</a>
-    <div>📍 경기도 고양시 일산서구 고양대로 726, 4층 우성한의원</div>
+        <div>📍 경기도 고양시 일산서구 고양대로 726, 4층 우성한의원</div>
+    </div>
     <div style="font-weight: bold;">📞 전화문의: <a href="tel:031-975-3075" style="color: #555; text-decoration: none;">031-975-3075</a></div>
 </div>
 
@@ -233,3 +234,11 @@
 
 </body>
 </html>
+```<br>
+<FollowUp>
+
+<ElicitationsGroup message="추가로 웹페이지를 개선하시겠습니까?">
+  <Elicitation label="모바일 환경 탐색 메뉴 고정하기" query="모바일에서 볼 때 상단 메뉴(nav)가 스크롤을 내려도 항상 화면 위에 떠있게(고정되게) CSS를 수정해 줘."/>
+  <Elicitation label="카카오맵 길찾기 링크 추가" query="오시는 길 텍스트나 지도 아이콘을 누르면 카카오맵 길찾기로 바로 연결되는 코드를 만들어 줘."/>
+</ElicitationsGroup>
+</FollowUp>
