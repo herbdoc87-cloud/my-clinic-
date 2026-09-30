@@ -17,7 +17,7 @@
         .nav-links a { text-decoration: none; color: #333; font-weight: bold; font-size: 0.95em; transition: color 0.2s; }
         .nav-links a:hover { color: var(--accent); }
 
-        /* 🌟 추가된 부분: 상단 메인홈페이지 이동 버튼 스타일 */
+        /* 상단 메인홈페이지 이동 버튼 스타일 */
         .btn-home-nav {
             display: inline-flex;
             align-items: center;
@@ -60,21 +60,22 @@
         }
 
         /* 3. 컨텐츠 섹션 */
-        .section { padding: 80px 20px; max-width: 900px; margin: auto; }
+        .section { padding: 80px 20px; max-width: 1000px; margin: auto; }
         .section-title { color: #222; margin-bottom: 40px; border-bottom: 3px solid var(--accent); padding-bottom: 10px; display: inline-block; font-size: 1.6em; text-align: center; width: 100%; }
         
         /* 카드 레이아웃 */
         .card-container { display: flex; flex-wrap: wrap; gap: 20px; }
-        .card { flex: 1 1 200px; border: 1px solid #e0e0e0; padding: 30px; border-radius: 12px; background: #fff; box-sizing: border-box; box-shadow: 0 4px 6px rgba(0,0,0,0.05); transition: transform 0.2s; text-align: center; }
+        .card { flex: 1 1 220px; border: 1px solid #e0e0e0; padding: 30px; border-radius: 12px; background: #fff; box-sizing: border-box; box-shadow: 0 4px 6px rgba(0,0,0,0.05); transition: transform 0.2s; text-align: left; }
         .card:hover { transform: translateY(-5px); border-color: var(--accent); }
-        .card h3 { color: var(--primary); margin-top: 0; font-size: 1.25em; margin-bottom: 15px; }
-        .card p { color: #555; line-height: 1.5; margin-bottom: 0; text-align: left; }
+        .card h3 { color: var(--primary); margin-top: 0; font-size: 1.25em; margin-bottom: 15px; text-align: center; }
+        .card p { color: #555; line-height: 1.6; margin-bottom: 0; font-size: 0.95em; }
 
         /* 성분 하이라이트 박스 */
         .ingredient-box { background: #3e2723; color: #fff; border-radius: 12px; padding: 40px; text-align: center; margin-bottom: 30px; }
         .ingredient-box h3 { color: #ffd700; margin-top: 0; font-size: 1.5em; }
         .ingredient-list { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; margin-top: 20px; }
-        .ingredient-item { background: rgba(255,255,255,0.1); padding: 10px 20px; border-radius: 30px; font-weight: bold; border: 1px solid rgba(255,215,0,0.3); }
+        .ingredient-item { background: rgba(255,255,255,0.1); padding: 15px 25px; border-radius: 15px; font-weight: bold; border: 1px solid rgba(255,215,0,0.3); font-size: 1.1em; line-height: 1.4; }
+        .ingredient-desc { display: block; font-size: 0.75em; color: #e0e0e0; font-weight: normal; margin-top: 5px; }
 
         /* 안내 리스트 스타일 */
         .info-list { list-style: none; padding: 0; margin: 0; text-align: left; }
@@ -82,7 +83,7 @@
         .badge { background: #fdfaf6; color: var(--primary); padding: 4px 10px; border-radius: 20px; font-size: 0.85em; margin-right: 8px; font-weight: bold; display: inline-block; width: 45px; text-align: center; border: 1px solid #e0e0e0; }
         .sub-text { font-size: 0.9em; color: #666; margin-top: 15px; display: block; background: #f9f9f9; padding: 10px; border-radius: 5px; text-align: left; }
 
-        /* 🌟 추가된 부분: 하단 푸터 영역 스타일 */
+        /* 하단 푸터 영역 스타일 */
         .site-footer {
             background-color: var(--primary);
             color: #fff;
@@ -95,6 +96,7 @@
             .nav-links { display: none; } 
             header { padding: 60px 20px; }
             header h1 { font-size: 1.8em; }
+            .ingredient-item { width: 40%; }
         }
     </style>
 </head>
@@ -115,17 +117,17 @@
         <a href="#about">경옥고란?</a>
         <a href="#research">현대적 효능</a>
         <a href="#location">진료시간 및 위치</a>
-        <!-- 🌟 추가된 부분: 상단 네비게이션 메인 홈페이지 버튼 -->
+        <!-- 상단 네비게이션 메인 홈페이지 버튼 -->
         <a href="https://ilsan-wsclinic.vercel.app/" class="btn-home-nav">🏠 본원 홈페이지</a>
     </div>
 </nav>
 
 <header>
     <h1>동의보감이 첫 번째로 꼽은 명방<br><span class="highlight-text">우성한의원 맞춤 경옥고</span></h1>
-    <p class="slogan">정(精)과 수(髓)를 불려 주고 원기를 보하는 생명의 약.<br>최상급 생지황, 인삼, 복령, 봉밀을 정성껏 달여 호흡기를 윤택하게 하고 만성 피로와 쇠약해진 체력을 근본적으로 회복시킵니다.</p>
+    <p class="slogan">"정(精)과 수(髓)를 불려 주고 원기를 보하여 늙은이를 젊어지게 하고 모든 허손증을 보하며 온갖 병을 낫게 한다."<br>최상급 생지황, 인삼, 복령, 봉밀을 오랜 시간 정성껏 달여 쇠약해진 체력을 근본적으로 회복시킵니다.</p>
     
     <div class="btn-group">
-        <!-- ⬇️ 경옥고 비대면 접수 구글 폼 주소를 넣어주세요 ⬇️ -->
+        <!-- ⬇️ 경옥고 비대면 접수 구글 폼 주소 -->
         <a href="https://forms.gle/2PFKXBr21LsD2i347" target="_blank" class="btn btn-form">✨ 경옥고 비대면 처방 신청하기</a>
     </div>
     <div class="btn-group" style="margin-top: 15px;">
@@ -134,7 +136,7 @@
     </div>
 </header>
 
-<!-- ⬇️ 경옥고 3가지 제형 사진 영역 ⬇️ -->
+<!-- 경옥고 3가지 제형 사진 영역 -->
 <div style="text-align: center; background-color: #fdfaf6; padding: 60px 20px; border-bottom: 1px solid #e0e0e0;">
     <h2 style="color: #b8860b; margin-top: 0; margin-bottom: 40px; font-size: 1.6em;">다양한 제형으로 만나는 우성한의원 경옥고</h2>
     
@@ -161,7 +163,6 @@
         </div>
     </div>
 </div>
-<!-- ⬆️ 3가지 제형 사진 영역 끝 ⬆️ -->    
     
 <!-- 경옥고 소개 -->
 <div id="about" class="section">
@@ -169,43 +170,41 @@
         <h3>경옥고 4대 핵심 구성</h3>
         <p style="color: #ccc; margin-bottom: 0;">물 한 방울 넣지 않고 고귀한 약재만을 오랜 시간 정성으로 달여냅니다.</p>
         <div class="ingredient-list">
-            <div class="ingredient-item">생지황 (청열양혈)</div>
-            <div class="ingredient-item">인삼 (대보원기)</div>
-            <div class="ingredient-item">복령 (건비녕심)</div>
-            <div class="ingredient-item">봉밀 (윤조)</div>
+            <div class="ingredient-item">생지황 <span class="ingredient-desc">청열량혈 / 양음생진</span></div>
+            <div class="ingredient-item">인삼 <span class="ingredient-desc">대보원기 / 고탈생진</span></div>
+            <div class="ingredient-item">복령 <span class="ingredient-desc">이수삼습 / 건비녕심</span></div>
+            <div class="ingredient-item">봉밀 <span class="ingredient-desc">보중 / 윤조</span></div>
         </div>
     </div>
 
     <h2 class="section-title">역사가 증명하는 보약 중의 보약</h2>
     <p style="text-align: center; font-size: 1.1em; color: #444; margin-bottom: 30px;">
-        <strong>"늙은이를 젊어지게 하고 모든 허손증을 보하며 온갖 병을 낫게 한다."</strong><br>
-        동의보감은 경옥고를 음액을 보태어 폐를 윤택하게 하고, 허로성 해수와 마른기침을 치료하는 최고의 명방으로 기록하고 있습니다.
+        동의보감은 경옥고를 <strong>음액을 보태어 폐를 윤택하게 하고, 허로성 해수와 마른기침을 치료하는 최고의 명방</strong>으로 기록하고 있습니다. 소화기 질환과 신허(腎虛)로 인한 쇠약에도 널리 쓰여온 자양강장제입니다.
     </p>
 </div>
 
-<!-- 최신 연구 결과 효능 -->
+<!-- 최신 연구 결과 효능 업데이트 -->
 <div id="research" class="section" style="background-color: #fff;">
     <h2 class="section-title">최신 연구로 과학이 입증한 경옥고의 4대 효능</h2>
     <div class="card-container" style="gap: 15px;">
         <div class="card" style="border-top: 4px solid var(--accent);">
-            <h3 style="text-align: center;">🫁 호흡기 보호 및 강화</h3>
-            <p>미세먼지나 만성폐쇄성폐질환(COPD)으로 인한 폐 손상을 억제하고 염증 세포의 침윤을 막아 폐를 보호하는 효과가 확인되었습니다.</p>
+            <h3>🫁 호흡기 보호 및 폐 손상 예방</h3>
+            <p>미세먼지로 인한 폐 내피세포의 활성 산소를 감소시키며, 만성폐쇄성폐질환(COPD) 모델에서 염증세포의 침윤과 조직학적 폐 손상 정도를 유의하게 억제하는 효과가 입증되었습니다.</p>
         </div>
         <div class="card" style="border-top: 4px solid var(--accent);">
-            <h3 style="text-align: center;">💪 만성 피로 및 체력 회복</h3>
-            <p>항산화 물질과 발린, 아르기닌 등 아미노산이 풍부하여 근육의 글리코겐을 유지시키고 운동 수행 능력 향상 및 강력한 피로 해소 효과를 냅니다.</p>
+            <h3>💪 만성 피로 및 운동 수행능력 향상</h3>
+            <p>발린, 아르기닌, 카르노신 등 아미노산이 풍부하여 근육 내 글리코겐을 늘려줍니다. 실제 축구선수 대상 연구에서 최대산소섭취량을 늘리고 운동 후 심박수 회복을 유의하게 향상시켰습니다.</p>
         </div>
         <div class="card" style="border-top: 4px solid var(--accent);">
-            <h3 style="text-align: center;">🧠 뇌신경 보호 및 노화 방지</h3>
-            <p>파킨슨병 등 퇴행성 뇌 질환 모델에서 신경 독성을 완화하고 인지 장애를 개선하여 노년층의 건강한 삶을 지키는 단초를 제공합니다.</p>
+            <h3>🧠 뇌신경 보호 및 인지기능 개선</h3>
+            <p>파킨슨병 및 허혈성 뇌 손상 동물모델 연구에서 도파민성 뉴런의 소실을 억제하고 뇌 허혈로 유발된 인지 장애를 상당 부분 완화하여, 노인 환자의 장복 시 퇴행성 뇌 질환 예방에 도움을 줍니다.</p>
         </div>
         <div class="card" style="border-top: 4px solid var(--accent);">
-            <h3 style="text-align: center;">🛡️ 강력한 면역력 증강</h3>
-            <p>약화된 신체에서 염증을 유발하는 인자는 감소시키고, 면역 세포를 자극하는 유익한 인자는 증가시켜 본연의 방어력을 높여줍니다.</p>
+            <h3>🛡️ 면역세포 활성화 및 방어력 증강</h3>
+            <p>항암제 투여로 면역이 약화된 상태에서 면역세포를 자극하는 사이토카인(IFN-r, IL-2 등)은 늘려주고, 염증성 반응을 유발하는 사이토카인은 감소시켜 신체 본연의 면역 방어력을 높여줍니다.</p>
         </div>
     </div>
     
-    <!-- 폼 유도 배너 (코드 수정: target="_blank" 오타 교정) -->
     <div style="text-align: center; margin-top: 50px;">
         <a href="https://forms.gle/2PFKXBr21LsD2i347" target="_blank" class="btn btn-form" style="padding: 12px 30px; box-shadow: none; animation: none;">경옥고 처방 간편 설문 작성하기 👉</a>
     </div>
@@ -243,7 +242,7 @@
     </div>
 </div>
 
-<!-- 🌟 추가된 부분: 하단 푸터 (메인 홈페이지 이동 배너) -->
+<!-- 하단 푸터 (메인 홈페이지 이동 배너) -->
 <div class="site-footer">
     <h3 style="margin-top: 0; color: #f8e5b4; font-size: 1.5em;">우성한의원의 더 많은 진료를 확인해 보세요</h3>
     <p style="margin-bottom: 25px; font-size: 1.05em; color: #e0e0e0;">추나요법, 두개천골요법, 초음파 약침 등 특화 진료 안내</p>
