@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>우성한의원 - 한의사 방문진료 및 노인장기요양 클리닉</title>
+    <style>
+        :root { 
+            --primary: #4e342e; /* 따뜻하고 신뢰감 있는 브라운 */
+            --secondary: #2e7d32; /* 안정감을 주는 그린 */
+            --bg-light: #fdfaf6; 
+            --text-dark: #333;
+        }
+        body { font-family: 'Apple SD Gothic Neo', sans-serif; line-height: 1.6; margin: 0; color: var(--text-dark); background-color: #fafafa; scroll-behavior: smooth; }
+        
+        /* 1. 상단 네비게이션 */
+        nav { background: #fff; padding: 15px 20px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 100; display: flex; justify-content: space-between; align-items: center; }
+        .nav-logo { font-size: 1.3em; font-weight: bold; color: var(--primary); text-decoration: none; display: flex; align-items: center; gap: 8px; }
+        .nav-logo img { height: 32px; width: 32px; border-radius: 50%; object-fit: cover; }
+        .nav-links { display: flex; gap: 20px; flex-wrap: wrap; justify-content: flex-end; }
+        .nav-links a { text-decoration: none; color: #333; font-weight: bold; font-size: 0.95em; transition: color 0.2s; }
+        .nav-links a:hover { color: var(--secondary); }
+
+        /* 2. 메인 배너 */
+        header { 
+            background: linear-gradient(rgba(78, 52, 46, 0.7), rgba(78, 52, 46, 0.7)), url('방문진료배경.jpg'); 
+            background-size: cover; 
+            background-position: center; 
+            padding: 100px 20px; 
+            text-align: center; 
+            color: #fff;
+        }
+        header h1 { margin-bottom: 15px; font-size: 2.4em; text-shadow: 1px 1px 4px rgba(0,0,0,0.5); line-height: 1.3; }
+        header .slogan { font-size: 1.2em; color: #e8f5e9; max-width: 750px; margin: 0 auto 30px auto; line-height: 1.6; }
+        .highlight-text { color: #81c784; font-weight: bold; }
+        
+        /* 버튼 스타일 */
+        .btn-group { margin-top: 25px; display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; }
+        .btn { display: inline-block; padding: 12px 28px; text-decoration: none; border-radius: 8px; font-weight: bold; transition: all 0.2s; font-size: 1.05em; box-shadow: 0 4px 6px rgba(0,0,0,0.2); }
+        .btn:hover { opacity: 0.9; transform: translateY(-2px); }
+        .btn-call { background: #fff; color: var(--primary); }
+        .btn-form { background: var(--secondary); color: white; padding: 15px 35px; border-radius: 30px; animation: pulse 2s infinite; }
+        
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(46, 125, 50, 0.7); }
+            70% { box-shadow: 0 0 0 15px rgba(46, 125, 50, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(46, 125, 50, 0); }
+        }
+
+        /* 3. 컨텐츠 섹션 */
+        .section { padding: 80px 20px; max-width: 1000px; margin: auto; }
+        .section-title { color: var(--primary); margin-bottom: 40px; border-bottom: 3px solid var(--secondary); padding-bottom: 10px; display: inline-block; font-size: 1.6em; text-align: center; width: 100%; }
+        
+        /* 서비스 카드 그리드 */
+        .service-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; margin-bottom: 40px; }
+        .service-card { background: #fff; border: 1px solid #e0e0e0; border-radius: 12px; padding: 30px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); transition: transform 0.2s; }
+        .service-card:hover { transform: translateY(-5px); border-color: var(--secondary); box-shadow: 0 8px 15px rgba(0,0,0,0.1); }
+        .service-card h3 { color: var(--primary); margin-top: 0; font-size: 1.3em; margin-bottom: 15px; display: flex; align-items: center; gap: 8px; }
+        .service-card p { color: #555; line-height: 1.6; font-size: 1.05em; margin-bottom: 15px; }
+        .service-card ul { padding-left: 20px; margin: 0; color: #444; font-size: 0.95em; }
+        .service-card li { margin-bottom: 8px; }
+
+        /* 절차 안내 스텝 */
+        .step-container { display: flex; flex-wrap: wrap; gap: 15px; justify-content: center; margin-top: 30px; }
+        .step-box { flex: 1 1 200px; background: #fff; padding: 25px 15px; text-align: center; border-radius: 12px; border: 1px solid #d7ccc8; position: relative; }
+        .step-num { background: var(--secondary); color: white; width: 30px; height: 30px; border-radius: 50%; display: inline-flex; justify-content: center; align-items: center; font-weight: bold; margin-bottom: 15px; }
+        .step-box h4 { margin: 0 0 10px 0; color: var(--primary); font-size: 1.1em; }
+        .step-box p { margin: 0; font-size: 0.9em; color: #666; }
+
+        /* 대상자 안내 박스 */
+        .target-box { background: var(--bg-light); border-radius: 12px; padding: 40px; margin-bottom: 50px; border: 1px solid #d7ccc8; }
+        .target-box h3 { color: var(--primary); margin-top: 0; text-align: center; font-size: 1.4em; margin-bottom: 25px; }
+        .target-list { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; }
+        .target-item { background: #fff; padding: 15px; border-radius: 8px; text-align: center; font-weight: bold; color: #444; box-shadow: 0 2px 4px rgba(0,0,0,0.05); }
+
+        footer { background: #333; color: #bbb; padding: 25px 20px; text-align: center; font-size: 0.9em; line-height: 1.5; }
+
+        @media (max-width: 768px) {
+            .nav-links { display: none; } 
+            header { padding: 60px 20px; }
+            header h1 { font-size: 1.8em; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- 상단 안내 바 -->
+<div style="background-color: #f8f5f0; border-bottom: 1px solid #e0e0e0; padding: 8px 20px; font-size: 0.88em; color: #555; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 5px;">
+    <div>📍 경기도 고양시 일산서구 고양대로 726, 4층 우성한의원</div>
+    <div style="font-weight: bold;">📞 방문진료 상담: <a href="tel:031-975-3075" style="color: #555; text-decoration: none;">031-975-3075</a></div>
+</div>
+
+<nav>
+    <a href="index.html" class="nav-logo">
+        <img src="우성한의원마크.jpg" alt="우성한의원 마크">
+        <span>우성한의원</span>
+    </a>
+    <div class="nav-links">
+        <a href="#services">제공 서비스</a>
+        <a href="#target">진료 대상</a>
+        <a href="#procedure">신청 절차</a>
+    </div>
+</nav>
+
+<header>
+    <h1>거동이 불편하신 어르신을 위해<br><span class="highlight-text">한의사가 직접 찾아갑니다</span></h1>
+    <p class="slogan">우성한의원은 환자분이 머무시는 가장 편안한 공간인 가정이나 요양시설로 방문하여 정성 어린 맞춤 한의 진료를 제공합니다.</p>
+    
+    <div class="btn-group">
+        <a href="https://docs.google.com/forms/d/14xLwWFknlXXHgCsBC-lFdYvV1XNXGk9gG18bVtHog5M/edit" target="_blank" class="btn btn-form">🏡 한의사 방문진료 간편 신청</a>
+        <a href="http://pf.kakao.com/_xogxeFxd/chat" target="_blank" class="btn btn-call">💬 카카오톡 상담</a> 
+    </div>
+</header>
+
+<div id="target" class="section">
+    <div class="target-box">
+        <h3>이런 분들께 한의사 방문진료가 필요합니다</h3>
+        <div class="target-list">
+            <div class="target-item">🧠 뇌졸중(중풍) 후유증 환자</div>
+            <div class="target-item">👴 치매, 파킨슨병 등 노인성 질환</div>
+            <div class="target-item">🦴 중증 관절염으로 보행이 힘든 분</div>
+            <div class="target-item">🛏️ 수술 후 퇴원하여 자택 요양 중인 분</div>
+            <div class="target-item">♿ 척수 손상 및 마비 증상 환자</div>
+        </div>
+        <p style="text-align: center; margin-top: 20px; color: #666; font-size: 0.95em;">※ 그 외 질병, 부상, 출산 등으로 인하여 혼자서 한의원 내원이 곤란한 분 누구나 신청 가능합니다.</p>
+    </div>
+</div>
+
+<div id="services" class="section" style="padding-top: 0;">
+    <h2 class="section-title">우성한의원 노인장기요양 및 방문 의료 서비스</h2>
+    
+    <div class="service-grid">
+        <!-- 1. 방문진료 -->
+        <div class="service-card">
+            <h3>🏡 일차의료 방문진료 (왕진)</h3>
+            <p>보건복지부 주관 방문진료 시범사업 참여 기관으로서, 원장님이 직접 자택을 방문하여 침, 뜸, 부항 치료 및 맞춤 한약 처방을 진행합니다.</p>
+            <ul>
+                <li><strong>건강보험 적용:</strong> 시범사업에 따라 본인 부담금이 일부 지원됩니다.</li>
+                <li><strong>맞춤 치료:</strong> 통증 완화, 기력 회복, 마비 증상 개선 등 환자 상태에 맞춘 한방 치료.</li>
+            </ul>
+        </div>
+
+        <!-- 2. 의사소견서 -->
+        <div class="service-card">
+            <h3>📄 노인장기요양 의사소견서 발급</h3>
+            <p>국민건강보험공단에 노인장기요양등급 판정 신청 및 갱신을 하실 때 반드시 필요한 '의사소견서'를 정성껏 진찰 후 발급해 드립니다.</p>
+            <ul>
+                <li>치매, 중풍 등 노인성 질환 진단 병력 확인</li>
+                <li>거동 불편 정도 및 인지 기능 평가 진행</li>
+            </ul>
+        </div>
+
+        <!-- 3. 방문간호지시서 -->
+        <div class="service-card">
+            <h3>📝 방문간호지시서 발급</h3>
+            <p>장기요양등급을 받으신 어르신이 가정에서 전문적인 방문간호 서비스(투약 관리, 욕창 치료 등)를 받으실 수 있도록 간호지시서를 발급합니다.</p>
+            <ul>
+                <li>재가복지센터 및 방문간호 서비스 연계 필수 서류</li>
+                <li>환자의 만성 질환 및 현재 건강 상태 꼼꼼히 반영</li>
+            </ul>
+        </div>
+
+        <!-- 4. 촉탁의 -->
+        <div class="service-card">
+            <h3>🤝 계약의사 (촉탁의) 진료</h3>
+            <p>요양원 등 노인요양시설과 협약을 맺고 주기적으로 시설을 방문하여, 입소 어르신들의 건강 상태를 세심하게 확인하고 관리합니다.</p>
+            <ul>
+                <li>시설 내 정기적 건강 모니터링</li>
+                <li>침 치료 및 질병 예방을 위한 한의학적 관리</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div id="procedure" class="section" style="padding-top: 0;">
+    <h2 class="section-title">방문진료 신청 절차</h2>
+    <div class="step-container">
+        <div class="step-box">
+            <div class="step-num">1</div>
+            <h4>상담 및 신청</h4>
+            <p>전화, 카카오톡 또는 온라인 폼을 통해 환자의 상태와 주소를 접수합니다.</p>
+        </div>
+        <div class="step-box">
+            <div class="step-num">2</div>
+            <h4>일정 조율</h4>
+            <p>원장님의 진료 일정에 맞춰 보호자분과 방문 일시를 확정합니다.</p>
+        </div>
+        <div class="step-box">
+            <div class="step-num">3</div>
+            <h4>가정 방문 및 진료</h4>
+            <p>약속된 시간에 자택을 방문하여 진맥, 침구 치료 및 처방을 진행합니다.</p>
+        </div>
+        <div class="step-box">
+            <div class="step-num">4</div>
+            <h4>사후 관리</h4>
+            <p>치료 경과를 확인하고 필요시 정기적인 방문 계획을 수립합니다.</p>
+        </div>
+    </div>
+    
+    <div style="text-align: center; margin-top: 50px;">
+        <a href="https://docs.google.com/forms/d/14xLwWFknlXXHgCsBC-lFdYvV1XNXGk9gG18bVtHog5M/edit" target="_blank" class="btn btn-form" style="padding: 15px 40px; font-size: 1.1em;">가족을 위한 방문진료 상담 신청하기 👉</a>
+    </div>
+</div>
+
+<footer>
+    <p>우성한의원 | 대표원장 고의현 | 경기도 고양시 일산서구 고양대로 726, 4층 | 전화: 031-975-3075</p>
+    <p style="margin-top: 10px; color: #999;">※ 본 웹사이트의 모든 안내는 의료법을 준수하여 작성되었습니다. 일차의료 방문진료 시범사업 및 건강보험 적용 기준에 따라 본인 부담금이 발생할 수 있으며, 환자의 상태에 따라 치료 내용 및 방문 주기가 달라질 수 있습니다.</p>
+</footer>
+
+</body>
+</html>
