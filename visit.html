@@ -18,7 +18,7 @@
         .nav-logo { font-size: 1.3em; font-weight: bold; color: var(--primary); text-decoration: none; display: flex; align-items: center; gap: 8px; }
         .nav-logo img { height: 32px; width: 32px; border-radius: 50%; object-fit: cover; }
         
-        /* 모바일 햄버거 메뉴 버튼 (PC에서는 숨김) */
+        /* 모바일 햄버거 메뉴 버튼 */
         .menu-toggle { display: none; font-size: 1.8em; cursor: pointer; color: var(--primary); }
 
         .nav-links { display: flex; gap: 20px; flex-wrap: wrap; justify-content: flex-end; }
@@ -77,7 +77,37 @@
         .target-list { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; }
         .target-item { background: #fff; padding: 15px; border-radius: 8px; text-align: center; font-weight: bold; color: #444; box-shadow: 0 2px 4px rgba(0,0,0,0.05); }
 
-        footer { background: #333; color: #bbb; padding: 25px 20px; text-align: center; font-size: 0.9em; line-height: 1.5; }
+        footer { background: #333; color: #bbb; padding: 40px 20px 100px 20px; text-align: center; font-size: 0.9em; line-height: 1.5; } /* 플로팅 바 가림 방지를 위해 하단 여백 추가 */
+
+        /* 📞 플로팅 상담 버튼 바 */
+        .floating-contact {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            z-index: 1000;
+        }
+        .float-btn {
+            background-color: var(--secondary);
+            color: white;
+            border-radius: 30px;
+            padding: 14px 22px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1em;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            transition: all 0.2s ease;
+        }
+        .float-btn:hover { transform: translateY(-3px); box-shadow: 0 6px 14px rgba(0,0,0,0.3); }
+        .float-btn.sms { background-color: #f57c00; } /* 오렌지색: 문자 */
+        .float-btn.call-clinic { background-color: var(--primary); } /* 브라운: 한의원 */
+        .float-btn.call-mobile { background-color: #0277bd; } /* 블루: 원장님 직통 */
 
         /* 📱 모바일 화면 대응 */
         @media (max-width: 768px) {
@@ -96,15 +126,34 @@
             
             header { padding: 60px 20px; }
             header h1 { font-size: 1.8em; }
+
+            /* 모바일에서는 하단에 가로로 꽉 차게 고정 */
+            .floating-contact {
+                bottom: 0; right: 0; left: 0;
+                flex-direction: row;
+                gap: 0;
+            }
+            .float-btn {
+                flex: 1;
+                border-radius: 0;
+                padding: 16px 0;
+                font-size: 0.95em;
+                box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
+                border-right: 1px solid rgba(255,255,255,0.2);
+            }
+            .float-btn:last-child { border-right: none; }
         }
     </style>
 </head>
 <body>
 
-<!-- 상단 안내 바 -->
-<div style="background-color: #f8f5f0; border-bottom: 1px solid #e0e0e0; padding: 8px 20px; font-size: 0.88em; color: #555; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 5px;">
+<!-- 상단 안내 바 (연락처 두 개 모두 표기) -->
+<div style="background-color: #f8f5f0; border-bottom: 1px solid #e0e0e0; padding: 8px 20px; font-size: 0.9em; color: #555; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px;">
     <div>📍 경기도 고양시 일산서구 고양대로 726, 4층 우성한의원</div>
-    <div style="font-weight: bold;">📞 방문진료 상담: <a href="tel:031-975-3075" style="color: #555; text-decoration: none;">031-975-3075</a></div>
+    <div style="font-weight: bold; display: flex; gap: 15px; flex-wrap: wrap;">
+        <span>📞 한의원: <a href="tel:031-975-3075" style="color: #555; text-decoration: none;">031-975-3075</a></span>
+        <span>📱 원장직통: <a href="tel:010-9720-3075" style="color: #d84315; text-decoration: none;">010-9720-3075</a></span>
+    </div>
 </div>
 
 <nav>
@@ -117,9 +166,7 @@
     <div class="menu-toggle" onclick="toggleMenu()">☰</div>
     
     <div class="nav-links" id="navLinks">
-        <!-- 메인 홈페이지 이동 버튼 추가 -->
         <a href="index.html" style="color: #d84315;">🏠 메인 홈페이지로</a>
-        
         <a href="#services" onclick="toggleMenu()">제공 서비스</a>
         <a href="#target" onclick="toggleMenu()">진료 대상</a>
         <a href="#procedure" onclick="toggleMenu()">신청 절차</a>
@@ -132,7 +179,8 @@
     
     <div class="btn-group">
         <a href="https://docs.google.com/forms/d/14xLwWFknlXXHgCsBC-lFdYvV1XNXGk9gG18bVtHog5M/edit" target="_blank" class="btn btn-form">🏡 한의사 방문진료 간편 신청</a>
-        <a href="http://pf.kakao.com/_xogxeFxd/chat" target="_blank" class="btn btn-call">💬 카카오톡 상담</a> 
+        <a href="tel:031-975-3075" class="btn btn-call">📞 한의원 연결</a> 
+        <a href="tel:010-9720-3075" class="btn btn-call" style="color: #0277bd;">📱 원장님 전화상담</a>
     </div>
 </header>
 
@@ -164,7 +212,7 @@
             </ul>
         </div>
 
-        <!-- 2. 의사소견서 (방문 발급 강조) -->
+        <!-- 2. 의사소견서 -->
         <div class="service-card" style="border: 2px solid #ffb74d; position: relative;">
             <span style="background: #fff3e0; color: #e65100; padding: 4px 10px; border-radius: 4px; font-size: 0.85em; font-weight: bold; position: absolute; top: -14px; left: 30px;">방문 발급 가능</span>
             <h3>📄 노인장기요양 의사소견서 발급</h3>
@@ -176,7 +224,6 @@
                     <span style="color: #4e342e; font-size: 0.95em;">원장님이 직접 가정이나 시설로 찾아가는 <strong>'방문진료(왕진)'</strong>를 통해서도 의사소견서 발급이 가능합니다.</span>
                 </p>
             </div>
-
             <ul>
                 <li>치매, 중풍 등 노인성 질환 진단 병력 확인</li>
                 <li>거동 불편 정도 및 인지 기능 평가 진행</li>
@@ -211,22 +258,22 @@
         <div class="step-box">
             <div class="step-num">1</div>
             <h4>상담 및 신청</h4>
-            <p>전화, 카카오톡 또는 온라인 폼을 통해 환자의 상태와 주소를 접수합니다.</p>
+            <p>전화, 문자, 카카오톡 또는 온라인 폼을 통해 접수합니다.</p>
         </div>
         <div class="step-box">
             <div class="step-num">2</div>
             <h4>일정 조율</h4>
-            <p>원장님의 진료 일정에 맞춰 보호자분과 방문 일시를 확정합니다.</p>
+            <p>원장님의 진료 일정에 맞춰 방문 일시를 확정합니다.</p>
         </div>
         <div class="step-box">
             <div class="step-num">3</div>
             <h4>가정 방문 및 진료</h4>
-            <p>약속된 시간에 자택을 방문하여 진맥, 침구 치료 및 처방을 진행합니다.</p>
+            <p>자택을 방문하여 진맥, 침구 치료 및 처방을 진행합니다.</p>
         </div>
         <div class="step-box">
             <div class="step-num">4</div>
             <h4>사후 관리</h4>
-            <p>치료 경과를 확인하고 필요시 정기적인 방문 계획을 수립합니다.</p>
+            <p>치료 경과를 확인하고 필요시 정기 방문 계획을 수립합니다.</p>
         </div>
     </div>
     
@@ -236,9 +283,17 @@
 </div>
 
 <footer>
-    <p>우성한의원 | 대표원장 고의현 | 경기도 고양시 일산서구 고양대로 726, 4층 | 전화: 031-975-3075</p>
-    <p style="margin-top: 10px; color: #999;">※ 본 웹사이트의 모든 안내는 의료법을 준수하여 작성되었습니다. 일차의료 방문진료 시범사업 및 건강보험 적용 기준에 따라 본인 부담금이 발생할 수 있으며, 환자의 상태에 따라 치료 내용 및 방문 주기가 달라질 수 있습니다.</p>
+    <p>우성한의원 | 대표원장 고의현 | 경기도 고양시 일산서구 고양대로 726, 4층</p>
+    <p style="margin-top: 10px;">전화: 031-975-3075 | 원장 직통: 010-9720-3075</p>
+    <p style="margin-top: 15px; color: #999; font-size: 0.9em;">※ 본 웹사이트의 모든 안내는 의료법을 준수하여 작성되었습니다. 일차의료 방문진료 시범사업 및 건강보험 적용 기준에 따라 본인 부담금이 발생할 수 있으며, 환자의 상태에 따라 치료 내용 및 방문 주기가 달라질 수 있습니다.</p>
 </footer>
+
+<!-- 🚀 플로팅 연락처 바 (핵심 추가 영역) -->
+<div class="floating-contact">
+    <a href="tel:031-975-3075" class="float-btn call-clinic">📞 한의원 전화상담</a>
+    <a href="tel:010-9720-3075" class="float-btn call-mobile">📱 원장님 전화상담</a>
+    <a href="sms:010-9720-3075" class="float-btn sms">✉️ 원장님 문자상담</a>
+</div>
 
 <!-- 햄버거 메뉴 동작을 위한 스크립트 -->
 <script>
