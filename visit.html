@@ -207,6 +207,9 @@
                 border-right: 1px solid rgba(255,255,255,0.2);
             }
             .float-btn:last-child { border-right: none; }
+            
+            /* 모바일에서 길어진 로고 제목 크기 자동 조절 */
+            .nav-logo { font-size: 1.05em; }
         }
     </style>
 </head>
@@ -224,7 +227,8 @@
 <nav>
     <a href="index.html" class="nav-logo">
         <img src="우성한의원마크.jpg" alt="우성한의원 마크">
-        <span>우성한의원 방문진료</span>
+        <!-- 👇 요청하신 대로 제목이 변경되었습니다. -->
+        <span>우성한의원 노인장기요양보험과 방문진료</span>
     </a>
     
     <div class="menu-toggle" onclick="toggleMenu()">☰</div>
@@ -233,7 +237,6 @@
         <a href="index.html" style="color: #d84315;">🏠 메인 홈페이지</a>
         <a href="#services" onclick="toggleMenu()">제공 서비스</a>
         <a href="#target" onclick="toggleMenu()">진료 대상</a>
-        <!-- TLC 쇼핑몰 상단 네비게이션 추가 -->
         <a href="https://tlcmtm.com/" target="_blank" class="nav-link-tlc" onclick="toggleMenu()">🛒 추천 영양식단(TLC)</a>
     </div>
 </nav>
@@ -326,7 +329,6 @@
         </div>
         <br>
         
-        <!-- 아래 href 속성에 TLC 쇼핑몰의 실제 URL을 입력하세요 -->
         <a href="https://tlcmtm.com/" target="_blank" class="btn-tlc">TLC 맞춤몰 구경하러 가기 👉</a>
     </div>
 </div>
