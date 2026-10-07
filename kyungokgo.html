@@ -13,7 +13,7 @@
         nav { background: #fff; padding: 15px 20px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 100; display: flex; justify-content: space-between; align-items: center; }
         .nav-logo { font-size: 1.3em; font-weight: bold; color: var(--primary); text-decoration: none; display: flex; align-items: center; gap: 8px; white-space: nowrap; }
         .nav-logo img { height: 32px; width: 32px; border-radius: 50%; object-fit: cover; }
-        .nav-links { display: flex; gap: 20px; flex-wrap: wrap; justify-content: flex-end; align-items: center; }
+        .nav-links { display: flex; gap: 15px; flex-wrap: wrap; justify-content: flex-end; align-items: center; }
         .nav-links a { text-decoration: none; color: #333; font-weight: bold; font-size: 0.95em; transition: color 0.2s; }
         .nav-links a:hover { color: var(--accent); }
 
@@ -28,6 +28,7 @@
             border-radius: 20px;
             font-size: 0.85em !important;
             transition: all 0.3s ease;
+            margin-left: 5px;
         }
         .btn-home-nav:hover {
             background-color: var(--primary);
@@ -116,7 +117,8 @@
     <div class="nav-links">
         <a href="#about">경옥고란?</a>
         <a href="#research">현대적 효능</a>
-        <a href="#location">진료시간 및 위치</a>
+        <a href="#usage">복용 및 보관법</a> <!-- 🌟 추가된 메뉴 -->
+        <a href="#location">오시는 길</a>
         <!-- 상단 네비게이션 메인 홈페이지 버튼 -->
         <a href="https://ilsan-wsclinic.vercel.app/" class="btn-home-nav">🏠 본원 홈페이지</a>
     </div>
@@ -127,7 +129,6 @@
     <p class="slogan">"정(精)과 수(髓)를 불려 주고 원기를 보하여 늙은이를 젊어지게 하고 모든 허손증을 보하며 온갖 병을 낫게 한다."<br>최상급 생지황, 인삼, 복령, 봉밀을 오랜 시간 정성껏 달여 쇠약해진 체력을 근본적으로 회복시킵니다.</p>
     
     <div class="btn-group">
-        <!-- ⬇️ 경옥고 비대면 접수 구글 폼 주소 -->
         <a href="https://forms.gle/2PFKXBr21LsD2i347" target="_blank" class="btn btn-form">✨ 경옥고 비대면 처방 신청하기</a>
     </div>
     <div class="btn-group" style="margin-top: 15px;">
@@ -141,21 +142,18 @@
     <h2 style="color: #b8860b; margin-top: 0; margin-bottom: 40px; font-size: 1.6em;">다양한 제형으로 만나는 우성한의원 경옥고</h2>
     
     <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 30px; max-width: 900px; margin: 0 auto;">
-        <!-- 1. 경옥고 환 -->
         <div style="flex: 1 1 250px; text-align: center; background: #fff; padding: 20px; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
             <img src="경옥고환.jpg" alt="경옥고 환" style="max-width: 100%; height: auto; border-radius: 8px; filter: drop-shadow(0 8px 12px rgba(0,0,0,0.1)); margin-bottom: 15px;">
             <h3 style="color: #5d4037; margin: 0; font-size: 1.3em;">경옥고 환</h3>
             <p style="color: #666; font-size: 0.95em; margin-top: 8px; margin-bottom: 0;">씹어먹기 편한 고급스러운 제형</p>
         </div>
         
-        <!-- 2. 경옥고 스틱 -->
         <div style="flex: 1 1 250px; text-align: center; background: #fff; padding: 20px; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
             <img src="경옥고스틱.jpg" alt="경옥고 스틱" style="max-width: 100%; height: auto; border-radius: 8px; filter: drop-shadow(0 8px 12px rgba(0,0,0,0.1)); margin-bottom: 15px;">
             <h3 style="color: #5d4037; margin: 0; font-size: 1.3em;">경옥고 스틱</h3>
             <p style="color: #666; font-size: 0.95em; margin-top: 8px; margin-bottom: 0;">언제 어디서나 간편한 휴대용</p>
         </div>
 
-        <!-- 3. 경옥고 단지 -->
         <div style="flex: 1 1 250px; text-align: center; background: #fff; padding: 20px; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
             <img src="경옥고단지.jpg" alt="경옥고 단지" style="max-width: 100%; height: auto; border-radius: 8px; filter: drop-shadow(0 8px 12px rgba(0,0,0,0.1)); margin-bottom: 15px;">
             <h3 style="color: #5d4037; margin: 0; font-size: 1.3em;">경옥고 단지</h3>
@@ -183,7 +181,7 @@
     </p>
 </div>
 
-<!-- 최신 연구 결과 효능 업데이트 -->
+<!-- 최신 연구 결과 효능 -->
 <div id="research" class="section" style="background-color: #fff;">
     <h2 class="section-title">최신 연구로 과학이 입증한 경옥고의 4대 효능</h2>
     <div class="card-container" style="gap: 15px;">
@@ -204,14 +202,56 @@
             <p>항암제 투여로 면역이 약화된 상태에서 면역세포를 자극하는 사이토카인(IFN-r, IL-2 등)은 늘려주고, 염증성 반응을 유발하는 사이토카인은 감소시켜 신체 본연의 면역 방어력을 높여줍니다.</p>
         </div>
     </div>
+</div>
+
+<!-- 🌟 새로 추가된 복용법 및 보관 안내 섹션 🌟 -->
+<div id="usage" class="section" style="background-color: #fdfaf6; padding-top: 60px; padding-bottom: 60px; border-top: 1px solid #e0e0e0;">
+    <h2 class="section-title">경옥고 올바른 복용법 및 보관 안내</h2>
     
+    <div class="card-container" style="gap: 20px;">
+        <!-- 복용 안내 -->
+        <div class="card" style="flex: 1 1 300px; border-left: 4px solid var(--accent);">
+            <h3 style="color: var(--primary); text-align: left; font-size: 1.25em; display: flex; align-items: center; gap: 8px;">
+                💊 복용 및 식단 안내
+            </h3>
+            <ul class="info-list">
+                <li><strong>복용량:</strong> 성인 기준 <strong>하루 1~2봉 (또는 1~2환)</strong> 복용을 권장합니다.</li>
+                <li><strong>복용 시간:</strong> 식전, 식후 상관없이 편하신 시간에 자유롭게 드시면 됩니다.</li>
+                <li><strong>주의 음식:</strong> 특별히 가려야 할 음식은 없습니다. 평소처럼 편안하게 식사해 주세요.</li>
+            </ul>
+        </div>
+        
+        <!-- 보관 방법 -->
+        <div class="card" style="flex: 1 1 300px; border-left: 4px solid var(--accent);">
+            <h3 style="color: var(--primary); text-align: left; font-size: 1.25em; display: flex; align-items: center; gap: 8px;">
+                📦 보관 방법
+            </h3>
+            <ul class="info-list">
+                <li>직사광선을 피해 <strong>서늘한 곳에 실온 보관</strong>하시면 됩니다.</li>
+                <li>단지형의 경우, 침이 묻은 숟가락이나 쇠숟가락이 닿으면 변질될 수 있으니 물기가 없는 나무스푼이나 동봉된 전용 스푼을 사용해 주세요.</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- 원장님 당부 (명현/부작용 안내) -->
+    <div style="background-color: #fff; border: 1px solid #e0e0e0; border-radius: 12px; padding: 25px; margin-top: 25px; box-shadow: 0 2px 4px rgba(0,0,0,0.02);">
+        <h3 style="color: var(--primary); margin-top: 0; font-size: 1.15em; display: flex; align-items: center; gap: 8px;">
+            👨‍⚕️ 우성한의원 원장님 안내
+        </h3>
+        <p style="color: #555; line-height: 1.6; margin-bottom: 0; font-size: 1em;">
+            경옥고는 워낙 순한 명약이라 부작용은 거의 없습니다. 하지만 평소 소화기가 약하신 분들은 간혹 속이 약간 부글거리거나 대변이 묽어질 수 있습니다.<br><br>
+            이는 <strong>장 기능이 조절되는 자연스러운 과정</strong>이니 안심하셔도 되며, 혹시라도 부담스러우시다면 <strong>식후에 드시거나 복용량을 살짝 줄여보시는 것</strong>을 추천해 드립니다.
+        </p>
+    </div>
+
+    <!-- 폼 유도 배너 -->
     <div style="text-align: center; margin-top: 50px;">
         <a href="https://forms.gle/2PFKXBr21LsD2i347" target="_blank" class="btn btn-form" style="padding: 12px 30px; box-shadow: none; animation: none;">경옥고 처방 간편 설문 작성하기 👉</a>
     </div>
 </div>
 
 <!-- 위치 안내 및 진료시간 -->
-<div id="location" class="section" style="background-color: #fdfaf6; border-radius: 15px; margin-bottom: 0;">
+<div id="location" class="section" style="background-color: #fff; border-radius: 15px; margin-bottom: 0;">
     <div style="display: flex; gap: 40px; margin-bottom: 20px;">
         <h2 class="section-title" style="margin-bottom: 0; text-align: left; width: auto; border-bottom: none; color: var(--primary);">오시는 길 및 진료시간</h2>
     </div>
