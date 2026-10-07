@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>우성한의원 - 첩약(탕약) 건강보험 클리닉</title>
+    <style>
+        :root { 
+            --primary: #0277bd; /* 신뢰감을 주는 블루 */
+            --secondary: #2e7d32; /* 건강한 느낌의 그린 */
+            --bg-light: #f1f8e9; 
+            --text-dark: #333;
+        }
+        body { font-family: 'Apple SD Gothic Neo', sans-serif; line-height: 1.6; margin: 0; color: var(--text-dark); background-color: #fafafa; scroll-behavior: smooth; }
+        
+        /* 상단 네비게이션 */
+        nav { background: #fff; padding: 15px 20px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 100; display: flex; justify-content: space-between; align-items: center; }
+        .nav-logo { font-size: 1.3em; font-weight: bold; color: var(--primary); text-decoration: none; display: flex; align-items: center; gap: 8px; }
+        .nav-logo img { height: 32px; width: 32px; border-radius: 50%; object-fit: cover; }
+        
+        .menu-toggle { display: none; font-size: 1.8em; cursor: pointer; color: var(--primary); }
+
+        .nav-links { display: flex; gap: 20px; flex-wrap: wrap; justify-content: flex-end; }
+        .nav-links a { text-decoration: none; color: #333; font-weight: bold; font-size: 0.95em; transition: color 0.2s; }
+        .nav-links a:hover { color: var(--secondary); }
+
+        /* 메인 배너 */
+        header { 
+            background: linear-gradient(rgba(2, 119, 189, 0.8), rgba(2, 119, 189, 0.8)), url('첩약보험배경.jpg'); 
+            background-size: cover; 
+            background-position: center; 
+            padding: 100px 20px; 
+            text-align: center; 
+            color: #fff;
+        }
+        header h1 { margin-bottom: 15px; font-size: 2.4em; text-shadow: 1px 1px 4px rgba(0,0,0,0.5); line-height: 1.3; }
+        header .slogan { font-size: 1.2em; color: #e1f5fe; max-width: 750px; margin: 0 auto 30px auto; line-height: 1.6; }
+        .highlight-text { color: #b2dfdb; font-weight: bold; }
+        
+        /* 버튼 스타일 */
+        .btn-group { margin-top: 25px; display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; }
+        .btn { display: inline-block; padding: 12px 28px; text-decoration: none; border-radius: 8px; font-weight: bold; transition: all 0.2s; font-size: 1.05em; box-shadow: 0 4px 6px rgba(0,0,0,0.2); }
+        .btn:hover { opacity: 0.9; transform: translateY(-2px); }
+        .btn-call { background: #fff; color: var(--primary); }
+        .btn-blog { background: #03C75A; color: white; }
+        
+        /* 컨텐츠 섹션 */
+        .section { padding: 80px 20px; max-width: 1000px; margin: auto; }
+        .section-title { color: var(--primary); margin-bottom: 40px; border-bottom: 3px solid var(--secondary); padding-bottom: 10px; display: inline-block; font-size: 1.6em; text-align: center; width: 100%; }
+        
+        /* 안내 박스 */
+        .info-box { background: #e1f5fe; border-radius: 12px; padding: 40px; text-align: center; margin-bottom: 50px; border: 1px solid #b3e5fc; }
+        .info-box h3 { color: var(--primary); font-size: 1.5em; margin-top: 0; margin-bottom: 15px; }
+        .info-box p { font-size: 1.1em; color: #01579b; line-height: 1.6; margin: 0; }
+        
+        /* 6대 질환 그리드 */
+        .disease-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
+        .disease-card { background: #fff; border: 1px solid #e0e0e0; border-radius: 12px; padding: 25px; display: flex; flex-direction: column; box-shadow: 0 4px 6px rgba(0,0,0,0.05); transition: transform 0.2s; border-top: 4px solid var(--secondary); }
+        .disease-card:hover { transform: translateY(-5px); box-shadow: 0 8px 15px rgba(0,0,0,0.1); }
+        .icon-wrapper { font-size: 2.5em; margin-bottom: 15px; }
+        .disease-card h3 { color: var(--primary); margin-top: 0; font-size: 1.3em; margin-bottom: 10px; }
+        .disease-card p { color: #555; line-height: 1.6; flex-grow: 1; margin-bottom: 20px; }
+        .disease-card a { display: inline-block; text-align: center; background: #f1f8e9; color: var(--secondary); font-weight: bold; padding: 10px; border-radius: 6px; text-decoration: none; transition: background 0.2s; }
+        .disease-card a:hover { background: #c8e6c9; }
+
+        /* 비용 안내 박스 */
+        .cost-section { display: flex; flex-wrap: wrap; gap: 20px; margin-top: 40px; }
+        .cost-card { flex: 1 1 300px; background: #fff; padding: 30px; border-radius: 12px; border: 1px solid #dcdcdc; text-align: center; }
+        .cost-card h4 { font-size: 1.2em; color: var(--text-dark); margin-top: 0; }
+        .cost-highlight { font-size: 1.8em; font-weight: bold; color: #d32f2f; margin: 15px 0; }
+        
+        footer { background: #333; color: #bbb; padding: 25px 20px; text-align: center; font-size: 0.9em; line-height: 1.5; }
+
+        /* 모바일 대응 */
+        @media (max-width: 768px) {
+            .menu-toggle { display: block; }
+            nav { flex-wrap: wrap; }
+            .nav-links { 
+                display: none; 
+                flex-direction: column; 
+                width: 100%; 
+                background: #fff; 
+                padding: 10px 0;
+            }
+            .nav-links.active { display: flex; }
+            .nav-links a { padding: 15px 10px; border-bottom: 1px solid #f0f0f0; width: 100%; box-sizing: border-box; text-align: left; }
+            
+            header { padding: 60px 20px; }
+            header h1 { font-size: 1.8em; }
+        }
+    </style>
+</head>
+<body>
+
+<div style="background-color: #f8f5f0; border-bottom: 1px solid #e0e0e0; padding: 8px 20px; font-size: 0.88em; color: #555; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 5px;">
+    <div>📍 경기도 고양시 일산서구 고양대로 726, 4층 우성한의원</div>
+    <div style="font-weight: bold;">📞 전화문의: <a href="tel:031-975-3075" style="color: #555; text-decoration: none;">031-975-3075</a></div>
+</div>
+
+<nav>
+    <a href="index.html" class="nav-logo">
+        <img src="우성한의원마크.jpg" alt="우성한의원 마크">
+        <span>우성한의원 첩약보험 클리닉</span>
+    </a>
+    
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+    
+    <div class="nav-links" id="navLinks">
+        <a href="index.html" style="color: #d84315;">🏠 메인 홈페이지로</a>
+        <a href="#about" onclick="toggleMenu()">건강보험 혜택</a>
+        <a href="#diseases" onclick="toggleMenu()">적용 6대 질환</a>
+        <a href="#cost" onclick="toggleMenu()">비용 및 실비 안내</a>
+    </div>
+</nav>
+
+<header>
+    <h1>맞춤 한약(탕약), 이제 부담 없이<br><span class="highlight-text">건강보험 적용 혜택을 누리세요</span></h1>
+    <p class="slogan">우성한의원에서는 6가지 주요 질환에 대해 건강보험이 적용되어, 환자분들의 본인 부담금을 크게 낮춘 체질 맞춤 첩약을 처방해 드립니다.</p>
+    
+    <div class="btn-group">
+        <a href="http://pf.kakao.com/_xogxeFxd/chat" target="_blank" class="btn" style="background-color: #FEE500; color: #191919;">💬 카카오톡 상담 예약</a> 
+        <a href="tel:031-975-3075" class="btn btn-call">☎ 전화 예약 (031-975-3075)</a>
+    </div>
+</header>
+
+<div id="about" class="section">
+    <div class="info-box">
+        <h3>💡 첩약(탕약) 건강보험 시범사업이란?</h3>
+        <p>환자분들의 치료비 부담을 덜어드리기 위해, 국가에서 지정한 특정 질환에 대해 한의원에서 처방받는 <strong>액상 형태의 맞춤 한약(첩약)에 건강보험을 적용</strong>해 주는 제도입니다. 우성한의원은 본 사업의 공식 참여 기관으로서 안전하고 정직하게 처방합니다.</p>
+    </div>
+</div>
+
+<div id="diseases" class="section" style="padding-top: 0;">
+    <h2 class="section-title">건강보험 적용 6대 질환</h2>
+    <p style="text-align: center; color: #666; margin-bottom: 30px; font-size: 1.1em;">아래 6가지 질환으로 내원 시 건강보험 혜택을 받으실 수 있습니다.<br>(각 항목을 누르시면 상세한 블로그 글로 이동합니다.)</p>
+    
+    <div class="disease-grid">
+        <!-- 질환 1 -->
+        <div class="disease-card">
+            <div class="icon-wrapper">🤧</div>
+            <h3>알레르기 비염</h3>
+            <p>만성적인 코막힘, 콧물, 재채기로 고통받는 분들의 호흡기 면역력을 높이고 증상을 완화하는 맞춤 처방을 진행합니다.</p>
+            <a href="https://blog.naver.com/herbdoc87/223593449663" target="_blank">비염 치료 자세히 보기 👉</a>
+        </div>
+        
+        <!-- 질환 2 -->
+        <div class="disease-card">
+            <div class="icon-wrapper">🍲</div>
+            <h3>기능성 소화불량</h3>
+            <p>내시경 상 이상이 없어도 지속되는 만성 소화불량, 더부룩함, 잦은 체함 등의 위장 기능을 근본적으로 다스립니다.</p>
+            <a href="https://blog.naver.com/herbdoc87/223684669854" target="_blank">소화불량 치료 자세히 보기 👉</a>
+        </div>
+        
+        <!-- 질환 3 -->
+        <div class="disease-card">
+            <div class="icon-wrapper">🩸</div>
+            <h3>월경통 (생리통)</h3>
+            <p>매달 반복되는 극심한 하복부 통증과 골반통. 진통제에 의존하지 않고 자궁의 기혈 순환을 돕는 처방을 내립니다.</p>
+            <a href="https://blog.naver.com/herbdoc87/222151551712" target="_blank">월경통 치료 자세히 보기 👉</a>
+        </div>
+        
+        <!-- 질환 4 -->
+        <div class="disease-card">
+            <div class="icon-wrapper">💥</div>
+            <h3>요추추간판탈출증</h3>
+            <p>허리 디스크로 인한 극심한 요통과 다리 저림(방사통)을 치료하고 신경의 염증을 줄이는 데 도움을 줍니다.</p>
+            <a href="https://blog.naver.com/herbdoc87/223521596681" target="_blank">허리디스크 치료 자세히 보기 👉</a>
+        </div>
+        
+        <!-- 질환 5 -->
+        <div class="disease-card">
+            <div class="icon-wrapper">🎭</div>
+            <h3>안면신경마비 (구안와사)</h3>
+            <p>초기 대응이 가장 중요한 구안와사. 안면부 신경의 빠른 회복을 돕고 후유증을 최소화하기 위한 집중 처방을 합니다.</p>
+            <a href="https://blog.naver.com/herbdoc87/222152954328" target="_blank">구안와사 치료 자세히 보기 👉</a>
+        </div>
+        
+        <!-- 질환 6 -->
+        <div class="disease-card">
+            <div class="icon-wrapper">🧠</div>
+            <h3>뇌혈관질환 후유증</h3>
+            <p>중풍(뇌졸중) 발병 후 나타나는 마비, 보행 장애, 언어 장애 등 다양한 후유증의 회복을 돕는 한방 재활 처방입니다.</p>
+            <a href="https://blog.naver.com/herbdoc87/222155076565" target="_blank">뇌혈관질환 치료 보기 👉</a>
+        </div>
+    </div>
+</div>
+
+<div id="cost" class="section">
+    <h2 class="section-title">비용 및 실비보험 적용 안내</h2>
+    
+    <div class="cost-section">
+        <div class="cost-card" style="border-top: 4px solid #1976d2;">
+            <h4>건강보험 적용 시 본인 부담금</h4>
+            <div class="cost-highlight">약 3~4만 원대</div>
+            <p style="color: #666; font-size: 0.95em;">(10일분 기준)<br>※ 환자의 상태와 처방되는 약재, 그리고 요양기관 종별에 따라 실제 비용은 약간의 차이가 발생할 수 있습니다.</p>
+        </div>
+        
+        <div class="cost-card" style="border-top: 4px solid #388e3c;">
+            <h4>실손의료비보험(실비) 청구</h4>
+            <div class="cost-highlight">추가 보장 가능</div>
+            <p style="color: #666; font-size: 0.95em;">건강보험이 적용되는 '급여' 항목이므로, 가입하신 실비보험 약관에 따라 본인 부담금을 추가로 환급받으실 수 있습니다.<br>(*가입 시기 및 약관에 따라 상이함)</p>
+        </div>
+    </div>
+    
+    <div style="background-color: #fff3e0; border-radius: 8px; padding: 20px; margin-top: 30px; text-align: center; border: 1px dashed #ff9800;">
+        <p style="margin: 0; color: #e65100; font-weight: bold;">1인당 연간 최대 2가지 질환에 대해, 질환별 20일분(총 40일분)까지 건강보험 혜택이 적용됩니다.</p>
+    </div>
+</div>
+
+<footer>
+    <p>우성한의원 | 대표원장 고의현 | 경기도 고양시 일산서구 고양대로 726, 4층 | 전화: 031-975-3075</p>
+    <p style="margin-top: 10px; color: #999;">※ 본 웹사이트의 모든 처방 및 치료 정보는 의료법을 준수하여 작성되었습니다. 모든 한방 치료 및 첩약 처방은 개인의 체질과 증상에 따라 효과에 차이가 있을 수 있으며, 부작용이 발생할 수 있으므로 한의사와 충분한 진단 및 상담 후 진행하시기 바랍니다.</p>
+</footer>
+
+<script>
+    function toggleMenu() {
+        const navLinks = document.getElementById("navLinks");
+        if (window.innerWidth <= 768) {
+            navLinks.classList.toggle("active");
+        }
+    }
+</script>
+
+</body>
+</html>
