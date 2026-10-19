@@ -73,6 +73,17 @@
         .target-list { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; }
         .target-item { background: #fff; padding: 15px; border-radius: 8px; text-align: center; font-weight: bold; color: #444; box-shadow: 0 2px 4px rgba(0,0,0,0.05); }
 
+        /* 💰 비용 안내 테이블 스타일 (새로 추가) */
+        .cost-info-box { background-color: #fff8e1; border-left: 4px solid #ffb300; padding: 15px 20px; margin-bottom: 20px; border-radius: 4px; }
+        .cost-info-box p { margin: 0; color: #333; font-weight: bold; font-size: 1.1em; }
+        .cost-info-box span { display: block; margin-top: 5px; font-size: 0.85em; color: #777; font-weight: normal; }
+        .table-responsive { overflow-x: auto; }
+        .cost-table { width: 100%; border-collapse: collapse; margin-bottom: 40px; background: #fff; box-shadow: 0 2px 4px rgba(0,0,0,0.05); min-width: 500px; }
+        .cost-table th, .cost-table td { border: 1px solid #e0e0e0; padding: 15px; text-align: center; }
+        .cost-table th { background-color: var(--secondary); color: white; font-weight: bold; }
+        .cost-table tr:nth-child(even) { background-color: #f9f9f9; }
+        .cost-highlight { color: #d84315; font-weight: bold; font-size: 1.15em; }
+
         /* 🛒 TLC 맞춤몰 배너 스타일 */
         .tlc-banner {
             background: linear-gradient(135deg, #f1f8e9, #dcedc8);
@@ -168,6 +179,7 @@
             transition: all 0.2s ease;
         }
         .float-btn:hover { transform: translateY(-3px); box-shadow: 0 6px 14px rgba(0,0,0,0.3); }
+        .float-btn.kakao { background-color: #FEE500; color: #3C1E1E; } /* 카카오톡 노란색 버튼 */
         .float-btn.sms { background-color: #f57c00; }
         .float-btn.call-clinic { background-color: var(--primary); }
         .float-btn.call-mobile { background-color: #0277bd; }
@@ -190,23 +202,27 @@
             header { padding: 60px 20px; }
             header h1 { font-size: 1.8em; }
             .tlc-banner h3 { font-size: 1.3em; }
-
             .tlc-discount { font-size: 0.95em; padding: 12px 15px; }
 
+            /* 모바일에서 버튼이 4개가 되므로, 두 줄로 배치하여 누르기 쉽게 수정 */
             .floating-contact {
                 bottom: 0; right: 0; left: 0;
                 flex-direction: row;
+                flex-wrap: wrap; /* 두 줄바꿈 허용 */
                 gap: 0;
             }
             .float-btn {
-                flex: 1;
+                flex: 1 1 50%; /* 버튼이 화면 반씩 차지하도록 설정 */
                 border-radius: 0;
-                padding: 16px 0;
-                font-size: 0.95em;
+                padding: 14px 0; /* 모바일 높이 약간 조정 */
+                font-size: 0.9em; /* 글씨 크기 조정 */
                 box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
                 border-right: 1px solid rgba(255,255,255,0.2);
+                border-bottom: 1px solid rgba(255,255,255,0.2);
+                box-sizing: border-box; /* 테두리 포함 크기 계산 */
             }
-            .float-btn:last-child { border-right: none; }
+            .float-btn:nth-child(even) { border-right: none; }
+            .float-btn:nth-child(3), .float-btn:nth-child(4) { border-bottom: none; }
             
             /* 모바일에서 길어진 로고 제목 크기 자동 조절 */
             .nav-logo { font-size: 1.05em; }
@@ -235,6 +251,7 @@
     <div class="nav-links" id="navLinks">
         <a href="index.html" style="color: #d84315;">🏠 메인 홈페이지</a>
         <a href="#services" onclick="toggleMenu()">제공 서비스</a>
+        <a href="#cost" onclick="toggleMenu()">비용 안내</a> <!-- 추가된 비용안내 메뉴 -->
         <a href="#target" onclick="toggleMenu()">진료 대상</a>
         <a href="https://tlcmtm.com/" target="_blank" class="nav-link-tlc" onclick="toggleMenu()">🛒 추천 영양식단(TLC)</a>
     </div>
@@ -246,8 +263,8 @@
     
     <div class="btn-group">
         <a href="https://docs.google.com/forms/d/14xLwWFknlXXHgCsBC-lFdYvV1XNXGk9gG18bVtHog5M/edit" target="_blank" class="btn btn-form">🏡 한의사 방문진료 간편 신청</a>
-        <a href="tel:031-975-3075" class="btn btn-call">📞 한의원 연결</a> 
-        <a href="tel:010-9720-3075" class="btn btn-call" style="color: #0277bd;">📱 원장님 전화상담</a>
+        <!-- 카카오톡 상담 버튼이 메인 배너에도 추가되었습니다 -->
+        <a href="http://pf.kakao.com/_xogxeFxd/chat" target="_blank" class="btn btn-call" style="background-color: #FEE500; color: #3C1E1E;">💬 카카오톡 상담</a> 
     </div>
 </header>
 
@@ -295,7 +312,6 @@
             </ul>
         </div>
 
-        <!-- 👇 방문간호지시서 안내 카드가 업데이트 되었습니다 -->
         <div class="service-card">
             <h3>📝 방문간호지시서 발급</h3>
             <p>장기요양등급을 받으신 어르신이 가정에서 전문적인 방문간호 서비스(투약 관리, 욕창 치료 등)를 받으실 수 있도록 간호지시서를 발급합니다.</p>
@@ -303,7 +319,6 @@
                 <li>재가복지센터 및 방문간호 서비스 연계 필수 서류</li>
                 <li>환자의 만성 질환 및 현재 건강 상태 꼼꼼히 반영</li>
             </ul>
-            <!-- 추가된 방문간호센터 상담 안내 문구 -->
             <p style="margin-top: 15px; color: #0277bd; font-weight: bold; font-size: 0.95em; text-align: center; background-color: #e1f5fe; padding: 10px; border-radius: 8px;">
                 🩺 방문간호지시서 발급을 원하시는 방문간호센터는 상담해주세요.
             </p>
@@ -320,6 +335,45 @@
                 🏢 계약의 방문을 원하는 요양원은 상담해주세요.
             </p>
         </div>
+    </div>
+</div>
+
+<!-- 💰 추가된 방문진료 본인 부담금 안내 섹션 -->
+<div id="cost" class="section" style="padding-top: 0;">
+    <h2 class="section-title">방문진료(왕진) 비용 안내 <span style="font-size: 0.6em; color: #666; font-weight: normal;">(2026년 기준)</span></h2>
+    
+    <div class="cost-info-box">
+        <p>💡 방문진료 1회당 총 진료비: 108,262원</p>
+        <span>※ 건강보험 수가 인상에 따라 본인 부담금은 해마다 변동(인상)될 수 있습니다.</span>
+    </div>
+
+    <div class="table-responsive">
+        <table class="cost-table">
+            <thead>
+                <tr>
+                    <th>건강보험 가입 유형</th>
+                    <th>본인 부담률</th>
+                    <th>환자 본인 부담금 (1회)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>일반 건강보험 환자</td>
+                    <td>30%</td>
+                    <td class="cost-highlight">32,400원</td>
+                </tr>
+                <tr>
+                    <td>차상위 2종 / 의료급여 2종</td>
+                    <td>10%</td>
+                    <td class="cost-highlight">10,820원</td>
+                </tr>
+                <tr>
+                    <td>차상위 1종 / 의료급여 1종</td>
+                    <td>5%</td>
+                    <td class="cost-highlight">5,410원</td>
+                </tr>
+            </tbody>
+        </table>
     </div>
 </div>
 
@@ -378,9 +432,10 @@
 </footer>
 
 <div class="floating-contact">
-    <a href="tel:031-975-3075" class="float-btn call-clinic">📞 한의원 전화상담</a>
-    <a href="tel:010-9720-3075" class="float-btn call-mobile">📱 원장님 전화상담</a>
-    <a href="sms:010-9720-3075" class="float-btn sms">✉️ 원장님 문자상담</a>
+    <a href="http://pf.kakao.com/_xogxeFxd/chat" target="_blank" class="float-btn kakao">💬 카톡 상담·예약</a>
+    <a href="tel:031-975-3075" class="float-btn call-clinic">📞 한의원 전화</a>
+    <a href="tel:010-9720-3075" class="float-btn call-mobile">📱 원장님 직통</a>
+    <a href="sms:010-9720-3075" class="float-btn sms">✉️ 원장님 문자</a>
 </div>
 
 <script>
