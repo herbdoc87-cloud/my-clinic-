@@ -3,7 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>일산 우성한의원</title>
+    
+    <!-- 🟢 1. AI 검색 최적화(AEO)용 메타 태그 추가 -->
+    <meta name="description" content="일산서구 우성한의원(고의현 원장). 초음파 진단, 방문진료(왕진), 노인장기요양 의사소견서 발급, 첩약 건강보험, 교통사고, 명품 보약 클리닉 운영.">
+    <meta name="keywords" content="일산 한의원, 일산 방문진료, 일산 초음파 한의원, 일산 장기요양 의사소견서, 우성한의원, 고의현 원장, 일산 첩약보험">
+    <title>일산 우성한의원 | 초음파 진단·방문진료 특화</title>
+
+    <!-- 🟢 2. AI 검색 엔진용 구조화된 데이터 (Schema Markup) 추가 -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "MedicalClinic",
+      "name": "우성한의원",
+      "description": "초음파 진단을 통한 정확한 원인 파악과 방문진료, 맞춤 보약 처방을 제공하는 일산서구 한의원입니다.",
+      "image": "https://blog.naver.com/herbdoc87", 
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "고양대로 726, 4층",
+        "addressLocality": "고양시 일산서구",
+        "addressRegion": "경기도",
+        "postalCode": "10366",
+        "addressCountry": "KR"
+      },
+      "telephone": "031-975-3075",
+      "medicalSpecialty": ["초음파 진단", "방문진료", "통증클리닉", "소아성장", "첩약보험", "장기요양 의사소견서"],
+      "employee": {
+        "@type": "Physician",
+        "name": "고의현"
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Friday"],
+          "opens": "09:30",
+          "closes": "19:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Thursday", "Saturday"],
+          "opens": "09:30",
+          "closes": "14:00"
+        }
+      ]
+    }
+    </script>
+
     <style>
         /* 기본 설정 */
         :root { --primary: #5d4037; --bg-light: #f8f5f0; }
@@ -11,15 +55,13 @@
         
         /* 1. 상단 네비게이션 바 */
         nav { background: #fff; padding: 15px 20px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 100; display: flex; justify-content: space-between; align-items: center; }
-        /* ⬇️ 이 부분으로 덮어쓰기 하세요 ⬇️ */
         .nav-logo { font-size: 1.3em; font-weight: bold; color: var(--primary); text-decoration: none; display: flex; align-items: center; gap: 8px; }
         .nav-logo img { height: 32px; width: 32px; border-radius: 50%; object-fit: cover; }
-        /* ⬆️ 여기까지 ⬆️ */
         .nav-links { display: flex; gap: 20px; flex-wrap: wrap; justify-content: flex-end; }
         .nav-links a { text-decoration: none; color: #333; font-weight: bold; font-size: 0.95em; transition: color 0.2s; }
         .nav-links a:hover { color: var(--primary); }
 
-       /* 2. 메인 배너 (히어로 섹션) - 배경 이미지 적용 */
+       /* 2. 메인 배너 (히어로 섹션) */
         header { 
             background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), url('배경.jpg'); 
             background-size: cover; 
@@ -47,7 +89,7 @@
         .card:hover { transform: translateY(-5px); }
         .card h3 { color: var(--primary); margin-top: 0; font-size: 1.3em; margin-bottom: 15px; }
         
-        /* 첩약 질환 리스트 디자인 수정 (박스 전체 클릭 및 마우스 효과 활성화) */
+        /* 첩약 질환 리스트 디자인 */
         .disease-list { display: flex; flex-wrap: wrap; gap: 10px; padding: 0; list-style: none; }
         .disease-list li { flex: 1 1 calc(33.333% - 10px); box-sizing: border-box; }
         .disease-list a { 
@@ -59,7 +101,14 @@
         }
         .disease-list a:hover { background: #e6dfd1; transform: translateY(-3px); box-shadow: 0 4px 8px rgba(0,0,0,0.1); }
         
-        /* 안내 리스트 스타일 (진료시간 등) */
+        /* 🟢 3. FAQ(자주 묻는 질문) 스타일 신설 */
+        .faq-item { background: #fff; border: 1px solid #e0e0e0; padding: 20px; border-radius: 10px; margin-bottom: 15px; box-shadow: 0 2px 4px rgba(0,0,0,0.03); }
+        .faq-item h3 { color: var(--primary); margin: 0 0 10px 0; font-size: 1.15em; display: flex; align-items: flex-start; gap: 10px; }
+        .faq-item h3::before { content: 'Q.'; color: #d32f2f; font-weight: bold; }
+        .faq-item p { margin: 0; color: #444; line-height: 1.6; font-size: 1.05em; display: flex; align-items: flex-start; gap: 10px; }
+        .faq-item p::before { content: 'A.'; color: #2e7d32; font-weight: bold; }
+
+        /* 안내 리스트 스타일 */
         .info-list { list-style: none; padding: 0; margin: 0; }
         .info-list li { margin-bottom: 12px; line-height: 1.5; font-size: 1.05em; }
         .badge { background: #f0ebe1; color: var(--primary); padding: 4px 10px; border-radius: 20px; font-size: 0.85em; margin-right: 8px; font-weight: bold; display: inline-block; width: 45px; text-align: center; }
@@ -79,23 +128,23 @@
         /* 햄버거 메뉴 버튼 (PC에서는 숨김) */
         .menu-toggle { display: none; font-size: 1.8em; cursor: pointer; color: var(--primary); }
 
-        /* 📱 모바일 대응 (이 부분으로 덮어쓰세요) */
+        /* 📱 모바일 대응 */
         @media (max-width: 768px) {
             .menu-toggle { display: block; }
             nav { flex-wrap: wrap; }
             .nav-links { 
-                display: none; /* 평소에는 숨김 */
+                display: none; 
                 flex-direction: column; 
                 width: 100%; 
                 background: #fff; 
                 padding: 10px 0;
             }
-            .nav-links.active { display: flex; } /* 버튼 누르면 나타남 */
+            .nav-links.active { display: flex; }
             .nav-links a { padding: 15px 10px; border-bottom: 1px solid #f0f0f0; width: 100%; box-sizing: border-box; text-align: left; }
             .nav-links a:last-child { border-bottom: none; }
             
             header { padding: 50px 20px; }
-            h1 { font-size: 2em; }
+            header h1 { font-size: 2em; }
             .disease-list li { flex: 1 1 calc(50% - 10px); } 
         }
     </style>
@@ -130,25 +179,18 @@
         let statusText = "진료 종료";
         let badgeColor = "#757575"; 
 
-        // 🗓️ 특별 진료 일정 관리 (객체 형태)
-        // 매년 이곳의 날짜와 텍스트만 업데이트하면 됩니다!
         const specialDays = {
-        // 🔴 법정 공휴일 및 연휴 (빨간색 배지)
             "2026-09-24": { type: "closed", text: "추석 연휴 휴진", color: "#d32f2f" },
             "2026-09-25": { type: "closed", text: "추석 연휴 휴진", color: "#d32f2f" },
             "2026-09-26": { type: "closed", text: "추석 연휴 휴진", color: "#d32f2f" },
             "2026-10-03": { type: "closed", text: "개천절 휴진", color: "#d32f2f" },
             "2026-10-09": { type: "closed", text: "한글날 휴진", color: "#d32f2f" },
             "2026-12-25": { type: "closed", text: "성탄절 휴진", color: "#d32f2f" },
-
-            // 🟢 공휴일/대체휴일 정상 진료 강조 (초록색 배지)
             "2026-10-05": { type: "normal", text: "대체휴일 정상진료" }
         };   
 
-        // --- 시간 계산 로직 ---
         if (specialDays[todayString]) {
             const special = specialDays[todayString];
-            
             if (special.type === "closed") {
                 statusText = special.text;
                 badgeColor = special.color;
@@ -173,7 +215,6 @@
             else { statusText = "진료 종료"; badgeColor = "#757575"; }
         }
 
-        // 화면에 반영
         const badge = document.getElementById("clinic-status-badge");
         if (badge) { 
             badge.innerText = statusText; 
@@ -181,13 +222,9 @@
         }
     }
     
-    // 1. 페이지 접속 시 즉시 실행
     checkClinicStatus();
-    
-    // 2. 1분(60000ms)마다 백그라운드에서 실시간 자동 갱신
     setInterval(checkClinicStatus, 60000);
 
-    // ⬇️ 모바일 햄버거 메뉴 동작 스크립트 (새로 추가) ⬇️
     function toggleMenu() {
         const navLinks = document.getElementById("navLinks");
         if (window.innerWidth <= 768) {
@@ -202,7 +239,6 @@
         <span>우성한의원</span>
     </a>
     
-    <!-- ⬇️ 모바일용 햄버거 버튼 추가 ⬇️ -->
     <div class="menu-toggle" onclick="toggleMenu()">☰</div>
     
     <div class="nav-links" id="navLinks">
@@ -210,9 +246,9 @@
         <a href="#premium-clinics" style="color: #d32f2f;" onclick="toggleMenu()">특화처방·맞춤보약</a> 
         <a href="#specialties" onclick="toggleMenu()">진료과목</a>
         <a href="#chubyak" onclick="toggleMenu()">첩약보험</a>
-        <a href="#longtermcare" onclick="toggleMenu()">노인장기요양보험</a>
+        <a href="#longtermcare" onclick="toggleMenu()">방문진료·장기요양</a>
+        <a href="#faq" onclick="toggleMenu()">자주 묻는 질문(FAQ)</a>
         <a href="#location" onclick="toggleMenu()">위치안내</a>
-        <a href="#hours" onclick="toggleMenu()">진료시간</a>
     </div>
 </nav>
 
@@ -222,36 +258,28 @@
     <div class="btn-group">
         <a href="https://blog.naver.com/herbdoc87" class="btn btn-blog" target="_blank">📝 우성한의원 블로그</a>
         <a href="tel:031-975-3075" class="btn btn-call">☎ 한의원 전화 상담</a>
-       
-        <!-- ⬇️ 새로 추가된 비대면 진료 & 방문 진료 구글폼 버튼 ⬇️ -->
         <a href="https://forms.gle/Jq2FTayZqMd3yQyo9" target="_blank" class="btn" style="background-color: #1976d2; color: white;">💻 비대면 진료 신청</a>
         <a href="https://forms.gle/CCQ5noH4ktndcijU9" target="_blank" class="btn" style="background-color: #2e7d32; color: white;">🏡 방문 진료 신청</a>
     </div>
 </header>
 
-<!-- ⬆️ 추석 맞이 특별 이벤트 섹션 끝 ⬆️ -->
-<!-- 메인 배너 끝 -->
-</header>
-
-<!-- ⬇️ 여기서부터 복사해서 붙여넣으세요 ⬇️ -->
 <div id="about" class="section">
     <h2 class="section-title">의료진 소개</h2>
     <div class="profile-container">
         <div class="profile-img">
-            <!-- 사진 파일 이름은 원장님.jpg 로 맞춰주세요 -->
             <img src="원장님.jpg" alt="고의현 대표원장">
         </div>
         <div class="profile-text">
             <h3>대표원장 고의현</h3>
             <p>안녕하세요. 일산 우성한의원 대표원장입니다.<br>환자분의 아픔에 깊이 공감하며, 초음파 등 첨단 기기를 활용한 정확한 진단과 정성 어린 한방 치료로 바른 건강을 되찾아 드리겠습니다. 환자를 가족처럼 생각하면 편안하게 진료받을 수 있도록 최선을 다하겠습니다.</p>
             <ul class="history-list">
-            
+                <li>대구한의대학교 한의학과 졸업</li>
+                <li>일산 우성한의원 대표원장 (30년 임상 경력)</li>
             </ul>
         </div>
     </div>
 </div>
 
-<!-- ⬇️ 특화 클리닉 및 명품 보약 (새로 추가) ⬇️ -->
 <div id="premium-clinics" class="section" style="background-color: #fdfaf6; border-radius: 15px; margin-bottom: 50px;">
     <h2 class="section-title">우성한의원 특화 처방 & 명품 보약</h2>
     <p style="font-size: 1.1em; margin-bottom: 25px; line-height: 1.6; color: #555;">
@@ -260,7 +288,7 @@
     </p>
     
     <div class="card-container">
-        <!-- 1. 산화질소 -->
+        <!-- 특화 처방 카드들 유지 -->
         <div class="card" style="border-top: 4px solid #0288d1; position: relative;">
             <span style="background: #e1f5fe; color: #0288d1; padding: 4px 8px; border-radius: 4px; font-size: 0.85em; font-weight: bold; position: absolute; top: -12px; left: 30px;">혈관·림프 순환</span>
             <h3 style="color: #0288d1; margin-top: 10px;">🩸 산화질소(NO) 클리닉</h3>
@@ -268,7 +296,6 @@
             <a href="nitric-oxide.html" target="_blank" class="btn" style="background-color: #0288d1; color: #fff; width: 100%; box-sizing: border-box; text-align: center; margin-top: 15px; font-size: 0.95em;">산화질소 클리닉 👉</a>
         </div>
         
-        <!-- 2. 경옥고 -->
         <div class="card" style="border-top: 4px solid #b8860b; position: relative;">
             <span style="background: #fff8e1; color: #b8860b; padding: 4px 8px; border-radius: 4px; font-size: 0.85em; font-weight: bold; position: absolute; top: -12px; left: 30px;">동의보감 제1의 명방</span>
             <h3 style="color: #b8860b; margin-top: 10px;">🍯 명품 경옥고</h3>
@@ -276,7 +303,6 @@
             <a href="kyungokgo.html" target="_blank" class="btn" style="background-color: #b8860b; color: #fff; width: 100%; box-sizing: border-box; text-align: center; margin-top: 15px; font-size: 0.95em;">경옥고 자세히 보기 👉</a>
         </div>
         
-        <!-- 3. 공진단 -->
         <div class="card" style="border-top: 4px solid #5c0000; position: relative;">
             <span style="background: #ffebee; color: #5c0000; padding: 4px 8px; border-radius: 4px; font-size: 0.85em; font-weight: bold; position: absolute; top: -12px; left: 30px;">황제의 보약</span>
             <h3 style="color: #5c0000; margin-top: 10px;">🦌 명품 공진단</h3>
@@ -284,7 +310,6 @@
             <a href="gongjindan.html" target="_blank" class="btn" style="background-color: #5c0000; color: #fff; width: 100%; box-sizing: border-box; text-align: center; margin-top: 15px; font-size: 0.95em;">공진단 자세히 보기 👉</a>
         </div>
 
-        <!-- 4. 퓨리톤 -->
         <div class="card" style="border-top: 4px solid #4caf50; position: relative;">
             <span style="background: #e8f5e9; color: #2e7d32; padding: 4px 8px; border-radius: 4px; font-size: 0.85em; font-weight: bold; position: absolute; top: -12px; left: 30px;">약용 광물 추출물</span>
             <h3 style="color: #2e7d32; margin-top: 10px;">🌿 퓨리톤 미네랄 솔루션</h3>
@@ -292,7 +317,6 @@
             <a href="puriton.html" target="_blank" class="btn" style="background-color: #4caf50; color: #fff; width: 100%; box-sizing: border-box; text-align: center; margin-top: 15px; font-size: 0.95em;">퓨리톤 솔루션 👉</a>
         </div>
 
-        <!-- 5. 건뇌 클리닉 (새로 추가) -->
         <div class="card" style="border-top: 4px solid #16a085; position: relative;">
             <span style="background: #e8f8f5; color: #16a085; padding: 4px 8px; border-radius: 4px; font-size: 0.85em; font-weight: bold; position: absolute; top: -12px; left: 30px;">맑은 기억력·뇌혈류 순환</span>
             <h3 style="color: #16a085; margin-top: 10px;">🧠 건뇌(健腦) 클리닉</h3>
@@ -301,10 +325,9 @@
         </div>
     </div>
 </div>
-<!-- ⬆️ 특화 클리닉 및 명품 보약 끝 ⬆️ -->
     
 <div id="specialties" class="section">
-    <h2 class="section-title"> 진료과목</h2>
+    <h2 class="section-title">진료과목</h2>
     <div class="card-container">
         <div class="card">
             <h3>💪 통증 및 근골격 클리닉</h3>
@@ -355,7 +378,6 @@
         <li><a href="https://blog.naver.com/herbdoc87/222155076565" target="_blank">🧠 뇌혈관질환 후유증</a></li>
     </ul>
     <p class="sub-text" style="margin-top:20px;">※ 실비보험 가입자의 경우 추가 혜택이 가능할 수 있으니 내원 시 문의해 주세요.</p>
-    <!-- ⬇️ 첩약 전용 홈페이지로 넘어가는 대형 버튼 (새로 추가) ⬇️ -->
     <div style="text-align: center; margin-top: 35px;">
         <a href="chubyak.html" class="btn" style="background-color: #0277bd; color: white; padding: 15px 40px; font-size: 1.15em; border-radius: 30px; box-shadow: 0 4px 6px rgba(0,0,0,0.2);">
             우성한의원 - 첩약(탕약) 건강보험 클리닉 자세히 보기 👉
@@ -372,8 +394,6 @@
         <div class="card" style="flex: 1 1 45%;">
             <h3 style="color: var(--primary);">🏡 방문진료(왕진) 시범사업</h3>
             <p style="font-size: 1.05em; line-height: 1.5;">질병, 부상 등으로 거동이 불편하여 한의원 내원이 어려운 환자분의 자택으로 한의사가 직접 방문하여 침, 뜸, 부항 등 맞춤 한의 진료를 제공합니다. (건강보험 적용)</p>
-
-            <!-- ⬇️ 방문진료 앱 연결 버튼 (구글 폼 주소 적용) ⬇️ -->
             <a href="https://forms.gle/5kGZB5BcptAeMVUz6" target="_blank" style="display: block; margin-top: 15px; background-color: #5d4037; color: white; padding: 12px; text-align: center; border-radius: 8px; text-decoration: none; font-weight: bold; transition: opacity 0.2s; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
                 👉 방문진료 간편 신청하기
             </a>
@@ -391,15 +411,41 @@
             <p style="font-size: 1.05em; line-height: 1.5;">요양원 등 노인요양시설과 협약을 맺고 주기적으로 방문하여, 시설에 입소하신 어르신들의 건강 상태를 세심하게 확인하고 필요한 한의 진료와 예방 관리를 제공합니다.</p>
         </div>
     </div>
-</div>
-<!-- ⬇️ 4개의 안내 카드 아래에 새로 추가할 큰 버튼 ⬇️ -->
+    
     <div style="text-align: center; margin-top: 40px; padding: 20px; background-color: #fdfaf6; border-radius: 12px; border: 1px dashed #2e7d32;">
         <h3 style="margin-top: 0; color: #4e342e; margin-bottom: 15px;">거동이 불편하시다면, 고민하지 말고 신청하세요</h3>
         <a href="visit.html" class="btn" style="background-color: #2e7d32; color: white; padding: 15px 40px; font-size: 1.15em; border-radius: 30px; box-shadow: 0 4px 6px rgba(0,0,0,0.2);">
             우성한의원 - 한의사 방문진료 및 노인장기요양 클리닉 👉
         </a>
     </div>
-<!-- 여기가 기존 longtermcare 구역이 끝나는 </div> 입니다 -->
+</div>
+
+<!-- 🟢 4. AI 검색 대응 대화형 질의응답 (FAQ) 섹션 추가 -->
+<div id="faq" class="section">
+    <h2 class="section-title">자주 묻는 질문 (FAQ)</h2>
+    
+    <div class="faq-item">
+        <h3>일산에서 한의사 방문진료(왕진)가 가능한가요?</h3>
+        <div>
+            <p>네, 가능합니다. 일산 우성한의원은 국민건강보험공단 지정 방문진료 시범사업 참여 기관입니다. 뇌졸중, 파킨슨병, 고관절 골절 등으로 거동이 불편하여 내원이 힘든 어르신들의 자택이나 시설로 한의사가 직접 방문해 침, 뜸, 한약 처방 등 꼼꼼한 진료를 진행합니다.</p>
+        </div>
+    </div>
+
+    <div class="faq-item">
+        <h3>장기요양등급 신청을 위한 의사소견서 발급이 되나요?</h3>
+        <div>
+            <p>네, 발급 가능합니다. 우성한의원에서는 치매나 중풍 등 노인성 질환으로 노인장기요양보험 등급 판정이나 갱신이 필요하신 분들을 위해 정확히 진단 후 의사소견서 및 방문간호지시서를 신속하게 발급해 드리고 있습니다.</p>
+        </div>
+    </div>
+
+    <div class="faq-item">
+        <h3>한의원에서도 초음파 검사를 받을 수 있나요?</h3>
+        <div>
+            <p>우성한의원은 근골격계, 소아성장, 복부 등을 정밀하게 확인할 수 있는 초음파 진단 기기를 도입하여 활용하고 있습니다. 단순히 통증 부위만 보는 것이 아니라 초음파를 통해 염증의 위치와 상태를 눈으로 확인하며, 더욱 안전하고 정확하게 약침 치료와 진료를 시행합니다.</p>
+        </div>
+    </div>
+</div>
+
 <div id="info" class="section" style="background-color: #f8f5f0; border-radius: 15px; margin-bottom: 50px;">
     <div style="display: flex; gap: 40px; margin-bottom: 20px;">
         <h2 id="location" class="section-title" style="margin-bottom: 0;">위치안내</h2>
@@ -430,7 +476,7 @@
             </ul>
             <span class="sub-text">※ 대체공휴일진료는 전화문의 바랍니다.</span>
         </div>
-   
+    
         <div class="card" style="text-align: center; display: flex; flex-direction: column; justify-content: center; align-items: center;">
             <h3>💬 카카오톡 상담 및 예약</h3>
             <p style="margin-bottom: 15px; font-size: 1.05em; color: #555;">스마트폰으로 아래 QR코드를 스캔하거나<br>노란색 버튼을 눌러 채널을 추가해 보세요.</p>
