@@ -254,3 +254,265 @@
             .floating-contact {
                 bottom: 0; right: 0; left: 0;
                 flex-direction: row;
+                flex-wrap: wrap; 
+                gap: 0;
+            }
+            .float-btn {
+                flex: 1 1 50%; 
+                border-radius: 0;
+                padding: 14px 0; 
+                font-size: 0.9em; 
+                box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
+                border-right: 1px solid rgba(255,255,255,0.2);
+                border-bottom: 1px solid rgba(255,255,255,0.2);
+                box-sizing: border-box; 
+            }
+            .float-btn:nth-child(even) { border-right: none; }
+            .float-btn:nth-child(3), .float-btn:nth-child(4) { border-bottom: none; }
+            
+            .nav-logo { font-size: 1.05em; }
+        }
+    </style>
+</head> <!-- 🟢 복구된 닫는 태그 -->
+
+<body> <!-- 🟢 복구된 여는 태그 -->
+
+<!-- 상단 안내 바 -->
+<div style="background-color: #f8f5f0; border-bottom: 1px solid #e0e0e0; padding: 8px 20px; font-size: 0.9em; color: #555; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px;">
+    <div>📍 경기도 고양시 일산서구 고양대로 726, 4층 우성한의원</div>
+    <div style="font-weight: bold; display: flex; gap: 15px; flex-wrap: wrap;">
+        <span>📞 한의원: <a href="tel:031-975-3075" style="color: #555; text-decoration: none;">031-975-3075</a></span>
+        <span>📱 원장직통: <a href="tel:010-9720-3075" style="color: #d84315; text-decoration: none;">010-9720-3075</a></span>
+    </div>
+</div>
+
+<nav>
+    <a href="https://ilsan-wsclinic.vercel.app/" class="nav-logo">
+        <img src="우성한의원마크.jpg" alt="우성한의원 마크">
+        <span>우성한의원 노인장기요양보험과 방문진료</span>
+    </a>
+    
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+    
+    <div class="nav-links" id="navLinks">
+        <a href="https://ilsan-wsclinic.vercel.app/" style="color: #d84315;">🏠 메인 홈페이지</a>
+        <a href="#services" onclick="toggleMenu()">제공 서비스</a>
+        <a href="#cost" onclick="toggleMenu()">비용 안내</a>
+        <a href="#target" onclick="toggleMenu()">진료 대상</a>
+        <a href="#faq" onclick="toggleMenu()">자주 묻는 질문(FAQ)</a>
+        <a href="https://tlcmtm.com/" target="_blank" class="nav-link-tlc" onclick="toggleMenu()">🛒 추천 영양식단(TLC)</a>
+    </div>
+</nav>
+
+<header>
+    <h1>거동이 불편하신 어르신을 위해<br><span class="highlight-text">한의사가 직접 찾아갑니다</span></h1>
+    <p class="slogan">우성한의원은 환자분이 머무시는 가장 편안한 공간인 가정이나 요양시설로 방문하여 정성 어린 맞춤 한의 진료를 제공합니다.</p>
+    
+    <div class="btn-group">
+        <a href="https://docs.google.com/forms/d/14xLwWFknlXXHgCsBC-lFdYvV1XNXGk9gG18bVtHog5M/edit" target="_blank" class="btn btn-form">🏡 한의사 방문진료 간편 신청</a>
+        <a href="http://pf.kakao.com/_xogxeFxd/chat" target="_blank" class="btn btn-call" style="background-color: #FEE500; color: #3C1E1E;">💬 카카오톡 상담</a> 
+    </div>
+</header>
+
+<div id="target" class="section">
+    <div class="target-box">
+        <h3>이런 분들께 한의사 방문진료가 필요합니다</h3>
+        <div class="target-list">
+            <div class="target-item">🧠 뇌졸중(중풍) 후유증 환자</div>
+            <div class="target-item">👴 치매, 파킨슨병 등 노인성 질환</div>
+            <div class="target-item">🦴 중증 관절염으로 보행이 힘든 분</div>
+            <div class="target-item">🛏️ 수술 후 퇴원하여 자택 요양 중인 분</div>
+            <div class="target-item">♿ 척수 손상 및 마비 증상 환자</div>
+        </div>
+        <p style="text-align: center; margin-top: 20px; color: #666; font-size: 0.95em;">※ 그 외 질병, 부상, 출산 등으로 인하여 혼자서 한의원 내원이 곤란한 분 누구나 신청 가능합니다.</p>
+    </div>
+</div>
+
+<div id="services" class="section" style="padding-top: 0;">
+    <h2 class="section-title">우성한의원 노인장기요양 및 방문 의료 서비스</h2>
+    
+    <div class="service-grid">
+        <div class="service-card">
+            <h3>🏡 일차의료 방문진료 (왕진)</h3>
+            <p>보건복지부 주관 방문진료 시범사업 참여 기관으로서, 원장님이 직접 자택을 방문하여 침, 뜸, 부항 치료 및 맞춤 한약 처방을 진행합니다.</p>
+            <ul>
+                <li><strong>건강보험 적용:</strong> 시범사업에 따라 본인 부담금이 일부 지원됩니다.</li>
+                <li><strong>맞춤 치료:</strong> 통증 완화, 기력 회복, 마비 증상 개선 등 환자 상태에 맞춘 한방 치료.</li>
+            </ul>
+        </div>
+
+        <div class="service-card" style="border: 2px solid #ffb74d; position: relative;">
+            <span style="background: #fff3e0; color: #e65100; padding: 4px 10px; border-radius: 4px; font-size: 0.85em; font-weight: bold; position: absolute; top: -14px; left: 30px;">방문 진찰 가능</span>
+            <h3>📄 노인장기요양 의사소견서 발급 안내</h3>
+            <p>장기요양등급 판정 신청 및 갱신 시 국민건강보험공단에 제출해야 하는 '의사소견서'를 원장님이 면밀히 진찰한 후 의학적 기준에 따라 발급해 드립니다.</p>
+            
+            <div style="background-color: #fff3e0; padding: 15px; border-radius: 8px; margin-bottom: 15px; border-left: 4px solid #ff9800;">
+                <p style="margin: 0; color: #d84315; font-weight: bold; font-size: 1.05em; line-height: 1.5;">
+                    💡 환자분이 직접 내원하기 힘드신가요?<br>
+                    <span style="color: #4e342e; font-size: 0.95em;">거동이 완전히 불가능한 경우, 원장님이 직접 찾아가는 <strong>'방문진료(왕진)'</strong>를 통해 진찰 후 소견서 발급이 가능합니다.</span>
+                </p>
+            </div>
+            <ul>
+                <li>치매, 중풍 등 노인성 질환 진단 병력 확인</li>
+                <li>거동 불편 정도 및 인지 기능 평가 진행</li>
+            </ul>
+        </div>
+
+        <div class="service-card">
+            <h3>📝 방문간호지시서 발급</h3>
+            <p>장기요양등급을 받으신 어르신이 가정에서 전문적인 방문간호 서비스(투약 관리, 욕창 치료 등)를 받으실 수 있도록 진료 후 한의사 방문간호지시서를 발급해 드립니다.</p>
+            <ul>
+                <li>재가복지센터 및 방문간호 서비스 연계 필수 서류</li>
+                <li>환자의 만성 질환 및 현재 건강 상태 꼼꼼히 반영</li>
+            </ul>
+            <p style="margin-top: 15px; color: #0277bd; font-weight: bold; font-size: 0.95em; text-align: center; background-color: #e1f5fe; padding: 10px; border-radius: 8px;">
+                🩺 방문간호지시서 발급을 원하시는 방문간호센터는 상담해주세요.
+            </p>
+        </div>
+
+        <div class="service-card">
+            <h3>🤝 계약의사 (촉탁의) 진료</h3>
+            <p>요양원 등 노인요양시설과 협약을 맺고 주기적으로 시설을 방문하여, 입소 어르신들의 건강 상태를 세심하게 확인하고 필요한 한방 의료 관리를 제공합니다.</p>
+            <ul>
+                <li>시설 내 정기적 건강 모니터링</li>
+                <li>침 치료 및 질병 예방을 위한 한의학적 관리</li>
+            </ul>
+            <p style="margin-top: 15px; color: #d84315; font-weight: bold; font-size: 0.95em; text-align: center; background-color: #fff3e0; padding: 10px; border-radius: 8px;">
+                🏢 계약의 방문을 원하는 요양원은 상담해주세요.
+            </p>
+        </div>
+    </div>
+</div>
+
+<div id="cost" class="section" style="padding-top: 0;">
+    <h2 class="section-title">방문진료(왕진) 비용 안내 <span style="font-size: 0.6em; color: #666; font-weight: normal;">(2026년 기준)</span></h2>
+    
+    <div class="cost-info-box">
+        <p>💡 방문진료 1회당 총 진료비: 108,262원</p>
+        <span>※ 건강보험 수가 인상에 따라 본인 부담금은 해마다 변동(인상)될 수 있습니다.</span>
+    </div>
+
+    <div class="table-responsive">
+        <table class="cost-table">
+            <thead>
+                <tr>
+                    <th>건강보험 가입 유형</th>
+                    <th>본인 부담률</th>
+                    <th>환자 본인 부담금 (1회)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>일반 건강보험 환자</td>
+                    <td>30%</td>
+                    <td class="cost-highlight">32,400원</td>
+                </tr>
+                <tr>
+                    <td>차상위 2종 / 의료급여 2종</td>
+                    <td>10%</td>
+                    <td class="cost-highlight">10,820원</td>
+                </tr>
+                <tr>
+                    <td>차상위 1종 / 의료급여 1종</td>
+                    <td>5%</td>
+                    <td class="cost-highlight">5,410원</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<!-- 🛒 TLC 맞춤몰 섹션 -->
+<div class="section" style="padding-top: 0; padding-bottom: 20px;">
+    <div class="tlc-banner">
+        <h3>🛒 의료진이 추천하는 맞춤몰 | TLC</h3>
+        <p>어르신들의 기력 회복과 건강 유지를 위한 <strong>맞춤식 케어식품, 영양 식단, 필수 영양제</strong>를 만나보세요.<br>우성한의원 방문진료 환자분들을 위해 원장님이 꼼꼼하게 엄선하여 안내해 드립니다.</p>
+        
+        <!-- 할인 혜택 강조 박스 -->
+        <div class="tlc-discount">
+            🎁 회원가입 시 제휴병원에 <strong>'우성한의원'</strong>을 입력하시면<br>
+            <span style="color: #c62828;">할인된 제휴 가격</span>으로 구입하실 수 있습니다!
+        </div>
+        <br>
+        
+        <a href="https://tlcmtm.com/" target="_blank" class="btn-tlc">TLC 맞춤몰 구경하러 가기 👉</a>
+    </div>
+</div>
+
+<!-- 🟢 AI 검색 대응 대화형 질의응답 (FAQ) 섹션 추가 -->
+<div id="faq" class="section" style="padding-top: 0;">
+    <h2 class="section-title">방문진료 자주 묻는 질문 (FAQ)</h2>
+    
+    <div class="faq-item">
+        <h3>방문진료 시 교통비가 따로 추가되나요?</h3>
+        <p>아니요, 추가되지 않습니다. 방문진료는 건강보험 수가 내에 이동에 대한 비용이 포함되어 있어 환자분이나 보호자분께 별도의 교통비를 청구하지 않습니다.</p>
+    </div>
+
+    <div class="faq-item">
+        <h3>의사소견서 발급을 위해 환자가 반드시 한의원에 가야 하나요?</h3>
+        <p>원칙적으로 환자 본인의 내원 진찰이 필요합니다. 하지만 <strong>거동이 전혀 불가능하여 내원이 어려운 경우</strong>, 우성한의원의 '방문진료'를 신청하시면 원장님이 직접 자택이나 시설로 찾아가 심신 상태를 진찰한 후 소견서를 발급해 드릴 수 있습니다.</p>
+    </div>
+
+    <div class="faq-item">
+        <h3>장기요양등급이 없어도 방문진료를 받을 수 있나요?</h3>
+        <p>네, 가능합니다. 노인장기요양등급 유무와 상관없이 뇌졸중이나 골절 등 질병이나 부상으로 인해 스스로 의료기관 내원이 어려운 분이라면 누구나 건강보험을 적용받아 왕진을 신청하실 수 있습니다.</p>
+    </div>
+</div>
+
+<div id="procedure" class="section" style="padding-top: 0;">
+    <h2 class="section-title">방문진료 신청 절차</h2>
+    <div class="step-container">
+        <div class="step-box">
+            <div class="step-num">1</div>
+            <h4>상담 및 신청</h4>
+            <p>전화, 문자, 카카오톡 또는 온라인 폼을 통해 접수합니다.</p>
+        </div>
+        <div class="step-box">
+            <div class="step-num">2</div>
+            <h4>일정 조율</h4>
+            <p>원장님의 진료 일정에 맞춰 방문 일시를 확정합니다.</p>
+        </div>
+        <div class="step-box">
+            <div class="step-num">3</div>
+            <h4>가정 방문 및 진료</h4>
+            <p>자택을 방문하여 진맥, 침구 치료 및 처방을 진행합니다.</p>
+        </div>
+        <div class="step-box">
+            <div class="step-num">4</div>
+            <h4>사후 관리</h4>
+            <p>치료 경과를 확인하고 필요시 정기 방문 계획을 수립합니다.</p>
+        </div>
+    </div>
+    
+    <div style="text-align: center; margin-top: 50px;">
+        <a href="https://docs.google.com/forms/d/14xLwWFknlXXHgCsBC-lFdYvV1XNXGk9gG18bVtHog5M/edit" target="_blank" class="btn btn-form" style="padding: 15px 40px; font-size: 1.1em;">가족을 위한 방문진료 상담 신청하기 👉</a>
+    </div>
+</div>
+
+<!-- 🟢 의료광고 고지사항 푸터 추가 -->
+<footer style="background-color: #333; color: #bbb; text-align: center; padding: 30px 20px; font-size: 0.85em; line-height: 1.6;">
+    <p style="color: #fff; font-weight: bold; margin-bottom: 10px; font-size: 1.1em;">의료광고 고지사항</p>
+    <p style="margin-bottom: 15px;">본 웹사이트의 모든 안내는 의료법 제56조 1항을 준수하여 작성되었습니다.<br>
+    일차의료 방문진료 시범사업 및 건강보험 적용 기준에 따라 본인 부담금이 발생할 수 있으며, 환자의 상태에 따라 치료 내용 및 방문 주기가 달라질 수 있습니다.<br>방문 후 시행되는 침, 뜸, 부항 등 한방 시술 시 개인에 따라 멍, 뻐근함, 미약한 통증 등의 부작용이 발생할 수 있습니다.<br>노인장기요양 의사소견서는 무조건 발급되는 것이 아니며, 한의사의 꼼꼼한 진단 하에 의학적 소견을 바탕으로 발급됩니다.</p>
+    <p>우성한의원 | 대표원장 고의현 | 경기도 고양시 일산서구 고양대로 726, 4층</p>
+    <p style="margin-top: 5px;">전화: 031-975-3075 | 원장 직통: 010-9720-3075</p>
+</footer>
+
+<div class="floating-contact">
+    <a href="http://pf.kakao.com/_xogxeFxd/chat" target="_blank" class="float-btn kakao">💬 카톡 상담·예약</a>
+    <a href="tel:031-975-3075" class="float-btn call-clinic">📞 한의원 전화</a>
+    <a href="tel:010-9720-3075" class="float-btn call-mobile">📱 원장님 직통</a>
+    <a href="sms:010-9720-3075" class="float-btn sms">✉️ 원장님 문자</a>
+</div>
+
+<script>
+    function toggleMenu() {
+        const navLinks = document.getElementById("navLinks");
+        if (window.innerWidth <= 768) {
+            navLinks.classList.toggle("active");
+        }
+    }
+</script>
+
+</body>
+</html>
