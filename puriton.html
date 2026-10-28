@@ -3,7 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- 🟢 1. AI 검색 최적화(AEO) 및 의료법 준수 메타 태그 -->
+    <meta name="description" content="일산 우성한의원 퓨리톤(MEB) 미네랄 클리닉. 독성을 정제한 약용 광물 추출물로 혈당 건강(미네랄 패치), 통증 완화(SV 패치), 안구 건조(명안액) 관리를 돕습니다. 비대면 처방 안내.">
+    <meta name="keywords" content="일산 퓨리톤, MEB 미네랄, 미네랄 패치, 당뇨 패치 한의원, 통증 패치, 사독 패치, 명안액, 구강스프레이, 우성한의원, 비대면 처방">
     <title>우성한의원 - 퓨리톤 미네랄 솔루션</title>
+
+    <!-- 🟢 2. AI 검색 엔진을 위한 FAQ 구조화된 데이터 (Schema Markup) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "퓨리톤(MEB) 미네랄 솔루션이란 무엇인가요?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "점토 광물에서 유해한 중금속을 정제하고 인체에 필요한 필수 미네랄만을 추출한 약용 광물 농축액입니다. 체내 흡수를 돕는 콜로이드 상태로 제조되어 신진대사 및 건강 회복을 보조합니다."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "미네랄 패치와 통증(SV) 패치는 어떻게 다른가요?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "미네랄 패치는 귀 뒤에 부착하여 전반적인 신진대사와 혈당 건강 관리를 돕는 보조 요법인 반면, 통증(SV) 패치는 미세침 형태로 불편한 관절이나 근육 등 국소 부위에 직접 부착하여 통증 완화를 돕는 외용제입니다."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "명안액이나 구강스프레이도 비대면 처방이 가능한가요?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "네, 가능합니다. 원장님과의 비대면 전화 진료를 통해 현재 눈의 피로도나 구강 건조 상태 등을 꼼꼼히 확인한 후 안전하게 자택으로 처방 및 발송해 드리고 있습니다."
+          }
+        }
+      ]
+    }
+    </script>
+
     <style>
         :root { 
             --primary: #1a4f76; 
@@ -66,6 +105,17 @@
         .product-info ul { padding-left: 20px; margin: 0; color: #555; font-size: 0.95em; line-height: 1.5; }
         .product-info ul li { margin-bottom: 6px; }
 
+        /* 🟢 FAQ 스타일 (신설) */
+        .faq-item { background: #fff; border: 1px solid #e0e0e0; padding: 20px; border-radius: 12px; margin-bottom: 15px; box-shadow: 0 2px 4px rgba(0,0,0,0.03); transition: transform 0.2s; text-align: left; }
+        .faq-item:hover { transform: translateY(-2px); border-color: var(--secondary); }
+        .faq-item h3 { color: var(--primary); margin: 0 0 12px 0; font-size: 1.15em; display: flex; align-items: flex-start; gap: 10px; }
+        .faq-item h3::before { content: 'Q.'; color: var(--secondary); font-weight: bold; }
+        .faq-item p { margin: 0; color: #444; line-height: 1.6; font-size: 1.05em; display: flex; align-items: flex-start; gap: 10px; }
+        .faq-item p::before { content: 'A.'; color: var(--primary); font-weight: bold; }
+
+        /* 의료법 명시 푸터 */
+        footer { background: #333; color: #bbb; padding: 30px 20px; text-align: center; font-size: 0.85em; line-height: 1.6; }
+
         @media (max-width: 768px) {
             .nav-links { display: none; } 
             header { padding: 60px 20px; }
@@ -76,10 +126,8 @@
 </head>
 <body>
 
-<!-- 상단 안내 바 (수정됨: div 태그 닫기 오류 해결) -->
 <div style="background-color: #f8f5f0; border-bottom: 1px solid #e0e0e0; padding: 8px 20px; font-size: 0.88em; color: #555; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px;">
     <div style="display: flex; align-items: center; gap: 10px;">
-        <!-- 메인홈피 이동 버튼 -->
         <a href="https://ilsan-wsclinic.vercel.app/" style="background-color: #1a4f76; color: white; padding: 4px 10px; border-radius: 4px; text-decoration: none; font-weight: bold; font-size: 0.9em; box-shadow: 0 1px 3px rgba(0,0,0,0.1);">🏠 메인홈피 가기</a>
         <div>📍 경기도 고양시 일산서구 고양대로 726, 4층 우성한의원</div>
     </div>
@@ -95,75 +143,75 @@
         <a href="#puriton">퓨리톤이란?</a>
         <a href="#patch">마이크로니들 패치</a>
         <a href="#solution">명안액 & 구강스프레이</a>
+        <a href="#faq">자주 묻는 질문(FAQ)</a>
     </div>
 </nav>
 
+<!-- 🟢 배너 텍스트 순화 (의료법 준수) -->
 <header>
-    <h1>인체 회복을 위한 약용 광물 추출물<br><span class="highlight-text">퓨리톤(MEB) 미네랄 솔루션</span></h1>
-    <p class="slogan">먹고, 뿌리고, 붙이는 신개념 처방.<br>독성 중금속을 완벽히 제거하고 흡수율을 극대화한 천연 복합 미네랄이 저하된 세포의 회복과 혈당·통증 관리를 돕습니다.</p>
+    <h1>인체 회복을 돕는 약용 광물 추출물<br><span class="highlight-text">퓨리톤(MEB) 미네랄 솔루션</span></h1>
+    <p class="slogan">먹고, 뿌리고, 붙이는 신개념 처방.<br>독성을 정제하여 안전성을 높이고 체내 흡수를 돕는 천연 복합 미네랄이 저하된 컨디션 회복과 건강 관리를 보조합니다.</p>
     
     <div class="btn-group">
-        <!-- 메인 홈피 이동 버튼 추가 -->
         <a href="https://ilsan-wsclinic.vercel.app/" class="btn" style="background: rgba(255,255,255,0.2); color: white; border: 1px solid white; backdrop-filter: blur(2px);">🏠 우성한의원 메인 홈</a>
-        <!-- ⬇️ 구글 폼 주소 입력 ⬇️ -->
-        <a href="https://forms.gle/NPduptzFAcxAZpLT8"_blank" class="btn btn-form">✨ 미네랄 솔루션 비대면 처방 신청</a>
-        <a href="http://pf.kakao.com/_xogxeFxd/chat" target="_blank" class="btn btn-call">💬 카카오톡 상담</a> 
+        <a href="https://forms.gle/NPduptzFAcxAZpLT8" target="_blank" class="btn btn-form">✨ 미네랄 솔루션 비대면 처방 신청</a>
+        <a href="http://pf.kakao.com/_xogxeFxd/chat" target="_blank" class="btn btn-call" style="background-color: #FEE500; color: #191919;">💬 카카오톡 상담</a> 
     </div>
 </header>
 
-<!-- 퓨리톤(MEB) 소개 -->
+<!-- 퓨리톤(MEB) 소개 (과대광고 표현 순화) -->
 <div id="puriton" class="section">
     <div class="puriton-box">
         <h3 style="font-size: 2em; margin-bottom: 10px;">💧 퓨리톤 (MEB 멀티미네랄) 이란?</h3>
-        <p style="font-size: 1.1em; color: #444; max-width: 800px; margin: 0 auto 20px auto;">점토 광물을 수비법(水飛法)으로 가공하여 복합 미네랄 성분을 추출한 신개념 약용 광물 농축액입니다.</p>
+        <p style="font-size: 1.1em; color: #444; max-width: 800px; margin: 0 auto 20px auto;">점토 광물을 수비법(水飛法)으로 가공하여 인체에 필요한 복합 미네랄 성분을 추출한 약용 광물 농축액입니다.</p>
         
         <div style="display: flex; flex-wrap: wrap; gap: 15px; justify-content: center; margin-top: 30px;">
             <div style="flex: 1 1 200px; background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
                 <span style="font-size: 2em; display: block; margin-bottom: 10px;">🛡️</span>
-                <strong>안전성 극대화</strong><br><span style="font-size: 0.9em; color: #666;">인체에 유해한 독성 중금속을 완벽하게 정제하여 제거했습니다.</span>
+                <strong>독성 정제 공정</strong><br><span style="font-size: 0.9em; color: #666;">정제 과정을 거쳐 유해한 중금속을 걸러내어 안전하게 조제되었습니다.</span>
             </div>
             <div style="flex: 1 1 200px; background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
                 <span style="font-size: 2em; display: block; margin-bottom: 10px;">⚡</span>
-                <strong>흡수율 강화</strong><br><span style="font-size: 0.9em; color: #666;">우리 몸에 필요한 필수 미네랄을 콜로이달 상태로 만들어 일반 무기 미네랄과 달리 체내 흡수가 매우 용이합니다.</span>
+                <strong>흡수 친화적 구조</strong><br><span style="font-size: 0.9em; color: #666;">필수 미네랄을 콜로이달 상태로 만들어 일반 무기 미네랄에 비해 체내 흡수를 원활하게 돕습니다.</span>
             </div>
             <div style="flex: 1 1 200px; background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
                 <span style="font-size: 2em; display: block; margin-bottom: 10px;">🌿</span>
-                <strong>다양한 활용도</strong><br><span style="font-size: 0.9em; color: #666;">목적에 따라 조성이 다른 광물로부터 조제되어 패치, 안약, 구강용품 등 다양한 해독 및 회복 치료에 사용됩니다.</span>
+                <strong>다양한 활용도</strong><br><span style="font-size: 0.9em; color: #666;">조성이 다른 광물로부터 추출되어 패치, 안약, 구강용품 등 다양한 형태의 건강 보조 치료에 사용됩니다.</span>
             </div>
         </div>
     </div>
 </div>
 
-<!-- 미네랄 처방 라인업 -->
+<!-- 미네랄 처방 라인업 (보장성 문구 수정) -->
 <div id="patch" class="section" style="padding-top: 0;">
     <h2 class="section-title">퓨리톤 기반 맞춤 처방 라인업</h2>
     
     <div class="product-grid">
         
-        <!-- 1. MEB 미네랄 패치 (당뇨패치) -->
+        <!-- 1. MEB 미네랄 패치 -->
         <div class="product-card">
             <img src="미네랄패치(당뇨패치).jpg" alt="MEB 미네랄 패치" class="product-img">
             <div class="product-info">
-                <span class="tag" style="background: #e3f2fd; color: #1976d2;">붙이는 혈당조절제</span>
-                <h3>MEB 미네랄 (당뇨) 패치</h3>
+                <span class="tag" style="background: #e3f2fd; color: #1976d2;">대사 조절 보조</span>
+                <h3>MEB 미네랄 패치</h3>
                 <ul>
-                    <li>당뇨병, 인슐린 저항성, 산화 스트레스 및 고지혈증 개선에 도움을 줍니다.</li>
-                    <li>위장관을 거치지 않고 모세혈관으로 미네랄이 바로 흡수되는 패치형 무통 주사입니다.</li>
-                    <li>귀 뒤에 부착하며 영실, 여주, 천연 미네랄 추출물의 강력한 시너지 효과를 냅니다.</li>
+                    <li>혈당 건강 관리 및 신진대사 개선을 보조하는 데 도움을 줍니다.</li>
+                    <li>위장관을 거치지 않고 피부를 통해 미네랄 성분이 흡수되도록 고안된 패치입니다.</li>
+                    <li>귀 뒤에 부착하며 천연 미네랄과 약재(영실, 여주 등) 추출물의 시너지 효과를 기대할 수 있습니다.</li>
                 </ul>
             </div>
         </div>
 
-        <!-- 2. SV 통증패치 (사독패치) -->
+        <!-- 2. SV 통증패치 -->
         <div class="product-card">
             <img src="통증패치.jpg" alt="SV 통증패치" class="product-img">
             <div class="product-info">
-                <span class="tag" style="background: #ffebee; color: #d32f2f;">붙이는 사독약침</span>
+                <span class="tag" style="background: #ffebee; color: #d32f2f;">국소 통증 이완</span>
                 <h3>SV 통증·풍증 패치</h3>
                 <ul>
-                    <li>한방에서 사용하는 약침을 그대로 담은 신개념 용해성 미세침 패치입니다.</li>
-                    <li>불편한 관절이나 근육에 부착하면 미세한 침이 체내 온도로 녹아서 흡수됩니다.</li>
-                    <li>서서히 흡수되어 오랜 시간 유효 성분이 작용해 효과가 극대화됩니다.</li>
+                    <li>한방 약침 성분을 용해성 미세침(마이크로니들) 형태로 담은 패치입니다.</li>
+                    <li>불편한 관절이나 근육에 부착하면 미세침이 체온에 녹아 부드럽게 흡수됩니다.</li>
+                    <li>지속적으로 유효 성분이 작용하여 국소 부위의 통증 완화에 도움을 줍니다.</li>
                 </ul>
             </div>
         </div>
@@ -172,12 +220,12 @@
         <div class="product-card" id="solution">
             <img src="명안액.jpg" alt="MEB 명안액" class="product-img">
             <div class="product-info">
-                <span class="tag" style="background: #f3e5f5; color: #7b1fa2;">안구 피로 회복</span>
+                <span class="tag" style="background: #f3e5f5; color: #7b1fa2;">안구 피로 완화</span>
                 <h3>MEB 점안액 (명안액)</h3>
                 <ul>
-                    <li><strong>핵심 성분:</strong> 황산나트륨, 염화마그네슘, 황산칼슘, 황산아연, 황산제일철 등 복합 미네랄수</li>
-                    <li>안구 건조로 인한 피로감과 따끔거림, 시야 흐림을 일시적으로 완화합니다.</li>
-                    <li>충혈, 가려움증, 염증이 있는 눈과 진물 개선에 도움을 줍니다.</li>
+                    <li><strong>핵심 성분:</strong> 황산나트륨, 염화마그네슘, 황산아연 등 천연 복합 미네랄수</li>
+                    <li>안구 건조로 인한 뻑뻑함, 피로감, 시야 흐림의 일시적 완화를 돕습니다.</li>
+                    <li>눈의 가벼운 충혈이나 염증 완화 관리에 도움을 줄 수 있습니다.</li>
                     <li><strong>용법:</strong> 1일 1~2회, 1회 1~2방울 점안 (15ml)</li>
                 </ul>
             </div>
@@ -187,24 +235,43 @@
         <div class="product-card">
             <img src="구강스프레이.jpg" alt="MEB 구강스프레이" class="product-img">
             <div class="product-info">
-                <span class="tag" style="background: #fff3e0; color: #e65100;">구강·인후 보호</span>
+                <span class="tag" style="background: #fff3e0; color: #e65100;">구강·인후 보습</span>
                 <h3>MEB 목(구강) 스프레이</h3>
                 <ul>
                     <li><strong>핵심 성분:</strong> 미네랄수 기반 추출액</li>
-                    <li>콜로이달 상태의 미네랄 용액이 구강 및 인후두 점막에 직접 작용하여 환경을 개선합니다.</li>
-                    <li>목의 염증 완화, 건조함 해소 및 구강 내 보습에 효과적입니다.</li>
-                    <li>휴대가 간편한 30ml 용량으로 언제 어디서나 수시로 사용할 수 있습니다.</li>
+                    <li>미네랄 용액이 구강 및 인후두 점막에 닿아 보습 환경 유지를 돕습니다.</li>
+                    <li>목의 건조함 해소 및 가벼운 염증 완화 관리에 도움을 줄 수 있습니다.</li>
+                    <li>휴대가 간편한 30ml 용량으로 수시로 사용하기 편리합니다.</li>
                 </ul>
             </div>
         </div>
 
     </div>
     
-    <!-- 하단 폼 유도 -->
     <div style="text-align: center; margin-top: 50px; background: #fff; padding: 40px 20px; border-radius: 12px; border: 1px solid #e0e0e0;">
         <h3 style="margin-top:0; color: var(--primary);">나에게 맞는 미네랄 솔루션은?</h3>
-        <p style="font-size: 1.1em; color: #555; margin-bottom: 25px;">환자분의 증상에 맞는 맞춤형 퓨리톤 제품을 원장님께서 직접 처방해 드립니다.</p>
-        <a href="https://forms.gle/NPduptzFAcxAZpLT8"_blank" class="btn btn-form" style="padding: 15px 40px; font-size: 1.1em;">간편 설문 작성하고 비대면 처방받기 👉</a>
+        <p style="font-size: 1.1em; color: #555; margin-bottom: 25px;">환자분의 증상에 맞는 맞춤형 퓨리톤 제품을 원장님께서 진단 후 처방해 드립니다.</p>
+        <a href="https://forms.gle/NPduptzFAcxAZpLT8" target="_blank" class="btn btn-form" style="padding: 15px 40px; font-size: 1.1em;">간편 설문 작성하고 비대면 처방받기 👉</a>
+    </div>
+</div>
+
+<!-- 🟢 AI 검색 대응 대화형 질의응답 (FAQ) 섹션 추가 -->
+<div id="faq" class="section" style="padding-top: 0;">
+    <h2 class="section-title">자주 묻는 질문 (FAQ)</h2>
+    
+    <div class="faq-item">
+        <h3>퓨리톤(MEB) 미네랄 솔루션이란 무엇인가요?</h3>
+        <p>점토 광물에서 유해한 독성 중금속을 정제하여 걸러내고, 인체에 유익한 필수 미네랄만을 추출한 약용 광물 농축액입니다. 일반 미네랄과 달리 체내 흡수가 용이한 콜로이드 상태로 만들어져 다양한 부위의 컨디션 회복을 돕는 데 사용됩니다.</p>
+    </div>
+
+    <div class="faq-item">
+        <h3>미네랄 패치와 통증(SV) 패치는 어떻게 다른가요?</h3>
+        <p>미네랄 패치는 귀 뒤 얇은 피부에 부착하여 혈당 건강 및 전반적인 신진대사 관리를 보조하는 제품입니다. 반면 통증(SV) 패치는 미세침(마이크로니들) 형태로 만들어져 불편한 관절이나 뭉친 근육에 직접 부착하여 국소적인 통증 완화를 돕습니다.</p>
+    </div>
+
+    <div class="faq-item">
+        <h3>명안액이나 패치도 한의원에 안 가고 처방받을 수 있나요?</h3>
+        <p>네, 가능합니다. 원장님과의 비대면 전화 진료를 통해 환자분의 눈 피로도, 통증 부위, 평소 건강 상태 등을 확인한 후 적합한 제품을 안전하게 자택으로 발송해 드리고 있습니다.</p>
     </div>
 </div>
 
@@ -232,13 +299,14 @@
     </div>
 </div>
 
+<!-- 🟢 의료광고 고지사항 푸터 추가 -->
+<footer style="background-color: #333; color: #bbb; text-align: center; padding: 30px 20px; font-size: 0.85em; line-height: 1.6;">
+    <p style="color: #fff; font-weight: bold; margin-bottom: 10px; font-size: 1.1em;">의료광고 고지사항</p>
+    <p>본 게시물은 의료법 제56조 1항을 준수하여 우성한의원에서 직접 작성하였습니다.<br>
+    모든 한방 처방 및 외용제(패치, 점안액 등)는 개인의 체질과 건강 상태에 따라 효과에 차이가 있을 수 있으며, <br>
+    패치 부착 시 피부 발적이나 가려움, 점안액 사용 시 일시적 따가움 등의 부작용이 발생할 수 있습니다. <br>반드시 한의사와 충분한 진단 및 상담 후 사용하시기 바랍니다.</p>
+    <p style="margin-top: 15px; color: #888;">우성한의원 | 대표원장 고의현 | 경기도 고양시 일산서구 고양대로 726, 4층</p>
+</footer>
+
 </body>
 </html>
-```<br>
-<FollowUp>
-
-<ElicitationsGroup message="추가로 웹페이지를 개선하시겠습니까?">
-  <Elicitation label="모바일 환경 탐색 메뉴 고정하기" query="모바일에서 볼 때 상단 메뉴(nav)가 스크롤을 내려도 항상 화면 위에 떠있게(고정되게) CSS를 수정해 줘."/>
-  <Elicitation label="카카오맵 길찾기 링크 추가" query="오시는 길 텍스트나 지도 아이콘을 누르면 카카오맵 길찾기로 바로 연결되는 코드를 만들어 줘."/>
-</ElicitationsGroup>
-</FollowUp>
