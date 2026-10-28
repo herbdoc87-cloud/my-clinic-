@@ -3,7 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>우성한의원 다이어트 클리닉</title>
+    
+    <!-- 🟢 1. AI 검색 최적화(AEO) 메타 태그 -->
+    <meta name="description" content="일산 우성한의원 다이어트 클리닉. 굶지 않고 기초대사량을 높이는 '엔오슬림환'과 체내 독소를 비우는 '해독환' 맞춤 처방. 전국 비대면 진료 및 택배 발송 가능.">
+    <meta name="keywords" content="일산 다이어트 한의원, 한방 다이어트, 엔오슬림환, 다이어트 환약, 해독환, 비대면 다이어트 한약, 요요방지 다이어트, 산화질소 다이어트, 우성한의원">
+    <title>우성한의원 다이어트 클리닉 (엔오슬림환 & 해독환)</title>
+
+    <!-- 🟢 2. AI 검색 엔진을 위한 FAQ 구조화된 데이터 (Schema Markup) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "다이어트 한약(엔오슬림환)은 비대면 처방이 가능한가요?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "네, 가능합니다. 원장님과의 꼼꼼한 전화 상담을 통해 환자분의 체질, 병력, 감량 목표를 확인한 후, 개인에게 맞춘 다이어트 환약을 조제하여 자택으로 안전하게 택배 발송해 드립니다."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "엔오슬림환을 먹으면 운동을 안 해도 살이 빠지나요?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "엔오슬림환은 기초대사량을 끌어올리고 백색지방을 갈색지방으로 전환시키는 산화질소 작용을 돕습니다. 마치 가벼운 운동을 한 것과 같은 대사 촉진 효과를 내기 때문에, 무리한 운동 없이도 체지방 위주의 감량 효과를 기대하실 수 있습니다."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "해독환은 어떤 역할을 하나요? 꼭 먹어야 하나요?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "해독환은 다이어트 중 흔히 발생하는 변비를 예방하고 체내 독소와 노폐물을 배출합니다. 본격적인 감량 전 '비움기'에 복용하여 장내 환경을 개선하면, 이후 다이어트 약의 흡수율을 높이고 염증을 완화하여 훨씬 효과적인 체중 감량이 가능합니다."
+          }
+        }
+      ]
+    }
+    </script>
+
     <style>
         /* 기본 설정 */
         :root { --primary: #5d4037; --bg-light: #f8f5f0; }
@@ -13,11 +52,14 @@
         nav { background: #fff; padding: 15px 20px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 100; display: flex; justify-content: space-between; align-items: center; }
         .nav-logo { font-size: 1.3em; font-weight: bold; color: var(--primary); text-decoration: none; display: flex; align-items: center; gap: 8px; white-space: nowrap; }
         .nav-logo img { height: 32px; width: 32px; border-radius: 50%; object-fit: cover; }
-        .nav-links { display: flex; gap: 20px; flex-wrap: wrap; justify-content: flex-end; }
+        .nav-links { display: flex; gap: 20px; flex-wrap: wrap; justify-content: flex-end; align-items: center; }
         .nav-links a { text-decoration: none; color: #333; font-weight: bold; font-size: 0.95em; transition: color 0.2s; }
         .nav-links a:hover { color: var(--primary); }
 
-       /* 2. 메인 배너 (히어로 섹션) - 다이어트 전용 문구 */
+        /* 모바일 햄버거 메뉴 버튼 */
+        .menu-toggle { display: none; font-size: 1.8em; cursor: pointer; color: var(--primary); }
+
+       /* 2. 메인 배너 (히어로 섹션) */
         header { 
             background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), url('배경.jpg'); 
             background-size: cover; 
@@ -59,9 +101,29 @@
         .badge { background: #f0ebe1; color: var(--primary); padding: 4px 10px; border-radius: 20px; font-size: 0.85em; margin-right: 8px; font-weight: bold; display: inline-block; width: 45px; text-align: center; }
         .sub-text { font-size: 0.9em; color: #666; margin-top: 15px; display: block; background: #f9f9f9; padding: 10px; border-radius: 5px; text-align: left; }
 
+        /* 🟢 4. AI 검색 대응 FAQ 스타일 신설 */
+        .faq-item { background: #fff; border: 1px solid #e0e0e0; padding: 20px; border-radius: 12px; margin-bottom: 15px; box-shadow: 0 2px 4px rgba(0,0,0,0.03); transition: transform 0.2s; text-align: left; }
+        .faq-item:hover { transform: translateY(-2px); border-color: #d32f2f; }
+        .faq-item h3 { color: var(--primary); margin: 0 0 12px 0; font-size: 1.15em; display: flex; align-items: flex-start; gap: 10px; }
+        .faq-item h3::before { content: 'Q.'; color: #d32f2f; font-weight: bold; }
+        .faq-item p { margin: 0; color: #444; line-height: 1.6; font-size: 1.05em; display: flex; align-items: flex-start; gap: 10px; }
+        .faq-item p::before { content: 'A.'; color: #2e7d32; font-weight: bold; }
+
         /* 모바일 대응 */
         @media (max-width: 768px) {
-            .nav-links { display: none; } 
+            .menu-toggle { display: block; }
+            nav { flex-wrap: wrap; }
+            .nav-links { 
+                display: none; 
+                flex-direction: column; 
+                width: 100%; 
+                background: #fff; 
+                padding: 10px 0;
+            }
+            .nav-links.active { display: flex; }
+            .nav-links a { padding: 15px 10px; border-bottom: 1px solid #f0f0f0; width: 100%; box-sizing: border-box; text-align: left; }
+            .nav-links a:last-child { border-bottom: none; }
+
             header { padding: 60px 20px; }
             h1 { font-size: 2em; }
         }
@@ -118,6 +180,13 @@
         if (badge) { badge.innerText = statusText; badge.style.backgroundColor = badgeColor; }
     }
     checkClinicStatus();
+
+    function toggleMenu() {
+        const navLinks = document.getElementById("navLinks");
+        if (window.innerWidth <= 768) {
+            navLinks.classList.toggle("active");
+        }
+    }
 </script>
 
 <nav>
@@ -125,16 +194,17 @@
         <img src="우성한의원마크.jpg" alt="우성한의원 마크">
         <span>우성한의원 다이어트 클리닉</span>
     </a>
-    <div class="nav-links">
-        <a href="#point">다이어트 포인트</a>
-        <a href="#noslim">엔오슬림환</a>
-        <a href="#program">프로그램 안내</a>
-        <a href="#location">위치 및 진료시간</a>
+    
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
 
-        <!-- ⬇️ 산화질소 클리닉 메뉴 추가 ⬇️ -->
-        <a href="https://ilsan-wsclinic.vercel.app/nitric-oxide.html" style="color: #e65100;">산화질소(NO) 클리닉</a>
-        <!-- ⬇️ 메인 홈페이지 이동 버튼 추가 ⬇️ -->
-        <a href="https://ilsan-wsclinic.vercel.app/" style="background-color: var(--primary); color: white; padding: 6px 16px; border-radius: 20px; font-weight: bold; font-size: 0.9em; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">🏠 본원 홈으로</a>
+    <div class="nav-links" id="navLinks">
+        <a href="#point" onclick="toggleMenu()">다이어트 포인트</a>
+        <a href="#noslim" onclick="toggleMenu()">엔오슬림환</a>
+        <a href="#program" onclick="toggleMenu()">프로그램 안내</a>
+        <a href="#faq" onclick="toggleMenu()">자주 묻는 질문(FAQ)</a>
+        <a href="#location" onclick="toggleMenu()">위치 및 진료시간</a>
+        <a href="https://ilsan-wsclinic.vercel.app/nitric-oxide.html" style="color: #e65100;" onclick="toggleMenu()">산화질소(NO) 클리닉</a>
+        <a href="https://ilsan-wsclinic.vercel.app/" style="background-color: var(--primary); color: white; padding: 6px 16px; border-radius: 20px; font-weight: bold; font-size: 0.9em; box-shadow: 0 2px 4px rgba(0,0,0,0.1);" onclick="toggleMenu()">🏠 본원 홈으로</a>
     </div>
 </nav>
 
@@ -144,11 +214,9 @@
     <p class="slogan" style="font-size: 1.3em;">백색지방을 갈색지방으로 전환시키는 산화질소작용을 통해<br>엔오슬림환을 처방하여 살이 잘 빠지는 체질로 만들어 <br>몸속 노폐물을 비우고 대사를 촉진하여 가벼운 몸을 되찾아 드립니다.</p>
     
     <div class="btn-group">
-        <!-- ⬇️ 여기에 다이어트 상담 구글 폼 주소를 넣어주세요 ⬇️ -->
         <a href="https://docs.google.com/forms/d/1STpU4-oB8TZ1iqmnX1oP46IlP4fbXFyjWvTN5XrXXDY/edit" target="_blank" class="btn btn-form">🔥 다이어트 비대면 처방 신청하기</a>
     </div>
     <div class="btn-group" style="margin-top: 15px;">
-        <!-- ⬇️ 메인 홈페이지 이동 버튼 추가 ⬇️ -->
         <a href="https://ilsan-wsclinic.vercel.app/" class="btn btn-call" style="background-color: #5d4037;">🏠 우성한의원 메인 홈</a>
         <a href="tel:031-975-3075" class="btn btn-call" style="background-color: #333;">☎ 전화 상담 031-975-3075</a>
         <a href="http://pf.kakao.com/_xogxeFxd/chat" target="_blank" class="btn btn-call" style="background-color: #FEE500; color: #191919;">💬 카카오톡 상담</a> 
@@ -172,18 +240,16 @@
     </div>
 </div>
 
-   <!-- 우성한의원 엔오슬림환 소개 -->
+<!-- 우성한의원 엔오슬림환 소개 -->
 <div id="noslim" class="section" style="background-color: #fdfaf6; border-radius: 15px; margin: 40px auto; box-shadow: 0 2px 10px rgba(0,0,0,0.03);">
     <h2 class="section-title">우성한의원 특별 처방, <span style="color: #d32f2f;">엔오슬림환</span></h2>
     <p style="text-align: center; font-size: 1.25em; font-weight: bold; color: #444; margin-bottom: 35px;">
         "백색지방을 갈색지방으로! 저장 지방을 태워 소모하는 다이어트"
     </p>
 
-    <!-- ⬇️ 여기에 엔오슬림환 사진을 추가합니다 ⬇️ -->
     <div style="text-align: center; margin-bottom: 40px;">
         <img src="엔오슬림환.jpg" alt="우성한의원 엔오슬림환" style="max-width: 100%; max-height: 400px; border-radius: 12px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); object-fit: cover;">
     </div>
-    <!-- ⬆️ 사진 추가 끝 ⬆️ -->
     
     <div class="card-container">
         <!-- 첫 번째 카드: 효과 -->
@@ -225,6 +291,8 @@
             </div>
         </div>
     </div>
+</div>
+
 <!-- 우성한의원 해독환 소개 -->
 <div id="detox" class="section" style="background-color: #f4f9f5; border-radius: 15px; margin: 40px auto; box-shadow: 0 2px 10px rgba(0,0,0,0.03);">
     <h2 class="section-title">건강한 비워냄, <span style="color: #2e7d32;">해독환</span></h2>
@@ -264,6 +332,7 @@
         </div>
     </div>
 </div> 
+
 <!-- 프로그램 안내 -->
 <div id="program" class="section" style="background-color: #fff;">
     <h2 class="section-title">단계별 다이어트 프로그램</h2>
@@ -274,7 +343,7 @@
         </div>
         <div class="card" style="border-top: 4px solid var(--primary);">
             <h3 style="color: var(--primary);">Step 2. 감량기 (집중 연소)</h3>
-            <p style="text-align: left; color: #444;">체지방 분해를 극대화하는 맞춤 탕약/환약을 복용합니다. 근손실을 최소화하고 체지방 위주로 사이즈를 줄이는 집중 감량 기간입니다.</p>
+            <p style="text-align: left; color: #444;">체지방 분해를 극대화하는 맞춤 환약을 복용합니다. 근손실을 최소화하고 체지방 위주로 사이즈를 줄이는 집중 감량 기간입니다.</p>
         </div>
         <div class="card" style="border-top: 4px solid #2e7d32;">
             <h3 style="color: #2e7d32;">Step 3. 유지기 (요요 방지)</h3>
@@ -286,11 +355,31 @@
     <div style="text-align: center; margin-top: 50px; background: #f8f5f0; padding: 40px 20px; border-radius: 12px;">
         <h3 style="margin-top:0; color: var(--primary);">바빠서 내원이 어려우신가요?</h3>
         <p style="font-size: 1.1em; color: #555; margin-bottom: 25px;">전화 상담을 통한 <strong>비대면 처방 및 자택 택배 수령</strong>이 가능합니다.</p>
-        <a href="https://docs.google.com/forms/d/1STpU4-oB8TZ1iqmnX1oP46IlP4fbXFyjWvTN5XrXXDY/edit" target="_blank" class="btn btn-call" style="padding: 12px 30px;">간편 설문 작성하고 상담 예약하기 👉</a>
+        <a href="https://docs.google.com/forms/d/1STpU4-oB8TZ1iqmnX1oP46IlP4fbXFyjWvTN5XrXXDY/edit" target="_blank" class="btn btn-call" style="padding: 12px 30px; border-radius: 8px;">간편 설문 작성하고 상담 예약하기 👉</a>
     </div>
 </div>
 
-<!-- 위치 안내 및 진료시간 (기존과 동일) -->
+<!-- 🟢 5. AI 검색 대응 대화형 질의응답 (FAQ) 섹션 추가 -->
+<div id="faq" class="section">
+    <h2 class="section-title">다이어트 자주 묻는 질문 (FAQ)</h2>
+    
+    <div class="faq-item">
+        <h3>다이어트 한약(엔오슬림환)은 비대면 처방이 가능한가요?</h3>
+        <p>네, 가능합니다. 원장님과의 꼼꼼한 전화 상담을 통해 환자분의 체질, 병력, 감량 목표를 확인한 후, 개인에게 맞춘 다이어트 환약을 조제하여 자택으로 안전하게 택배 발송해 드립니다.</p>
+    </div>
+
+    <div class="faq-item">
+        <h3>엔오슬림환을 먹으면 운동을 안 해도 살이 빠지나요?</h3>
+        <p>엔오슬림환은 기초대사량을 끌어올리고 백색지방을 갈색지방으로 전환시키는 산화질소 작용을 돕습니다. 약 복용만으로도 가벼운 운동을 한 것과 같은 대사 촉진 효과를 내기 때문에, 무리한 운동 없이도 체지방 위주의 감량 효과를 기대하실 수 있습니다.</p>
+    </div>
+
+    <div class="faq-item">
+        <h3>해독환은 어떤 역할을 하나요? 다이어트 약과 꼭 같이 먹어야 하나요?</h3>
+        <p>해독환은 다이어트 중 흔히 발생하는 숙변과 변비를 예방하고 체내 독소와 노폐물을 배출합니다. 본격적인 감량 전 '비움기'에 복용하여 장내 환경을 미리 개선해 두면, 이후 다이어트 약의 흡수율을 높이고 염증을 완화하여 훨씬 효과적인 체중 감량이 가능합니다.</p>
+    </div>
+</div>
+
+<!-- 위치 안내 및 진료시간 -->
 <div id="location" class="section" style="background-color: #f8f5f0; border-radius: 15px; margin-bottom: 50px;">
     <div style="display: flex; gap: 40px; margin-bottom: 20px;">
         <h2 class="section-title" style="margin-bottom: 0; text-align: left; width: auto; border-bottom: none;">오시는 길 및 진료시간</h2>
@@ -301,27 +390,4 @@
     </div>
 
     <div class="card-container">
-        <div class="card" style="text-align: left;">
-            <h3>📍 오시는 길</h3>
-            <ul class="info-list">
-                <li><strong>주소</strong><br>경기도 고양시 일산서구 고양대로 726, 4층 우성한의원</li>
-                <li style="margin-top: 15px;"><strong>주차 안내</strong><br>일산제1공영주차장 (지도상 건물우측 이용)</li>
-            </ul>
-            <span class="sub-text">※ 무인주차장 1시간 주차비를 한의원에서 정산해 드립니다.</span>
-        </div>
-
-        <div class="card" style="text-align: left;">
-            <h3>⏰ 진료 시간</h3>
-            <ul class="info-list">
-                <li><span class="badge">평일</span> 09:30 ~ 19:00</li>
-                <li><span class="badge">목·토</span> 09:30 ~ 14:00 <span style="font-size: 0.9em; color:#d32f2f;">(점심시간 없음)</span></li>
-                <li><span class="badge">점심</span> 13:00 ~ 14:00</li>
-                <li><span class="badge">휴진</span> 일요일 및 공휴일</li>
-            </ul>
-            <span class="sub-text">※ 대체공휴일진료는 전화문의 바랍니다.</span>
-        </div>
-    </div>
-</div>
-
-</body>
-</html>
+        <div class="card" style="text-align:
