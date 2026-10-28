@@ -4,13 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <!-- 🟢 1. AI 검색 최적화(AEO) 메타 태그 추가 -->
-    <meta name="description" content="일산 우성한의원 한의사 방문진료(왕진), 노인장기요양등급 의사소견서 및 방문간호지시서 발급 안내. 거동이 불편한 어르신을 위해 고의현 원장님이 직접 찾아갑니다.">
-    <meta name="keywords" content="일산 방문진료, 일산 왕진 한의원, 일산 장기요양 의사소견서, 우성한의원 방문진료, 고의현 원장, 일산 방문간호지시서">
-    
-    <title>우성한의원 - 한의사 방문진료 및 노인장기요양 클리닉</title>
+    <!-- 🟢 1. AI 검색 최적화(AEO) 및 의료법 준수 메타 태그 -->
+    <meta name="description" content="일산 우성한의원 한의사 방문진료(왕진) 및 노인장기요양등급 의사소견서, 방문간호지시서 발급 안내. 거동이 불편한 어르신을 위해 고의현 원장님이 자택으로 찾아가 진료합니다.">
+    <meta name="keywords" content="일산 방문진료, 일산 왕진 한의원, 일산 장기요양 의사소견서, 방문간호지시서, 우성한의원 방문진료, 고양시 방문진료, 치매 의사소견서">
+    <title>방문진료 및 장기요양 의사소견서 | 일산 우성한의원</title>
 
-    <!-- 🟢 2. AI 검색 엔진을 위한 FAQ 구조화된 데이터 (Schema Markup) 추가 -->
+    <!-- 🟢 2. AI 검색 엔진을 위한 FAQ 구조화된 데이터 (Schema Markup) -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -21,23 +20,23 @@
           "name": "일산에서 한의사 방문진료(왕진)가 가능한가요?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "네, 가능합니다. 일산 우성한의원은 국민건강보험공단 지정 방문진료 시범사업 기관입니다. 거동이 불편하여 내원이 힘든 어르신들의 자택으로 30년 임상 경력의 고의현 원장님이 직접 방문해 맞춤 진료를 제공합니다."
+            "text": "네, 가능합니다. 일산 우성한의원은 국민건강보험공단 지정 일차의료 방문진료 시범사업 참여 기관입니다. 중풍, 파킨슨병, 고관절 질환 등으로 거동이 불편하여 내원이 힘든 어르신들의 자택으로 30년 임상 경력의 한의사가 직접 방문해 진료를 제공합니다."
           }
         },
         {
           "@type": "Question",
-          "name": "방문진료 비용은 얼마이며 교통비가 추가되나요?",
+          "name": "방문진료 비용은 얼마이며, 건강보험이 적용되나요?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "방문진료는 건강보험이 적용되며, 환자분의 건강보험 가입 요건(일반, 차상위, 의료급여)에 따라 5%~30%의 본인 부담금만 발생합니다. 방문에 따른 별도의 추가 교통비는 청구하지 않습니다."
+            "text": "방문진료는 건강보험이 적용되는 국가 시범사업입니다. 환자분의 건강보험 가입 요건(일반, 차상위, 의료급여 등)에 따라 정해진 본인 부담금이 산정되며, 방문에 따른 별도의 추가 교통비는 청구하지 않습니다."
           }
         },
         {
           "@type": "Question",
-          "name": "노인장기요양 의사소견서를 집에서 발급받을 수 있나요?",
+          "name": "노인장기요양등급 신청용 의사소견서를 집에서 발급받을 수 있나요?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "네, 가능합니다. 환자분이 거동이 전혀 불가능하여 한의원 내원이 어려우신 경우, 우성한의원의 '방문진료'를 신청하시면 원장님이 자택으로 직접 찾아가 진찰한 후 의사소견서 및 방문간호지시서를 발급해 드릴 수 있습니다."
+            "text": "원칙적으로는 한의원 내원 진찰이 필요합니다. 다만, 환자분이 거동이 완전히 불가능하여 내원이 어려운 경우, '방문진료'를 신청하시면 원장님이 직접 자택을 방문하여 심신 상태를 면밀히 진찰한 후 소견서를 발급해 드릴 수 있습니다."
           }
         }
       ]
@@ -45,470 +44,159 @@
     </script>
 
     <style>
-        :root { 
-            --primary: #4e342e; /* 따뜻하고 신뢰감 있는 브라운 */
-            --secondary: #2e7d32; /* 안정감을 주는 그린 */
-            --bg-light: #fdfaf6; 
-            --text-dark: #333;
-        }
-        body { font-family: 'Apple SD Gothic Neo', sans-serif; line-height: 1.6; margin: 0; color: var(--text-dark); background-color: #fafafa; scroll-behavior: smooth; }
+        :root { --primary: #5d4037; --bg-light: #f8f5f0; --accent: #2e7d32; }
+        body { font-family: 'Apple SD Gothic Neo', sans-serif; line-height: 1.6; margin: 0; color: #333; background-color: #fafafa; }
         
-        /* 1. 상단 네비게이션 */
-        nav { background: #fff; padding: 15px 20px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 100; display: flex; justify-content: space-between; align-items: center; }
+        /* 네비게이션 */
+        nav { background: #fff; padding: 15px 20px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 100; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; }
         .nav-logo { font-size: 1.3em; font-weight: bold; color: var(--primary); text-decoration: none; display: flex; align-items: center; gap: 8px; }
         .nav-logo img { height: 32px; width: 32px; border-radius: 50%; object-fit: cover; }
+        .btn-home-nav { text-decoration: none; color: #fff !important; font-weight: bold; background: var(--accent); padding: 8px 16px; border-radius: 20px; font-size: 0.9em; transition: opacity 0.2s; }
+        .btn-home-nav:hover { opacity: 0.8; }
+
+        /* 페이지 헤더 */
+        .page-header { background: var(--bg-light); padding: 60px 20px; text-align: center; border-bottom: 1px solid #e0e0e0; }
+        .page-header h1 { color: var(--primary); margin: 0 0 15px 0; font-size: 2.2em; }
+        .page-header p { font-size: 1.1em; color: #555; max-width: 600px; margin: 0 auto; line-height: 1.6; }
+
+        /* 컨텐츠 공통 */
+        .content-wrap { max-width: 800px; margin: 0 auto; padding: 50px 20px; }
+        .section-box { background: #fff; padding: 40px; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); margin-bottom: 40px; border-top: 4px solid var(--accent); }
+        .section-box h2 { color: var(--accent); font-size: 1.5em; margin-top: 0; border-bottom: 2px dashed #eee; padding-bottom: 15px; margin-bottom: 20px; display: flex; align-items: center; gap: 10px; }
         
-        /* 모바일 햄버거 메뉴 버튼 */
-        .menu-toggle { display: none; font-size: 1.8em; cursor: pointer; color: var(--primary); }
+        /* 리스트 스타일 */
+        .feature-list { list-style: none; padding: 0; margin: 0; }
+        .feature-list li { padding: 15px; background: #f9f9f9; margin-bottom: 10px; border-radius: 8px; display: flex; align-items: flex-start; gap: 15px; border: 1px solid #eee; }
+        .feature-list li span.icon { font-size: 1.5em; line-height: 1; }
+        .feature-list h3 { margin: 0 0 5px 0; color: var(--primary); font-size: 1.1em; }
+        .feature-list p { margin: 0; color: #555; font-size: 0.95em; }
 
-        .nav-links { display: flex; gap: 15px; flex-wrap: wrap; justify-content: flex-end; align-items: center; }
-        .nav-links a { text-decoration: none; color: #333; font-weight: bold; font-size: 0.95em; transition: color 0.2s; }
-        .nav-links a:hover { color: var(--secondary); }
-        
-        /* TLC 쇼핑몰 강조 링크 */
-        .nav-link-tlc { color: #2e7d32 !important; background: #e8f5e9; padding: 6px 12px; border-radius: 20px; border: 1px solid #c8e6c9; }
+        /* FAQ 스타일 */
+        .faq-item { margin-bottom: 20px; border: 1px solid #e0e0e0; border-radius: 8px; overflow: hidden; }
+        .faq-q { background: #fdfaf6; padding: 15px 20px; font-weight: bold; color: var(--primary); display: flex; gap: 10px; border-bottom: 1px solid #eee; margin: 0; }
+        .faq-q::before { content: 'Q.'; color: #d32f2f; }
+        .faq-a { background: #fff; padding: 15px 20px; margin: 0; color: #444; display: flex; gap: 10px; line-height: 1.6; }
+        .faq-a::before { content: 'A.'; color: var(--accent); font-weight: bold; }
 
-        /* 2. 메인 배너 */
-        header { 
-            background: linear-gradient(rgba(78, 52, 46, 0.7), rgba(78, 52, 46, 0.7)), url('배경.jpg'); 
-            background-size: cover; 
-            background-position: center; 
-            padding: 100px 20px; 
-            text-align: center; 
-            color: #fff;
-        }
-        header h1 { margin-bottom: 15px; font-size: 2.4em; text-shadow: 1px 1px 4px rgba(0,0,0,0.5); line-height: 1.3; }
-        header .slogan { font-size: 1.2em; color: #e8f5e9; max-width: 750px; margin: 0 auto 30px auto; line-height: 1.6; }
-        .highlight-text { color: #81c784; font-weight: bold; }
-        
-        /* 버튼 스타일 */
-        .btn-group { margin-top: 25px; display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; }
-        .btn { display: inline-block; padding: 12px 28px; text-decoration: none; border-radius: 8px; font-weight: bold; transition: all 0.2s; font-size: 1.05em; box-shadow: 0 4px 6px rgba(0,0,0,0.2); }
-        .btn:hover { opacity: 0.9; transform: translateY(-2px); }
-        .btn-call { background: #fff; color: var(--primary); }
-        .btn-form { background: var(--secondary); color: white; padding: 15px 35px; border-radius: 30px; animation: pulse 2s infinite; }
-        
-        @keyframes pulse {
-            0% { box-shadow: 0 0 0 0 rgba(46, 125, 50, 0.7); }
-            70% { box-shadow: 0 0 0 15px rgba(46, 125, 50, 0); }
-            100% { box-shadow: 0 0 0 0 rgba(46, 125, 50, 0); }
-        }
+        /* CTA 버튼 */
+        .cta-container { text-align: center; margin-top: 50px; padding: 40px 20px; background: #f0f7f4; border-radius: 12px; border: 1px solid #dcedc8; }
+        .btn-large { display: inline-block; background: var(--accent); color: white; padding: 15px 40px; font-size: 1.15em; font-weight: bold; text-decoration: none; border-radius: 30px; box-shadow: 0 4px 6px rgba(0,0,0,0.2); transition: transform 0.2s; margin-top: 15px; }
+        .btn-large:hover { transform: translateY(-3px); }
 
-        /* 3. 컨텐츠 섹션 */
-        .section { padding: 80px 20px; max-width: 1000px; margin: auto; }
-        .section-title { color: var(--primary); margin-bottom: 40px; border-bottom: 3px solid var(--secondary); padding-bottom: 10px; display: inline-block; font-size: 1.6em; text-align: center; width: 100%; }
-        
-        /* 서비스 카드 그리드 */
-        .service-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; margin-bottom: 40px; }
-        .service-card { background: #fff; border: 1px solid #e0e0e0; border-radius: 12px; padding: 30px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); transition: transform 0.2s; }
-        .service-card:hover { transform: translateY(-5px); border-color: var(--secondary); box-shadow: 0 8px 15px rgba(0,0,0,0.1); }
-        .service-card h3 { color: var(--primary); margin-top: 0; font-size: 1.3em; margin-bottom: 15px; display: flex; align-items: center; gap: 8px; }
-        .service-card p { color: #555; line-height: 1.6; font-size: 1.05em; margin-bottom: 15px; }
-        .service-card ul { padding-left: 20px; margin: 0; color: #444; font-size: 0.95em; }
-        .service-card li { margin-bottom: 8px; }
+        /* 의료법 명시 푸터 */
+        .site-footer { background-color: #333; color: #bbb; text-align: center; padding: 40px 20px; margin-top: 50px; font-size: 0.85em; line-height: 1.6; }
 
-        /* 대상자 안내 박스 */
-        .target-box { background: var(--bg-light); border-radius: 12px; padding: 40px; margin-bottom: 50px; border: 1px solid #d7ccc8; }
-        .target-box h3 { color: var(--primary); margin-top: 0; text-align: center; font-size: 1.4em; margin-bottom: 25px; }
-        .target-list { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; }
-        .target-item { background: #fff; padding: 15px; border-radius: 8px; text-align: center; font-weight: bold; color: #444; box-shadow: 0 2px 4px rgba(0,0,0,0.05); }
-
-        /* 💰 비용 안내 테이블 스타일 */
-        .cost-info-box { background-color: #fff8e1; border-left: 4px solid #ffb300; padding: 15px 20px; margin-bottom: 20px; border-radius: 4px; }
-        .cost-info-box p { margin: 0; color: #333; font-weight: bold; font-size: 1.1em; }
-        .cost-info-box span { display: block; margin-top: 5px; font-size: 0.85em; color: #777; font-weight: normal; }
-        .table-responsive { overflow-x: auto; }
-        .cost-table { width: 100%; border-collapse: collapse; margin-bottom: 40px; background: #fff; box-shadow: 0 2px 4px rgba(0,0,0,0.05); min-width: 500px; }
-        .cost-table th, .cost-table td { border: 1px solid #e0e0e0; padding: 15px; text-align: center; }
-        .cost-table th { background-color: var(--secondary); color: white; font-weight: bold; }
-        .cost-table tr:nth-child(even) { background-color: #f9f9f9; }
-        .cost-highlight { color: #d84315; font-weight: bold; font-size: 1.15em; }
-
-        /* 🟢 3. AI 검색 대응 FAQ 스타일 신설 */
-        .faq-item { background: #fff; border: 1px solid #e0e0e0; padding: 20px; border-radius: 12px; margin-bottom: 15px; box-shadow: 0 2px 4px rgba(0,0,0,0.03); transition: transform 0.2s; }
-        .faq-item:hover { transform: translateY(-2px); border-color: #c8e6c9; }
-        .faq-item h3 { color: var(--primary); margin: 0 0 12px 0; font-size: 1.15em; display: flex; align-items: flex-start; gap: 10px; }
-        .faq-item h3::before { content: 'Q.'; color: #e65100; font-weight: bold; }
-        .faq-item p { margin: 0; color: #444; line-height: 1.6; font-size: 1.05em; display: flex; align-items: flex-start; gap: 10px; }
-        .faq-item p::before { content: 'A.'; color: var(--secondary); font-weight: bold; }
-
-        /* 🛒 TLC 맞춤몰 배너 스타일 */
-        .tlc-banner {
-            background: linear-gradient(135deg, #f1f8e9, #dcedc8);
-            border-radius: 12px;
-            padding: 40px 20px;
-            margin: 40px auto;
-            text-align: center;
-            border: 1px solid #c5e1a5;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-        }
-        .tlc-banner h3 {
-            color: #33691e;
-            font-size: 1.6em;
-            margin-top: 0;
-            margin-bottom: 15px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
-        }
-        .tlc-banner p {
-            color: #555;
-            font-size: 1.1em;
-            margin-bottom: 20px;
-            line-height: 1.6;
-        }
-        
-        /* 🎁 제휴 할인 안내 박스 */
-        .tlc-discount {
-            background-color: #fff8e1;
-            border: 2px dashed #ffb300;
-            color: #d84315;
-            padding: 15px 25px;
-            border-radius: 8px;
-            display: inline-block;
-            margin-bottom: 25px;
-            font-weight: bold;
-            font-size: 1.05em;
-            line-height: 1.5;
-        }
-
-        .btn-tlc {
-            background: #fff;
-            color: #2e7d32;
-            border: 2px solid #2e7d32;
-            padding: 14px 35px;
-            border-radius: 30px;
-            font-weight: bold;
-            text-decoration: none;
-            display: inline-block;
-            font-size: 1.1em;
-            transition: all 0.2s;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        }
-        .btn-tlc:hover {
-            background: #2e7d32;
-            color: #fff;
-            transform: translateY(-2px);
-        }
-
-        /* 절차 안내 스텝 */
-        .step-container { display: flex; flex-wrap: wrap; gap: 15px; justify-content: center; margin-top: 30px; }
-        .step-box { flex: 1 1 200px; background: #fff; padding: 25px 15px; text-align: center; border-radius: 12px; border: 1px solid #d7ccc8; position: relative; }
-        .step-num { background: var(--secondary); color: white; width: 30px; height: 30px; border-radius: 50%; display: inline-flex; justify-content: center; align-items: center; font-weight: bold; margin-bottom: 15px; }
-        .step-box h4 { margin: 0 0 10px 0; color: var(--primary); font-size: 1.1em; }
-        .step-box p { margin: 0; font-size: 0.9em; color: #666; }
-
-        footer { background: #333; color: #bbb; padding: 40px 20px 100px 20px; text-align: center; font-size: 0.9em; line-height: 1.5; }
-
-        /* 📞 플로팅 상담 버튼 바 */
-        .floating-contact {
-            position: fixed;
-            bottom: 30px;
-            right: 30px;
-            display: flex;
-            flex-direction: column;
-            gap: 12px;
-            z-index: 1000;
-        }
-        .float-btn {
-            background-color: var(--secondary);
-            color: white;
-            border-radius: 30px;
-            padding: 14px 22px;
-            text-decoration: none;
-            font-weight: bold;
-            font-size: 1em;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.25);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 8px;
-            transition: all 0.2s ease;
-        }
-        .float-btn:hover { transform: translateY(-3px); box-shadow: 0 6px 14px rgba(0,0,0,0.3); }
-        .float-btn.kakao { background-color: #FEE500; color: #3C1E1E; }
-        .float-btn.sms { background-color: #f57c00; }
-        .float-btn.call-clinic { background-color: var(--primary); }
-        .float-btn.call-mobile { background-color: #0277bd; }
-
-        /* 📱 모바일 화면 대응 */
         @media (max-width: 768px) {
-            .menu-toggle { display: block; }
-            nav { flex-wrap: wrap; }
-            .nav-links { 
-                display: none; 
-                flex-direction: column; 
-                width: 100%; 
-                background: #fff; 
-                padding: 10px 0;
-            }
-            .nav-links.active { display: flex; }
-            .nav-links a { padding: 15px 10px; border-bottom: 1px solid #f0f0f0; width: 100%; box-sizing: border-box; text-align: left; }
-            .nav-links a:last-child { border-bottom: none; }
-            
-            header { padding: 60px 20px; }
-            header h1 { font-size: 1.8em; }
-            .tlc-banner h3 { font-size: 1.3em; }
-            .tlc-discount { font-size: 0.95em; padding: 12px 15px; }
-
-            .floating-contact {
-                bottom: 0; right: 0; left: 0;
-                flex-direction: row;
-                flex-wrap: wrap;
-                gap: 0;
-            }
-            .float-btn {
-                flex: 1 1 50%;
-                border-radius: 0;
-                padding: 14px 0;
-                font-size: 0.9em;
-                box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
-                border-right: 1px solid rgba(255,255,255,0.2);
-                border-bottom: 1px solid rgba(255,255,255,0.2);
-                box-sizing: border-box;
-            }
-            .float-btn:nth-child(even) { border-right: none; }
-            .float-btn:nth-child(3), .float-btn:nth-child(4) { border-bottom: none; }
-            
-            .nav-logo { font-size: 1.05em; }
+            .section-box { padding: 25px; }
+            .page-header { padding: 40px 20px; }
+            .page-header h1 { font-size: 1.8em; }
         }
     </style>
 </head>
 <body>
 
-<!-- 상단 안내 바 -->
-<div style="background-color: #f8f5f0; border-bottom: 1px solid #e0e0e0; padding: 8px 20px; font-size: 0.9em; color: #555; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px;">
-    <div>📍 경기도 고양시 일산서구 고양대로 726, 4층 우성한의원</div>
-    <div style="font-weight: bold; display: flex; gap: 15px; flex-wrap: wrap;">
-        <span>📞 한의원: <a href="tel:031-975-3075" style="color: #555; text-decoration: none;">031-975-3075</a></span>
-        <span>📱 원장직통: <a href="tel:010-9720-3075" style="color: #d84315; text-decoration: none;">010-9720-3075</a></span>
-    </div>
-</div>
-
 <nav>
-    <a href="index.html" class="nav-logo">
+    <a href="https://ilsan-wsclinic.vercel.app/" class="nav-logo">
         <img src="우성한의원마크.jpg" alt="우성한의원 마크">
-        <span>우성한의원 노인장기요양보험과 방문진료</span>
+        <span>우성한의원</span>
     </a>
-    
-    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
-    
-    <div class="nav-links" id="navLinks">
-        <a href="index.html" style="color: #d84315;">🏠 메인 홈페이지</a>
-        <a href="#services" onclick="toggleMenu()">제공 서비스</a>
-        <a href="#cost" onclick="toggleMenu()">비용 안내</a>
-        <a href="#target" onclick="toggleMenu()">진료 대상</a>
-        <a href="#faq" onclick="toggleMenu()">자주 묻는 질문(FAQ)</a> <!-- 🟢 네비게이션 메뉴 추가 -->
-        <a href="https://tlcmtm.com/" target="_blank" class="nav-link-tlc" onclick="toggleMenu()">🛒 추천 영양식단(TLC)</a>
-    </div>
+    <a href="https://ilsan-wsclinic.vercel.app/" class="btn-home-nav">🏠 본원 홈페이지 가기</a>
 </nav>
 
-<header>
-    <h1>거동이 불편하신 어르신을 위해<br><span class="highlight-text">한의사가 직접 찾아갑니다</span></h1>
-    <p class="slogan">우성한의원은 환자분이 머무시는 가장 편안한 공간인 가정이나 요양시설로 방문하여 정성 어린 맞춤 한의 진료를 제공합니다.</p>
-    
-    <div class="btn-group">
-        <a href="https://docs.google.com/forms/d/14xLwWFknlXXHgCsBC-lFdYvV1XNXGk9gG18bVtHog5M/edit" target="_blank" class="btn btn-form">🏡 한의사 방문진료 간편 신청</a>
-        <a href="http://pf.kakao.com/_xogxeFxd/chat" target="_blank" class="btn btn-call" style="background-color: #FEE500; color: #3C1E1E;">💬 카카오톡 상담</a> 
-    </div>
+<header class="page-header">
+    <h1>방문진료 및 장기요양 클리닉</h1>
+    <p>거동이 불편하신 어르신들을 위해 30년 임상 경험의 고의현 원장님이 자택 및 시설로 직접 찾아가 세심하게 진찰합니다.</p>
 </header>
 
-<div id="target" class="section">
-    <div class="target-box">
-        <h3>이런 분들께 한의사 방문진료가 필요합니다</h3>
-        <div class="target-list">
-            <div class="target-item">🧠 뇌졸중(중풍) 후유증 환자</div>
-            <div class="target-item">👴 치매, 파킨슨병 등 노인성 질환</div>
-            <div class="target-item">🦴 중증 관절염으로 보행이 힘든 분</div>
-            <div class="target-item">🛏️ 수술 후 퇴원하여 자택 요양 중인 분</div>
-            <div class="target-item">♿ 척수 손상 및 마비 증상 환자</div>
-        </div>
-        <p style="text-align: center; margin-top: 20px; color: #666; font-size: 0.95em;">※ 그 외 질병, 부상, 출산 등으로 인하여 혼자서 한의원 내원이 곤란한 분 누구나 신청 가능합니다.</p>
-    </div>
-</div>
+<div class="content-wrap">
 
-<div id="services" class="section" style="padding-top: 0;">
-    <h2 class="section-title">우성한의원 노인장기요양 및 방문 의료 서비스</h2>
-    
-    <div class="service-grid">
-        <div class="service-card">
-            <h3>🏡 일차의료 방문진료 (왕진)</h3>
-            <p>보건복지부 주관 방문진료 시범사업 참여 기관으로서, 원장님이 직접 자택을 방문하여 침, 뜸, 부항 치료 및 맞춤 한약 처방을 진행합니다.</p>
-            <ul>
-                <li><strong>건강보험 적용:</strong> 시범사업에 따라 본인 부담금이 일부 지원됩니다.</li>
-                <li><strong>맞춤 치료:</strong> 통증 완화, 기력 회복, 마비 증상 개선 등 환자 상태에 맞춘 한방 치료.</li>
-            </ul>
-        </div>
-
-        <div class="service-card" style="border: 2px solid #ffb74d; position: relative;">
-            <span style="background: #fff3e0; color: #e65100; padding: 4px 10px; border-radius: 4px; font-size: 0.85em; font-weight: bold; position: absolute; top: -14px; left: 30px;">방문 발급 가능</span>
-            <h3>📄 노인장기요양 의사소견서 발급</h3>
-            <p>장기요양등급 판정 신청 및 갱신 시 국민건강보험공단에 제출해야 하는 '의사소견서'를 정성껏 진찰 후 발급해 드립니다.</p>
-            
-            <div style="background-color: #fff3e0; padding: 15px; border-radius: 8px; margin-bottom: 15px; border-left: 4px solid #ff9800;">
-                <p style="margin: 0; color: #d84315; font-weight: bold; font-size: 1.05em; line-height: 1.5;">
-                    💡 환자분이 직접 내원하기 힘드신가요?<br>
-                    <span style="color: #4e342e; font-size: 0.95em;">원장님이 직접 가정이나 시설로 찾아가는 <strong>'방문진료(왕진)'</strong>를 통해서도 의사소견서 발급이 가능합니다.</span>
-                </p>
-            </div>
-            <ul>
-                <li>치매, 중풍 등 노인성 질환 진단 병력 확인</li>
-                <li>거동 불편 정도 및 인지 기능 평가 진행</li>
-            </ul>
-        </div>
-
-        <div class="service-card">
-            <h3>📝 방문간호지시서 발급</h3>
-            <p>장기요양등급을 받으신 어르신이 가정에서 전문적인 방문간호 서비스(투약 관리, 욕창 치료 등)를 받으실 수 있도록 간호지시서를 발급합니다.</p>
-            <ul>
-                <li>재가복지센터 및 방문간호 서비스 연계 필수 서류</li>
-                <li>환자의 만성 질환 및 현재 건강 상태 꼼꼼히 반영</li>
-            </ul>
-            <p style="margin-top: 15px; color: #0277bd; font-weight: bold; font-size: 0.95em; text-align: center; background-color: #e1f5fe; padding: 10px; border-radius: 8px;">
-                🩺 방문간호지시서 발급을 원하시는 방문간호센터는 상담해주세요.
-            </p>
-        </div>
-
-        <div class="service-card">
-            <h3>🤝 계약의사 (촉탁의) 진료</h3>
-            <p>요양원 등 노인요양시설과 협약을 맺고 주기적으로 시설을 방문하여, 입소 어르신들의 건강 상태를 세심하게 확인하고 관리합니다.</p>
-            <ul>
-                <li>시설 내 정기적 건강 모니터링</li>
-                <li>침 치료 및 질병 예방을 위한 한의학적 관리</li>
-            </ul>
-            <p style="margin-top: 15px; color: #d84315; font-weight: bold; font-size: 0.95em; text-align: center; background-color: #fff3e0; padding: 10px; border-radius: 8px;">
-                🏢 계약의 방문을 원하는 요양원은 상담해주세요.
-            </p>
-        </div>
-    </div>
-</div>
-
-<div id="cost" class="section" style="padding-top: 0;">
-    <h2 class="section-title">방문진료(왕진) 비용 안내 <span style="font-size: 0.6em; color: #666; font-weight: normal;">(2026년 기준)</span></h2>
-    
-    <div class="cost-info-box">
-        <p>💡 방문진료 1회당 총 진료비: 108,262원</p>
-        <span>※ 건강보험 수가 인상에 따라 본인 부담금은 해마다 변동(인상)될 수 있습니다.</span>
-    </div>
-
-    <div class="table-responsive">
-        <table class="cost-table">
-            <thead>
-                <tr>
-                    <th>건강보험 가입 유형</th>
-                    <th>본인 부담률</th>
-                    <th>환자 본인 부담금 (1회)</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>일반 건강보험 환자</td>
-                    <td>30%</td>
-                    <td class="cost-highlight">32,400원</td>
-                </tr>
-                <tr>
-                    <td>차상위 2종 / 의료급여 2종</td>
-                    <td>10%</td>
-                    <td class="cost-highlight">10,820원</td>
-                </tr>
-                <tr>
-                    <td>차상위 1종 / 의료급여 1종</td>
-                    <td>5%</td>
-                    <td class="cost-highlight">5,410원</td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-</div>
-
-<!-- 🛒 TLC 맞춤몰 섹션 -->
-<div class="section" style="padding-top: 0; padding-bottom: 20px;">
-    <div class="tlc-banner">
-        <h3>🛒 의료진이 추천하는 맞춤몰 | TLC</h3>
-        <p>어르신들의 기력 회복과 건강 유지를 위한 <strong>맞춤식 케어식품, 영양 식단, 필수 영양제</strong>를 만나보세요.<br>우성한의원 방문진료 환자분들을 위해 원장님이 꼼꼼하게 엄선하여 안내해 드립니다.</p>
+    <!-- 섹션 1: 한의사 방문진료 (왕진) -->
+    <div class="section-box">
+        <h2>🏡 한의사 방문진료 (건강보험 적용)</h2>
+        <p style="margin-bottom: 25px; font-size: 1.05em; color: #444;">질병, 부상, 출산 등으로 거동이 불편하여 한의원에 내원하기 힘든 환자분을 위해 한의사가 직접 자택이나 요양 시설로 찾아가 진료하는 국가 시범사업입니다.</p>
         
-        <div class="tlc-discount">
-            🎁 회원가입 시 제휴병원에 <strong>'우성한의원'</strong>을 입력하시면<br>
-            <span style="color: #c62828;">할인된 제휴 가격</span>으로 구입하실 수 있습니다!
-        </div>
-        <br>
+        <ul class="feature-list">
+            <li>
+                <span class="icon">👥</span>
+                <div>
+                    <h3>진료 대상</h3>
+                    <p>뇌졸중(중풍) 후유증, 파킨슨병, 치매, 척추·관절 질환, 노환 등으로 자력으로 내원이 불가능한 분 (일산 지역 내 가능)</p>
+                </div>
+            </li>
+            <li>
+                <span class="icon">🩺</span>
+                <div>
+                    <h3>제공되는 의료 서비스</h3>
+                    <p>건강 상태 면밀한 진찰, 침·뜸·부항 치료, 약침 치료, 맞춤 한약(탕약) 처방, 노인장기요양 의사소견서 발급을 위한 방문 진찰</p>
+                </div>
+            </li>
+            <li>
+                <span class="icon">💳</span>
+                <div>
+                    <h3>비용 및 건강보험 혜택</h3>
+                    <p>시범사업을 통해 건강보험이 적용되며, 건강보험 가입 요건(일반, 차상위, 의료급여 1/2종 등)에 따라 5~30%의 본인부담금만 적용됩니다.</p>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <!-- 섹션 2: 노인장기요양 의사소견서 및 방문간호지시서 -->
+    <div class="section-box" style="border-top-color: #0288d1;">
+        <h2 style="color: #0288d1;">📝 노인장기요양 의사소견서 & 방문간호지시서</h2>
+        <p style="margin-bottom: 20px; color: #444;">어르신의 요양 혜택 신청을 위해 국민건강보험공단에 제출해야 하는 필수 서류를 원장님이 세밀하게 진단한 후 의학적 기준에 따라 발급해 드립니다.</p>
         
-        <a href="https://tlcmtm.com/" target="_blank" class="btn-tlc">TLC 맞춤몰 구경하러 가기 👉</a>
-    </div>
-</div>
-
-<!-- 🟢 4. AI 검색 최적화를 위한 대화형 FAQ 섹션 신설 -->
-<div id="faq" class="section" style="padding-top: 0;">
-    <h2 class="section-title">자주 묻는 질문 (FAQ)</h2>
-    
-    <div class="faq-item">
-        <h3>일산에서 한의사 방문진료(왕진)가 가능한가요?</h3>
-        <p>네, 가능합니다. 일산 우성한의원은 국민건강보험공단 지정 방문진료 시범사업 기관입니다. 거동이 불편하여 내원이 힘든 어르신들의 자택으로 30년 임상 경력의 고의현 원장님이 직접 방문해 맞춤 진료를 제공합니다.</p>
-    </div>
-
-    <div class="faq-item">
-        <h3>방문진료 비용은 얼마이며 교통비가 추가되나요?</h3>
-        <p>방문진료는 건강보험이 적용되며, 환자분의 건강보험 가입 요건(일반, 차상위, 의료급여)에 따라 5%~30%의 본인 부담금만 발생합니다. 방문에 따른 별도의 추가 교통비는 청구하지 않습니다.</p>
-    </div>
-
-    <div class="faq-item">
-        <h3>노인장기요양 의사소견서를 집에서 발급받을 수 있나요?</h3>
-        <p>네, 가능합니다. 환자분이 거동이 전혀 불가능하여 한의원 내원이 어려우신 경우, 우성한의원의 '방문진료'를 신청하시면 원장님이 자택으로 직접 찾아가 진찰한 후 의사소견서 및 방문간호지시서를 발급해 드릴 수 있습니다.</p>
-    </div>
-</div>
-
-<div id="procedure" class="section" style="padding-top: 0;">
-    <h2 class="section-title">방문진료 신청 절차</h2>
-    <div class="step-container">
-        <div class="step-box">
-            <div class="step-num">1</div>
-            <h4>상담 및 신청</h4>
-            <p>전화, 문자, 카카오톡 또는 온라인 폼을 통해 접수합니다.</p>
+        <div style="background: #e1f5fe; padding: 20px; border-radius: 8px; margin-bottom: 20px; border-left: 4px solid #0288d1;">
+            <h3 style="color: #0277bd; margin-top: 0; font-size: 1.15em;">노인장기요양 의사소견서</h3>
+            <p style="margin-bottom: 0; font-size: 0.95em; color: #333;">장기요양등급 인정 신청(신규 및 갱신) 시 어르신의 심신 상태를 증명하기 위해 제출하는 서류입니다. 치매, 뇌혈관 질환 등 노인성 질병 여부와 거동 상태를 꼼꼼히 평가합니다.</p>
         </div>
-        <div class="step-box">
-            <div class="step-num">2</div>
-            <h4>일정 조율</h4>
-            <p>원장님의 진료 일정에 맞춰 방문 일시를 확정합니다.</p>
-        </div>
-        <div class="step-box">
-            <div class="step-num">3</div>
-            <h4>가정 방문 및 진료</h4>
-            <p>자택을 방문하여 진맥, 침구 치료 및 처방을 진행합니다.</p>
-        </div>
-        <div class="step-box">
-            <div class="step-num">4</div>
-            <h4>사후 관리</h4>
-            <p>치료 경과를 확인하고 필요시 정기 방문 계획을 수립합니다.</p>
+
+        <div style="background: #e8f5e9; padding: 20px; border-radius: 8px; border-left: 4px solid #2e7d32;">
+            <h3 style="color: #2e7d32; margin-top: 0; font-size: 1.15em;">방문간호지시서</h3>
+            <p style="margin-bottom: 0; font-size: 0.95em; color: #333;">장기요양등급을 받은 어르신이 자택에서 간호사로부터 전문적인 간호(투약 관리, 욕창 치료 등)를 받기 위해 필수적인 한의사의 지시서입니다.</p>
         </div>
     </div>
-    
-    <div style="text-align: center; margin-top: 50px;">
-        <a href="https://docs.google.com/forms/d/14xLwWFknlXXHgCsBC-lFdYvV1XNXGk9gG18bVtHog5M/edit" target="_blank" class="btn btn-form" style="padding: 15px 40px; font-size: 1.1em;">가족을 위한 방문진료 상담 신청하기 👉</a>
+
+    <!-- 🟢 섹션 3: AI 검색 최적화를 위한 대화형 FAQ -->
+    <div class="section-box" style="border-top-color: #f57c00;">
+        <h2 style="color: #f57c00;">💬 방문진료 자주 묻는 질문 (FAQ)</h2>
+        
+        <div class="faq-item">
+            <h3 class="faq-q">방문진료 시 교통비가 따로 청구되나요?</h3>
+            <p class="faq-a">아니요, 추가되지 않습니다. 방문진료는 건강보험 수가 내에 이동에 대한 비용이 포함되어 있어 환자분이나 보호자분께 별도의 교통비를 청구하지 않습니다.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3 class="faq-q">의사소견서 발급을 위해 환자가 반드시 한의원에 가야 하나요?</h3>
+            <p class="faq-a">원칙적으로 환자 본인의 내원 진찰이 필요합니다. 하지만 <strong>거동이 전혀 불가능하여 내원이 불가능한 경우</strong>, 우성한의원의 '방문진료'를 신청하시면 원장님이 직접 자택이나 시설로 찾아가 진찰한 후 의사소견서를 발급해 드릴 수 있습니다.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3 class="faq-q">장기요양등급이 없어도 방문진료를 받을 수 있나요?</h3>
+            <p class="faq-a">네, 가능합니다. 노인장기요양등급 유무와 상관없이 뇌졸중, 골절 등의 질병이나 부상으로 인해 스스로 의료기관 내원이 어려운 분이라면 건강보험을 적용받아 왕진을 신청하실 수 있습니다.</p>
+        </div>
     </div>
+
+    <!-- CTA 영역 -->
+    <div class="cta-container">
+        <h3 style="margin-top: 0; color: #2e7d32; font-size: 1.4em;">거동이 불편하시다면, 편안하게 자택에서 진료받으세요</h3>
+        <p style="color: #555; margin-bottom: 10px;">보호자분께서 아래 버튼을 눌러 온라인으로 접수해주시면, 확인 후 진료 일정을 조율해 드립니다.</p>
+        <a href="https://forms.gle/5kGZB5BcptAeMVUz6" target="_blank" class="btn-large">
+            👉 우성한의원 방문진료 간편 신청하기
+        </a>
+        <div style="margin-top: 25px; font-weight: bold; color: #333; font-size: 1.1em; background: #fff; display: inline-block; padding: 10px 20px; border-radius: 8px;">
+            빠른 전화 문의: <a href="tel:031-975-3075" style="color: #5d4037; text-decoration: none;">031-975-3075</a>
+        </div>
+    </div>
+
 </div>
 
-<footer>
-    <p>우성한의원 | 대표원장 고의현 | 경기도 고양시 일산서구 고양대로 726, 4층</p>
-    <p style="margin-top: 10px;">전화: 031-975-3075 | 원장 직통: 010-9720-3075</p>
-    <p style="margin-top: 15px; color: #999; font-size: 0.9em;">※ 본 웹사이트의 모든 안내는 의료법을 준수하여 작성되었습니다. 일차의료 방문진료 시범사업 및 건강보험 적용 기준에 따라 본인 부담금이 발생할 수 있으며, 환자의 상태에 따라 치료 내용 및 방문 주기가 달라질 수 있습니다.</p>
-</footer>
-
-<div class="floating-contact">
-    <a href="http://pf.kakao.com/_xogxeFxd/chat" target="_blank" class="float-btn kakao">💬 카톡 상담·예약</a>
-    <a href="tel:031-975-3075" class="float-btn call-clinic">📞 한의원 전화</a>
-    <a href="tel:010-9720-3075" class="float-btn call-mobile">📱 원장님 직통</a>
-    <a href="sms:010-9720-3075" class="float-btn sms">✉️ 원장님 문자</a>
+<!-- 🟢 의료광고 고지사항 푸터 추가 -->
+<div class="site-footer">
+    <p style="color: #fff; font-weight: bold; margin-bottom: 10px; font-size: 1.1em;">의료광고 고지사항</p>
+    <p>본 게시물은 의료법 제56조 1항을 준수하여 우성한의원에서 직접 제공하는 정보입니다.<br>
+    방문진료 시 진행되는 침, 약침, 부항 등의 한방 치료는 환자의 상태와 체질에 따라 치료 경과에 차이가 있을 수 있으며, <br>시술 후 멍, 뻐근함, 미약한 통증 등의 부작용이 발생할 수 있습니다.<br>모든 진료 및 서류 발급은 한의사의 꼼꼼한 진단 하에 의학적 소견을 바탕으로 이루어집니다.</p>
+    <p style="margin-top: 15px; color: #888;">우성한의원 | 대표원장 고의현 | 경기도 고양시 일산서구 고양대로 726, 4층</p>
 </div>
-
-<script>
-    function toggleMenu() {
-        const navLinks = document.getElementById("navLinks");
-        if (window.innerWidth <= 768) {
-            navLinks.classList.toggle("active");
-        }
-    }
-</script>
 
 </body>
 </html>
