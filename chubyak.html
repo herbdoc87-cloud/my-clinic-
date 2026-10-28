@@ -3,7 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- 🟢 1. AI 검색 최적화(AEO) 및 의료법 준수 메타 태그 -->
+    <meta name="description" content="일산 우성한의원 첩약(탕약) 건강보험 클리닉. 알레르기 비염, 소화불량, 생리통, 허리디스크, 구안와사, 뇌혈관질환 후유증 등 6대 질환 맞춤 한약 처방 및 실비 안내.">
+    <meta name="keywords" content="일산 첩약 건강보험, 한약 건강보험, 일산 한의원 탕약, 비염 한약 보험, 생리통 한약, 허리디스크 한약, 구안와사 한약, 우성한의원">
     <title>우성한의원 - 첩약(탕약) 건강보험 클리닉</title>
+
+    <!-- 🟢 2. AI 검색 엔진을 위한 FAQ 구조화된 데이터 (Schema Markup) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "한약(첩약)도 건강보험 적용이 되나요?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "네, 가능합니다. 첩약 건강보험 적용 시범사업이 확대되어 알레르기 비염, 기능성 소화불량, 생리통, 요추추간판탈출증(허리디스크), 안면신경마비(구안와사), 뇌혈관질환 후유증 등 6대 질환에 대해 건강보험 혜택을 받으실 수 있습니다."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "건강보험 적용 시 한약 비용은 얼마인가요?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "건강보험 가입자의 경우 10일분 기준 약 4~5만 원대의 본인 부담금으로 맞춤 첩약을 처방받으실 수 있습니다. 단, 환자의 증상, 처방되는 약재, 건강보험 가입 유형에 따라 실제 비용은 차이가 있을 수 있습니다."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "첩약 처방 시 실비보험(실손의료비) 청구도 가능한가요?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "네, 첩약 건강보험 시범사업을 통해 처방받은 한약은 '급여' 항목에 해당하므로, 가입하신 실손의료비보험 약관에 따라 본인 부담금에 대한 추가 청구가 가능할 수 있습니다. 자세한 사항은 가입하신 보험사에 문의하시기 바랍니다."
+          }
+        }
+      ]
+    }
+    </script>
+
     <style>
         :root { 
             --primary: #0277bd; /* 신뢰감을 주는 블루 */
@@ -69,7 +108,15 @@
         .cost-card h4 { font-size: 1.2em; color: var(--text-dark); margin-top: 0; }
         .cost-highlight { font-size: 1.8em; font-weight: bold; color: #d32f2f; margin: 15px 0; }
         
-        footer { background: #333; color: #bbb; padding: 25px 20px; text-align: center; font-size: 0.9em; line-height: 1.5; }
+        /* 🟢 FAQ 스타일 (신설) */
+        .faq-item { background: #fff; border: 1px solid #e0e0e0; padding: 20px; border-radius: 12px; margin-bottom: 15px; box-shadow: 0 2px 4px rgba(0,0,0,0.03); transition: transform 0.2s; text-align: left; }
+        .faq-item:hover { transform: translateY(-2px); border-color: var(--primary); }
+        .faq-item h3 { color: var(--text-dark); margin: 0 0 12px 0; font-size: 1.15em; display: flex; align-items: flex-start; gap: 10px; }
+        .faq-item h3::before { content: 'Q.'; color: var(--primary); font-weight: bold; }
+        .faq-item p { margin: 0; color: #555; line-height: 1.6; font-size: 1.05em; display: flex; align-items: flex-start; gap: 10px; }
+        .faq-item p::before { content: 'A.'; color: var(--secondary); font-weight: bold; }
+
+        footer { background: #333; color: #bbb; padding: 30px 20px; text-align: center; font-size: 0.9em; line-height: 1.6; }
 
         /* 모바일 대응 */
         @media (max-width: 768px) {
@@ -106,10 +153,11 @@
     <div class="menu-toggle" onclick="toggleMenu()">☰</div>
     
     <div class="nav-links" id="navLinks">
-        <a href="index.html" style="color: #d84315;">🏠 메인 홈페이지로</a>
+        <a href="index.html" style="color: #d84315;" onclick="toggleMenu()">🏠 메인 홈페이지로</a>
         <a href="#about" onclick="toggleMenu()">건강보험 혜택</a>
         <a href="#diseases" onclick="toggleMenu()">적용 6대 질환</a>
         <a href="#cost" onclick="toggleMenu()">비용 및 실비 안내</a>
+        <a href="#faq" onclick="toggleMenu()">자주 묻는 질문(FAQ)</a>
     </div>
 </nav>
 
@@ -126,10 +174,11 @@
 <div id="about" class="section">
     <div class="info-box">
         <h3>💡 첩약(탕약) 건강보험 시범사업이란?</h3>
-        <p>환자분들의 치료비 부담을 덜어드리기 위해, 국가에서 지정한 특정 질환에 대해 한의원에서 처방받는 <strong>액상 형태의 맞춤 한약(첩약)에 건강보험을 적용</strong>해 주는 제도입니다. 우성한의원은 본 사업의 공식 참여 기관으로서 안전하고 정직하게 처방합니다.</p>
+        <p>환자분들의 치료비 부담을 덜어드리기 위해, 국가에서 지정한 특정 질환에 대해 한의원에서 처방받는 <strong>액상 형태의 맞춤 한약(첩약)에 건강보험을 적용</strong>해 주는 제도입니다. 우성한의원은 본 사업의 공식 참여 기관으로서 원장님의 세밀한 진단을 통해 정직하게 처방합니다.</p>
     </div>
 </div>
 
+<!-- 🟢 의료법 반영 질환 설명 문구 순화 -->
 <div id="diseases" class="section" style="padding-top: 0;">
     <h2 class="section-title">건강보험 적용 6대 질환</h2>
     <p style="text-align: center; color: #666; margin-bottom: 30px; font-size: 1.1em;">아래 6가지 질환으로 내원 시 건강보험 혜택을 받으실 수 있습니다.<br>(각 항목을 누르시면 상세한 블로그 글로 이동합니다.)</p>
@@ -139,7 +188,7 @@
         <div class="disease-card">
             <div class="icon-wrapper">🤧</div>
             <h3>알레르기 비염</h3>
-            <p>만성적인 코막힘, 콧물, 재채기로 고통받는 분들의 호흡기 면역력을 높이고 증상을 완화하는 맞춤 처방을 진행합니다.</p>
+            <p>만성적인 코막힘, 콧물, 재채기로 불편을 겪는 분들의 호흡기 면역력을 돕고 증상 완화에 도움을 주는 맞춤 처방을 진행합니다.</p>
             <a href="https://blog.naver.com/herbdoc87/223593449663" target="_blank">비염 치료 자세히 보기 👉</a>
         </div>
         
@@ -147,7 +196,7 @@
         <div class="disease-card">
             <div class="icon-wrapper">🍲</div>
             <h3>기능성 소화불량</h3>
-            <p>내시경 상 이상이 없어도 지속되는 만성 소화불량, 더부룩함, 잦은 체함 등의 위장 기능을 근본적으로 다스립니다.</p>
+            <p>내시경 상 뚜렷한 이상이 없어도 지속되는 만성 소화불량, 더부룩함, 잦은 체함 등의 위장 기능 개선을 돕습니다.</p>
             <a href="https://blog.naver.com/herbdoc87/223684669854" target="_blank">소화불량 치료 자세히 보기 👉</a>
         </div>
         
@@ -155,7 +204,7 @@
         <div class="disease-card">
             <div class="icon-wrapper">🩸</div>
             <h3>월경통 (생리통)</h3>
-            <p>매달 반복되는 극심한 하복부 통증과 골반통. 진통제에 의존하지 않고 자궁의 기혈 순환을 돕는 처방을 내립니다.</p>
+            <p>매달 반복되는 극심한 하복부 통증과 골반통 완화를 위해, 자궁 주변의 기혈 순환을 원활하게 돕는 처방을 내립니다.</p>
             <a href="https://blog.naver.com/herbdoc87/222151551712" target="_blank">월경통 치료 자세히 보기 👉</a>
         </div>
         
@@ -163,7 +212,7 @@
         <div class="disease-card">
             <div class="icon-wrapper">💥</div>
             <h3>요추추간판탈출증</h3>
-            <p>허리 디스크로 인한 극심한 요통과 다리 저림(방사통)을 치료하고 신경의 염증을 줄이는 데 도움을 줍니다.</p>
+            <p>허리 디스크로 인한 요통과 다리 저림(방사통)을 완화하고 신경 주변의 염증을 줄이는 데 도움을 줍니다.</p>
             <a href="https://blog.naver.com/herbdoc87/223521596681" target="_blank">허리디스크 치료 자세히 보기 👉</a>
         </div>
         
@@ -171,7 +220,7 @@
         <div class="disease-card">
             <div class="icon-wrapper">🎭</div>
             <h3>안면신경마비 (구안와사)</h3>
-            <p>초기 대응이 가장 중요한 구안와사. 안면부 신경의 빠른 회복을 돕고 후유증을 최소화하기 위한 집중 처방을 합니다.</p>
+            <p>초기 관리가 중요한 구안와사. 안면부 신경의 기능 회복을 돕고 후유증을 예방하기 위한 맞춤 처방을 진행합니다.</p>
             <a href="https://blog.naver.com/herbdoc87/222152954328" target="_blank">구안와사 치료 자세히 보기 👉</a>
         </div>
         
@@ -179,7 +228,7 @@
         <div class="disease-card">
             <div class="icon-wrapper">🧠</div>
             <h3>뇌혈관질환 후유증</h3>
-            <p>중풍(뇌졸중) 발병 후 나타나는 마비, 보행 장애, 언어 장애 등 다양한 후유증의 회복을 돕는 한방 재활 처방입니다.</p>
+            <p>중풍(뇌졸중) 발병 후 나타나는 마비, 보행 및 언어 장애 등 다양한 후유증 증상의 완화를 돕는 한방 재활 처방입니다.</p>
             <a href="https://blog.naver.com/herbdoc87/222155076565" target="_blank">뇌혈관질환 치료 보기 👉</a>
         </div>
     </div>
@@ -192,13 +241,13 @@
         <div class="cost-card" style="border-top: 4px solid #1976d2;">
             <h4>건강보험 적용 시 본인 부담금</h4>
             <div class="cost-highlight">약 4~5만 원대</div>
-            <p style="color: #666; font-size: 0.95em;">(10일분 기준)<br>※ 환자의 상태와 처방되는 약재, 그리고 요양기관 종별에 따라 실제 비용은 약간의 차이가 발생할 수 있습니다.</p>
+            <p style="color: #666; font-size: 0.95em;">(10일분 기준)<br>※ 환자의 증상과 처방되는 약재, 건강보험 가입 요건에 따라 실제 산정 비용은 약간의 차이가 발생할 수 있습니다.</p>
         </div>
         
         <div class="cost-card" style="border-top: 4px solid #388e3c;">
             <h4>실손의료비보험(실비) 청구</h4>
             <div class="cost-highlight">추가 보장 가능</div>
-            <p style="color: #666; font-size: 0.95em;">건강보험이 적용되는 '급여' 항목이므로, 가입하신 실비보험 약관에 따라 본인 부담금을 추가로 환급받으실 수 있습니다.<br>(*가입 시기 및 약관에 따라 상이함)</p>
+            <p style="color: #666; font-size: 0.95em;">건강보험이 적용되는 '급여' 항목에 해당하므로, 가입하신 실비보험 약관에 따라 본인 부담금을 추가로 청구하실 수 있습니다.<br>(*가입 시기 및 약관에 따라 상이함)</p>
         </div>
     </div>
     
@@ -207,19 +256,28 @@
     </div>
 </div>
 
+<!-- 🟢 AI 검색 대응 대화형 질의응답 (FAQ) 섹션 추가 -->
+<div id="faq" class="section" style="padding-top: 0;">
+    <h2 class="section-title">첩약 건강보험 자주 묻는 질문 (FAQ)</h2>
+    
+    <div class="faq-item">
+        <h3>한약(첩약)도 건강보험 적용이 되나요?</h3>
+        <p>네, 가능합니다. 첩약 건강보험 적용 시범사업이 확대되어 알레르기 비염, 기능성 소화불량, 생리통, 요추추간판탈출증(허리디스크), 안면신경마비(구안와사), 뇌혈관질환 후유증 등 6대 질환에 대해 건강보험 혜택을 받으실 수 있습니다.</p>
+    </div>
+
+    <div class="faq-item">
+        <h3>건강보험 적용 시 한약 비용은 얼마인가요?</h3>
+        <p>건강보험 가입자의 경우 10일분 기준 약 4~5만 원대의 본인 부담금으로 맞춤 첩약을 처방받으실 수 있습니다. 단, 환자분의 세부 증상과 처방되는 약재의 종류에 따라 실제 진료비는 차이가 있을 수 있습니다.</p>
+    </div>
+
+    <div class="faq-item">
+        <h3>첩약 처방 시 실비보험(실손의료비) 청구도 가능한가요?</h3>
+        <p>네, 첩약 건강보험 시범사업을 통해 처방받은 한약은 비급여가 아닌 '급여' 항목에 해당하므로, 가입하신 실손의료비보험 약관에 따라 본인 부담금에 대한 추가 청구가 가능할 수 있습니다. (자세한 보장 여부는 가입하신 보험사에 사전 문의를 권장합니다.)</p>
+    </div>
+</div>
+
+<!-- 🟢 의료광고 고지사항 푸터 수정 -->
 <footer>
-    <p>우성한의원 | 대표원장 고의현 | 경기도 고양시 일산서구 고양대로 726, 4층 | 전화: 031-975-3075</p>
-    <p style="margin-top: 10px; color: #999;">※ 본 웹사이트의 모든 처방 및 치료 정보는 의료법을 준수하여 작성되었습니다. 모든 한방 치료 및 첩약 처방은 개인의 체질과 증상에 따라 효과에 차이가 있을 수 있으며, 부작용이 발생할 수 있으므로 한의사와 충분한 진단 및 상담 후 진행하시기 바랍니다.</p>
-</footer>
-
-<script>
-    function toggleMenu() {
-        const navLinks = document.getElementById("navLinks");
-        if (window.innerWidth <= 768) {
-            navLinks.classList.toggle("active");
-        }
-    }
-</script>
-
-</body>
-</html>
+    <p style="color: #fff; font-weight: bold; margin-bottom: 10px; font-size: 1.1em;">의료광고 고지사항</p>
+    <p>본 게시물은 의료법 제56조 1항을 준수하여 우성한의원에서 직접 제공하는 정보입니다.<br>
+    모든 한방 치료 및 첩
