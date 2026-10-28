@@ -3,7 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- 🟢 1. AI 검색 최적화(AEO) 메타 태그 -->
+    <meta name="description" content="일산 우성한의원 건뇌 클리닉. 치매 예방, 건망증, 브레인 포그를 위한 뇌혈류 개선 '건뇌환'과 두개골을 이완시키는 '두개천골태반약침' 맞춤 처방 안내.">
+    <meta name="keywords" content="일산 치매 한의원, 치매 예방 한약, 건뇌환, 뇌혈류 개선 한약, 두개천골요법, 태반약침, 브레인 포그 치료, 기억력 영양제, 우성한의원">
     <title>우성한의원 - 뇌 건강·치매 예방 클리닉 (건뇌환 & 두개천골태반약침)</title>
+
+    <!-- 🟢 2. AI 검색 엔진을 위한 FAQ 구조화된 데이터 (Schema Markup) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "건뇌환은 어떤 증상이 있을 때 복용하면 좋나요?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "최근 들어 깜빡하는 건망증이 잦아졌거나, 머리에 안개가 낀 것처럼 멍한 '브레인 포그' 증상, 만성적인 뇌 피로감을 느끼시는 분들께 추천합니다. 건뇌환은 저하된 뇌혈류 순환을 촉진하여 두뇌에 산소와 영양을 공급하는 데 도움을 줍니다."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "두개천골태반약침은 일반 약침과 어떻게 다른가요?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "단순히 근육을 푸는 것을 넘어, 고농축 태반 성분(자하거)과 신경 안정을 돕는 한약재를 배합하여 시술합니다. 나이가 들면서 딱딱하게 굳어지는 두개골 봉합선을 이완시켜 뇌척수액의 순환을 돕고 두피와 뇌신경에 직접적인 영양을 공급하는 특수 약침입니다."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "치매 진단을 받지 않았는데 예방 목적으로 건뇌환을 먹어도 되나요?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "네, 매우 좋습니다. 치매 예방의 핵심은 뇌혈류 저하를 조기에 관리하는 것입니다. 건뇌환은 인지 기능 저하를 예방하고 싶은 중장년층뿐만 아니라, 두뇌 활동이 많은 수험생을 위한 뇌 영양 보약으로도 처방됩니다."
+          }
+        }
+      ]
+    }
+    </script>
+
     <style>
         :root { 
             --primary: #2c3e50; /* 신뢰감을 주는 다크 네이비 */
@@ -22,7 +61,7 @@
         .nav-links a { text-decoration: none; color: #333; font-weight: bold; font-size: 0.95em; transition: color 0.2s; }
         .nav-links a:hover { color: var(--secondary); }
 
-        /* 2. 메인 배너 (배경.jpg 적용) */
+        /* 2. 메인 배너 */
         header { 
             background: linear-gradient(rgba(44, 62, 80, 0.5), rgba(44, 62, 80, 0.5)), url('배경.jpg'); 
             background-size: cover; 
@@ -71,6 +110,14 @@
         .check-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 15px; margin-top: 20px; }
         .check-item { background: #fff; border: 1px solid #cfd8dc; padding: 15px; border-radius: 8px; display: flex; align-items: center; gap: 10px; font-size: 0.98em; }
 
+        /* 🟢 3. AI 검색 대응 FAQ 스타일 신설 */
+        .faq-item { background: #fff; border: 1px solid #e0e0e0; padding: 20px; border-radius: 12px; margin-bottom: 15px; box-shadow: 0 2px 4px rgba(0,0,0,0.03); transition: transform 0.2s; }
+        .faq-item:hover { transform: translateY(-2px); border-color: var(--secondary); }
+        .faq-item h3 { color: var(--primary); margin: 0 0 12px 0; font-size: 1.15em; display: flex; align-items: flex-start; gap: 10px; }
+        .faq-item h3::before { content: 'Q.'; color: var(--tertiary); font-weight: bold; }
+        .faq-item p { margin: 0; color: #444; line-height: 1.6; font-size: 1.05em; display: flex; align-items: flex-start; gap: 10px; }
+        .faq-item p::before { content: 'A.'; color: var(--secondary); font-weight: bold; }
+
         /* 하단 메인으로 버튼 */
         .btn-bottom-home { display: inline-block; background-color: var(--primary); color: white; padding: 12px 30px; border-radius: 8px; text-decoration: none; font-weight: bold; font-size: 1.1em; transition: background 0.2s; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
         .btn-bottom-home:hover { background-color: #1a252f; transform: translateY(-2px); }
@@ -106,7 +153,8 @@
     <div class="nav-links">
         <a href="#about">건뇌 클리닉이란?</a>
         <a href="#self-check">인지기능 자가진단</a>
-        <a href="#solution">건뇌환 & 두개천골태반약침 솔루션</a>
+        <a href="#solution">건뇌환 & 태반약침 솔루션</a>
+        <a href="#faq">자주 묻는 질문(FAQ)</a> <!-- 🟢 네비게이션 메뉴 추가 -->
     </div>
 </nav>
 
@@ -202,6 +250,26 @@
         <h3 style="margin-top:0; color: var(--primary);">맑은 기억력을 지키는 가장 좋은 방법은 '조기 관리'입니다.</h3>
         <p style="font-size: 1.1em; color: #555; margin-bottom: 25px;">환자분의 체질과 증상에 맞춘 건뇌환을 원장님께서 직접 처방해 드립니다.</p>
         <a href="https://forms.gle/wPoXfaHKSDXeobcx7" target="_blank" class="btn btn-form" style="padding: 15px 40px; font-size: 1.1em;">건뇌환 비대면 진료 및 상담 신청하기 👉</a>
+    </div>
+</div>
+
+<!-- 🟢 4. AI 검색 최적화를 위한 대화형 FAQ 섹션 신설 -->
+<div id="faq" class="section" style="padding-top: 0;">
+    <h2 class="section-title">자주 묻는 질문 (FAQ)</h2>
+    
+    <div class="faq-item">
+        <h3>건뇌환은 어떤 증상이 있을 때 복용하면 좋나요?</h3>
+        <p>최근 들어 깜빡하는 건망증이 잦아졌거나, 머리에 안개가 낀 것처럼 멍한 '브레인 포그' 증상, 만성적인 뇌 피로감을 느끼시는 분들께 추천합니다. 건뇌환은 저하된 뇌혈류 순환을 촉진하여 두뇌에 산소와 영양을 공급하는 데 도움을 줍니다.</p>
+    </div>
+
+    <div class="faq-item">
+        <h3>두개천골태반약침은 일반 약침과 어떻게 다른가요?</h3>
+        <p>단순히 근육을 푸는 것을 넘어, 고농축 태반 성분(자하거)과 신경 안정을 돕는 한약재를 배합하여 시술합니다. 나이가 들면서 딱딱하게 굳어지는 두개골 봉합선을 이완시켜 뇌척수액의 순환을 돕고 두피와 뇌신경에 직접적인 영양을 공급하는 특수 약침입니다.</p>
+    </div>
+
+    <div class="faq-item">
+        <h3>치매 진단을 받지 않았는데 예방 목적으로 건뇌환을 먹어도 되나요?</h3>
+        <p>네, 매우 좋습니다. 치매 예방의 핵심은 뇌혈류 저하를 조기에 관리하는 것입니다. 건뇌환은 인지 기능 저하를 예방하고 싶은 중장년층뿐만 아니라, 두뇌 활동이 많은 수험생이나 직장인을 위한 뇌 영양 보약으로도 처방됩니다.</p>
     </div>
 </div>
 
