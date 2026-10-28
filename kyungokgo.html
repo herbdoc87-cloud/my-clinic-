@@ -3,7 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>우성한의원 명품 경옥고</title>
+    
+    <!-- 🟢 1. AI 검색 최적화 및 의료법 준수 메타 태그 -->
+    <meta name="description" content="일산 우성한의원 경옥고 클리닉. 만성 피로, 호흡기 약화, 면역력 저하에 도움을 주는 전통 보약. 경옥고 환, 단지, 스틱 등 맞춤 제형 처방 및 비대면 진료 안내.">
+    <meta name="keywords" content="일산 경옥고, 경옥고 한의원, 우성한의원, 경옥고 스틱, 경옥고 환, 경옥고 단지, 경옥고 효능, 면역력 보약, 만성피로 한약, 비대면 한약 처방">
+    <title>우성한의원 명품 경옥고 클리닉</title>
+
+    <!-- 🟢 2. AI 검색 엔진을 위한 FAQ 구조화된 데이터 (부작용 및 개인차 명시) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "경옥고는 어떤 분들이 드시면 좋은가요?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "경옥고는 동의보감에 수록된 대표적인 보약으로, 만성 피로에 시달리는 직장인, 기력이 저하된 어르신, 호흡기가 약해 마른기침을 자주 하시는 분, 체력 보충이 필요한 수험생의 건강 관리에 도움을 줄 수 있습니다."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "경옥고 환, 스틱, 단지의 차이가 무엇인가요?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "세 가지 모두 들어가는 약재와 기본 효능은 동일합니다. 환은 씹어먹기 편하고, 스틱은 짜 먹는 형태로 휴대가 간편하며, 단지는 전통 방식으로 집에서 온 가족이 떠서 드시기에 좋습니다. 환자분의 라이프스타일에 맞게 제형을 선택하실 수 있습니다."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "경옥고 처방 시 부작용이나 주의사항이 있나요?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "경옥고는 대체로 순한 약재로 구성되어 남녀노소 복용하기 좋으나, 평소 소화기가 매우 약하신 분들은 복용 초기 속이 불편하거나 대변이 묽어질 수 있습니다. 반드시 한의사의 진단 후 본인 체질에 맞게 복용량과 횟수를 조절해야 합니다."
+          }
+        }
+      ]
+    }
+    </script>
+
     <style>
         /* 기본 설정 (경옥고에 어울리는 고급스러운 골드/브라운 톤) */
         :root { --primary: #5d4037; --bg-light: #fdfaf6; --accent: #b8860b; }
@@ -13,6 +52,10 @@
         nav { background: #fff; padding: 15px 20px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 100; display: flex; justify-content: space-between; align-items: center; }
         .nav-logo { font-size: 1.3em; font-weight: bold; color: var(--primary); text-decoration: none; display: flex; align-items: center; gap: 8px; white-space: nowrap; }
         .nav-logo img { height: 32px; width: 32px; border-radius: 50%; object-fit: cover; }
+        
+        /* 모바일 햄버거 메뉴 버튼 */
+        .menu-toggle { display: none; font-size: 1.8em; cursor: pointer; color: var(--primary); }
+
         .nav-links { display: flex; gap: 15px; flex-wrap: wrap; justify-content: flex-end; align-items: center; }
         .nav-links a { text-decoration: none; color: #333; font-weight: bold; font-size: 0.95em; transition: color 0.2s; }
         .nav-links a:hover { color: var(--accent); }
@@ -84,17 +127,32 @@
         .badge { background: #fdfaf6; color: var(--primary); padding: 4px 10px; border-radius: 20px; font-size: 0.85em; margin-right: 8px; font-weight: bold; display: inline-block; width: 45px; text-align: center; border: 1px solid #e0e0e0; }
         .sub-text { font-size: 0.9em; color: #666; margin-top: 15px; display: block; background: #f9f9f9; padding: 10px; border-radius: 5px; text-align: left; }
 
+        /* 🟢 FAQ 스타일 */
+        .faq-item { background: #fff; border: 1px solid #e0e0e0; padding: 20px; border-radius: 12px; margin-bottom: 15px; box-shadow: 0 2px 4px rgba(0,0,0,0.03); transition: transform 0.2s; text-align: left; }
+        .faq-item:hover { transform: translateY(-2px); border-color: var(--accent); }
+        .faq-item h3 { color: var(--primary); margin: 0 0 12px 0; font-size: 1.15em; display: flex; align-items: flex-start; gap: 10px; }
+        .faq-item h3::before { content: 'Q.'; color: var(--accent); font-weight: bold; }
+        .faq-item p { margin: 0; color: #444; line-height: 1.6; font-size: 1.05em; display: flex; align-items: flex-start; gap: 10px; }
+        .faq-item p::before { content: 'A.'; color: var(--primary); font-weight: bold; }
+
         /* 하단 푸터 영역 스타일 */
-        .site-footer {
-            background-color: var(--primary);
-            color: #fff;
-            text-align: center;
-            padding: 50px 20px;
-            margin-top: 50px;
-        }
+        .site-footer { background-color: var(--primary); color: #fff; text-align: center; padding: 40px 20px; margin-top: 50px; }
+        .medical-notice { font-size: 0.85em; color: #bbb; line-height: 1.6; text-align: center; margin-top: 20px; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.2); }
 
         @media (max-width: 768px) {
-            .nav-links { display: none; } 
+            .menu-toggle { display: block; }
+            nav { flex-wrap: wrap; }
+            .nav-links { 
+                display: none; 
+                flex-direction: column; 
+                width: 100%; 
+                background: #fff; 
+                padding: 10px 0;
+            }
+            .nav-links.active { display: flex; }
+            .nav-links a { padding: 15px 10px; border-bottom: 1px solid #f0f0f0; width: 100%; box-sizing: border-box; text-align: left; }
+            .nav-links a:last-child { border-bottom: none; }
+            
             header { padding: 60px 20px; }
             header h1 { font-size: 1.8em; }
             .ingredient-item { width: 40%; }
@@ -109,24 +167,38 @@
     <div style="font-weight: bold;">📞 전화문의: <a href="tel:031-975-3075" style="color: #555; text-decoration: none;">031-975-3075</a></div>
 </div>
 
+<script>
+    function toggleMenu() {
+        const navLinks = document.getElementById("navLinks");
+        if (window.innerWidth <= 768) {
+            navLinks.classList.toggle("active");
+        }
+    }
+</script>
+
 <nav>
     <a href="#" class="nav-logo">
         <img src="우성한의원마크.jpg" alt="우성한의원 마크">
         <span>우성한의원 경옥고 클리닉</span>
     </a>
-    <div class="nav-links">
-        <a href="#about">경옥고란?</a>
-        <a href="#research">현대적 효능</a>
-        <a href="#usage">복용 및 보관법</a> <!-- 🌟 추가된 메뉴 -->
-        <a href="#location">오시는 길</a>
+    
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+    
+    <div class="nav-links" id="navLinks">
+        <a href="#about" onclick="toggleMenu()">경옥고란?</a>
+        <a href="#research" onclick="toggleMenu()">보조적 효능</a>
+        <a href="#usage" onclick="toggleMenu()">복용 및 보관법</a> 
+        <a href="#faq" onclick="toggleMenu()">자주 묻는 질문(FAQ)</a>
+        <a href="#location" onclick="toggleMenu()">오시는 길</a>
         <!-- 상단 네비게이션 메인 홈페이지 버튼 -->
-        <a href="https://ilsan-wsclinic.vercel.app/" class="btn-home-nav">🏠 본원 홈페이지</a>
+        <a href="https://ilsan-wsclinic.vercel.app/" class="btn-home-nav" onclick="toggleMenu()">🏠 본원 홈페이지</a>
     </div>
 </nav>
 
+<!-- 🟢 의료법 반영 배너 문구 수정 -->
 <header>
-    <h1>동의보감이 첫 번째로 꼽은 명방<br><span class="highlight-text">우성한의원 맞춤 경옥고</span></h1>
-    <p class="slogan">"정(精)과 수(髓)를 불려 주고 원기를 보하여 늙은이를 젊어지게 하고 모든 허손증을 보하며 온갖 병을 낫게 한다."<br>최상급 생지황, 인삼, 복령, 봉밀을 오랜 시간 정성껏 달여 쇠약해진 체력을 근본적으로 회복시킵니다.</p>
+    <h1>동의보감에 수록된 건강의 지혜<br><span class="highlight-text">우성한의원 맞춤 경옥고</span></h1>
+    <p class="slogan">생지황, 인삼, 복령, 봉밀을 오랜 시간 정성껏 달여 체력을 돕고 호흡기를 윤택하게 하는 전통 한방 보약입니다.</p>
     
     <div class="btn-group">
         <a href="https://forms.gle/2PFKXBr21LsD2i347" target="_blank" class="btn btn-form">✨ 경옥고 비대면 처방 신청하기</a>
@@ -145,7 +217,7 @@
         <div style="flex: 1 1 250px; text-align: center; background: #fff; padding: 20px; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
             <img src="경옥고환.jpg" alt="경옥고 환" style="max-width: 100%; height: auto; border-radius: 8px; filter: drop-shadow(0 8px 12px rgba(0,0,0,0.1)); margin-bottom: 15px;">
             <h3 style="color: #5d4037; margin: 0; font-size: 1.3em;">경옥고 환</h3>
-            <p style="color: #666; font-size: 0.95em; margin-top: 8px; margin-bottom: 0;">씹어먹기 편한 고급스러운 제형</p>
+            <p style="color: #666; font-size: 0.95em; margin-top: 8px; margin-bottom: 0;">씹어먹기 편한 제형</p>
         </div>
         
         <div style="flex: 1 1 250px; text-align: center; background: #fff; padding: 20px; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
@@ -157,7 +229,7 @@
         <div style="flex: 1 1 250px; text-align: center; background: #fff; padding: 20px; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
             <img src="경옥고단지.jpg" alt="경옥고 단지" style="max-width: 100%; height: auto; border-radius: 8px; filter: drop-shadow(0 8px 12px rgba(0,0,0,0.1)); margin-bottom: 15px;">
             <h3 style="color: #5d4037; margin: 0; font-size: 1.3em;">경옥고 단지</h3>
-            <p style="color: #666; font-size: 0.95em; margin-top: 8px; margin-bottom: 0;">온 가족이 함께 떠먹는 전통 방식</p>
+            <p style="color: #666; font-size: 0.95em; margin-top: 8px; margin-bottom: 0;">가정에서 덜어 먹기 좋은 전통 방식</p>
         </div>
     </div>
 </div>
@@ -166,7 +238,7 @@
 <div id="about" class="section">
     <div class="ingredient-box">
         <h3>경옥고 4대 핵심 구성</h3>
-        <p style="color: #ccc; margin-bottom: 0;">물 한 방울 넣지 않고 고귀한 약재만을 오랜 시간 정성으로 달여냅니다.</p>
+        <p style="color: #ccc; margin-bottom: 0;">전통 방식 그대로 엄선된 약재를 정성으로 달여냅니다.</p>
         <div class="ingredient-list">
             <div class="ingredient-item">생지황 <span class="ingredient-desc">청열량혈 / 양음생진</span></div>
             <div class="ingredient-item">인삼 <span class="ingredient-desc">대보원기 / 고탈생진</span></div>
@@ -175,36 +247,36 @@
         </div>
     </div>
 
-    <h2 class="section-title">역사가 증명하는 보약 중의 보약</h2>
+    <h2 class="section-title">전통 한의학의 자양강장 처방</h2>
     <p style="text-align: center; font-size: 1.1em; color: #444; margin-bottom: 30px;">
-        동의보감은 경옥고를 <strong>음액을 보태어 폐를 윤택하게 하고, 허로성 해수와 마른기침을 치료하는 최고의 명방</strong>으로 기록하고 있습니다. 소화기 질환과 신허(腎虛)로 인한 쇠약에도 널리 쓰여온 자양강장제입니다.
+        동의보감은 경옥고를 <strong>음액을 보태어 폐를 윤택하게 하고, 허로성 기침을 완화하는 처방</strong> 중 하나로 기록하고 있습니다. 예로부터 기력 저하와 소화기 약화에 널리 쓰여온 자양강장 보약입니다.
     </p>
 </div>
 
-<!-- 최신 연구 결과 효능 -->
+<!-- 최신 연구 결과 효능 (의료법 수정 - 단정적 표현 완화) -->
 <div id="research" class="section" style="background-color: #fff;">
-    <h2 class="section-title">최신 연구로 과학이 입증한 경옥고의 4대 효능</h2>
+    <h2 class="section-title">학술 연구를 통해 보고된 경옥고의 보조적 효능</h2>
     <div class="card-container" style="gap: 15px;">
         <div class="card" style="border-top: 4px solid var(--accent);">
-            <h3>🫁 호흡기 보호 및 폐 손상 예방</h3>
-            <p>미세먼지로 인한 폐 내피세포의 활성 산소를 감소시키며, 만성폐쇄성폐질환(COPD) 모델에서 염증세포의 침윤과 조직학적 폐 손상 정도를 유의하게 억제하는 효과가 입증되었습니다.</p>
+            <h3>🫁 호흡기 보호 보조</h3>
+            <p>관련 연구에서 미세먼지로 인한 활성 산소를 감소시키고, 염증 세포의 침윤 억제를 통해 호흡기 보호에 도움을 줄 수 있음이 보고되었습니다.</p>
         </div>
         <div class="card" style="border-top: 4px solid var(--accent);">
-            <h3>💪 만성 피로 및 운동 수행능력 향상</h3>
-            <p>발린, 아르기닌, 카르노신 등 아미노산이 풍부하여 근육 내 글리코겐을 늘려줍니다. 실제 축구선수 대상 연구에서 최대산소섭취량을 늘리고 운동 후 심박수 회복을 유의하게 향상시켰습니다.</p>
+            <h3>💪 피로 회복 및 체력 증진 보조</h3>
+            <p>다양한 아미노산이 포함되어 있어 운동 후 심박수 회복과 체력 증진에 도움을 줄 수 있다는 관련 연구 결과가 있습니다.</p>
         </div>
         <div class="card" style="border-top: 4px solid var(--accent);">
-            <h3>🧠 뇌신경 보호 및 인지기능 개선</h3>
-            <p>파킨슨병 및 허혈성 뇌 손상 동물모델 연구에서 도파민성 뉴런의 소실을 억제하고 뇌 허혈로 유발된 인지 장애를 상당 부분 완화하여, 노인 환자의 장복 시 퇴행성 뇌 질환 예방에 도움을 줍니다.</p>
+            <h3>🧠 인지기능 유지 보조</h3>
+            <p>퇴행성 뇌 질환 동물모델 실험 등에서 인지 장애의 일부 완화를 돕는 뇌신경 보호 효능이 연구된 바 있습니다.</p>
         </div>
         <div class="card" style="border-top: 4px solid var(--accent);">
-            <h3>🛡️ 면역세포 활성화 및 방어력 증강</h3>
-            <p>항암제 투여로 면역이 약화된 상태에서 면역세포를 자극하는 사이토카인(IFN-r, IL-2 등)은 늘려주고, 염증성 반응을 유발하는 사이토카인은 감소시켜 신체 본연의 면역 방어력을 높여줍니다.</p>
+            <h3>🛡️ 신체 방어력 향상 보조</h3>
+            <p>면역세포를 돕는 물질을 활성화하고 염증성 반응 물질을 감소시켜, 신체의 전반적인 방어력을 유지하는 데 도움을 줄 수 있습니다.</p>
         </div>
     </div>
 </div>
 
-<!-- 🌟 새로 추가된 복용법 및 보관 안내 섹션 🌟 -->
+<!-- 복용법 및 보관 안내 섹션 -->
 <div id="usage" class="section" style="background-color: #fdfaf6; padding-top: 60px; padding-bottom: 60px; border-top: 1px solid #e0e0e0;">
     <h2 class="section-title">경옥고 올바른 복용법 및 보관 안내</h2>
     
@@ -217,7 +289,7 @@
             <ul class="info-list">
                 <li><strong>복용량:</strong> 성인 기준 <strong>하루 1~2봉 (또는 1~2환)</strong> 복용을 권장합니다.</li>
                 <li><strong>복용 시간:</strong> 식전, 식후 상관없이 편하신 시간에 자유롭게 드시면 됩니다.</li>
-                <li><strong>주의 음식:</strong> 특별히 가려야 할 음식은 없습니다. 평소처럼 편안하게 식사해 주세요.</li>
+                <li><strong>주의 음식:</strong> 특별히 가려야 할 음식은 없으나, 원장님 진단에 따라 조언을 받으실 수 있습니다.</li>
             </ul>
         </div>
         
@@ -233,20 +305,40 @@
         </div>
     </div>
 
-    <!-- 원장님 당부 (명현/부작용 안내) -->
+    <!-- 원장님 당부 (부작용 고지) -->
     <div style="background-color: #fff; border: 1px solid #e0e0e0; border-radius: 12px; padding: 25px; margin-top: 25px; box-shadow: 0 2px 4px rgba(0,0,0,0.02);">
         <h3 style="color: var(--primary); margin-top: 0; font-size: 1.15em; display: flex; align-items: center; gap: 8px;">
-            👨‍⚕️ 우성한의원 원장님 안내
+            👨‍⚕️ 우성한의원 진료 안내
         </h3>
         <p style="color: #555; line-height: 1.6; margin-bottom: 0; font-size: 1em;">
-            경옥고는 워낙 순한 명약이라 부작용은 거의 없습니다. 하지만 평소 소화기가 약하신 분들은 간혹 속이 약간 부글거리거나 대변이 묽어질 수 있습니다.<br><br>
-            이는 <strong>장 기능이 조절되는 자연스러운 과정</strong>이니 안심하셔도 되며, 혹시라도 부담스러우시다면 <strong>식후에 드시거나 복용량을 살짝 줄여보시는 것</strong>을 추천해 드립니다.
+            경옥고는 남녀노소 복용하기 좋은 보약이지만, 개인의 체질이나 평소 소화기 상태에 따라 복용 초기 속이 약간 부글거리거나 대변이 묽어지는 증상이 나타날 수 있습니다.<br><br>
+            이는 장 기능이 조절되는 과정에서 나타날 수 있는 반응이나, 불편함이 지속된다면 복용량을 조절하거나 식후 복용으로 변경하실 수 있도록 <strong>원장님과 꼭 상담해 주시기 바랍니다.</strong>
         </p>
     </div>
 
     <!-- 폼 유도 배너 -->
     <div style="text-align: center; margin-top: 50px;">
         <a href="https://forms.gle/2PFKXBr21LsD2i347" target="_blank" class="btn btn-form" style="padding: 12px 30px; box-shadow: none; animation: none;">경옥고 처방 간편 설문 작성하기 👉</a>
+    </div>
+</div>
+
+<!-- 🟢 AI 검색 대응 대화형 질의응답 (FAQ) 섹션 추가 -->
+<div id="faq" class="section">
+    <h2 class="section-title">자주 묻는 질문 (FAQ)</h2>
+    
+    <div class="faq-item">
+        <h3>경옥고는 어떤 분들이 드시면 좋은가요?</h3>
+        <p>경옥고는 만성 피로에 시달리는 직장인, 기력이 저하된 어르신, 호흡기가 약해 마른기침을 자주 하시는 분, 체력 보충이 필요한 수험생의 건강 관리에 도움을 줄 수 있습니다.</p>
+    </div>
+
+    <div class="faq-item">
+        <h3>경옥고 환, 스틱, 단지의 차이가 무엇인가요?</h3>
+        <p>세 가지 제형 모두 들어가는 약재의 구성과 기본 효능은 동일합니다. 환은 씹어먹기 편하고, 스틱은 짜 먹는 형태로 휴대가 간편하며, 단지는 전통 방식으로 집에서 온 가족이 떠서 드시기에 좋습니다. 환자분의 라이프스타일에 맞게 선택하실 수 있습니다.</p>
+    </div>
+
+    <div class="faq-item">
+        <h3>비대면 전화 진료로도 처방받을 수 있나요?</h3>
+        <p>네, 가능합니다. 직접 내원이 어려우신 경우 전화 상담을 통해 원장님께서 환자분의 건강 상태를 꼼꼼히 문진한 후 체질에 맞게 처방하여 자택으로 발송해 드립니다.</p>
     </div>
 </div>
 
@@ -282,11 +374,18 @@
     </div>
 </div>
 
-<!-- 하단 푸터 (메인 홈페이지 이동 배너) -->
+<!-- 🟢 하단 푸터 (메인 홈페이지 이동 배너 및 의료광고 고지사항 포함) -->
 <div class="site-footer">
     <h3 style="margin-top: 0; color: #f8e5b4; font-size: 1.5em;">우성한의원의 더 많은 진료를 확인해 보세요</h3>
     <p style="margin-bottom: 25px; font-size: 1.05em; color: #e0e0e0;">추나요법, 두개천골요법, 초음파 약침 등 특화 진료 안내</p>
     <a href="https://ilsan-wsclinic.vercel.app/" class="btn" style="background-color: var(--accent); color: white; border-radius: 30px; padding: 14px 35px;">🏠 우성한의원 홈페이지 가기</a>
+    
+    <div class="medical-notice">
+        <p style="font-weight: bold; margin-bottom: 8px; color: #fff;">의료광고 고지사항</p>
+        본 게시물은 의료법 제56조 1항을 준수하여 우성한의원에서 직접 작성하였습니다.<br>
+        모든 한방 치료 및 한약 처방은 개인의 체질과 건강 상태에 따라 효과에 차이가 있을 수 있으며, <br>소화불량이나 무른 변 등의 부작용이 발생할 수 있습니다. 반드시 한의사와 충분한 상담 및 진단 후 복용하시기 바랍니다.<br>
+        <span style="display: block; margin-top: 10px;">우성한의원 | 대표원장 고의현 | 경기도 고양시 일산서구 고양대로 726, 4층</span>
+    </div>
 </div>
 
 </body>
