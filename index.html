@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- 구글 및 네이버 소유권 확인 태그 -->
-<meta name="google-site-verification" content="google328f364db5f46b6c" />
-<meta name="naver-site-verification" content="8b72b242c81ae2a0e1cf847ca27eaa1fad55ebb9" />
+    <meta name="google-site-verification" content="google328f364db5f46b6c" />
+    <meta name="naver-site-verification" content="8b72b242c81ae2a0e1cf847ca27eaa1fad55ebb9" />
     
     <!-- 🟢 1. AI 검색 최적화(AEO)용 메타 태그 추가 -->
     <meta name="description" content="일산서구 우성한의원(고의현 원장). 초음파 진단, 방문진료(왕진), 노인장기요양 의사소견서 발급, 첩약 건강보험, 교통사고, 맞춤 보약 클리닉 운영.">
@@ -21,7 +21,7 @@
     <meta property="og:title" content="일산 우성한의원 | 초음파 진단·방문진료 특화">
     <meta property="og:description" content="거동이 불편한 어르신을 위한 방문진료(왕진), 초음파 진단, 노인장기요양 의사소견서 발급. 고의현 원장의 꼼꼼한 진료.">
     <meta property="og:url" content="https://wsclinic-psi.vercel.app">
-    <meta property="og:image" content="https://wsclinic-psi.vercel.app/배경.jpg"> <!-- 임시로 배경.jpg를 사용하도록 수정했습니다 -->
+    <meta property="og:image" content="https://wsclinic-psi.vercel.app/배경.jpg">
     <meta property="og:locale" content="ko_KR">
 
     <!-- 🟢 2. AI 검색 엔진용 구조화된 데이터 (MedicalClinic 및 FAQPage) 최적화 통합 반영 -->
@@ -303,12 +303,14 @@
     
     <div class="menu-toggle" onclick="toggleMenu()">☰</div>
     
+    <!-- ⬇️ 수정된 메뉴 부분: 각 서브페이지 링크를 완벽히 연결했습니다 ⬇️ -->
     <div class="nav-links" id="navLinks">
         <a href="#about" onclick="toggleMenu()">의료진 소개</a>
         <a href="#premium-clinics" style="color: #d32f2f;" onclick="toggleMenu()">특화처방·맞춤보약</a> 
         <a href="#specialties" onclick="toggleMenu()">진료과목</a>
-        <a href="#chubyak" onclick="toggleMenu()">첩약보험</a>
-        <a href="#longtermcare" onclick="toggleMenu()">방문진료·장기요양</a>
+        <a href="chubyak.html">첩약보험</a>
+        <a href="visit.html">방문진료·장기요양</a>
+        <a href="car.html">자동차보험</a>
         <a href="#faq" onclick="toggleMenu()">자주 묻는 질문(FAQ)</a>
         <a href="#location" onclick="toggleMenu()">위치안내</a>
     </div>
@@ -424,7 +426,6 @@
                     우성한의원 다이어트 클리닉 👉
                 </a>
             </div>
-            <!-- 기존 자동차보험 클리닉 카드를 아래 코드로 교체 -->
             <div class="card">
                <h3>🚗 자동차보험 클리닉</h3>
                <p>보이지 않는 교통사고 후유증, 본인 부담금 없이 초음파 진단과 맞춤 한방 치료로 다스립니다.</p>
