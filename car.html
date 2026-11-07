@@ -175,22 +175,6 @@
     }
     @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important;animation:none!important}}
   </style>
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"MedicalClinic",
-    "name":"우성한의원",
-    "telephone":"031-975-3075",
-    "address":{
-      "@type":"PostalAddress",
-      "streetAddress":"고양대로 726, 4층",
-      "addressLocality":"고양시 일산서구",
-      "addressRegion":"경기도",
-      "addressCountry":"KR"
-    },
-    "medicalSpecialty":"https://schema.org/MedicalBusiness"
-  }
-  </script>
 </head>
 <body>
   <div class="topline">
@@ -208,6 +192,8 @@
       </a>
       <button class="menu-btn" type="button" aria-label="메뉴 열기" aria-expanded="false" aria-controls="navLinks">☰</button>
       <div class="nav-links" id="navLinks">
+        <!-- 메인 홈페이지로 돌아가는 버튼 추가 -->
+        <a href="index.html" style="color:var(--gold); font-weight:800;">🏠 메인 홈페이지</a>
         <a href="#about">교통사고 후 통증</a>
         <a href="#care">진료 안내</a>
         <a href="#process">접수 절차</a>
