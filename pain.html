@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- 🤖 AI 검색 및 SEO 최적화 메타 태그 -->
+    <title>일산 우성한의원 - 통증 및 근골격 클리닉 (초음파 진단·추나요법)</title>
+    <!-- 지역 키워드(일산서구, 일산동 등) 추가 -->
+    <meta name="description" content="고양시 일산서구(일산동) 위치 우성한의원 통증 클리닉. 30년 임상 경력 고의현 원장의 초음파 진단, 초음파 유도 맞춤 약침, 추나요법, 불부항으로 만성 통증과 척추 관절 질환의 회복을 돕습니다.">
+    <meta name="keywords" content="일산 통증 한의원, 일산서구 한의원, 일산역 한의원, 일산동 디스크, 초음파 유도 약침, 일산 추나요법, 우성한의원, 고의현 원장, 만성통증">
+    <meta name="author" content="우성한의원">
+    
+    <!-- 📍 Geo SEO: LocalBusiness Schema Markup -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "MedicalClinic",
+      "name": "우성한의원",
+      "image": "우성한의원마크.jpg",
+      "@id": "",
+      "url": "https://wsclinic-psi.vercel.app",
+      "telephone": "+82-31-975-3075",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "고양대로 726, 4층",
+        "addressLocality": "고양시 일산서구",
+        "addressRegion": "경기도",
+        "postalCode": "10328",
+        "addressCountry": "KR"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 37.6841, 
+        "longitude": 126.7725 
+      },
+      "medicalSpecialty": ["PainMedicine", "Acupuncture"]
+    }
+    </script>
+    
+    <!-- 📊 Vercel 방문자 통계 추적 스크립트 -->
+    <script defer src="/_vercel/insights/script.js"></script>
+
+    <style>
+        :root { 
+            --primary: #1565c0; 
+            --secondary: #ff8f00; 
+            --bg-light: #f5f8fa; 
+            --text-dark: #333;
+        }
+        body { font-family: 'Apple SD Gothic Neo', sans-serif; line-height: 1.6; margin: 0; color: var(--text-dark); background-color: #fafafa; scroll-behavior: smooth; }
+        
+        /* 네비게이션 */
+        nav { background: #fff; padding: 15px 20px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 100; display: flex; justify-content: space-between; align-items: center; }
+        .nav-logo { font-size: 1.3em; font-weight: bold; color: var(--primary); text-decoration: none; display: flex; align-items: center; gap: 8px; }
+        .nav-logo img { height: 32px; width: 32px; border-radius: 50%; object-fit: cover; }
+        .menu-toggle { display: none; font-size: 1.8em; cursor: pointer; color: var(--primary); }
+        .nav-links { display: flex; gap: 20px; flex-wrap: wrap; justify-content: flex-end; }
+        .nav-links a { text-decoration: none; color: #333; font-weight: bold; font-size: 0.95em; transition: color 0.2s; }
+        .nav-links a:hover { color: var(--secondary); }
+
+        /* 메인 배너 */
+        header { 
+            background: linear-gradient(rgba(21, 101, 192, 0.7), rgba(21, 101, 192, 0.7)), url('통증배경.jpg'); 
+            background-size: cover; 
+            background-position: center; 
+            padding: 100px 20px; 
+            text-align: center; 
+            color: #fff;
+        }
+        header h1 { margin-bottom: 15px; font-size: 2.4em; text-shadow: 1px 1px 4px rgba(0,0,0,0.5); line-height: 1.3; }
+        header .slogan { font-size: 1.2em; color: #e3f2fd; max-width: 750px; margin: 0 auto 30px auto; line-height: 1.6; }
+        .highlight-text { color: #ffca28; font-weight: bold; }
+        
+        .btn-group { margin-top: 25px; display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; }
+        .btn { display: inline-block; padding: 12px 28px; text-decoration: none; border-radius: 8px; font-weight: bold; transition: all 0.2s; font-size: 1.05em; box-shadow: 0 4px 6px rgba(0,0,0,0.2); }
+        .btn:hover { opacity: 0.9; transform: translateY(-2px); }
+        .btn-call { background: #fff; color: var(--primary); }
+        .btn-form { background: var(--secondary); color: white; padding: 15px 35px; border-radius: 30px; }
+
+        /* 섹션 공통 */
+        .section { padding: 80px 20px; max-width: 1000px; margin: auto; }
+        .section-title { color: var(--primary); margin-bottom: 40px; border-bottom: 3px solid var(--secondary); padding-bottom: 10px; display: inline-block; font-size: 1.6em; text-align: center; width: 100%; }
+        
+        /* 알림 박스 */
+        .alert-box { background-color: #e3f2fd; border: 2px solid #64b5f6; border-radius: 12px; padding: 30px; text-align: center; margin-bottom: 50px; }
+        .alert-box h3 { color: #1565c0; font-size: 1.5em; margin-top: 0; margin-bottom: 15px; }
+        .alert-box p { font-size: 1.1em; color: #333; margin: 0; line-height: 1.6; }
+
+        /* 서비스 카드 그리드 */
+        .service-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; margin-bottom: 40px; }
+        .service-card { background: #fff; border: 1px solid #e0e0e0; border-radius: 12px; padding: 30px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); transition: transform 0.2s; border-top: 4px solid var(--primary); }
+        .service-card:hover { transform: translateY(-5px); border-color: var(--secondary); box-shadow: 0 8px 15px rgba(0,0,0,0.1); }
+        .service-card img { width: 100%; height: 200px; object-fit: cover; border-radius: 8px; margin-bottom: 15px; background-color: #f0f0f0; }
+        .service-card h3 { color: var(--primary); margin-top: 0; font-size: 1.3em; margin-bottom: 15px; display: flex; align-items: center; gap: 8px; }
+        .service-card p { color: #555; line-height: 1.6; font-size: 1.05em; margin-bottom: 0; }
+
+        footer { background: #333; color: #bbb; padding: 25px 20px; text-align: center; font-size: 0.9em; line-height: 1.5; }
+
+        @media (max-width: 768px) {
+            .menu-toggle { display: block; }
+            nav { flex-wrap: wrap; }
+            .nav-links { display: none; flex-direction: column; width: 100%; background: #fff; padding: 10px 0; }
+            .nav-links.active { display: flex; }
+            .nav-links a { padding: 15px 10px; border-bottom: 1px solid #f0f0f0; width: 100%; box-sizing: border-box; text-align: left; }
+            header { padding: 60px 20px; }
+            header h1 { font-size: 1.8em; }
+        }
+    </style>
+</head>
+<body>
+
+<div style="background-color: #f8f5f0; border-bottom: 1px solid #e0e0e0; padding: 8px 20px; font-size: 0.88em; color: #555; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 5px;">
+    <div>📍 경기도 고양시 일산서구 고양대로 726 (일산동), 4층 우성한의원</div>
+    <div style="font-weight: bold;">📞 진료예약 및 상담: <a href="tel:031-975-3075" style="color: #555; text-decoration: none;">031-975-3075</a></div>
+</div>
+
+<nav>
+    <a href="index.html" class="nav-logo">
+        <img src="우성한의원마크.jpg" alt="일산 우성한의원 로고">
+        <span>우성한의원 통증·근골격 클리닉</span>
+    </a>
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+    <div class="nav-links" id="navLinks">
+        <a href="index.html" style="color: #d84315;">🏠 메인 홈페이지로</a>
+        <a href="index.html#specialties">진료과목</a>
+        <a href="chubyak.html">첩약보험</a>
+        <a href="visit.html">방문진료</a>
+        <a href="car.html">자동차보험</a>
+    </div>
+</nav>
+
+<header>
+    <h1>지긋지긋한 만성 통증,<br><span class="highlight-text">초음파로 꼼꼼하게 살피고 세밀하게 치료합니다</span></h1>
+    <p class="slogan">고양시 일산 우성한의원은 30년 임상 노하우와 초음파 진단을 결합하여<br>목, 허리, 무릎, 어깨 등 척추·관절 질환의 건강한 회복을 돕습니다.</p>
+    
+    <div class="btn-group">
+        <a href="tel:031-975-3075" class="btn btn-form">☎ 통증 클리닉 예약하기</a>
+        <a href="http://pf.kakao.com/_xogxeFxd/chat" target="_blank" class="btn btn-call">💬 카카오톡 빠른 상담</a> 
+    </div>
+</header>
+
+<div id="about" class="section">
+    <div class="alert-box">
+        <h3>💡 눈으로 직접 확인하는 세밀한 치료</h3>
+        <p>
+            단순히 아픈 곳을 짐작만으로 치료하지 않습니다.<br>
+            우성한의원은 <strong>초음파 기기</strong>를 활용해 뼈, 근육, 인대, 신경의 상태를 관찰한 후,<br>
+            <strong>문제가 발생한 위치에 적절한 한방 치료를 시행</strong>하여 건강한 일상 복귀를 돕습니다.
+        </p>
+    </div>
+</div>
+
+<div id="treatments" class="section" style="padding-top: 0;">
+    <h2 class="section-title">우성한의원 통증 치료 프로그램</h2>
+    
+    <div class="service-grid">
+        <!-- 1. 초음파 진단 사진 -->
+        <div class="service-card">
+            <!-- 📸 파일명: 초음파.jpg -->
+            <img src="초음파.jpg" alt="초음파 정밀 진단">
+            <h3>🔍 초음파 정밀 진단</h3>
+            <p>초음파 기기를 통해 뼈, 근육, 인대, 신경의 상태를 눈으로 직접 확인하며, 통증의 원인이 되는 부위를 짐작이 아닌 데이터로 세밀하게 파악합니다.</p>
+        </div>
+
+        <!-- 2. 약침 치료 사진 (약침 종류 포함) -->
+        <div class="service-card">
+            <!-- 📸 파일명: 약침치료.jpg -->
+            <img src="약침치료.jpg" alt="초음파 유도 맞춤 약침 치료">
+            <h3>🎯 초음파 유도 맞춤 약침</h3>
+            <p>초음파 화면으로 염증 부위를 실시간으로 확인하며, 환자의 증상과 체질에 맞는 정제된 한약 추출물을 정확히 주입하여 염증 완화와 조직 재생을 돕습니다.</p>
+            
+            <!-- 약침 종류 안내 박스 -->
+            <div style="margin-top: 15px; background: var(--bg-light); padding: 15px; border-radius: 8px; font-size: 0.95em; border-left: 4px solid var(--secondary);">
+                <strong style="color: var(--primary); display: block; margin-bottom: 8px;">[우성한의원 맞춤 약침]</strong>
+                <ul style="margin: 0; padding-left: 20px; color: #555; line-height: 1.6;">
+                    <li><strong>봉약침:</strong> 국소 부위 염증 완화 및 면역 작용 보조</li>
+                    <li><strong>태반(자하거)약침:</strong> 손상된 조직 재생 보조 및 기력 회복</li>
+                    <li><strong>죽염약침:</strong> 딱딱하게 굳은 근막의 긴장 완화</li>
+                    <li><strong>N(앤오)약침:</strong> 국소 혈류 순환 촉진 및 통증 경감</li>
+                    <li><strong>어혈약침:</strong> 뭉친 어혈을 풀고 기혈 순환 개선</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- 3. 추나베드 사진 -->
+        <div class="service-card">
+            <!-- 📸 파일명: 추나베드.jpg -->
+            <img src="추나베드.jpg" alt="우성한의원 추나베드 및 추나요법">
+            <h3>👐 구조를 바로잡는 추나요법</h3>
+            <p>전문 <strong>추나베드</strong>를 활용하여 잘못된 자세나 사고로 인해 틀어진 척추와 관절, 뭉친 근막을 원장님이 직접 손으로 밀고 당겨 바르게 교정합니다.</p>
+        </div>
+
+        <!-- 4. 불부항 사진 -->
+        <div class="service-card">
+            <!-- 📸 파일명: 불부항.jpg -->
+            <img src="불부항.jpg" alt="전통 불부항 및 한방 물리치료">
+            <h3>🔥 전통 불부항 및 물리치료</h3>
+            <p>음압과 온기를 동시에 전달하여 딱딱하게 굳은 근육을 풀어주는 <strong>불부항(火罐)</strong> 치료와 함께, 통증 부위의 혈류 순환을 원활하게 돕는 맞춤형 한방 물리치료를 병행합니다.</p>
+        </div>
+
+        <!-- 5. 침구 치료 사진 -->
+        <div class="service-card">
+            <!-- 📸 파일명: 침구치료.jpg -->
+            <img src="침구치료.jpg" alt="우성한의원 통증 침구 치료">
+            <h3>📌 기혈 순환을 돕는 침구 치료</h3>
+            <p>경혈을 자극하여 막힌 기혈의 소통을 원활하게 하고 뭉친 근육의 긴장을 풀어줍니다. 정통 침과 뜸 치료를 활용하여 통증을 줄이고 신체의 자연 치유력을 높이는 데 도움을 줍니다.</p>
+        </div>
+
+        <!-- 6. 맞춤 한약 사진 -->
+        <div class="service-card">
+            <!-- 📸 파일명: 맞춤한약.jpg -->
+            <img src="맞춤한약.jpg" alt="척추 관절 맞춤 치료 한약">
+            <h3>🌿 척추·관절 맞춤 치료 한약</h3>
+            <p>만성적인 척추·관절 질환은 뼈와 근육에 영양을 공급하는 기능이 떨어진 경우가 많습니다. 꼼꼼한 진단 후, 약해진 연골과 인대를 강화하고 자생력을 기르는 데 도움을 주는 맞춤 한약을 처방합니다.</p>
+        </div>
+    </div>
+</div>
+
+<!-- 📍 오시는 길 (지도 및 위치 안내) -->
+<div id="location" class="section">
+    <h2 class="section-title">오시는 길</h2>
+    
+    <div style="display: flex; flex-wrap: wrap; gap: 20px; background: #fff; padding: 25px; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); border: 1px solid #e0e0e0; border-top: 4px solid var(--primary);">
+        
+        <!-- 지도 화면 영역 -->
+        <div style="flex: 1 1 400px; min-height: 350px; border-radius: 8px; overflow: hidden; background-color: #f0f0f0;">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3158.552435017042!2d126.7703113!3d37.6841!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357c8f0000000000%3A0x0!2z6rK96riw64-EIOqzoOyWkeyLnCDsnbzshbjshJzqurAg6rOg7JaR64yA66GcIDcyNg!5e0!3m2!1sko!2skr!4v1700000000000" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+
+        <!-- 주소 및 길찾기 버튼 영역 -->
+        <div style="flex: 1 1 300px; display: flex; flex-direction: column; justify-content: center;">
+            <h3 style="color: var(--primary); margin-top: 0; font-size: 1.4em;">일산 우성한의원</h3>
+            <p style="font-size: 1.05em; color: #444; line-height: 1.8;">
+                <strong>📍 주소:</strong><br>
+                경기도 고양시 일산서구 고양대로 726 (일산동), 4층
+            </p>
+            <p style="font-size: 1.05em; color: #444; line-height: 1.8;">
+                <strong>📞 전화번호:</strong><br>
+                <a href="tel:031-975-3075" style="color: var(--primary); text-decoration: none; font-weight: bold;">031-975-3075</a>
+            </p>
+            <p style="font-size: 0.95em; color: #666; margin-top: 5px;">
+                ※ 일산역(경의중앙선) 인근 위치<br>
+                ※ 주차장 이용 등 자세한 안내는 한의원으로 문의해 주세요.
+            </p>
+            
+            <!-- 모바일 연동 길찾기 버튼 -->
+            <div style="margin-top: 25px; display: flex; gap: 10px; flex-wrap: wrap;">
+                <!-- 카카오맵 연동 -->
+                <a href="https://map.kakao.com/link/to/우성한의원,37.6841,126.7725" target="_blank" style="flex: 1; text-align: center; background: #fee500; color: #000; padding: 12px 15px; border-radius: 8px; text-decoration: none; font-weight: bold; font-size: 1em; box-shadow: 0 2px 4px rgba(0,0,0,0.1); transition: opacity 0.2s;">
+                    카카오맵 길찾기
+                </a>
+                <!-- 네이버지도 연동 -->
+                <a href="https://map.naver.com/v5/search/일산서구 고양대로 726 우성한의원" target="_blank" style="flex: 1; text-align: center; background: #03c75a; color: #fff; padding: 12px 15px; border-radius: 8px; text-decoration: none; font-weight: bold; font-size: 1em; box-shadow: 0 2px 4px rgba(0,0,0,0.1); transition: opacity 0.2s;">
+                    네이버지도 길찾기
+                </a>
+            </div>
+        </div>
+        
+    </div>
+</div>
+
+<footer>
+    <p>일산 우성한의원 | 대표원장 고의현 | 경기도 고양시 일산서구 고양대로 726 (일산동), 4층 | 전화: 031-975-3075</p>
+    <p style="margin-top: 10px; color: #999;">※ 본 웹사이트의 모든 안내는 의료법 제56조 1항을 준수하여 의료정보 제공을 목적으로 우성한의원에서 직접 작성하였습니다.<br>모든 한방 치료 및 한약 처방은 개인의 체질과 건강 상태에 따라 치료 결과에 차이가 있을 수 있으며 부작용이 발생할 수 있으므로, 치료 전 반드시 담당 한의사와 충분한 상담을 진행하시기 바랍니다.</p>
+</footer>
+
+<script>
+    function toggleMenu() {
+        const navLinks = document.getElementById("navLinks");
+        if (window.innerWidth <= 768) {
+            navLinks.classList.toggle("active");
+        }
+    }
+</script>
+
+</body>
+</html>
