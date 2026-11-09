@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version='1.0' encoding='utf-8'?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://wsclinic-psi.vercel.app/</loc>
@@ -15,19 +15,19 @@
   <url>
     <loc>https://wsclinic-psi.vercel.app/gongjindan.html</loc>
   </url>
-   <url>
+  <url>
     <loc>https://wsclinic-psi.vercel.app/bopego.html</loc>
   </url>
-   <url>
+  <url>
     <loc>https://wsclinic-psi.vercel.app/puriton.html</loc>
   </url>
-   <url>
+  <url>
     <loc>https://wsclinic-psi.vercel.app/nitric-oxide.html</loc>
   </url>
-   <url>
+  <url>
     <loc>https://wsclinic-psi.vercel.app/brain.html</loc>
   </url>
-   <url>
+  <url>
     <loc>https://wsclinic-psi.vercel.app/chubyak.html</loc>
   </url>
   <url>
@@ -35,5 +35,32 @@
   </url>
   <url>
     <loc>https://wsclinic-psi.vercel.app/pain.html</loc>
+  </url>
+  <url>
+    <loc>https://wsclinic-psi.vercel.app/neck.html</loc>
+  </url>
+  <url>
+    <loc>https://wsclinic-psi.vercel.app/shoulder.html</loc>
+  </url>
+  <url>
+    <loc>https://wsclinic-psi.vercel.app/elbow.html</loc>
+  </url>
+  <url>
+    <loc>https://wsclinic-psi.vercel.app/wrist.html</loc>
+  </url>
+  <url>
+    <loc>https://wsclinic-psi.vercel.app/hand.html</loc>
+  </url>
+  <url>
+    <loc>https://wsclinic-psi.vercel.app/back.html</loc>
+  </url>
+  <url>
+    <loc>https://wsclinic-psi.vercel.app/knee.html</loc>
+  </url>
+  <url>
+    <loc>https://wsclinic-psi.vercel.app/ankle.html</loc>
+  </url>
+  <url>
+    <loc>https://wsclinic-psi.vercel.app/foot.html</loc>
   </url>
 </urlset>
