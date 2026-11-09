@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#102b46">
   <title>일산 통증·근골격 클리닉 | 우성한의원</title>
-  <meta name="description" content="고양시 일산서구 우성한의원 통증 클리닉. 초음파를 활용한 근골격계 상태 확인과 침 치료, 약침, 추나요법 등 개인 상태에 따른 한의 진료를 안내합니다.">
+  <meta name="description" content="고양시 일산서구 일산동 우성한의원 통증클리닉. 목·어깨·팔꿈치·손목·손·허리·무릎·발목·발 통증의 증상과 관리법, 침·약침·추나요법 등 진료 안내.">
   <meta name="keywords" content="일산 통증 한의원, 일산서구 한의원, 일산역 한의원, 일산 추나요법, 초음파 유도 약침, 근골격계 통증, 우성한의원">
   <meta name="author" content="우성한의원">
   <meta name="robots" content="index,follow,max-image-preview:large">
@@ -105,6 +105,69 @@
       }
     ]
   }
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "우성한의원 부위별 통증 안내",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "목 통증",
+      "url": "https://wsclinic-psi.vercel.app/neck.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "어깨 통증",
+      "url": "https://wsclinic-psi.vercel.app/shoulder.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "팔꿈치 통증",
+      "url": "https://wsclinic-psi.vercel.app/elbow.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 4,
+      "name": "손목 통증",
+      "url": "https://wsclinic-psi.vercel.app/wrist.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 5,
+      "name": "손 통증",
+      "url": "https://wsclinic-psi.vercel.app/hand.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 6,
+      "name": "허리 통증",
+      "url": "https://wsclinic-psi.vercel.app/back.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 7,
+      "name": "무릎 통증",
+      "url": "https://wsclinic-psi.vercel.app/knee.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 8,
+      "name": "발목 통증",
+      "url": "https://wsclinic-psi.vercel.app/ankle.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 9,
+      "name": "발 통증",
+      "url": "https://wsclinic-psi.vercel.app/foot.html"
+    }
+  ]
+}
   </script>
   <script defer src="/_vercel/insights/script.js"></script>
   <style>
@@ -249,6 +312,18 @@
       html { scroll-behavior: auto; }
       *, *::before, *::after { transition-duration: .01ms !important; }
     }
+
+    /* 부위별 통증 안내: 기존 디자인 토큰과 반응형 레이아웃 재사용 */
+    .bodypart-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:18px; }
+    .bodypart-card { display:flex; flex-direction:column; padding:26px; border:1px solid var(--line); border-radius:18px; background:#fff; text-decoration:none; box-shadow:0 8px 28px rgba(16,43,70,.045); transition:transform .2s,border-color .2s; }
+    .bodypart-card:hover,.bodypart-card:focus-visible { transform:translateY(-3px); border-color:var(--teal); }
+    .bodypart-card .part-index { color:var(--teal); font-size:.78rem; font-weight:800; }
+    .bodypart-card h3 { margin:8px 0 10px; color:var(--navy); font-size:1.25rem; }
+    .bodypart-card p { margin:0 0 15px; color:var(--muted); font-size:.9rem; flex:1; }
+    .bodypart-card .part-link { color:var(--blue); font-size:.9rem; font-weight:800; }
+    .bodypart-note { margin-top:20px; color:var(--muted); font-size:.87rem; }
+    @media(max-width:850px){.bodypart-grid{grid-template-columns:repeat(2,minmax(0,1fr));}}
+    @media(max-width:680px){.bodypart-grid{grid-template-columns:1fr;}}
   </style>
 </head>
 <body>
@@ -271,6 +346,7 @@
         <a href="index.html">메인 홈페이지</a>
         <a href="index.html#specialties">진료과목</a>
         <a href="pain.html" aria-current="page">통증 클리닉</a>
+        <a href="#pain-areas">부위별 통증</a>
         <a href="car.html">자동차보험</a>
         <a href="chubyak.html">첩약보험</a>
         <a href="visit.html">방문진료</a>
@@ -287,6 +363,7 @@
         <p class="hero-copy">우성한의원 통증 클리닉은 문진과 진찰을 바탕으로 필요한 경우 초음파를 활용해 근육·힘줄·인대 등 근골격계 상태를 살펴보고, 침 치료·약침·추나요법 등 다양한 한의 치료를 환자 상태에 맞춰 검토합니다.</p>
         <div class="hero-actions">
           <a class="btn btn-gold" href="tel:031-975-3075">전화로 진료 문의하기</a>
+          <a class="btn btn-outline" href="#pain-areas">부위별 통증 살펴보기</a>
           <a class="btn btn-outline" href="http://pf.kakao.com/_xogxeFxd/chat" target="_blank" rel="noopener noreferrer">카카오톡 상담</a>
         </div>
         <p class="hero-note">치료 방법과 적용 여부는 증상, 진찰 결과 및 개인의 건강 상태에 따라 달라집니다.</p>
@@ -316,6 +393,62 @@
           <img src="초음파.jpg" alt="근골격계 상태 확인에 활용하는 초음파 장비" loading="lazy" decoding="async">
         </div>
       </div>
+    </section>
+
+    <section class="section" id="pain-areas" aria-labelledby="pain-areas-title">
+      <div class="section-head">
+        <span class="section-kicker">PAIN BY BODY AREA</span>
+        <h2 id="pain-areas-title">부위별 통증 증상 안내</h2>
+        <p>목부터 발까지, 통증이 나타나는 부위별로 확인할 증상과 일상 관리법을 살펴보세요. 각 페이지에서는 진료가 필요한 경고 신호도 안내합니다.</p>
+      </div>
+      <div class="bodypart-grid">
+        <a class="bodypart-card" href="neck.html" aria-label="목 통증 상세 안내 페이지">
+          <span class="part-index">01 / PAIN GUIDE</span>
+          <h3>목 통증</h3><p><strong>목이 뻣뻣하거나 고개를 돌릴 때 아픈가요?</strong><br>근육 긴장, 경추 관절 문제, 팔 저림 등 함께 확인할 증상을 알아봅니다.</p>
+          <span class="part-link">증상과 관리법 자세히 보기 →</span>
+        </a>
+        <a class="bodypart-card" href="shoulder.html" aria-label="어깨 통증 상세 안내 페이지">
+          <span class="part-index">02 / PAIN GUIDE</span>
+          <h3>어깨 통증</h3><p><strong>팔을 들어 올릴 때 어깨가 아픈가요?</strong><br>어깨 움직임의 제한, 야간 통증, 힘줄과 관절 관련 증상을 살펴봅니다.</p>
+          <span class="part-link">증상과 관리법 자세히 보기 →</span>
+        </a>
+        <a class="bodypart-card" href="elbow.html" aria-label="팔꿈치 통증 상세 안내 페이지">
+          <span class="part-index">03 / PAIN GUIDE</span>
+          <h3>팔꿈치 통증</h3><p><strong>물건을 잡거나 손목을 움직일 때 팔꿈치가 아픈가요?</strong><br>반복 사용과 관련된 팔꿈치 바깥쪽·안쪽 통증을 알아봅니다.</p>
+          <span class="part-link">증상과 관리법 자세히 보기 →</span>
+        </a>
+        <a class="bodypart-card" href="wrist.html" aria-label="손목 통증 상세 안내 페이지">
+          <span class="part-index">04 / PAIN GUIDE</span>
+          <h3>손목 통증</h3><p><strong>손목이 시큰거리거나 손이 저린가요?</strong><br>손목의 반복 사용, 힘줄 통증, 신경 압박 가능성을 살펴봅니다.</p>
+          <span class="part-link">증상과 관리법 자세히 보기 →</span>
+        </a>
+        <a class="bodypart-card" href="hand.html" aria-label="손 통증 상세 안내 페이지">
+          <span class="part-index">05 / PAIN GUIDE</span>
+          <h3>손 통증</h3><p><strong>손가락 마디가 아프거나 뻣뻣한가요?</strong><br>손가락 관절 통증, 부종, 아침 뻣뻣함 등의 특징을 알아봅니다.</p>
+          <span class="part-link">증상과 관리법 자세히 보기 →</span>
+        </a>
+        <a class="bodypart-card" href="back.html" aria-label="허리 통증 상세 안내 페이지">
+          <span class="part-index">06 / PAIN GUIDE</span>
+          <h3>허리 통증</h3><p><strong>허리를 숙이거나 일어날 때 통증이 있나요?</strong><br>허리 통증과 다리 저림, 일상생활에서 확인할 증상을 살펴봅니다.</p>
+          <span class="part-link">증상과 관리법 자세히 보기 →</span>
+        </a>
+        <a class="bodypart-card" href="knee.html" aria-label="무릎 통증 상세 안내 페이지">
+          <span class="part-index">07 / PAIN GUIDE</span>
+          <h3>무릎 통증</h3><p><strong>계단을 오르내릴 때 무릎이 아픈가요?</strong><br>무릎 관절 통증, 부종, 움직임에 따른 변화 등을 알아봅니다.</p>
+          <span class="part-link">증상과 관리법 자세히 보기 →</span>
+        </a>
+        <a class="bodypart-card" href="ankle.html" aria-label="발목 통증 상세 안내 페이지">
+          <span class="part-index">08 / PAIN GUIDE</span>
+          <h3>발목 통증</h3><p><strong>발목을 삐거나 걸을 때 아픈가요?</strong><br>발목 염좌 후 붓기, 체중 부하 가능 여부 등을 확인합니다.</p>
+          <span class="part-link">증상과 관리법 자세히 보기 →</span>
+        </a>
+        <a class="bodypart-card" href="foot.html" aria-label="발 통증 상세 안내 페이지">
+          <span class="part-index">09 / PAIN GUIDE</span>
+          <h3>발 통증</h3><p><strong>아침 첫발을 디딜 때 발바닥이 아픈가요?</strong><br>발뒤꿈치·발바닥·발가락 통증의 양상과 관리법을 알아봅니다.</p>
+          <span class="part-link">증상과 관리법 자세히 보기 →</span>
+        </a>
+      </div>
+      <p class="bodypart-note">※ 갑작스러운 마비·근력 저하, 심한 외상, 발열을 동반한 심한 통증 등은 신속한 의학적 평가가 필요할 수 있습니다. 각 상세 페이지는 별도로 제작·배포해야 링크가 정상 작동합니다.</p>
     </section>
 
     <section class="section" id="treatments">
