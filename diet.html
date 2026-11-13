@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="ko">
 <head>
 <meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><meta content="#183b36" name="theme-color"/>
@@ -12,31 +11,132 @@
 <style>
 :root{--deep:#183b36;--green:#2e6a58;--sage:#eaf1e9;--cream:#f8f6ef;--gold:#c49a56;--text:#26352f;--muted:#63726b;--line:#e0e8e2}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;color:var(--text);font-family:'Apple SD Gothic Neo','Malgun Gothic',sans-serif;line-height:1.75;word-break:keep-all}a{color:inherit}img{display:block;max-width:100%}.wrap{max-width:1160px;margin:auto;padding-left:24px;padding-right:24px}.skip{position:absolute;left:-9999px}.skip:focus{left:12px;top:12px;background:white;z-index:200;padding:10px}.top{background:var(--cream);font-size:13px;color:#52645b}.top .wrap{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;padding-top:8px;padding-bottom:8px}.top a{text-decoration:none;font-weight:700}.sitehead{position:sticky;top:0;z-index:50;background:#ffffffed;backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}.headrow{min-height:76px;display:flex;align-items:center;justify-content:space-between;gap:20px}.logo{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--deep);font-size:20px;font-weight:800}.logo img{width:40px;height:40px;object-fit:cover;border-radius:50%}.logo small{display:block;font-size:11px;color:var(--muted);font-weight:600;letter-spacing:1px}.nav{display:flex;gap:22px;align-items:center}.nav a{text-decoration:none;font-size:14px;font-weight:700}.nav a:hover{color:var(--green)}.nav .call{padding:10px 18px;background:var(--deep);color:white;border-radius:40px}.menu{display:none;background:none;border:0;font-size:27px;color:var(--deep);cursor:pointer}.hero{background:linear-gradient(105deg,rgba(17,49,42,.96),rgba(24,59,54,.82)),url('배경.jpg') center/cover;color:#fff;position:relative;overflow:hidden}.hero:after{content:'';position:absolute;width:420px;height:420px;border:1px solid #ffffff24;border-radius:50%;right:-120px;top:-170px;box-shadow:0 0 0 60px #ffffff08,0 0 0 120px #ffffff06}.hero .wrap{position:relative;z-index:1;padding-top:96px;padding-bottom:100px}.eyebrow{font-size:12px;letter-spacing:3px;font-weight:800;color:#e1c48c}.hero h1{font-size:clamp(36px,5.1vw,64px);line-height:1.28;letter-spacing:-2.4px;max-width:800px;margin:20px 0}.hero p{max-width:670px;color:#e2eee7;font-size:18px;margin:0}.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:32px}.btn{display:inline-flex;align-items:center;justify-content:center;min-height:49px;padding:12px 23px;border-radius:40px;font-weight:800;text-decoration:none;transition:transform .2s}.btn:hover{transform:translateY(-2px)}.primary{background:#e5c58d;color:#223c31}.secondary{border:1px solid #ffffff88;color:white}.hero .micro{font-size:12px;margin-top:23px;color:#d0ded6}.quick{background:#fff;border-bottom:1px solid var(--line)}.quickgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;padding-top:21px;padding-bottom:21px}.quickgrid div{display:flex;align-items:center;gap:12px;font-weight:800;color:var(--deep)}.quickgrid span{width:44px;height:44px;border-radius:13px;background:var(--sage);display:grid;place-items:center;font-size:20px}.quickgrid small{display:block;font-size:12px;font-weight:400;color:var(--muted)}.section{padding-top:88px;padding-bottom:88px}.section.alt{background:var(--cream)}.center{text-align:center;max-width:770px;margin:0 auto 42px}.kicker{font-size:12px;font-weight:800;letter-spacing:2.5px;color:var(--green)}h2{font-size:clamp(27px,3.5vw,40px);line-height:1.35;color:var(--deep);letter-spacing:-1px;margin:10px 0 14px}.center p{color:var(--muted);margin:0}.three{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.panel{background:white;border:1px solid var(--line);border-radius:19px;padding:30px;box-shadow:0 8px 25px #183b3608}.panel .num{font-size:13px;font-weight:800;color:var(--gold);letter-spacing:2px}.panel h3{font-size:21px;color:var(--deep);margin:12px 0}.panel p{color:var(--muted);margin:0;font-size:15px}.feature{display:grid;grid-template-columns:1fr 1fr;gap:0;background:var(--sage);border-radius:23px;overflow:hidden}.feature .photo{min-height:400px;background:#dce6dd}.feature img{width:100%;height:100%;object-fit:cover}.feature .copy{padding:clamp(28px,5vw,60px);align-self:center}.feature h3{font-size:30px;color:var(--deep);margin:12px 0}.feature p{color:#52665b}.chip{display:inline-block;padding:5px 12px;border:1px solid #aac6b7;border-radius:30px;font-size:12px;font-weight:800;color:var(--green)}.facts{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:23px}.fact{padding:15px;background:#ffffffb8;border-radius:12px}.fact b{display:block;color:var(--deep)}.fact span{font-size:13px;color:var(--muted)}.notice{padding:18px 22px;margin-top:24px;border-left:3px solid var(--gold);background:#faf7ed;border-radius:0 12px 12px 0;font-size:14px;color:#6b634e}.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.step{border-top:3px solid var(--green)}.step strong{font-size:21px;color:var(--deep)}.price{margin-top:22px;padding:24px 30px;border:1px solid var(--line);border-radius:16px;background:white}.price strong{color:var(--deep)}.price p{margin:5px 0;color:var(--muted)}.price table{border-collapse:collapse;width:100%;margin:12px 0}.price th,.price td{padding:11px 8px;text-align:left;border-bottom:1px solid var(--line)}.price td{font-weight:800}.price small{color:var(--muted)}.faq{max-width:850px;margin:auto}details{border-bottom:1px solid var(--line);padding:20px 5px}summary{font-weight:800;color:var(--deep);cursor:pointer;list-style:none;position:relative;padding-right:30px}summary::-webkit-details-marker{display:none}summary:after{content:'+';position:absolute;right:5px;font-size:23px;top:-4px;color:var(--green)}details[open] summary:after{content:'−'}details p{color:var(--muted);margin:12px 0 0}.locgrid{display:grid;grid-template-columns:1fr 1fr;gap:24px}.map{min-height:390px;border-radius:18px;overflow:hidden;background:var(--sage)}.map iframe{width:100%;height:100%;min-height:390px;border:0}.info{border:1px solid var(--line);border-radius:18px;padding:30px}.info h3{font-size:24px;color:var(--deep);margin:0 0 14px}.info dl{margin:0}.info dt{font-weight:800;color:var(--deep);margin-top:13px}.info dd{margin:3px 0;color:var(--muted)}.links{display:flex;gap:10px;flex-wrap:wrap;margin-top:20px}.links a{flex:1;min-width:130px;text-align:center;text-decoration:none;font-weight:800;padding:11px;border-radius:9px}.kakao{background:#fee500;color:#222}.naver{background:#03c75a;color:#fff}.cta{margin-bottom:80px;background:var(--deep);color:white;text-align:center;padding-top:48px;padding-bottom:48px;border-radius:22px}.cta h2{color:white}.cta p{color:#d7e6dc}.cta .actions{justify-content:center}footer{background:#172c27;color:#c1d2c8;text-align:center;padding:30px 24px;font-size:13px}footer p{max-width:980px;margin:6px auto}footer a{color:white}@media(max-width:900px){.nav{gap:12px}.nav a{font-size:12px}.feature,.locgrid{grid-template-columns:1fr}.feature .photo{min-height:300px}}@media(max-width:700px){.wrap{padding-left:18px;padding-right:18px}.headrow{min-height:66px}.menu{display:block}.nav{display:none;position:absolute;top:100%;left:0;right:0;background:white;padding:12px 18px 18px;flex-direction:column;align-items:stretch;border-bottom:1px solid var(--line);box-shadow:0 12px 25px #183b3618}.nav.open{display:flex}.nav a{font-size:15px;padding:10px 5px}.nav .call{text-align:center}.hero .wrap{padding-top:72px;padding-bottom:80px}.hero p{font-size:16px}.quickgrid{grid-template-columns:1fr;gap:12px}.section{padding-top:65px;padding-bottom:65px}.three,.steps,.facts{grid-template-columns:1fr}.feature .copy{padding:28px}.feature h3{font-size:25px}.cta{margin:0 18px 60px;padding:36px 18px}.map,.map iframe{min-height:300px}}@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.btn{transition:none}}
 
-/* 비만약침·침치료 섹션 */
-.needle-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px;margin-top:36px}.needle-card{overflow:hidden;border:1px solid var(--line);border-radius:22px;background:#fff;box-shadow:0 14px 34px rgba(24,59,54,.06)}.needle-art{height:128px;padding:22px 28px;display:flex;align-items:center;justify-content:space-between;color:#e8f2ed;background:linear-gradient(115deg,#214e45,#498574)}.needle-art-alt{background:linear-gradient(115deg,#355b63,#7ba6a4)}.needle-art>span:first-child{font-size:1rem;letter-spacing:.12em;font-weight:800}.needle-symbol{font-size:4rem;line-height:1;opacity:.8}.needle-body{padding:28px}.needle-body h3{margin:15px 0 12px;font-size:1.35rem;color:var(--deep)}.needle-body p{color:var(--muted)}.needle-body ul{margin:18px 0;padding-left:20px;color:var(--text);line-height:1.85}.needle-body li{margin-bottom:5px}.needle-caution{font-size:.9rem;padding:15px 17px;background:var(--cream);border-left:3px solid var(--gold);border-radius:0 10px 10px 0}.needle-summary{text-align:center;margin-top:24px;padding:30px 26px;border-radius:18px;background:var(--sage)}.needle-summary strong{display:block;color:var(--deep);font-size:1.1rem}.needle-summary p{max-width:780px;margin:12px auto 20px;color:var(--muted)}@media(max-width:700px){.needle-grid{grid-template-columns:1fr}.needle-body{padding:23px}.needle-art{height:105px}}
+/* 비만약침·침치료 섹션 등 커스텀 영역 */
+.needle-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px;margin-top:36px}.needle-card{overflow:hidden;border:1px solid var(--line);border-radius:22px;background:#fff;box-shadow:0 14px 34px rgba(24,59,54,.06)}.needle-art{height:128px;padding:22px 28px;display:flex;align-items:center;justify-content:space-between;color:#e8f2ed;background:linear-gradient(115deg,#214e45,#498574)}.needle-art-alt{background:linear-gradient(115deg,#355b63,#7ba6a4)}.needle-art>span:first-child{font-size:1rem;letter-spacing:.12em;font-weight:800}.needle-symbol{font-size:4rem;line-height:1;opacity:.8}.needle-body{padding:28px}.needle-body h3{margin:15px 0 12px;font-size:1.35rem;color:var(--deep)}.needle-body p{color:var(--muted)}.needle-body ul{margin:18px 0;padding-left:20px;color:var(--text);line-height:1.85}.needle-body li{margin-bottom:5px}.needle-caution{font-size:.9rem;padding:15px 17px;background:var(--cream);border-left:3px solid var(--gold);border-radius:0 10px 10px 0}.needle-summary{text-align:center;margin-top:24px;padding:30px 26px;border-radius:18px;background:var(--sage)}.needle-summary strong{display:block;color:var(--deep);font-size:1.1rem;margin-bottom:8px}.needle-summary p{max-width:780px;margin:12px auto 20px;color:var(--muted)}@media(max-width:700px){.needle-grid{grid-template-columns:1fr}.needle-body{padding:23px}.needle-art{height:105px}}
 </style>
 </head>
 <body>
 <a class="skip" href="#main">본문 바로가기</a>
 <div class="top"><div class="wrap"><span>경기도 고양시 일산서구 고양대로 726, 4층</span><span>진료 문의 <a href="tel:031-975-3075">031-975-3075</a></span></div></div>
-<header class="sitehead"><div class="wrap headrow"><a class="logo" href="index.html"><img alt="우성한의원 로고" src="우성한의원마크.jpg"/><span>우성한의원<small>WEIGHT MANAGEMENT CLINIC</small></span></a><button aria-controls="mainnav" aria-expanded="false" aria-label="메뉴 열기" class="menu" type="button">☰</button><nav aria-label="주요 메뉴" class="nav" id="mainnav"><a href="index.html">본원 홈</a><a href="#approach">관리 방향</a><a href="#noslim">엔오슬림환</a><a href="#detox">해독환</a><a href="#acupuncture">비만약침·침치료</a><a href="#program">관리 단계</a><a href="#faq">FAQ</a><a href="#location">오시는 길</a><a class="call" href="tel:031-975-3075">전화 상담</a></nav></div></header>
+
+<header class="sitehead">
+    <div class="wrap headrow">
+        <a class="logo" href="index.html"><img alt="우성한의원 로고" src="우성한의원마크.jpg"/><span>우성한의원<small>WEIGHT MANAGEMENT CLINIC</small></span></a>
+        <button aria-controls="mainnav" aria-expanded="false" aria-label="메뉴 열기" class="menu" type="button">☰</button>
+        <nav aria-label="주요 메뉴" class="nav" id="mainnav">
+            <a href="index.html">본원 홈</a>
+            <a href="nitric-oxide.html">산화질소 클리닉</a>
+            <a href="#noslim">엔오슬림환</a>
+            <a href="#detox">해독환</a>
+            <a href="#lifestyle">생활 지침</a>
+            <a href="#program">관리 단계</a>
+            <a href="#acupuncture">비만약침·침</a>
+            <a href="#location">오시는 길</a>
+            <a class="call" href="tel:031-975-3075">전화 상담</a>
+        </nav>
+    </div>
+</header>
+
 <main id="main">
 <section class="hero"><div class="wrap"><div class="eyebrow">WOOSUNG WEIGHT MANAGEMENT</div><h1>숫자보다 중요한 것은<br/>지속 가능한 체중관리</h1><p>무리하게 굶는 방식보다 현재의 건강 상태, 식습관, 생활 리듬을 함께 살피는 체중관리. 우성한의원은 상담과 진찰을 바탕으로 개인별 관리 방향과 한약 처방의 적합성을 검토합니다.</p><div class="actions"><a class="btn primary" href="tel:031-975-3075">진료·처방 상담하기</a><a class="btn secondary" href="http://pf.kakao.com/_xogxeFxd/chat" rel="noopener noreferrer" target="_blank">카카오톡 문의</a></div><p class="micro">한약 처방 및 체중 변화는 개인의 상태에 따라 달라지며, 특정 감량 결과를 보장하지 않습니다.</p></div></section>
+
 <div class="quick"><div class="wrap quickgrid"><div><span>◎</span><div>개인별 상태 확인<small>병력·복용약·생활습관 상담</small></div></div><div><span>✦</span><div>단계별 관리<small>준비 · 감량 · 유지 상담</small></div></div><div><span>♡</span><div>생활습관 함께 관리<small>식사 · 활동 · 수면 점검</small></div></div></div></div>
+
 <section class="section wrap" id="approach"><div class="center"><div class="kicker">OUR PHILOSOPHY</div><h2>몸 상태를 먼저 살피는 다이어트</h2><p>체중 변화에는 식사량뿐 아니라 수면, 활동량, 복용 중인 약, 건강 상태 등 여러 요인이 영향을 미칩니다.</p></div><div class="three"><article class="panel"><span class="num">01 / ASSESS</span><h3>건강 상태 점검</h3><p>현재 증상과 병력, 복용 중인 약, 이전 체중관리 경험을 확인합니다.</p></article><article class="panel"><span class="num">02 / PLAN</span><h3>현실적인 목표 설정</h3><p>생활 패턴을 고려해 식사와 활동량을 조정할 수 있는 방법을 함께 상의합니다.</p></article><article class="panel"><span class="num">03 / FOLLOW UP</span><h3>경과에 맞춘 조정</h3><p>체중뿐 아니라 불편 증상, 수면, 식사 패턴 등을 살피며 관리 계획을 조정합니다.</p></article></div></section>
-<section class="section alt" id="noslim"><div class="wrap"><div class="center"><div class="kicker">NO SLIM HWAN</div><h2>엔오슬림환 상담</h2><p>우성한의원에서 안내하는 다이어트 한약 프로그램입니다. 적합성 및 처방 내용은 진료 후 결정됩니다.</p></div><div class="feature"><div class="photo"><img alt="우성한의원 엔오슬림환 이미지" decoding="async" loading="lazy" src="엔오슬림환.jpg"/></div><div class="copy"><span class="chip">개인별 처방 상담</span><h3>내 건강 상태에 맞는지<br/>먼저 확인합니다</h3><p>한약 복용을 고려할 때에는 기존 질환, 복용 중인 약, 수면 상태, 두근거림 등의 증상과 과거 부작용 경험을 함께 확인하는 것이 중요합니다.</p><div class="facts"><div class="fact"><b>상담 항목</b><span>병력·복용약·생활습관</span></div><div class="fact"><b>처방 여부</b><span>진찰 후 의료진 판단</span></div></div></div></div><div class="price"><strong>엔오슬림환 비용 안내</strong><table><tbody><tr><th scope="row">1개월분</th><td>150,000원</td></tr><tr><th scope="row">3개월분</th><td>450,000원</td></tr></tbody></table><small>실제 비용과 진료비 포함 여부는 상담 시 확인해 주세요. 환자 상태에 따라 처방이 제한될 수 있습니다.</small></div><div class="notice"><strong>엔오슬림환 기본 복용 지침: 하루 3회, 식전 30분.</strong> 개인의 건강 상태와 처방 내용에 따라 복용 횟수·시간·용량이 달라질 수 있으므로 실제 복용은 처방 의료진의 안내에 따라 주세요.</div></div></section>
+
+<section class="section alt" id="noslim">
+    <div class="wrap">
+        <div class="center">
+            <div class="kicker">NO SLIM HWAN</div>
+            <h2>엔오슬림환 상담</h2>
+            <p>우성한의원에서 안내하는 다이어트 한약 프로그램입니다. 적합성 및 처방 내용은 진료 후 결정됩니다.</p>
+        </div>
+
+        <!-- ⬇️ 동영상 추가 영역 ⬇️ -->
+        <div style="max-width: 800px; margin: 0 auto 48px; border-radius: 20px; overflow: hidden; box-shadow: 0 14px 34px rgba(24,59,54,.08);">
+            <video style="width: 100%; display: block;" controls controlsList="nodownload">
+                <source src="엔오슬림환.mp4" type="video/mp4">
+                브라우저가 동영상을 지원하지 않습니다.
+            </video>
+        </div>
+        <!-- ⬆️ 동영상 추가 완료 ⬆️ -->
+
+        <div class="feature"><div class="photo"><img alt="우성한의원 엔오슬림환 이미지" decoding="async" loading="lazy" src="엔오슬림환.jpg"/></div><div class="copy"><span class="chip">개인별 처방 상담</span><h3>내 건강 상태에 맞는지<br/>먼저 확인합니다</h3><p>한약 복용을 고려할 때에는 기존 질환, 복용 중인 약, 수면 상태, 두근거림 등의 증상과 과거 부작용 경험을 함께 확인하는 것이 중요합니다.</p><div class="facts"><div class="fact"><b>상담 항목</b><span>병력·복용약·생활습관</span></div><div class="fact"><b>처방 여부</b><span>진찰 후 의료진 판단</span></div></div></div></div>
+        
+        <div class="price"><strong>엔오슬림환 비용 안내</strong><table><tbody><tr><th scope="row">1개월분</th><td>150,000원</td></tr><tr><th scope="row">3개월분</th><td>450,000원</td></tr></tbody></table><small>실제 비용과 진료비 포함 여부는 상담 시 확인해 주세요. 환자 상태에 따라 처방이 제한될 수 있습니다.</small></div>
+        <div class="notice"><strong>엔오슬림환 기본 복용 지침: 하루 3회, 식전 30분.</strong> 개인의 건강 상태와 처방 내용에 따라 복용 횟수·시간·용량이 달라질 수 있으므로 실제 복용은 처방 의료진의 안내에 따라 주세요.</div>
+
+        <!-- ⬇️ 산화질소 클리닉 이동 버튼 추가 ⬇️ -->
+        <div class="needle-summary" style="margin-top: 32px; border: 1px solid var(--line);">
+            <strong style="color: var(--gold); font-size: 1.25rem;">엔오슬림환의 핵심, '산화질소(NO)'가 궁금하신가요?</strong>
+            <p>엔오슬림환은 체내 산화질소(NO) 생성을 촉진하여 신진대사를 높이고 백색지방을 갈색지방으로 바꿔줍니다.<br>다이어트와 혈액순환, 만성 염증 치료에 탁월한 산화질소의 효능을 확인해 보세요.</p>
+            <a class="btn primary" href="nitric-oxide.html" style="margin-top: 10px;">🔬 산화질소(NO) 클리닉 바로가기</a>
+        </div>
+        <!-- ⬆️ 산화질소 버튼 추가 완료 ⬆️ -->
+    </div>
+</section>
+
 <section class="section wrap" id="detox"><div class="center"><div class="kicker">DETOX HWAN</div><h2>해독환 상담</h2><p>해독환의 복용 필요성과 주의사항을 개인의 건강 상태에 맞춰 상담합니다.</p></div><div class="feature"><div class="copy"><span class="chip">배변 상태·건강 상태 상담</span><h3>배변 변화와 불편감도<br/>함께 확인합니다</h3><p>식사 패턴이 달라지면 배변 습관에도 변화가 생길 수 있습니다. 변비나 설사가 있다면 원인과 동반 증상을 먼저 확인해야 합니다. 해독환의 복용 필요 여부와 방법은 진찰 후 결정합니다.</p><div class="notice">묽은 변이나 복통을 단순히 '독소가 빠지는 과정'으로 판단하지 마세요. 증상이 생기면 복용을 중단하고 의료진과 상담해야 합니다.</div></div><div class="photo"><img alt="우성한의원 해독환 이미지" decoding="async" loading="lazy" src="해독환.jpg"/></div></div></section>
-<section aria-labelledby="acupuncture-title" class="section wrap" id="acupuncture">
-<div class="center"><div class="kicker">ACUPUNCTURE &amp; PHARMACOACUPUNCTURE</div><h2 id="acupuncture-title">비만약침과 침 치료도 함께 상담합니다</h2><p>체중관리는 식사·활동·수면 등 생활습관 관리가 기본입니다. 진찰 결과에 따라 한약 외에 약침 또는 침 치료를 보조적인 진료 방법으로 검토할 수 있습니다.</p></div>
-<div class="needle-grid">
-<article class="needle-card"><div aria-hidden="true" class="needle-art"><span>01</span><span class="needle-symbol">✦</span></div><div class="needle-body"><span class="chip">비만약침 상담</span><h3>개인 상태를 고려한 약침 치료</h3><p>약침은 한약재 등에서 유래한 약액을 경혈 등에 주입하는 한의 치료입니다. 체중관리 과정에서 약침 적용을 고려하는 경우, 진찰을 통해 적합성과 주의사항을 먼저 확인합니다.</p><ul><li>현재 건강 상태와 복용 약물 확인</li><li>약침 성분에 대한 알레르기 및 과거 이상 반응 확인</li><li>적용 부위·횟수·비용은 진료 후 개별 안내</li></ul><p class="needle-caution">특정 부위의 지방이 약침만으로 선택적으로 감소하거나 체중이 반드시 줄어드는 것은 아닙니다. 효과에 관한 근거는 치료 종류에 따라 제한적일 수 있습니다.</p></div></article>
-<article class="needle-card"><div aria-hidden="true" class="needle-art needle-art-alt"><span>02</span><span class="needle-symbol">◎</span></div><div class="needle-body"><span class="chip">침 치료 상담</span><h3>체중관리 과정의 침 치료</h3><p>침 치료는 경혈에 침 자극을 가하는 한의 치료입니다. 체중관리와 관련해 활용 가능성을 상담할 수 있으나, 침 치료만으로 일정한 감량 효과가 보장되지는 않습니다.</p><ul><li>식사·활동·수면 패턴과 불편 증상 확인</li><li>침 치료의 필요성과 개인별 적용 여부 판단</li><li>치료 후 멍·통증·어지럼 등 이상 반응 안내</li></ul><p class="needle-caution">침 치료는 생활습관 개선을 대체하지 않으며, 체중관리 계획의 일부로 필요 여부를 판단합니다.</p></div></article>
-</div>
-<div class="needle-summary"><strong>한약 · 비만약침 · 침 치료, 모두에게 필요한 것은 아닙니다.</strong><p>우성한의원은 상담과 진찰을 바탕으로 각 치료의 필요성, 예상되는 이점과 위험, 비용을 안내하고 환자와 치료 방향을 상의합니다. 특정 감량 수치나 결과를 약속하지 않습니다.</p><a class="btn primary" href="tel:031-975-3075">비만약침·침 치료 문의하기</a></div>
-</section><section class="section alt" id="program"><div class="wrap"><div class="center"><div class="kicker">STEP BY STEP</div><h2>단계별 체중관리 프로그램</h2><p>개인별 건강 상태와 생활습관을 고려해 준비기부터 유지기까지 단계별로 상담합니다.</p></div><div class="steps"><article class="panel step"><span class="num">STEP 01</span><h3>준비기</h3><strong>현재 상태를 확인</strong><p>식사·수면·활동 패턴과 건강 상태를 점검하고 관리 목표를 상담합니다.</p></article><article class="panel step"><span class="num">STEP 02</span><h3>감량기</h3><strong>생활습관과 경과 관리</strong><p>식사와 활동 계획을 실천하며 필요 시 처방의 적합성을 평가합니다.</p></article><article class="panel step"><span class="num">STEP 03</span><h3>유지기</h3><strong>지속 가능한 습관</strong><p>변화된 체중과 생활 패턴을 점검하고 장기적인 관리 방법을 상담합니다.</p></article></div><div class="notice">모든 환자에게 동일한 프로그램이나 한약이 적용되는 것은 아닙니다. 처방 여부와 진료 간격은 개별 상태에 따라 달라집니다.</div></div></section>
-<section class="section wrap" id="faq"><div class="center"><div class="kicker">FREQUENTLY ASKED QUESTIONS</div><h2>자주 묻는 질문</h2><p>진료 전 확인하면 도움이 되는 내용을 모았습니다.</p></div><div class="faq"><details><summary>엔오슬림환은 누구나 복용할 수 있나요?</summary><p>아닙니다. 기존 질환, 복용 중인 약, 임신·수유 여부, 심혈관계 증상 등을 확인한 뒤 의료진이 처방 적합성을 판단합니다.</p></details><details><summary>체중관리에 식사와 운동을 병행해야 하나요?</summary><p>지속 가능한 체중관리를 위해서는 식사 패턴, 활동량, 수면 등 생활습관을 함께 관리하는 것이 중요합니다. 개인별 목표와 건강 상태에 맞춰 상담합니다.</p></details><details><summary>한약 복용 중 불편한 증상이 나타나면 어떻게 하나요?</summary><p>두근거림, 불면, 손떨림, 소화불편 등 이상 반응이 발생하면 복용을 중단하고 처방 의료진에게 즉시 상담하세요. 호흡곤란이나 심한 흉통 등 응급 증상은 즉시 응급진료를 받으세요.</p></details><details><summary>비대면 진료로 처방받을 수 있나요?</summary><p>비대면 진료 가능 여부와 처방·조제·수령 방식은 현행 제도, 환자 조건 및 의료진 판단에 따라 달라질 수 있으므로 전화로 먼저 확인해 주세요.</p></details><details><summary>상담 전에 준비하면 좋은 정보가 있나요?</summary><p>현재 복용 중인 약과 건강기능식품, 기존 질환, 이전 다이어트 경험, 최근 체중 변화 등을 정리해 오시면 상담에 도움이 됩니다.</p></details><details><summary>비만약침과 침 치료를 함께 받을 수 있나요?</summary><p>진찰 후 건강 상태와 치료 적합성을 확인하여 병행 여부를 판단합니다. 모든 환자에게 두 치료가 필요한 것은 아니며, 부작용 가능성과 비용 등을 상담한 후 결정합니다.</p></details><details><summary>비만약침이나 침 치료만으로 체중이 줄어드나요?</summary><p>특정 감량 결과를 보장할 수 없습니다. 체중관리는 식사·활동·수면 등 생활습관 관리가 기본이며, 약침과 침 치료의 효과는 치료 종류와 개인 상태에 따라 다르고 근거가 제한적일 수 있습니다.</p></details></div></section>
+
+<!-- ⬇️ 다이어트 생활 지침 섹션 추가 ⬇️ -->
+<section class="section alt" id="lifestyle">
+    <div class="wrap">
+        <div class="center">
+            <div class="kicker">LIFESTYLE GUIDELINES</div>
+            <h2>성공적인 감량을 위한 생활 지침</h2>
+            <p>엔오슬림환의 효과를 높이고 요요를 방지하기 위해 일상에서 꼭 지켜주셔야 할 기본 원칙입니다.</p>
+        </div>
+        <div class="three">
+            <article class="panel">
+                <span class="num">01 / DIET</span>
+                <h3>식단 관리 원칙</h3>
+                <p>저지방·저탄수화물·고단백(살코기, 두부 등) 식단을 유지합니다. <strong>저녁은 소식하고 취침 4시간 전 금식</strong>하여 수면 중 공복 상태를 유지하는 것이 감량의 핵심입니다. 식사는 20분 이상 천천히 꼭꼭 씹어 드세요.</p>
+            </article>
+            <article class="panel">
+                <span class="num">02 / HABIT</span>
+                <h3>생활 습관</h3>
+                <p>노폐물 배출을 위해 갈증이 없을 정도로 물을 충분히 마십니다. 무리한 운동보다는 <strong>하루 1시간 빠르게 걷기</strong>나 계단 이용을 생활화하고, 하루 8시간 정도 충분한 수면을 취하세요.</p>
+            </article>
+            <article class="panel">
+                <span class="num">03 / MEDICATION</span>
+                <h3>복용 및 유지 관리</h3>
+                <p>심한 두근거림이나 불면이 있다면 복용 단계를 낮추거나 양을 줄이세요. 식사량이 줄어 변비가 생길 수 있으니 <strong>생야채와 유산균</strong>을 챙겨 드세요. 감량 후 1kg당 1개월의 유지 기간을 가져야 요요를 예방할 수 있습니다.</p>
+            </article>
+        </div>
+    </div>
+</section>
+<!-- ⬆️ 다이어트 생활 지침 섹션 추가 완료 ⬆️ -->
+
+<section class="section wrap" id="program"><div class="center"><div class="kicker">STEP BY STEP</div><h2>단계별 체중관리 프로그램</h2><p>개인별 건강 상태와 생활습관을 고려해 준비기부터 유지기까지 단계별로 상담합니다.</p></div><div class="steps"><article class="panel step"><span class="num">STEP 01</span><h3>준비기</h3><strong>현재 상태를 확인</strong><p>식사·수면·활동 패턴과 건강 상태를 점검하고 관리 목표를 상담합니다.</p></article><article class="panel step"><span class="num">STEP 02</span><h3>감량기</h3><strong>생활습관과 경과 관리</strong><p>식사와 활동 계획을 실천하며 필요 시 처방의 적합성을 평가합니다.</p></article><article class="panel step"><span class="num">STEP 03</span><h3>유지기</h3><strong>지속 가능한 습관</strong><p>변화된 체중과 생활 패턴을 점검하고 장기적인 관리 방법을 상담합니다.</p></article></div><div class="notice">모든 환자에게 동일한 프로그램이나 한약이 적용되는 것은 아닙니다. 처방 여부와 진료 간격은 개별 상태에 따라 달라집니다.</div></section>
+
+<section aria-labelledby="acupuncture-title" class="section alt" id="acupuncture">
+    <div class="wrap">
+        <div class="center"><div class="kicker">ACUPUNCTURE &amp; PHARMACOACUPUNCTURE</div><h2 id="acupuncture-title">비만약침과 침 치료도 함께 상담합니다</h2><p>체중관리는 식사·활동·수면 등 생활습관 관리가 기본입니다. 진찰 결과에 따라 한약 외에 약침 또는 침 치료를 보조적인 진료 방법으로 검토할 수 있습니다.</p></div>
+        <div class="needle-grid">
+            <article class="needle-card"><div aria-hidden="true" class="needle-art"><span>01</span><span class="needle-symbol">✦</span></div><div class="needle-body"><span class="chip">비만약침 상담</span><h3>개인 상태를 고려한 약침 치료</h3><p>약침은 한약재 등에서 유래한 약액을 경혈 등에 주입하는 한의 치료입니다. 체중관리 과정에서 약침 적용을 고려하는 경우, 진찰을 통해 적합성과 주의사항을 먼저 확인합니다.</p><ul><li>현재 건강 상태와 복용 약물 확인</li><li>약침 성분에 대한 알레르기 및 과거 이상 반응 확인</li><li>적용 부위·횟수·비용은 진료 후 개별 안내</li></ul><p class="needle-caution">특정 부위의 지방이 약침만으로 선택적으로 감소하거나 체중이 반드시 줄어드는 것은 아닙니다. 효과에 관한 근거는 치료 종류에 따라 제한적일 수 있습니다.</p></div></article>
+            <article class="needle-card"><div aria-hidden="true" class="needle-art needle-art-alt"><span>02</span><span class="needle-symbol">◎</span></div><div class="needle-body"><span class="chip">침 치료 상담</span><h3>체중관리 과정의 침 치료</h3><p>침 치료는 경혈에 침 자극을 가하는 한의 치료입니다. 체중관리와 관련해 활용 가능성을 상담할 수 있으나, 침 치료만으로 일정한 감량 효과가 보장되지는 않습니다.</p><ul><li>식사·활동·수면 패턴과 불편 증상 확인</li><li>침 치료의 필요성과 개인별 적용 여부 판단</li><li>치료 후 멍·통증·어지럼 등 이상 반응 안내</li></ul><p class="needle-caution">침 치료는 생활습관 개선을 대체하지 않으며, 체중관리 계획의 일부로 필요 여부를 판단합니다.</p></div></article>
+        </div>
+        <div class="needle-summary" style="background:#fff; border:1px solid var(--line);">
+            <strong>한약 · 비만약침 · 침 치료, 모두에게 필요한 것은 아닙니다.</strong>
+            <p>우성한의원은 상담과 진찰을 바탕으로 각 치료의 필요성, 예상되는 이점과 위험, 비용을 안내하고 환자와 치료 방향을 상의합니다. 특정 감량 수치나 결과를 약속하지 않습니다.</p>
+            <a class="btn primary" href="tel:031-975-3075">비만약침·침 치료 문의하기</a>
+        </div>
+    </div>
+</section>
+
+<section class="section wrap" id="faq"><div class="center"><div class="kicker">FREQUENTLY ASKED QUESTIONS</div><h2>자주 묻는 질문</h2><p>진료 전 확인하면 도움이 되는 내용을 모았습니다.</p></div><div class="faq"><details><summary>엔오슬림환은 누구나 복용할 수 있나요?</summary><p>아닙니다. 기존 질환, 복용 중인 약, 임신·수유 여부, 심혈관계 증상 등을 확인한 뒤 의료진이 처방 적합성을 판단합니다.</p></details><details><summary>체중관리에 식사와 운동을 병행해야 하나요?</summary><p>지속 가능한 체중관리를 위해서는 식사 패턴, 활동량, 수면 등 생활습관을 함께 관리하는 가장 중요합니다. 개인별 목표와 건강 상태에 맞춰 상담합니다.</p></details><details><summary>한약 복용 중 불편한 증상이 나타나면 어떻게 하나요?</summary><p>두근거림, 불면, 손떨림, 소화불편 등 이상 반응이 발생하면 복용을 중단하고 처방 의료진에게 즉시 상담하세요. 호흡곤란이나 심한 흉통 등 응급 증상은 즉시 응급진료를 받으세요.</p></details><details><summary>비대면 진료로 처방받을 수 있나요?</summary><p>비대면 진료 가능 여부와 처방·조제·수령 방식은 현행 제도, 환자 조건 및 의료진 판단에 따라 달라질 수 있으므로 전화로 먼저 확인해 주세요.</p></details><details><summary>상담 전에 준비하면 좋은 정보가 있나요?</summary><p>현재 복용 중인 약과 건강기능식품, 기존 질환, 이전 다이어트 경험, 최근 체중 변화 등을 정리해 오시면 상담에 도움이 됩니다.</p></details><details><summary>비만약침과 침 치료를 함께 받을 수 있나요?</summary><p>진찰 후 건강 상태와 치료 적합성을 확인하여 병행 여부를 판단합니다. 모든 환자에게 두 치료가 필요한 것은 아니며, 부작용 가능성과 비용 등을 상담한 후 결정합니다.</p></details><details><summary>비만약침이나 침 치료만으로 체중이 줄어드나요?</summary><p>특정 감량 결과를 보장할 수 없습니다. 체중관리는 식사·활동·수면 등 생활습관 관리가 기본이며, 약침과 침 치료의 효과는 치료 종류와 개인 상태에 따라 다르고 근거가 제한적일 수 있습니다.</p></details></div></section>
+
 <section class="section alt" id="location"><div class="wrap"><div class="center"><div class="kicker">VISIT US</div><h2>오시는 길 · 진료시간</h2><p>휴진·단축진료 일정은 변동될 수 있으므로 방문 전에 확인해 주세요.</p></div><div class="locgrid"><div class="map"><iframe allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://maps.google.com/maps?q=%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EA%B3%A0%EC%96%91%EC%8B%9C%20%EC%9D%BC%EC%82%B0%EC%84%9C%EA%B5%AC%20%EA%B3%A0%EC%96%91%EB%8C%80%EB%A1%9C%20726&amp;z=17&amp;output=embed" title="우성한의원 위치 지도"></iframe></div><div class="info"><h3>일산 우성한의원</h3><dl><dt>주소</dt><dd>경기도 고양시 일산서구 고양대로 726, 4층</dd><dt>전화</dt><dd><a href="tel:031-975-3075">031-975-3075</a></dd><dt>진료시간</dt><dd>월·화·수·금 09:30~19:00 (점심 13:00~14:00)<br/>목·토 09:30~14:00 (점심시간 없음)<br/>일요일·공휴일 휴진 / 대체공휴일 별도 문의</dd><dt>주차</dt><dd>일산제1공영주차장 안내 (주차 지원 조건은 전화 확인)</dd></dl><div class="links"><a class="kakao" href="https://map.kakao.com/link/to/우성한의원,37.6841,126.7725" rel="noopener noreferrer" target="_blank">카카오맵 길찾기</a><a class="naver" href="https://map.naver.com/v5/search/일산서구%20고양대로%20726%20우성한의원" rel="noopener noreferrer" target="_blank">네이버지도 길찾기</a></div></div></div></div></section>
+
 <section class="wrap cta"><h2>나에게 맞는 체중관리,<br/>진료 상담부터 시작하세요</h2><p>비대면 진료 가능 여부, 처방 적합성, 진료시간을 먼저 문의해 주세요.</p><div class="actions"><a class="btn primary" href="tel:031-975-3075">전화 문의 031-975-3075</a><a class="btn secondary" href="http://pf.kakao.com/_xogxeFxd/chat" rel="noopener noreferrer" target="_blank">카카오톡 상담</a></div></section>
-</main><footer><p><strong>우성한의원</strong> | 대표원장 고의현 | 경기도 고양시 일산서구 고양대로 726, 4층 | 031-975-3075</p><p>본 페이지는 일반적인 진료 안내이며 치료 효과나 감량 결과를 보장하지 않습니다. 한약은 개인에 따라 부작용이 발생할 수 있으므로 처방 전 의료진과 충분히 상담하시기 바랍니다.</p><p><a href="index.html">우성한의원 메인 홈페이지</a> · <a href="pain.html">통증 클리닉</a> · <a href="nitric-oxide.html">산화질소 클리닉</a></p></footer>
+</main>
+
+<footer>
+    <p><strong>우성한의원</strong> | 대표원장 고의현 | 경기도 고양시 일산서구 고양대로 726, 4층 | 031-975-3075</p>
+    <p>본 페이지는 일반적인 진료 안내이며 치료 효과나 감량 결과를 보장하지 않습니다. 한약은 개인에 따라 부작용이 발생할 수 있으므로 처방 전 의료진과 충분히 상담하시기 바랍니다.</p>
+    <p><a href="index.html">우성한의원 메인 홈페이지</a> · <a href="pain.html">통증 클리닉</a> · <a href="nitric-oxide.html">산화질소 클리닉</a></p>
+</footer>
+
 <script>const b=document.querySelector('.menu'),n=document.querySelector('#mainnav');b.addEventListener('click',()=>{let o=n.classList.toggle('open');b.setAttribute('aria-expanded',String(o));b.setAttribute('aria-label',o?'메뉴 닫기':'메뉴 열기');b.textContent=o?'×':'☰'});n.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{n.classList.remove('open');b.setAttribute('aria-expanded','false');b.setAttribute('aria-label','메뉴 열기');b.textContent='☰'}));</script>
-</body></html>
+</body>
+</html>
