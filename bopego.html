@@ -1,140 +1,325 @@
 <!DOCTYPE html>
-
 <html lang="ko">
 <head>
-<meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/>
-<meta content="#102b46" name="theme-color"/><meta content="index,follow,max-image-preview:large" name="robots"/>
-<title>보폐고 엔오(NO) | 일산 호흡기·목 건강 한약 상담 - 우성한의원</title>
-<meta content="고양시 일산서구 우성한의원 보폐고 엔오(NO) 안내. 기침·가래, 목 건조감, 비염 등 호흡기 불편 증상에 대한 한의 진료와 스틱형 한약 복용·비용·주의사항·상담 방법을 확인하세요." name="description"/>
-<link href="https://wsclinic-psi.vercel.app/bopego.html" rel="canonical"/>
-<meta content="website" property="og:type"/><meta content="ko_KR" property="og:locale"/><meta content="우성한의원" property="og:site_name"/><meta content="보폐고 엔오(NO) | 일산 우성한의원" property="og:title"/><meta content="목과 호흡기 불편 증상을 살피는 한의 진료, 보폐고 엔오 복용·비용 안내" property="og:description"/><meta content="https://wsclinic-psi.vercel.app/bopego.html" property="og:url"/><meta content="https://wsclinic-psi.vercel.app/보폐고엔오.png" property="og:image"/><meta content="summary_large_image" name="twitter:card"/>
-<link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
-<script defer="" src="/_vercel/insights/script.js"></script>
-<script type="application/ld+json">{
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "MedicalClinic",
-      "@id": "https://wsclinic-psi.vercel.app/#clinic",
-      "name": "우성한의원",
-      "url": "https://wsclinic-psi.vercel.app/",
-      "telephone": "+82-31-975-3075",
-      "image": "https://wsclinic-psi.vercel.app/우성한의원마크.jpg",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "고양대로 726, 4층",
-        "addressLocality": "고양시 일산서구",
-        "addressRegion": "경기도",
-        "addressCountry": "KR"
-      }
-    },
-    {
-      "@type": "WebSite",
-      "@id": "https://wsclinic-psi.vercel.app/#website",
-      "url": "https://wsclinic-psi.vercel.app/",
-      "name": "우성한의원",
-      "inLanguage": "ko-KR"
-    },
-    {
-      "@type": "WebPage",
-      "@id": "https://wsclinic-psi.vercel.app/bopego.html#webpage",
-      "url": "https://wsclinic-psi.vercel.app/bopego.html",
-      "name": "보폐고 엔오(NO) | 일산 호흡기·목 건강 한약 상담 - 우성한의원",
-      "isPartOf": {
-        "@id": "https://wsclinic-psi.vercel.app/#website"
-      },
-      "about": {
-        "@id": "https://wsclinic-psi.vercel.app/#clinic"
-      },
-      "inLanguage": "ko-KR"
-    },
-    {
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "홈",
-          "item": "https://wsclinic-psi.vercel.app/"
-        },
-        {
-          "@type": "ListItem",
-          "position": 2,
-          "name": "보폐고 엔오",
-          "item": "https://wsclinic-psi.vercel.app/bopego.html"
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>우성한의원 호흡기 클리닉 - 보폐고 엔오</title>
+    <style>
+        /* 기본 설정 */
+        :root { --primary: #5d4037; --bg-light: #f0f4f8; --accent: #0277bd; }
+        body { font-family: 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif; line-height: 1.6; margin: 0; color: #333; background-color: #fafafa; scroll-behavior: smooth; }
+        
+        /* 1. 상단 네비게이션 바 */
+        nav { background: #fff; padding: 15px 20px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 100; display: flex; justify-content: space-between; align-items: center; }
+        .nav-logo { font-size: 1.3em; font-weight: bold; color: var(--primary); text-decoration: none; display: flex; align-items: center; gap: 8px; white-space: nowrap; }
+        .nav-logo img { height: 32px; width: 32px; border-radius: 50%; object-fit: cover; }
+        .nav-links { display: flex; gap: 18px; flex-wrap: wrap; justify-content: flex-end; align-items: center; }
+        .nav-links a { text-decoration: none; color: #333; font-weight: bold; font-size: 0.95em; transition: color 0.2s; }
+        .nav-links a:hover { color: var(--accent); }
+        .nav-home-btn { background-color: var(--primary); color: #fff !important; padding: 6px 14px; border-radius: 20px; font-size: 0.9em !important; display: inline-flex; align-items: center; gap: 4px; }
+        .nav-home-btn:hover { opacity: 0.9; }
+
+        /* 2. 메인 배너 (호흡기 특화) */
+        header { 
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('배경.jpg'); 
+            background-size: cover; 
+            background-position: center; 
+            padding: 100px 20px; 
+            text-align: center; 
         }
-      ]
-    },
-    {
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "보폐고 엔오(NO)는 어떤 한약인가요?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "길경·대청엽·금은화·연교·맥문동·오미자 등 한약재를 배합하고 산화질소(NO)를 함유한 스틱형 한약입니다. 진찰 후 처방 여부를 결정합니다."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "보폐고 엔오는 어떻게 복용하나요?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "짜 먹는 스틱형 한약입니다. 15일분은 45포, 30일분은 90포로 안내하며 복용 방법은 처방 시 의료진의 안내에 따릅니다."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "보폐고 엔오 처방 비용은 얼마인가요?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "15일분(45포)은 170,000원, 30일분(90포)은 300,000원입니다. 실제 비용과 구성은 방문 또는 상담 시 확인해 주세요."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "비대면 진료로 처방받을 수 있나요?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "비대면 진료 가능 여부는 관련 제도와 환자 조건 및 의료진의 판단에 따라 달라집니다. 전화로 먼저 확인해 주세요."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "기침이나 목 불편이 오래 지속되면 어떻게 해야 하나요?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "기침이 오래 지속되거나 호흡곤란, 객혈, 흉통, 고열 등이 동반되면 원인 평가를 위해 신속하게 의료기관 진료를 받으세요."
-          }
+        header h1 { color: #ffffff; margin-bottom: 15px; font-size: 2.3em; text-shadow: 1px 1px 4px rgba(0,0,0,0.5); line-height: 1.3; }
+        header .slogan { font-size: 1.2em; color: #f8f8f8; max-width: 700px; margin: 0 auto 30px auto; line-height: 1.6; text-shadow: 1px 1px 4px rgba(0,0,0,0.5); }
+        .highlight-text { color: #4fc3f7; font-weight: bold; }
+        
+        /* 버튼 스타일 */
+        .btn-group { margin-top: 25px; display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; }
+        .btn { display: inline-block; padding: 12px 28px; text-decoration: none; border-radius: 8px; font-weight: bold; transition: all 0.2s; font-size: 1.05em; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+        .btn:hover { opacity: 0.9; transform: translateY(-2px); }
+        .btn-call { background: var(--primary); color: white; }
+        .btn-form { background: var(--accent); color: white; font-size: 1.1em; padding: 15px 35px; border-radius: 30px; animation: pulse 2s infinite; }
+        
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(2, 119, 189, 0.7); }
+            70% { box-shadow: 0 0 0 15px rgba(2, 119, 189, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(2, 119, 189, 0); }
         }
-      ]
-    }
-  ]
-}</script>
-<style>
-:root{--navy:#102b46;--deep:#163d59;--blue:#2c7998;--mint:#62a9a7;--gold:#d9ae6d;--ink:#253745;--muted:#637785;--paper:#f4f8fa;--line:#e0e9ee;--white:#fff;--shadow:0 18px 46px rgba(16,43,70,.09)}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;color:var(--ink);font-family:'Noto Sans KR',sans-serif;line-height:1.75;word-break:keep-all}a{color:inherit}img{display:block;max-width:100%}button{font:inherit}.skip{position:absolute;left:-9999px;top:0;background:#fff;padding:12px;z-index:100}.skip:focus{left:12px}.top{background:#f2f6f8;border-bottom:1px solid var(--line);font-size:.82rem;color:#526675}.top-inner{max-width:1180px;margin:auto;padding:7px 24px;display:flex;gap:12px;justify-content:space-between;flex-wrap:wrap}.top a{text-decoration:none;font-weight:800}.site-head{position:sticky;top:0;z-index:40;background:rgba(255,255,255,.96);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}.nav-wrap{max-width:1180px;margin:auto;padding:12px 24px;min-height:76px;display:flex;justify-content:space-between;align-items:center;gap:20px}.brand{display:flex;align-items:center;gap:11px;text-decoration:none;color:var(--navy);font-weight:800;font-size:1.1rem;letter-spacing:-.04em}.brand img{width:42px;height:42px;object-fit:cover;border-radius:50%}.brand small{display:block;font-size:.69rem;letter-spacing:0;color:var(--muted);font-weight:600}.nav{display:flex;align-items:center;gap:20px}.nav a{font-size:.89rem;font-weight:700;text-decoration:none;color:#435969}.nav a:hover,.nav a[aria-current]{color:var(--blue)}.nav .nav-cta{background:var(--navy);color:#fff;padding:10px 18px;border-radius:999px}.menu{display:none;background:none;border:0;color:var(--navy);font-size:1.8rem;cursor:pointer}
-.hero{background:linear-gradient(113deg,rgba(12,38,61,.96),rgba(22,78,102,.88)),url('배경.jpg') center/cover;color:white;overflow:hidden}.hero-inner{max-width:1180px;margin:auto;min-height:520px;display:grid;grid-template-columns:1.12fr .88fr;gap:50px;align-items:center;padding:65px 24px 72px}.eyebrow{display:inline-flex;align-items:center;gap:12px;color:#f1d29b;font-weight:800;letter-spacing:.12em;font-size:.8rem}.eyebrow:before{content:'';width:28px;height:1px;background:var(--gold)}h1{font-size:clamp(2.15rem,4.3vw,3.5rem);line-height:1.27;letter-spacing:-.055em;margin:20px 0 22px}h1 em{font-style:normal;color:#bfe6e4}.hero p{color:#d9e8ef;font-size:1.04rem;margin:0;max-width:650px}.actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}.btn{display:inline-flex;justify-content:center;align-items:center;min-height:50px;padding:12px 23px;border-radius:999px;font-weight:800;text-decoration:none;transition:transform .2s,opacity .2s}.btn:hover{transform:translateY(-2px);opacity:.94}.btn-gold{background:#e7c283;color:#243645}.btn-outline{border:1px solid #b7d2df;color:white}.hero-visual{position:relative;padding:28px;border:1px solid rgba(255,255,255,.19);border-radius:28px;background:rgba(255,255,255,.09);box-shadow:0 20px 60px rgba(0,0,0,.13)}.hero-visual img{width:100%;height:355px;object-fit:contain;border-radius:18px;background:rgba(255,255,255,.94);padding:18px}.hero-visual span{display:block;margin-top:13px;text-align:center;font-size:.85rem;color:#dce9ef}.hero-foot{font-size:.8rem!important;margin-top:20px!important;color:#bcd1dc!important}
-.trust{border-bottom:1px solid var(--line)}.trust-inner{max-width:1180px;margin:auto;padding:22px 24px;display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.trust-item{display:flex;gap:13px;align-items:center;color:var(--navy);font-weight:800}.trust-item b{display:grid;place-items:center;flex:0 0 44px;height:44px;border-radius:14px;background:#eaf3f6;color:var(--blue);font-size:1.2rem}.trust-item small{display:block;color:var(--muted);font-size:.76rem;font-weight:500}.section{max-width:1180px;margin:auto;padding:84px 24px}.section-head{text-align:center;max-width:790px;margin:0 auto 40px}.kicker{color:var(--blue);font-weight:800;font-size:.78rem;letter-spacing:.15em}h2{font-size:clamp(1.75rem,3.2vw,2.4rem);letter-spacing:-.045em;line-height:1.35;color:var(--navy);margin:9px 0 14px}.section-head p{margin:0;color:var(--muted)}h3{color:var(--navy);line-height:1.45}.intro{display:grid;grid-template-columns:1.1fr .9fr;gap:30px;align-items:stretch}.intro-copy{background:var(--paper);padding:clamp(28px,4vw,50px);border-radius:22px}.intro-copy h3{font-size:1.55rem;margin:0 0 15px}.intro-copy p{color:var(--muted);margin:0}.intro-visual{border-radius:22px;background:#e9f2f5;display:grid;place-items:center;padding:30px}.intro-visual img{width:100%;height:300px;object-fit:contain}.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}.card{padding:28px;border:1px solid var(--line);border-radius:18px;background:white;box-shadow:0 7px 25px rgba(16,43,70,.035)}.card .number{color:var(--mint);font-size:.77rem;font-weight:800;letter-spacing:.1em}.card h3{margin:9px 0 12px;font-size:1.17rem}.card p{margin:0;color:var(--muted);font-size:.94rem}.soft{background:var(--paper)}.soft-inner{max-width:1180px;margin:auto;padding:84px 24px}.target-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}.target{background:white;border:1px solid var(--line);border-radius:16px;padding:24px 27px}.target h3{font-size:1.12rem;margin:0 0 8px}.target p{margin:0;color:var(--muted);font-size:.94rem}.notice{background:#faf7f0;border-left:3px solid var(--gold);padding:18px 22px;border-radius:0 12px 12px 0;color:#685e4f;font-size:.89rem;margin-top:25px}.ingredients{display:flex;flex-wrap:wrap;gap:9px;margin:20px 0 0}.ingredient{padding:7px 13px;border-radius:999px;border:1px solid #cbdfe6;color:#315f72;font-size:.88rem;background:#f5fafb}.two{display:grid;grid-template-columns:1fr 1fr;gap:26px}.panel{border:1px solid var(--line);border-radius:20px;padding:34px;background:white}.panel h3{font-size:1.35rem;margin:0 0 14px}.panel p{color:var(--muted);margin:0}.price{display:flex;justify-content:space-between;align-items:center;gap:14px;padding:17px 0;border-bottom:1px solid var(--line)}.price strong{font-size:1.24rem;color:var(--navy)}.price span{color:#536a79}.price:last-of-type{border:0}.panel .fine{margin-top:18px;font-size:.83rem;color:var(--muted)}.process{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.step{background:#fff;border:1px solid var(--line);border-radius:16px;padding:24px}.step b{font-size:.8rem;color:var(--blue);letter-spacing:.12em}.step h3{margin:7px 0}.step p{color:var(--muted);font-size:.91rem;margin:0}.faq{max-width:850px;margin:auto}details{padding:19px 5px;border-bottom:1px solid var(--line)}summary{cursor:pointer;list-style:none;position:relative;padding-right:32px;font-weight:800;color:var(--navy)}summary::-webkit-details-marker{display:none}summary:after{content:'+';position:absolute;right:4px;top:-5px;font-size:1.5rem;color:var(--blue)}details[open] summary:after{content:'−'}details p{color:var(--muted);margin:12px 0 0}.location{display:grid;grid-template-columns:1fr 1fr;gap:24px}.map{border-radius:18px;overflow:hidden;background:var(--paper);min-height:360px}.map iframe{width:100%;height:100%;min-height:360px;border:0}.location-info{border:1px solid var(--line);border-radius:18px;padding:30px}.location-info h3{margin:0 0 15px}.line{border-bottom:1px solid var(--line);padding:12px 0}.line b{display:block;color:var(--navy);font-size:.86rem}.line span,.line a{color:var(--muted);text-decoration:none}.map-links{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}.map-links a{padding:10px 16px;border-radius:9px;background:#e8f2f5;text-decoration:none;font-size:.88rem;font-weight:800;color:var(--navy)}.contact{max-width:1132px;margin:0 auto 75px;padding:44px 24px;border-radius:22px;background:linear-gradient(105deg,#102b46,#226b86);text-align:center;color:white}.contact h2{color:white;margin:0 0 12px}.contact p{color:#d6e7ee;margin:0}.contact .actions{justify-content:center}footer{padding:33px 24px;background:#102333;color:#bdcbd4;text-align:center;font-size:.82rem}footer p{max-width:1060px;margin:6px auto}footer a{color:white}
-@media(max-width:1000px){.nav{gap:12px}.nav a{font-size:.8rem}.hero-inner{gap:25px}.hero-visual img{height:300px}}@media(max-width:760px){.menu{display:block}.nav{display:none;position:absolute;top:100%;left:0;right:0;background:white;box-shadow:0 14px 20px rgba(16,43,70,.08);border-bottom:1px solid var(--line);padding:10px 20px 18px;flex-direction:column;align-items:stretch;gap:0}.nav.open{display:flex}.nav a{padding:11px 6px;border-bottom:1px solid var(--line);font-size:.94rem}.nav .nav-cta{text-align:center;margin-top:10px}.hero-inner{grid-template-columns:1fr;padding:60px 20px;min-height:0}.hero-visual{max-width:460px}.hero-visual img{height:280px}.trust-inner{grid-template-columns:1fr;gap:12px}.section,.soft-inner{padding:64px 20px}.intro,.two,.location{grid-template-columns:1fr}.grid{grid-template-columns:1fr}.target-grid{grid-template-columns:1fr}.process{grid-template-columns:1fr}.contact{margin:0 16px 55px}.map,.map iframe{min-height:300px}.nav-wrap{padding:10px 16px;min-height:66px}.top-inner{padding:7px 16px}.brand img{width:36px;height:36px}}@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
-</style>
+
+        /* 3. 컨텐츠 섹션 공통 스타일 */
+        .section { padding: 80px 20px; max-width: 900px; margin: auto; }
+        .section-title { color: #222; margin-bottom: 40px; border-bottom: 3px solid var(--accent); padding-bottom: 10px; display: inline-block; font-size: 1.6em; text-align: center; width: 100%; }
+        
+        /* 반응형 유튜브 비디오 래퍼 */
+        .video-wrapper {
+            max-width: 800px;
+            margin: 0 auto 45px auto;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 비율 */
+            height: 0;
+            background: #000;
+        }
+        .video-wrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+        /* 카드 레이아웃 */
+        .card-container { display: flex; flex-wrap: wrap; gap: 20px; }
+        .card { flex: 1 1 200px; border: 1px solid #e0e0e0; padding: 30px; border-radius: 12px; background: #fff; box-sizing: border-box; box-shadow: 0 4px 6px rgba(0,0,0,0.05); transition: transform 0.2s; text-align: center; }
+        .card:hover { transform: translateY(-5px); }
+        .card h3 { color: var(--accent); margin-top: 0; font-size: 1.25em; margin-bottom: 15px; }
+        .card p { color: #555; line-height: 1.5; margin-bottom: 0; }
+        
+        /* 성분 및 가격표 박스 */
+        .price-box { background: var(--bg-light); border: 2px solid #b3e5fc; border-radius: 12px; padding: 40px; text-align: center; margin-top: 30px; }
+        .price-box h3 { color: var(--accent); font-size: 1.5em; margin-top: 0; }
+        .price-item { font-size: 1.3em; font-weight: bold; color: #333; margin: 15px 0; }
+        .free-sample { display: inline-block; background: #d32f2f; color: white; padding: 8px 15px; border-radius: 20px; font-weight: bold; margin-top: 15px; font-size: 0.95em; }
+
+        /* 안내 리스트 스타일 */
+        .info-list { list-style: none; padding: 0; margin: 0; text-align: left; }
+        .info-list li { margin-bottom: 12px; line-height: 1.5; font-size: 1.05em; }
+        .badge { background: #e1f5fe; color: var(--accent); padding: 4px 10px; border-radius: 20px; font-size: 0.85em; margin-right: 8px; font-weight: bold; display: inline-block; width: 45px; text-align: center; }
+        .sub-text { font-size: 0.9em; color: #666; margin-top: 15px; display: block; background: #f9f9f9; padding: 10px; border-radius: 5px; text-align: left; }
+
+        /* 하단 푸터 */
+        footer { background: #333; color: #ccc; text-align: center; padding: 30px 20px; font-size: 0.9em; margin-top: 40px; }
+        footer p { margin: 6px 0; }
+        footer a { color: #fff; text-decoration: none; font-weight: bold; }
+
+        @media (max-width: 768px) {
+            .nav-links a:not(.nav-home-btn) { display: none; } 
+            header { padding: 60px 20px; }
+            header h1 { font-size: 1.8em; }
+        }
+    </style>
 </head>
 <body>
-<a class="skip" href="#main">본문 바로가기</a>
-<div class="top"><div class="top-inner"><span>경기도 고양시 일산서구 고양대로 726, 4층</span><span>진료 문의 <a href="tel:031-975-3075">031-975-3075</a></span></div></div>
-<div class="site-head"><div class="nav-wrap"><a class="brand" href="index.html"><img alt="우성한의원 로고" src="우성한의원마크.jpg"/><span>우성한의원<small>호흡기 · 목 건강 클리닉</small></span></a><button aria-controls="mainNav" aria-expanded="false" aria-label="메뉴 열기" class="menu" id="menuButton" type="button">☰</button><nav aria-label="주요 메뉴" class="nav" id="mainNav"><a href="index.html">메인 홈</a><a href="#about">보폐고 엔오 소개</a><a href="#symptoms">진료 상담 대상</a><a href="#ingredients">구성·복용 안내</a><a href="#price">처방 비용</a><a href="#faq">FAQ</a><a href="#location">오시는 길</a><a class="nav-cta" href="tel:031-975-3075">전화 상담</a></nav></div></div>
-<main id="main">
-<section class="hero"><div class="hero-inner"><div><span class="eyebrow">WOOSUNG RESPIRATORY CARE</span><h1>목을 많이 쓰시는 분들을 위한<br/><em>맞춤 호흡기 보약, 보폐고 엔오</em></h1><p>인후·성대질환 | 비염·축농증 | 만성 기침·가래 관리에 도움을 줍니다.<br/>호흡기 점막을 촉촉하게 적시고 염증 완화를 보조하여 답답한 호흡기를 편안하게 지켜드립니다.</p><div class="actions"><a class="btn btn-gold" href="https://forms.gle/rdDKsiAKwSNRmgAJ8">보폐고 엔오 처방 상담하기</a><a class="btn btn-outline" href="tel:031-975-3075" rel="noopener noreferrer">전화 상담 031-975-3075</a></div><p class="hero-foot">※ 증상에 따른 진료 및 처방 적합성 확인이 필요하며, 효과는 개인별로 다를 수 있습니다.</p></div><div class="hero-visual"><img alt="우성한의원 보폐고 엔오(NO) 제품 이미지" fetchpriority="high" src="보폐고엔오.png"/><span>보폐고 엔오(NO) · 스틱형 한약 안내</span></div></div></section>
-<div class="trust"><div class="trust-inner"><div class="trust-item"><b>01</b><span>증상 중심 진찰<small>기침·가래·목 불편 등 상담</small></span></div><div class="trust-item"><b>02</b><span>개인별 처방 판단<small>병력·복용약·건강 상태 확인</small></span></div><div class="trust-item"><b>03</b><span>복용 및 경과 안내<small>처방 시 복용법·주의사항 설명</small></span></div></div></div>
-<section class="section" id="about"><div class="section-head"><span class="kicker">ABOUT BOPYEGO NO</span><h2>보폐고 엔오(NO)는 무엇인가요?</h2><p>호흡기와 목 관련 불편 증상을 상담할 때 우성한의원에서 안내하는 한약 처방입니다.</p></div><div class="intro"><div class="intro-copy"><h3>목을 자주 사용하는 일상부터<br/>반복되는 호흡기 불편까지</h3><p>보폐고 엔오는 스틱형으로 안내되는 한약입니다. 목의 건조감이나 잔기침 등으로 불편한 경우, 증상 발생 시기와 원인 가능성, 기존 치료 및 복용 약물을 함께 살펴 처방 적합성을 판단합니다. 특정 질환의 치료 효과가 모든 사람에게 동일하게 나타나는 것은 아닙니다.</p><div class="actions"><a aria-label="보폐고 엔오 공식 홈페이지 바로가기 (새 창)" class="btn btn-gold" href="https://bopyego-no.co.kr/" rel="noopener noreferrer" target="_blank">공식 홈페이지 바로가기</a></div></div><div class="intro-visual"><img alt="보폐고 엔오 포장 이미지" loading="lazy" src="보폐고엔오.png"/></div></div></section>
-<section class="soft" id="symptoms"><div class="soft-inner"><div class="section-head"><span class="kicker">WHEN TO CONSULT</span><h2>이런 증상이 있다면 진료로 확인하세요</h2></div><div class="target-grid"><article class="target"><h3>목을 자주 쓰는 직업</h3><p>강의·상담·노래 등 발성량이 많아 목이 쉽게 건조하거나 불편한 경우</p></article><article class="target"><h3>기침·가래가 반복될 때</h3><p>잔기침이나 가래가 이어져 원인 확인과 증상 상담이 필요한 경우</p></article><article class="target"><h3>코막힘·후비루 등 코 증상</h3><p>비염·부비동 관련 증상이 의심되거나 목 뒤로 분비물이 넘어가는 느낌이 있는 경우</p></article><article class="target"><h3>환절기 목·호흡기 불편</h3><p>건조한 공기나 환경 변화로 목과 호흡기에 불편함을 느끼는 경우</p></article></div><p class="notice"><strong>진료가 우선인 증상:</strong> 호흡곤란, 객혈, 흉통, 심한 고열 또는 빠르게 악화되는 증상은 지체하지 말고 의료기관에서 평가받으세요. 오래 지속되는 기침도 원인 확인이 필요합니다.</p></div></section>
-<section class="section" id="ingredients"><div class="section-head"><span class="kicker">FORMULA &amp; GUIDANCE</span><h2>구성 약재와 복용 안내</h2></div><div class="grid"><article class="card"><span class="number">01 / HERBAL FORMULA</span><h3>한약재 구성</h3><p>길경·대청엽·금은화·연교·맥문동·오미자 등을 배합한 한약입니다. 산화질소(NO)도 함유되어 있습니다. 원료별 함량과 전체 배합 정보는 제품 자료 및 처방 내용을 통해 확인할 수 있습니다.</p></article><article class="card"><span class="number">02 / STICK FORM</span><h3>스틱형 복용</h3><p>짜 먹는 스틱형으로 휴대와 복용이 간편합니다. 15일분은 45포, 30일분은 90포로 안내하며, 복용 횟수와 방법은 처방 시 의료진이 안내합니다.</p></article><article class="card"><span class="number">03 / SAFETY FIRST</span><h3>복용 전 확인</h3><p>알레르기, 임신·수유 여부, 만성질환, 복용 중인 의약품 및 한약을 의료진에게 알려주세요. 복용 후 이상 증상이 생기면 상담이 필요합니다.</p></article></div><div class="ingredients"><span class="ingredient">길경</span><span class="ingredient">대청엽</span><span class="ingredient">금은화</span><span class="ingredient">연교</span><span class="ingredient">맥문동</span><span class="ingredient">오미자</span></div><p class="notice">보폐고 엔오에는 산화질소(NO)가 실제 함유되어 있습니다. 다만 함유 사실만으로 특정 질환의 치료 효과나 인체 내 산화질소 증가 효과가 입증되는 것은 아니며, 성분 함량과 효능에 관한 세부 사항은 관련 자료를 확인해 안내합니다.</p></section>
-<section class="soft" id="price"><div class="soft-inner"><div class="section-head"><span class="kicker">PRESCRIPTION GUIDE</span><h2>처방 비용과 상담 방법</h2><p>진찰 결과에 따라 처방 기간과 복용 방법이 달라질 수 있습니다.</p></div><div class="two"><div class="panel"><h3>보폐고 엔오 비용 안내</h3><div class="price"><span>15일분 · 45포</span><strong>170,000원</strong></div><div class="price"><span>30일분 · 90포</span><strong>300,000원</strong></div><p class="fine">※ 실제 복용 횟수와 기간은 진료 후 처방 내용에 따라 안내합니다.</p></div><div class="panel"><h3>처방 상담 절차</h3><p>전화 또는 상담 설문으로 문의하신 후, 의료진이 증상과 병력 등을 확인하고 진료 방식 및 처방 가능 여부를 판단합니다. 비대면 진료와 의약품 수령 방식은 현행 제도와 환자 조건에 따라 달라질 수 있습니다.</p><div class="actions"><a class="btn btn-gold" href="https://forms.gle/rdDKsiAKwSNRmgAJ8" rel="noopener noreferrer" target="_blank">상담 설문 열기</a><a class="btn" href="tel:031-975-3075" style="border:1px solid #a9c5d0;color:var(--navy)">전화 문의</a></div></div></div></div></section>
-<section class="section" id="process"><div class="section-head"><span class="kicker">HOW WE CARE</span><h2>진료는 이렇게 진행됩니다</h2><p>증상 확인부터 복용 중 경과 상담까지 단계별로 안내합니다.</p></div><div class="process"><article class="step"><b>STEP 01</b><h3>문진과 상태 확인</h3><p>증상 지속 기간, 발열 여부, 기존 질환, 복용 중인 약 등을 확인합니다.</p></article><article class="step"><b>STEP 02</b><h3>처방 적합성 판단</h3><p>진찰 결과에 따라 필요한 평가와 치료 방향, 한약 처방 여부를 결정합니다.</p></article><article class="step"><b>STEP 03</b><h3>복용 및 주의사항 안내</h3><p>처방 시 개인별 복용량과 기간, 이상 반응 시 대처 방법을 설명합니다.</p></article></div></section>
-<section class="section" id="faq" style="padding-top:10px"><div class="section-head"><span class="kicker">FREQUENTLY ASKED QUESTIONS</span><h2>보폐고 엔오 자주 묻는 질문</h2></div><div class="faq"><details><summary>보폐고 엔오(NO)는 어떤 한약인가요?</summary><p>길경·대청엽·금은화·연교·맥문동·오미자 등 한약재를 배합하고 산화질소(NO)를 함유한 스틱형 한약입니다. 목과 호흡기 증상을 진찰한 후 처방 적합성을 판단합니다.</p></details><details><summary>보폐고 엔오는 어떻게 복용하나요?</summary><p>짜 먹는 스틱형 한약입니다. 15일분 45포, 30일분 90포로 안내하며, 실제 복용 횟수와 방법은 진료 후 처방 지침에 따릅니다.</p></details><details><summary>보폐고 엔오 처방 비용은 얼마인가요?</summary><p>15일분(45포)은 170,000원, 30일분(90포)은 300,000원입니다. 실제 비용과 구성은 방문 또는 상담 시 확인해 주세요.</p></details><details><summary>비대면 진료로 처방받을 수 있나요?</summary><p>비대면 진료 가능 여부는 관련 제도와 환자 조건 및 의료진의 판단에 따라 달라집니다. 전화로 먼저 확인해 주세요.</p></details><details><summary>기침이나 목 불편이 오래 지속되면 어떻게 해야 하나요?</summary><p>기침이 오래 지속되거나 호흡곤란, 객혈, 흉통, 고열 등이 동반되면 원인 평가를 위해 신속하게 의료기관 진료를 받으세요.</p></details></div></section>
-<section class="section" id="location"><div class="section-head"><span class="kicker">LOCATION &amp; HOURS</span><h2>우성한의원 오시는 길</h2><p>진료시간은 변경될 수 있으므로 방문 전에 전화로 확인해 주세요.</p></div><div class="location"><div class="map"><iframe allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EA%B3%A0%EC%96%91%EC%8B%9C%20%EC%9D%BC%EC%82%B0%EC%84%9C%EA%B5%AC%20%EA%B3%A0%EC%96%91%EB%8C%80%EB%A1%9C%20726&amp;output=embed" title="우성한의원 위치 지도"></iframe></div><div class="location-info"><h3>일산 우성한의원</h3><div class="line"><b>주소</b><span>경기도 고양시 일산서구 고양대로 726, 4층</span></div><div class="line"><b>전화</b><a href="tel:031-975-3075">031-975-3075</a></div><div class="line"><b>진료시간</b><span>월·화·수·금 09:30–19:00 (점심 13:00–14:00)<br/>목·토 09:30–14:00 (점심시간 없음)<br/>일요일·공휴일 휴진</span></div><div class="line"><b>주차</b><span>일산제1공영주차장 이용 안내 (지원 여부는 전화 확인)</span></div><div class="map-links"><a href="https://map.naver.com/v5/search/일산서구%20고양대로%20726%20우성한의원" rel="noopener noreferrer" target="_blank">네이버지도</a><a href="https://map.kakao.com/?q=고양시%20일산서구%20고양대로%20726" rel="noopener noreferrer" target="_blank">카카오맵</a></div></div></div></section>
-<section class="contact"><h2>보폐고 엔오 처방이 궁금하신가요?</h2><p>현재 증상과 건강 상태를 확인한 뒤 적합한 진료 방향을 안내해 드립니다.</p><div class="actions"><a class="btn btn-gold" href="tel:031-975-3075">031-975-3075 전화 상담</a><a class="btn btn-outline" href="http://pf.kakao.com/_xogxeFxd/chat" rel="noopener noreferrer" target="_blank">카카오톡 문의</a></div></section>
-</main><footer><p><strong>우성한의원</strong> | 대표원장 고의현 | 경기도 고양시 일산서구 고양대로 726, 4층 | 031-975-3075</p><p>본 페이지는 일반적인 진료·처방 안내이며 특정 질환의 진단 또는 치료 효과를 보장하지 않습니다. 한약 복용에 따른 이상 반응이 발생할 수 있으므로 반드시 의료진과 상담해 주세요.</p><p><a href="index.html">우성한의원 홈페이지</a> · <a href="pain.html">통증 클리닉</a> · <a href="diet.html">비만클리닉</a></p></footer>
-<script>(()=>{const b=document.getElementById('menuButton'),n=document.getElementById('mainNav');b.addEventListener('click',()=>{const o=n.classList.toggle('open');b.setAttribute('aria-expanded',String(o));b.setAttribute('aria-label',o?'메뉴 닫기':'메뉴 열기');b.textContent=o?'×':'☰'});n.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{n.classList.remove('open');b.setAttribute('aria-expanded','false');b.setAttribute('aria-label','메뉴 열기');b.textContent='☰'}))})();</script>
-</body></html>
+
+<!-- 실시간 진료 상태 바 -->
+<div style="background-color: #f8f5f0; border-bottom: 1px solid #e0e0e0; padding: 8px 20px; font-size: 0.88em; color: #555; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 5px;">
+    <div>📍 경기도 고양시 일산서구 고양대로 726, 4층</div>
+    <div style="display: flex; align-items: center; gap: 6px; font-weight: bold;">
+        <span>진료 안내:</span>
+        <span id="clinic-status-badge" style="color: white; padding: 3px 8px; border-radius: 4px; font-size: 0.9em; font-weight: bold; transition: background-color 0.3s;">확인 중...</span>
+    </div>
+    <div style="font-weight: bold;">📞 전화문의: <a href="tel:031-975-3075" style="color: #555; text-decoration: none;">031-975-3075</a></div>
+</div>
+
+<script>
+    function checkClinicStatus() {
+        const now = new Date();
+        const year = now.getFullYear();
+        const month = String(now.getMonth() + 1).padStart(2, '0');
+        const date = String(now.getDate()).padStart(2, '0');
+        const todayString = `${year}-${month}-${date}`; 
+        const day = now.getDay(); 
+        const hours = now.getHours();
+        const minutes = now.getMinutes();
+        const time = hours * 100 + minutes; 
+        
+        let statusText = "진료 종료";
+        let badgeColor = "#757575"; 
+        
+        const holidays = ["2026-06-06", "2026-08-15", "2026-09-24", "2026-09-25", "2026-10-03", "2026-12-25"];
+        const shortDays = ["2026-06-03"];
+
+        if (holidays.includes(todayString)) {
+            statusText = "공휴일 휴진"; badgeColor = "#d32f2f"; 
+        } else if (shortDays.includes(todayString)) {
+            if (time >= 930 && time < 1400) { statusText = "단축 진료 중"; badgeColor = "#2e7d32"; } 
+            else { statusText = "진료 종료"; badgeColor = "#757575"; }
+        } else if (day === 0) { 
+            statusText = "일요일 휴진"; badgeColor = "#d32f2f"; 
+        } else if (day === 4 || day === 6) { 
+            if (time >= 930 && time < 1400) { statusText = "진료 중"; badgeColor = "#2e7d32"; } 
+            else { statusText = "진료 종료"; badgeColor = "#757575"; }
+        } else { 
+            if (time >= 930 && time < 1300) { statusText = "진료 중"; badgeColor = "#2e7d32"; } 
+            else if (time >= 1300 && time < 1400) { statusText = "점심 시간"; badgeColor = "#f57c00"; } 
+            else if (time >= 1400 && time < 1900) { statusText = "진료 중"; badgeColor = "#2e7d32"; } 
+            else { statusText = "진료 종료"; badgeColor = "#757575"; }
+        }
+
+        const badge = document.getElementById("clinic-status-badge");
+        if (badge) { badge.innerText = statusText; badge.style.backgroundColor = badgeColor; }
+    }
+    checkClinicStatus();
+</script>
+
+<!-- 상단 네비게이션 바 -->
+<nav>
+    <a href="index.html" class="nav-logo">
+        <img src="우성한의원마크.jpg" alt="우성한의원 마크">
+        <span>우성한의원 호흡기 클리닉</span>
+    </a>
+    <div class="nav-links">
+        <a href="#about">보폐고 엔오란?</a>
+        <a href="#target">이런 분들께 추천</a>
+        <a href="#price">처방 안내</a>
+        <a href="#location">진료시간 및 위치</a>
+        <a href="index.html" class="nav-home-btn">🏠 본원 메인홈</a>
+    </div>
+</nav>
+
+<!-- 메인 배너 (호흡기 집중) -->
+<header>
+    <h1>가수, 배우 등 연예인들이 사랑하는<br><span class="highlight-text">명품 호흡기 보약, 보폐고 엔오</span></h1>
+    <p class="slogan">인후·성대질환 | 비염·축농증 | 만성 기침·가래<br>지금까지 이런 약은 없었습니다. 호흡기 점막을 촉촉하게 적시고 염증을 완화하여 답답한 호흡기를 편안하게 튼튼하게 지켜드립니다.</p>
+    
+    <div class="btn-group">
+        <a href="https://docs.google.com/forms/d/1R_6n60kEA5rsyVjYZGONDl7gfRl2GB8S7EbEm6oxWg8/edit" target="_blank" class="btn btn-form">✨ 보폐고 엔오 비대면 처방 신청하기</a>
+    </div>
+    <div class="btn-group" style="margin-top: 15px;">
+        <a href="tel:031-975-3075" class="btn btn-call" style="background-color: #333;">☎ 전화 상담 031-975-3075</a>
+        <a href="http://pf.kakao.com/_xogxeFxd/chat" target="_blank" class="btn btn-call" style="background-color: #FEE500; color: #191919;">💬 카카오톡 문의 (샘플 신청)</a> 
+        <a href="index.html" class="btn btn-call" style="background-color: #5d4037; color: white;">🏠 우성한의원 메인홈피</a>
+    </div>
+</header>
+    
+<!-- 제품 사진 영역 -->
+<div style="text-align: center; background-color: #f0f4f8; padding: 50px 20px; border-bottom: 1px solid #e0e0e0;">
+    <h2 style="color: #0277bd; margin-top: 0; margin-bottom: 25px; font-size: 1.5em;">호흡기 점막을 촉촉하고 튼튼하게</h2>
+    <img src="보폐고엔오.png" alt="보폐고 엔오 패키지" style="max-width: 100%; width: 350px; height: auto; border-radius: 12px; filter: drop-shadow(0 10px 15px rgba(0,0,0,0.15));">
+</div>
+    
+<!-- 보폐고 엔오 설명 및 유튜브 동영상 -->
+<div id="about" class="section">
+    <h2 class="section-title">보폐고 엔오(NO)의 특별함</h2>
+
+    <!-- ⬇️ 보폐고 엔오 유튜브 동영상 영역 (https://youtu.be/h-y_hfRY2-c) ⬇️ -->
+    <div class="video-wrapper">
+        <iframe src="https://www.youtube.com/embed/h-y_hfRY2-c?rel=0" title="보폐고 엔오 소개 영상" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+    <!-- ⬆️ 유튜브 동영상 영역 끝 ⬆️ -->
+
+    <div class="card-container">
+        <div class="card">
+            <h3 style="font-size: 2em; margin-bottom: 5px;">🌬️</h3>
+            <h3>엔오(산화질소)의 힘</h3>
+            <p>혈관 및 기관지 순환을 촉진하고 만성 염증을 완화하여, 답답한 호흡기의 본질적인 환경을 개선합니다.</p>
+        </div>
+        <div class="card">
+            <h3 style="font-size: 2em; margin-bottom: 5px;">💧</h3>
+            <h3>점막 보습 및 강화</h3>
+            <p>마르고 갈라진 인후두와 기관지 점막을 촉촉하게 적셔주어, 외부 바이러스로부터 몸을 방어하는 힘을 기릅니다.</p>
+        </div>
+        <div class="card">
+            <h3 style="font-size: 2em; margin-bottom: 5px;">🌿</h3>
+            <h3>안전한 천연 한약재</h3>
+            <p>길경, 대청엽, 금은화, 연교, 맥문동, 오미자 등 순한 천연 성분으로 조제되어 부담 없이 매일 장기 복용할 수 있습니다.</p>
+        </div>
+    </div>
+</div>
+
+<!-- 보폐고 엔오 공식 정보 참고 안내 배너 -->
+<div class="section" style="padding-top: 0px; padding-bottom: 40px;">
+    <div style="background: linear-gradient(135deg, #f0f7fa 0%, #e1eff6 100%); border: 1.5px solid #b3e5fc; border-radius: 12px; padding: 25px 30px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px;">
+        <div style="flex: 1 1 450px;">
+            <div style="display: inline-block; background-color: #0277bd; color: #fff; font-size: 0.8em; font-weight: bold; padding: 3px 8px; border-radius: 4px; margin-bottom: 8px;">공식 개발 연구 안내</div>
+            <h3 style="margin: 0 0 8px 0; color: #333; font-size: 1.25em;">보폐고 엔오(NO) 공식 개발 연구 자료 확인</h3>
+            <p style="margin: 0; color: #666; font-size: 0.95em; line-height: 1.5;">
+                한의사 연구그룹의 성분 배합 연구, 처방 임상 사례, 상세 FAQ 등 제조사 공식 정보 원문을 직접 확인하실 수 있습니다.
+            </p>
+        </div>
+        <div>
+            <a href="https://bopyego-no.co.kr/" target="_blank" rel="noopener noreferrer" style="background-color: #0277bd; color: white; padding: 12px 24px; border-radius: 8px; text-decoration: none; font-weight: bold; font-size: 0.95em; display: inline-flex; align-items: center; gap: 6px; box-shadow: 0 3px 6px rgba(2, 119, 189, 0.2);">
+                🌐 공식 홈페이지 바로가기 ↗
+            </a>
+        </div>
+    </div>
+</div>
+
+<!-- 추천 대상 -->
+<div id="target" class="section" style="background-color: #fff;">
+    <h2 class="section-title">이런 분들에게 적극 추천합니다</h2>
+    <div class="card-container" style="gap: 15px;">
+        <div class="card" style="border-left: 4px solid var(--accent); text-align: left;">
+            <h3 style="color: #333; font-size: 1.1em;">🗣️ 목을 자주 사용하시는 분</h3>
+            <p style="font-size: 0.95em;">말, 노래, 강의 등 직업적으로 성대와 인후두 혹사가 잦으신 분</p>
+        </div>
+        <div class="card" style="border-left: 4px solid var(--accent); text-align: left;">
+            <h3 style="color: #333; font-size: 1.1em;">😷 만성 기침·가래가 불편하신 분</h3>
+            <p style="font-size: 0.95em;">건조한 목, 떨어지지 않는 잔기침과 가래로 일상생활이 불편하신 분</p>
+        </div>
+        <div class="card" style="border-left: 4px solid var(--accent); text-align: left;">
+            <h3 style="color: #333; font-size: 1.1em;">🤧 비염·축농증이 있으신 분</h3>
+            <p style="font-size: 0.95em;">답답한 코 막힘, 노란 콧물, 후비루(코가 뒤로 넘어가는 증상)가 고민이신 분</p>
+        </div>
+        <div class="card" style="border-left: 4px solid var(--accent); text-align: left;">
+            <h3 style="color: #333; font-size: 1.1em;">🫁 호흡기 면역력이 약하신 분</h3>
+            <p style="font-size: 0.95em;">평소 폐, 기관지, 목이 약하여 감기에 자주 걸리고 오래가시는 분</p>
+        </div>
+    </div>
+</div>
+
+<!-- 가격 및 처방 안내 -->
+<div id="price" class="section">
+    <h2 class="section-title">처방 안내 및 비용</h2>
+    <p style="text-align: center; font-size: 1.1em; color: #555;">보폐고 엔오는 원장님의 꼼꼼한 진단(대면/비대면) 후 처방되는 맞춤 한약입니다.</p>
+    
+    <div class="price-box">
+        <h3>보폐고 엔오 처방 비용</h3>
+        <div class="price-item">15일분 (45포) : 170,000원</div>
+        <div class="price-item" style="color: var(--accent);">30일분 (90포) : 300,000원</div>
+        
+        <div class="free-sample">🎁 샘플 무료 체험 가능!</div>
+        <p style="margin-top: 20px; font-size: 0.95em; color: #666;">효과가 궁금하신 분은 카카오톡이나 전화로 편하게 샘플을 문의해 주세요.</p>
+    </div>
+    
+    <div style="text-align: center; margin-top: 40px;">
+        <a href="https://docs.google.com/forms/d/1R_6n60kEA5rsyVjYZGONDl7gfRl2GB8S7EbEm6oxWg8/edit" target="_blank" class="btn btn-form" style="padding: 12px 30px; box-shadow: none; animation: none;">비대면 설문 작성하고 바로 처방받기 👉</a>
+    </div>
+</div>
+
+<!-- 위치 안내 및 진료시간 -->
+<div id="location" class="section" style="background-color: #f8f5f0; border-radius: 15px; margin-bottom: 50px;">
+    <div style="display: flex; gap: 40px; margin-bottom: 20px;">
+        <h2 class="section-title" style="margin-bottom: 0; text-align: left; width: auto; border-bottom: none; color: var(--primary);">오시는 길 및 진료시간</h2>
+    </div>
+
+    <div style="margin-bottom: 25px; border-radius: 12px; overflow: hidden; border: 1px solid #e0e0e0; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
+        <iframe src="https://maps.google.com/maps?q=%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EA%B3%A0%EC%96%91%EC%8B%9C%20%EC%9D%BC%EC%82%B0%EC%84%9C%EA%B5%AC%20%EA%B3%A0%EC%96%91%EB%8C%80%EB%A1%9C%20726&t=&z=17&ie=UTF8&iwloc=&output=embed" width="100%" height="400" style="border:0; display: block;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+
+    <div class="card-container">
+        <div class="card" style="text-align: left;">
+            <h3 style="color: var(--primary);">📍 오시는 길</h3>
+            <ul class="info-list">
+                <li><strong>주소</strong><br>경기도 고양시 일산서구 고양대로 726, 4층 우성한의원</li>
+                <li style="margin-top: 15px;"><strong>주차 안내</strong><br>일산제1공영주차장 (지도상 건물우측 이용)</li>
+            </ul>
+            <span class="sub-text">※ 무인주차장 1시간 주차비를 한의원에서 정산해 드립니다.</span>
+        </div>
+
+        <div class="card" style="text-align: left;">
+            <h3 style="color: var(--primary);">⏰ 진료 시간</h3>
+            <ul class="info-list">
+                <li><span class="badge" style="background: #f0ebe1; color: var(--primary);">평일</span> 09:30 ~ 19:00</li>
+                <li><span class="badge" style="background: #f0ebe1; color: var(--primary);">목·토</span> 09:30 ~ 14:00 <span style="font-size: 0.9em; color:#d32f2f;">(점심시간 없음)</span></li>
+                <li><span class="badge" style="background: #f0ebe1; color: var(--primary);">점심</span> 13:00 ~ 14:00</li>
+                <li><span class="badge" style="background: #f0ebe1; color: var(--primary);">휴진</span> 일요일 및 공휴일</li>
+            </ul>
+            <span class="sub-text">※ 대체공휴일진료는 전화문의 바랍니다.</span>
+        </div>
+    </div>
+</div>
+
+<!-- 하단 푸터 -->
+<footer>
+    <p><strong>우성한의원</strong> | 대표원장 고의현 | 경기도 고양시 일산서구 고양대로 726, 4층 | 031-975-3075</p>
+    <p style="margin-top: 12px;">
+        <a href="index.html">🏠 우성한의원 메인 홈페이지</a> &nbsp;·&nbsp; 
+        <a href="diet.html">비만 클리닉</a> &nbsp;·&nbsp; 
+        <a href="nitric-oxide.html">산화질소 클리닉</a>
+    </p>
+</footer>
+
+</body>
+</html>
